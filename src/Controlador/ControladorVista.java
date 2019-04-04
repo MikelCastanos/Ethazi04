@@ -9,6 +9,31 @@ package Controlador;
  *
  * @author ikasleaETHAZI
  */
-public class ControladorVista {
+
+import Vista.VistaBienvenida;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import javax.swing.JButton;
+
+
+
+public class ControladorVista implements ActionListener {
     
-}
+    public ControladorVista(JButton boton_siguiente){
+        
+        boton_siguiente.addActionListener(this);
+          
+           VistaBienvenida vistab=new VistaBienvenida();
+    vistab.setBounds(10,10,400,300);
+    vistab.setVisible(true);
+    
+    
+    }
+    
+    public void actionPerformed(ActionEvent e) {
+    System.exit(0);
+    }
+    }
+    
+   

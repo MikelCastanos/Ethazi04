@@ -1,6 +1,8 @@
 
 package Aplicacion;
 import Modelo.Conectar;
+import javax.swing.JFrame;
+import vista.*;
 
 
 

@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Aplicacion;
 
-/**
- *
- * @author ikasleaETHAZI
- */
+package Aplicacion;
+import Modelo.Conectar;
+
+
+
+
 public class Main {
     
+    public static void main(String[] args){
+    Conectar cxn = new Conectar();
+    cxn.conexion();
+    }
 }

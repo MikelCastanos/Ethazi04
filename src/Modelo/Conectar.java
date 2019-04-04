@@ -1,7 +1,10 @@
 
 package Modelo;
-import java.sql.Connection;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
 import java.sql.DriverManager;
+
 
 
 
@@ -12,7 +15,7 @@ public class Conectar {
    
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conectar=DriverManager.getConnection("jdbc:mysql://localhost/hotel","root","");
+            conectar=(Connection) DriverManager.getConnection("jdbc:mysql://localhost/hotel","root","");
             System.out.println("Conexion establecida");
            
         }

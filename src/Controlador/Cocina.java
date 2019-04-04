@@ -9,6 +9,6 @@ package Controlador;
  *
  * @author ikasleaETHAZI
  */
-public class Controlador {
+public class Cocina {
     
 }

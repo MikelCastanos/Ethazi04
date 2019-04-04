@@ -19,12 +19,12 @@ public class VistaBienvenida extends JFrame {
     
      
     JLabel mensaje_bienvenida;
-    public JButton boton_siguiente;
+    static JButton boton_siguiente;
     
     public VistaBienvenida(){
-        initComponents();
-        ControladorVista controladorb=new ControladorVista(boton_siguiente);
         
+        boton_siguiente=new javax.swing.JButton();
+
         setLayout(null);
         mensaje_bienvenida=new JLabel("Bienvenido a Bidai-On");
         mensaje_bienvenida.setBounds(10,20,200,30);
@@ -33,12 +33,11 @@ public class VistaBienvenida extends JFrame {
         boton_siguiente=new JButton("Siguiente");
         boton_siguiente.setBounds(10,60,100,30);
         add(boton_siguiente);
-        //boton_siguiente.addActionListener((ActionListener) this);
-
+        
     }
-    
-    public void initComponents(){
-        boton_siguiente=new javax.swing.JButton();
+
+    public static JButton getBoton_siguiente() {
+        return boton_siguiente;
     }
     
 }

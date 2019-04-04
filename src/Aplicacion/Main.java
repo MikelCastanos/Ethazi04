@@ -2,9 +2,11 @@
 package Aplicacion;
 import Modelo.Conectar;
 import javax.swing.JFrame;
-import vista.*;
+import Vista.*;
+import Controlador.*;
 
 import Controlador.*;
+import javax.swing.SwingUtilities;
 
 
 public class Main {
@@ -12,9 +14,23 @@ public class Main {
     public static void main(String[] args){
     //Conectar cxn = new Conectar();
     //cxn.conexion();
+    VistaBienvenida vistab=new VistaBienvenida();
     
-    ControladorVista controladorv=new ControladorVista();
-    controladorv.ventanaBienvenida();
+    vistab.setBounds(0,0,600,600);
+    vistab.setVisible(true);
     
-    }
-}
+    
+    
+    SwingUtilities.invokeLater(new Runnable(){
+        @Override
+        public void run(){
+            ControladorVista controlador=new ControladorVista();
+            controlador.contol();
+        }});
+    
+    
+    }}
+    
+    
+  
+

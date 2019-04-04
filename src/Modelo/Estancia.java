@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controlador;
+package Modelo;
 
 /**
  *
  * @author ikasleaETHAZI
  */
-public class Garaje {
+public class Estancia {
+    
+    int metros;
     
 }

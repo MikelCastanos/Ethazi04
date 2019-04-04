@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Vista;
+package Modelo;
+
+import Modelo.Alojamiento;
 
 /**
  *
  * @author ikasleaETHAZI
  */
-public class Vista {
+public class Hotel extends Alojamiento{
     
+    
+    int num_estrellas;
 }

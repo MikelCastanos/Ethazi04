@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controlador;
+package Modelo;
 
 /**
  *
  * @author ikasleaETHAZI
  */
-public class Sala {
+public class Baño extends Estancia{
     
+    int num_baños;
 }

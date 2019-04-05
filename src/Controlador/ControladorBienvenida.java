@@ -21,12 +21,14 @@ import Aplicacion.*;
 import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 
 
-public class ControladorBienvenida {
+public class ControladorBienvenida extends JFrame{
     
     VistaBienvenida vista;
+    VistaUbicacion vista2;
     Modelo modelo;
     ActionListener actionListener;
     
@@ -34,20 +36,10 @@ public class ControladorBienvenida {
         boton_siguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 impr();
+                SwingUtilities.getWindowAncestor(vista2).dispose();
             }
             
         });
-    }
-
-        public void contol(){        
-        actionListener = new ActionListener() {
-              public void actionPerformed(ActionEvent actionEvent) {  
-                  VistaBienvenida vistab=new VistaBienvenida();
-                  vistab.dispose();
-                  impr();
-              }
-        };                
-        VistaBienvenida.getBoton_siguiente().addActionListener(actionListener);   
     }
         
         public void impr(){
@@ -60,7 +52,7 @@ public class ControladorBienvenida {
         }
     
     
-    
+
     
     
     

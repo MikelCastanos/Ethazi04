@@ -50,13 +50,14 @@ public class VistaUbicacion extends JFrame{
         boton_siguiente2.setBounds(10,140,100,30);
         add(boton_siguiente2);
         
-
+        ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2);
+        
     }
 
     public static JButton getBoton_siguiente2() {
         return boton_siguiente2;
     }
     
-
+    
     
 }

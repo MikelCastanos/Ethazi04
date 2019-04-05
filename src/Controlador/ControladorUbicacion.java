@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import Vista.*;
 import Modelo.*;
 import Aplicacion.*;
+import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
@@ -23,7 +24,14 @@ public class ControladorUbicacion {
     Modelo modelo;
     ActionListener actionListener;
     
-    public ControladorUbicacion(){}
+    public ControladorUbicacion(JButton boton_siguiente2){
+        boton_siguiente2.addMouseListener(new MouseAdapter(){
+            public void mouseClicked(MouseEvent e){
+                accionBoton();
+            }
+            
+        });
+    }
 
     public ControladorUbicacion(VistaBienvenida vista, Modelo modelo) {
         this.vista = vista;
@@ -32,7 +40,7 @@ public class ControladorUbicacion {
     
     
     
-    public void controlBoton(){
+    /*public void controlBoton(){
         actionListener = new ActionListener() {
         
                 public void actionPerformed(ActionEvent actionEvent) {  
@@ -42,7 +50,7 @@ public class ControladorUbicacion {
         };                
         VistaUbicacion.getBoton_siguiente2().addActionListener(actionListener); 
 
-    }
+    }*/
     
     public void accionBoton(){
         JOptionPane.showMessageDialog(null,"Si que va");

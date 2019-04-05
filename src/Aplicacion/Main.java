@@ -29,10 +29,12 @@ public class Main {
     SwingUtilities.invokeLater(new Runnable(){
         @Override
         public void run(){
+            
             ControladorBienvenida controladorb=new ControladorBienvenida();
             controladorb.contol();
             
         }});
+    
     
 
     

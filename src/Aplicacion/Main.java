@@ -1,10 +1,9 @@
 
 package Aplicacion;
-import Modelo.Conectar;
+import BBDD.Conexion;
 import javax.swing.JFrame;
 import Vista.*;
 import Controlador.*;
-
 import Controlador.*;
 import javax.swing.SwingUtilities;
 
@@ -13,7 +12,7 @@ public class Main {
     
     public static void main(String[] args){
 
-    Conectar cxn = new Conectar();
+    Conexion cxn = new Conexion();
     cxn.conexion();
     
 //    ControladorVista controladorv=new ControladorVista();

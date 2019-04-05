@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.ImageIcon;
-import static vista.Pago.*;
+import static vista.VistaPago.*;
 
 public class pagoMayor extends JFrame implements ActionListener {
     

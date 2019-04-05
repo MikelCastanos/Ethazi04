@@ -7,6 +7,7 @@ import Controlador.*;
 
 import Controlador.*;
 import javax.swing.SwingUtilities;
+import vista.VistaPago;
 
 
 public class Main {
@@ -21,7 +22,7 @@ public class Main {
 
     //Conectar cxn = new Conectar();
     //cxn.conexion();
-    VistaBienvenida vistab=new VistaBienvenida();
+    VistaPago vistab=new VistaPago();
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     vistab.setBounds(0,0,600,600);
     vistab.setVisible(true);

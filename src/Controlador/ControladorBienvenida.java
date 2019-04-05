@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import Vista.*;
 import Modelo.*;
 import Aplicacion.*;
+import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -28,6 +29,15 @@ public class ControladorBienvenida {
     VistaBienvenida vista;
     Modelo modelo;
     ActionListener actionListener;
+    
+        public ControladorBienvenida(JButton boton_siguiente){
+        boton_siguiente.addMouseListener(new MouseAdapter(){
+            public void mouseClicked(MouseEvent e){
+                impr();
+            }
+            
+        });
+    }
 
         public void contol(){        
         actionListener = new ActionListener() {

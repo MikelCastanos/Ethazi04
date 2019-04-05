@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import Controlador.*;
+
 /**
  *
  * @author ikasleaETHAZI
@@ -32,6 +33,7 @@ public class VistaBienvenida extends JFrame {
         boton_siguiente.setBounds(10,60,100,30);
         add(boton_siguiente);
         
+        ControladorBienvenida cont=new ControladorBienvenida(boton_siguiente);
     }
 
     public static JButton getBoton_siguiente() {

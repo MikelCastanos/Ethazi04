@@ -26,14 +26,7 @@ public class Main {
     vistab.setBounds(0,0,600,600);
     vistab.setVisible(true);
     
-    SwingUtilities.invokeLater(new Runnable(){
-        @Override
-        public void run(){
-            
-            ControladorBienvenida controladorb=new ControladorBienvenida();
-            controladorb.contol();
-            
-        }});
+
     
     
 

@@ -18,11 +18,12 @@ import javax.swing.JButton;
 import Vista.*;
 import Modelo.*;
 import Aplicacion.*;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 
 
-public class ControladorVista {
+public class ControladorBienvenida {
     
     VistaBienvenida vista;
     Modelo modelo;
@@ -30,7 +31,9 @@ public class ControladorVista {
 
         public void contol(){        
         actionListener = new ActionListener() {
-              public void actionPerformed(ActionEvent actionEvent) {                  
+              public void actionPerformed(ActionEvent actionEvent) {  
+                  VistaBienvenida vistab=new VistaBienvenida();
+                  vistab.dispose();
                   impr();
               }
         };                
@@ -38,7 +41,12 @@ public class ControladorVista {
     }
         
         public void impr(){
-            JOptionPane.showMessageDialog(null,"YEEEEEEEAH");
+            
+            //HACER DISPOSE SI HAY AGALLAS.
+
+            VistaUbicacion vistau=new VistaUbicacion();
+            vistau.setBounds(0,0,600,600);
+            vistau.setVisible(true);
         }
     
     

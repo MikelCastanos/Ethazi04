@@ -16,8 +16,6 @@ import Controlador.*;
  */
 public class VistaBienvenida extends JFrame {
     
-    
-     
     JLabel mensaje_bienvenida;
     static JButton boton_siguiente;
     

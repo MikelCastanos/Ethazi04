@@ -25,12 +25,6 @@ public class Main {
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     vistab.setBounds(0,0,600,600);
     vistab.setVisible(true);
-    
-
-    
-    
-
-    
 
     }}
     

@@ -53,7 +53,9 @@ public class ControladorUbicacion {
     }*/
     
     public void accionBoton(){
-        JOptionPane.showMessageDialog(null,"Si que va");
+                    VistaEleccion vistae=new VistaEleccion();
+            vistae.setBounds(0,0,600,600);
+            vistae.setVisible(true);
     }
     
     

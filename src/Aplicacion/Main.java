@@ -16,15 +16,16 @@ public class Main {
     public static void main(String[] args){
 
     ConsultaHotel hotel= new ConsultaHotel();
-    hotel.cargarHoteles();
+//    hotel.cargarHoteles();
 
-<<<<<<< HEAD
-    //Conectar cxn = new Conectar();
-    //cxn.conexion();
+//pasamos por parametro la ciudad donde queremos buscar el hotel
+    hotel.HotelPorLugar("Bilbao");
+
+
     VistaPago vistab=new VistaPago();
-=======
-    VistaBienvenida vistab=new VistaBienvenida();
->>>>>>> f7ccdb72ae18c843ec0badef0f4ee8b0022bceeb
+
+//    VistaBienvenida vistab=new VistaBienvenida();
+
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     vistab.setBounds(0,0,600,600);
     vistab.setVisible(true);

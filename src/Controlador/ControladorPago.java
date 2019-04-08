@@ -1,15 +1,16 @@
 package Controlador;
 
+import Vista.VistaBienvenida;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
-import Vista.*;
 import Modelo.*;
 import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import vista.VistaPago;
-import vista.VistaPago.*;
 import static vista.VistaPago.*;
 import vista.pagoIgual;
 import vista.pagoMayor;
@@ -120,7 +121,7 @@ public class ControladorPago {
         
         VistaPago.getBoton_continuar().addActionListener(actionListener);
         VistaPago.getBoton_volver().addActionListener(actionListener);
-        VistaPago.getBoton_200e().addActionListener(actionListener);
+        /*VistaPago.getBoton_200e().addActionListener(actionListener);
         VistaPago.getBoton_100e().addActionListener(actionListener);
         VistaPago.getBoton_50e().addActionListener(actionListener);
         VistaPago.getBoton_20e().addActionListener(actionListener);
@@ -133,7 +134,7 @@ public class ControladorPago {
         VistaPago.getBoton_10c().addActionListener(actionListener);
         VistaPago.getBoton_5c().addActionListener(actionListener);
         VistaPago.getBoton_2c().addActionListener(actionListener);
-        VistaPago.getBoton_1c().addActionListener(actionListener);
+        VistaPago.getBoton_1c().addActionListener(actionListener);*/
     }
                
 
@@ -173,7 +174,7 @@ public class ControladorPago {
             pagoIgual.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);}
             //dispose();}
            
-            if(getBoton_200e()==boton_200e){ 
+           /* if(getBoton_200e()==boton_200e){ 
             cantidad_insertada=cantidad_insertada+billete200;
 
             VistaPago Pago=new VistaPago();
@@ -284,7 +285,7 @@ public class ControladorPago {
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
             //dispose();       
-           }
+           }*/
             
         }
     

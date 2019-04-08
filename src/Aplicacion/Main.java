@@ -20,6 +20,7 @@ public class Main {
 
 //pasamos por parametro la ciudad donde queremos buscar el hotel
     hotel.HotelPorLugar("Bilbao");
+    hotel.ubicacion();
 
 
     //VistaPago vistab=new VistaPago();

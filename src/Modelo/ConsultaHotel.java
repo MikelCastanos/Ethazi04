@@ -73,4 +73,35 @@ public class ConsultaHotel {
         System.out.println("Hoteles en "+ubicacionHotel+" son "+consulta);
         return consulta;
     }
+    
+        public ArrayList<String>ubicacion(){
+// Instanciar BBDD
+
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+        Connection con= conexion.conectar();
+// Crear ArrayList
+        ArrayList<String> consultaUbicacion = new ArrayList<String>();
+// Consulta
+        String query="Select * from hotel GROUP BY Ubicacion";
+// Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
+        ResultSet rs= consultas.consultaBD(con, query);
+//  Recorrer todos los datos a mostrar
+        try{
+            while(rs.next()){
+//           Si descomentamos la siguiente linea nos muestra todos los datos del hotel que ocincide con la ubicacion
+
+//              System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
+
+//  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
+                String ubicacion=rs.getString(4);
+                consultaUbicacion.add(ubicacion);
+            }
+//        Control de errores
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println("Hoteles en son "+consultaUbicacion);
+        return consultaUbicacion;
+    }
 }

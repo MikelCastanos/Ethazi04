@@ -24,8 +24,8 @@ public class Main {
     hotel.ubicacion();
     insertarReserva insertar= new insertarReserva();
     insertar.insertar("12345678","Santxo");
-    
-    
+        System.out.println("PRecioooooooooooooooooooo");
+    hotel.cosultaPrecio("Ercilla");
 
    // hotel.HotelPorLugar("Bilbao");
     //hotel.ubicacion();

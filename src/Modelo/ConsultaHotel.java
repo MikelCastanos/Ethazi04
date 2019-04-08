@@ -104,4 +104,29 @@ public class ConsultaHotel {
         System.out.println("Hoteles en son "+consultaUbicacion);
         return consultaUbicacion;
     }
+  
+   public int cosultaPrecio(String nombreHotel){
+//        Instanciar BBDD
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+        Connection con= conexion.conectar();
+        int precio=0;
+//        Consulta
+        String query="Select precio from hotel where nombre='"+nombreHotel+"'";
+//        Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
+        ResultSet rs= consultas.consultaBD(con, query);
+//        Recorrer todos los datos a mostrar
+        try{
+            while(rs.next()){
+                precio=rs.getInt("Precio");
+                System.out.println(precio);
+            }
+//        Control de errores
+        }catch(Exception e){
+            System.out.println("Error Precio");
+            System.out.println(e.getMessage());
+        }
+        return precio;
+    }     
 }
+

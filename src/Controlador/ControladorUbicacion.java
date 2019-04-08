@@ -50,12 +50,13 @@ public class ControladorUbicacion {
     
     public void accionBoton(JComboBox ubicacion){
         
-            VistaEleccion vistae=new VistaEleccion();
+            VistaEleccion vistae=new VistaEleccion(ubicacion);
             vistae.setBounds(0,0,600,600);
             vistae.setVisible(true);
             cogerDatos(ubicacion);
             System.out.println(seleccionUbicacion);
-
+            
+            
             
 
     }

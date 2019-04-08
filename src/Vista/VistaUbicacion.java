@@ -38,13 +38,13 @@ public class VistaUbicacion extends JFrame{
         ubicacion.setBounds(10,40,200,30);
         add(ubicacion);
         
-        mensaje_alojamiento=new JLabel("Tipo de Alojamiento");
+       /* mensaje_alojamiento=new JLabel("Tipo de Alojamiento");
         mensaje_alojamiento.setBounds(10,70,200,30);
         add(mensaje_alojamiento);
         
         tipo_alojamiento=new JComboBox();
         tipo_alojamiento.setBounds(10,100,200,30);
-        add(tipo_alojamiento);
+        add(tipo_alojamiento);*/
         
         boton_siguiente2=new JButton("Siguiente");
         boton_siguiente2.setBounds(10,140,100,30);
@@ -52,6 +52,9 @@ public class VistaUbicacion extends JFrame{
         
         ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2);
         
+                            ControladorUbicacion contU=new ControladorUbicacion();
+                
+            cont.rellenarComboBox(ubicacion);
     }
 
     public static JButton getBoton_siguiente2() {

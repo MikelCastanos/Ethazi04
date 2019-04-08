@@ -19,9 +19,12 @@ import Vista.*;
 import Modelo.*;
 import Aplicacion.*;
 import java.awt.event.MouseEvent;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
+import Modelo.ConsultaHotel;
+import Vista.VistaEleccion;
 
 
 
@@ -36,7 +39,7 @@ public class ControladorBienvenida extends JFrame{
         boton_siguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 impr();
-                SwingUtilities.getWindowAncestor(vista2).dispose();
+                
             }
             
         });
@@ -45,6 +48,7 @@ public class ControladorBienvenida extends JFrame{
         public void impr(){
             
             //HACER DISPOSE SI HAY AGALLAS.
+            
 
             VistaUbicacion vistau=new VistaUbicacion();
             vistau.setBounds(0,0,600,600);

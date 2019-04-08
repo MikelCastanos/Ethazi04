@@ -22,17 +22,17 @@ public class Main {
 
     hotel.HotelPorLugar("Bilbao");
     hotel.ubicacion();
-    insertarReserva insertar= new insertarReserva();
-    insertar.insertar();
+   // insertarReserva insertar= new insertarReserva();
+   // insertar.insertar();
 
    // hotel.HotelPorLugar("Bilbao");
     //hotel.ubicacion();
 
 
 
-    VistaPago vistab=new VistaPago();
+    //VistaPago vistab=new VistaPago();
 
-    //VistaBienvenida vistab=new VistaBienvenida();
+    VistaBienvenida vistab=new VistaBienvenida();
 
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     vistab.setBounds(0,0,600,850);

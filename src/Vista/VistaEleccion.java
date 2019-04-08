@@ -44,11 +44,8 @@ public class VistaEleccion extends JFrame {
         cont2.cogerDatos(ubicacion);
         ControladorEleccion cont=new ControladorEleccion(boton_siguiente3);
         cont.rellenarComboBox2(eleccion);
-        
-        
 
     }
-    
-    
+       
     
 }

@@ -14,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import Controlador.ControladorUbicacion;
 import static Controlador.ControladorUbicacion.seleccionUbicacion;
+import Vista.VistaEstanciaSeleccionada;
 
 
 /**
@@ -27,7 +28,9 @@ public class ControladorEleccion {
         public ControladorEleccion(JButton boton_siguiente2){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                JOptionPane.showMessageDialog(null,"FUnciona");
+            VistaEstanciaSeleccionada vistaes=new VistaEstanciaSeleccionada();
+            vistaes.setBounds(0,0,600,600);
+            vistaes.setVisible(true);
             }
             
         });}

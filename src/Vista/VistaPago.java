@@ -19,10 +19,6 @@ public class VistaPago extends JFrame {
  
    public static double precioFinal, precioFinalcents;
 
-    public static Object getBoton_500e() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
    
 public VistaPago(){
             

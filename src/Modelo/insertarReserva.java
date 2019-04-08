@@ -16,19 +16,20 @@ public class insertarReserva{
     
 //    Metodo para insertar los datos de la reserva en la tabla
     
-    public void insertar(){
+    public void insertar(String codHotel, String nombreHotel){
         
 //      Como prueba usamos estas variables, pero cuando tengamos la vista podemos pasarle las variables con el valor seleccionado
-        String fechaEntrada="00-00-0000";
-        String fechaSalida="00-00-0000";
-        String codHotel="12345678";
+//        String fechaEntrada="00-00-0000";
+//        String fechaSalida="00-00-0000";
+//        String codHotel="12345678";
+
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
         Connection con= conexion.conectar();
         
         String query="";
         
-        query="INSERT into reserva (Cod_hotel,Fecha_entrada,Fecha_salida)VALUES('"+ codHotel +"', '"+ fechaEntrada +"', '" +fechaSalida + "')";
+        query="INSERT into reserva (Cod_hotel,NombreHotel)VALUES('"+ codHotel +"', '"+ nombreHotel + "')";
         
         consultas.insertarDatosBD(con, query);
     }

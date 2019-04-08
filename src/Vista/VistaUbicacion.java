@@ -52,7 +52,7 @@ public class VistaUbicacion extends JFrame{
         boton_siguiente2.setBounds(10,140,100,30);
         add(boton_siguiente2);
         
-        ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2);
+        ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2,ubicacion);
         
                 
         cont.rellenarComboBox(ubicacion);
@@ -64,13 +64,18 @@ public class VistaUbicacion extends JFrame{
         return boton_siguiente2;
     }
 
-    public JComboBox getUbicacion() {
-        return ubicacion;
+
+    public void cogerUbi(){
+        System.out.println(ubicacion.getSelectedItem().toString());
     }
+
+
     
-          public void sgetSeleccionUbicacion(){
-             seleccionUbicacion=ubicacion.getSelectedItem().toString();
-         }
+    
+
+
+    
+
     
     
     

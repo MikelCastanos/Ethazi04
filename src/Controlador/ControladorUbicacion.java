@@ -28,14 +28,14 @@ public class ControladorUbicacion {
     Modelo modelo;
     ActionListener actionListener;
     
-    
+    String prueba2;
     
     public ControladorUbicacion(){}
     
-    public ControladorUbicacion(JButton boton_siguiente2){
+    public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                accionBoton();
+                accionBoton(ubicacion);
                 
             }
             
@@ -48,12 +48,14 @@ public class ControladorUbicacion {
     }
    
     
-    public void accionBoton(){
+    public void accionBoton(JComboBox ubicacion){
         
             VistaEleccion vistae=new VistaEleccion();
             vistae.setBounds(0,0,600,600);
             vistae.setVisible(true);
-            printt();
+            cogerDatos(ubicacion);
+            
+
     }
     
 
@@ -68,8 +70,9 @@ public class ControladorUbicacion {
          }
 
        
-         public void printt(){
-             System.out.println(VistaUbicacion.seleccionUbicacion);
+         public void cogerDatos(JComboBox ubicacion){
+             prueba2=ubicacion.getSelectedItem().toString();
+             System.out.println(prueba2);
          }
 
 

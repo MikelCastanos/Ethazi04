@@ -25,13 +25,16 @@ public class ControladorEleccion {
                 JOptionPane.showMessageDialog(null,"FUnciona");
             }
             
-        });
+        });}
+        
     }
+        
+
     
 
         
         
-    }
+    
 
     
 

@@ -26,6 +26,8 @@ public class VistaUbicacion extends JFrame{
     Date fecha_entrada, fecha_salida;
     static JButton boton_siguiente2;
     
+    public static String seleccionUbicacion;
+    
     public VistaUbicacion(){
         boton_siguiente2=new javax.swing.JButton();
         
@@ -52,14 +54,24 @@ public class VistaUbicacion extends JFrame{
         
         ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2);
         
-                            ControladorUbicacion contU=new ControladorUbicacion();
                 
-            cont.rellenarComboBox(ubicacion);
+        cont.rellenarComboBox(ubicacion);
+        
     }
 
-    public static JButton getBoton_siguiente2() {
+    public  JButton getBoton_siguiente2() {
+
         return boton_siguiente2;
     }
+
+    public JComboBox getUbicacion() {
+        return ubicacion;
+    }
+    
+          public void sgetSeleccionUbicacion(){
+             seleccionUbicacion=ubicacion.getSelectedItem().toString();
+         }
+    
     
     
     

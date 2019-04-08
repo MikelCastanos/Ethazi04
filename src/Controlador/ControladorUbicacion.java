@@ -20,6 +20,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import Modelo.ConsultaHotel;
+import Vista.VistaUbicacion;
 
 public class ControladorUbicacion {
     
@@ -27,12 +28,15 @@ public class ControladorUbicacion {
     Modelo modelo;
     ActionListener actionListener;
     
+    
+    
     public ControladorUbicacion(){}
     
     public ControladorUbicacion(JButton boton_siguiente2){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 accionBoton();
+                
             }
             
         });
@@ -45,11 +49,14 @@ public class ControladorUbicacion {
    
     
     public void accionBoton(){
-                    VistaEleccion vistae=new VistaEleccion();
+        
+            VistaEleccion vistae=new VistaEleccion();
             vistae.setBounds(0,0,600,600);
             vistae.setVisible(true);
+            printt();
     }
     
+
          public void rellenarComboBox (JComboBox ubicacion){
            ConsultaHotel hotel= new ConsultaHotel();
            hotel.ubicacion();
@@ -58,12 +65,22 @@ public class ControladorUbicacion {
         while(i.hasNext()){
            ubicacion.addItem(i.next()); 
         }
+         }
+
+       
+         public void printt(){
+             System.out.println(VistaUbicacion.seleccionUbicacion);
+         }
+
+
+
+
     
-    
-    
-    
-    
-    
-        }}
+
+
+        
+
+
+}
     
 

@@ -23,7 +23,7 @@ public class VistaBienvenida extends JFrame{
     
     
     public VistaBienvenida(){
-        
+      
         boton_siguiente=new javax.swing.JButton();
 
         setLayout(null);

@@ -22,9 +22,9 @@ public class Main {
     hotel.HotelPorLugar("Bilbao");
 
 
-    VistaPago vistab=new VistaPago();
+    //VistaPago vistab=new VistaPago();
 
-//    VistaBienvenida vistab=new VistaBienvenida();
+ VistaBienvenida vistab=new VistaBienvenida();
 
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     vistab.setBounds(0,0,600,600);

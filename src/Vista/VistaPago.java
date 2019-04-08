@@ -21,7 +21,7 @@ public class VistaPago extends JFrame {
 
    
 public VistaPago(){
-            
+          
             setLayout(null);
           
             boton_volver=new javax.swing.JButton();

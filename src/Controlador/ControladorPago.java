@@ -8,13 +8,11 @@ import javax.swing.JButton;
 import Modelo.*;
 import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
 import vista.VistaPago;
-import static vista.VistaPago.*;
 import vista.pagoIgual;
 import vista.pagoMayor;
 import vista.pagoMenor;
+import static vista.VistaPago.*;
 
 
 
@@ -106,22 +104,20 @@ public class ControladorPago {
             public void mouseClicked(MouseEvent e){
                 impr();
             }
-        });
+        });   
 
     }
     
     public void contol(){        
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) {  
-                  VistaPago paga=new VistaPago();
-                  paga.dispose();
                   impr();
               }
         };
         
         VistaPago.getBoton_continuar().addActionListener(actionListener);
         VistaPago.getBoton_volver().addActionListener(actionListener);
-        /*VistaPago.getBoton_200e().addActionListener(actionListener);
+        VistaPago.getBoton_200e().addActionListener(actionListener);
         VistaPago.getBoton_100e().addActionListener(actionListener);
         VistaPago.getBoton_50e().addActionListener(actionListener);
         VistaPago.getBoton_20e().addActionListener(actionListener);
@@ -134,14 +130,18 @@ public class ControladorPago {
         VistaPago.getBoton_10c().addActionListener(actionListener);
         VistaPago.getBoton_5c().addActionListener(actionListener);
         VistaPago.getBoton_2c().addActionListener(actionListener);
-        VistaPago.getBoton_1c().addActionListener(actionListener);*/
+        VistaPago.getBoton_1c().addActionListener(actionListener);
     }
                
 
+    public void impr1(){
+    
+    }
+    
     
     public void impr(){
             
-            if(VistaPago.getBoton_volver()==boton_volver){
+            if(getBoton_volver()==boton_volver){
             
             
             VistaBienvenida iniciostart=new VistaBienvenida();
@@ -151,30 +151,10 @@ public class ControladorPago {
             //dispose();
            }
             
-            if(getBoton_continuar()==boton_continuar){
- 
-            if(cantidad_insertada>precioFinalcents){  
-            pagoMayor pagoMayor=new pagoMayor();
-            pagoMayor.setBounds(0,0,600,750);
-            pagoMayor.setVisible(true);
-            pagoMayor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            //dispose();}
             
-            if(cantidad_insertada<precioFinalcents){  
-            pagoMenor pagoMenor=new pagoMenor();
-            pagoMenor.setBounds(0,0,450,300);
-            pagoMenor.setVisible(true);
-            pagoMenor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);}
-            //dispose();}
             
-            if(cantidad_insertada==precioFinalcents){  
-            pagoIgual pagoIgual=new pagoIgual();
-            pagoIgual.setBounds(0,0,450,300);
-            pagoIgual.setVisible(true);
-            pagoIgual.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);}
-            //dispose();}
            
-           /* if(getBoton_200e()==boton_200e){ 
+           if(getBoton_200e()==boton_200e){ 
             cantidad_insertada=cantidad_insertada+billete200;
 
             VistaPago Pago=new VistaPago();
@@ -285,8 +265,8 @@ public class ControladorPago {
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
             //dispose();       
-           }*/
-            
+           }
+           
         }
     
     

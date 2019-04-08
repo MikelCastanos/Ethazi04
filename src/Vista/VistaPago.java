@@ -13,12 +13,12 @@ public class VistaPago extends JFrame {
    public static JButton boton_volver, boton_continuar, boton_200e, boton_100e, boton_50e, boton_20e, boton_10e, boton_5e, boton_2e, boton_1e, boton_50c, boton_20c, boton_10c, boton_5c, boton_2c, boton_1c; 
    public static JLabel mensajePago,  preciototal, preciototal_IVA, men_cantidad_insertada,men_cantidad_pagar, logo1,mensajeRestante;
    public static ImageIcon img_agua;
-   public static double calculo_preciototal= 10;
+   public static double calculo_preciototal= Controlador.ControladorEstanciaSeleccionada.precio1cents;
    public static int billete200=20000,billete100=10000,billete50=5000,billete20=2000,billete10=1000,billete5=500,moneda2=200,moneda1=100,moneda50c=50,moneda20c=20,moneda10c=10,moneda5c=5,moneda2c=2,moneda1c=1;
    public static double cantidad_insertada=0;
  
    public static double precioFinal, precioFinalcents;
-
+   
    
 public VistaPago(){
           
@@ -128,7 +128,7 @@ public VistaPago(){
             boton_1c.setBounds(300,450,50,50);
             add(boton_1c);
             
-            precioFinal=Math.floor(((10)*1.21)*100d)/100d;
+            precioFinal=Math.floor(((Controlador.ControladorEstanciaSeleccionada.precio1)*1.21)*100d)/100d;
             precioFinalcents=precioFinal*100;
             
             preciototal_IVA= new JLabel("Precio Final (IVA incluido): "+precioFinal+"€");
@@ -147,8 +147,9 @@ public VistaPago(){
             boton_continuar.setBounds(350,650,100,30);
             add(boton_continuar);
 
-/*            ControladorPago cont=new ControladorPago(boton_volver, boton_continuar, boton_200e, boton_100e, boton_50e, boton_20e, boton_10e, 
-                    boton_5e, boton_2e, boton_1e, boton_50c, boton_20c, boton_10c, boton_5c, boton_2c, boton_1c);*/
+            ControladorPago cont;
+       cont = new ControladorPago(boton_volver, boton_continuar, boton_200e, boton_100e, boton_50e, boton_20e, boton_10e,
+               boton_5e, boton_2e, boton_1e, boton_50c, boton_20c, boton_10c, boton_5c, boton_2c, boton_1c);
             
 }
 

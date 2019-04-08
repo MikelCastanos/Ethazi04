@@ -20,7 +20,8 @@ import vista.VistaPago;
  */
 public class ControladorEstanciaSeleccionada {
     
-    int precio1;
+    public static int precio1;
+    public static int precio1cents;
     
     public ControladorEstanciaSeleccionada(JButton boton_siguiente3){
                    
@@ -40,6 +41,7 @@ public class ControladorEstanciaSeleccionada {
                 VistaPago vistap=new VistaPago();
                 vistap.setBounds(0,0,600,730);
                 vistap.setVisible(true);
+                precio1cents=precio1*100;
     }
     
     public void sacarDatosEstancia(){

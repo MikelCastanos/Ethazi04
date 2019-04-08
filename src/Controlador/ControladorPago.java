@@ -21,7 +21,7 @@ public class ControladorPago extends JFrame {
     VistaPago pago;
     Modelo modelo;
     ActionListener actionListener;
-    
+
     
     public ControladorPago(JButton boton_volver, JButton boton_continuar, JButton boton_200e, JButton boton_100e,
             JButton boton_50e, JButton boton_20e, JButton boton_10e, JButton boton_5e, JButton boton_2e, JButton boton_1e,

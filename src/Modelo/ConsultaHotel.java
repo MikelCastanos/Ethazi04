@@ -144,40 +144,5 @@ public class ConsultaHotel {
     }
    
    
-   //CONSULTA PARA SACAR SOLO EL PRECIO Y USARLO EN EL PAGO
-   public ArrayList consultaPrecio(String nombreHotel){
-// Instanciar BBDD
-
-        Conexion conexion= new Conexion();
-        Consultas consultas= new Consultas();
-        Connection con= conexion.conectar();
-// Crear ArrayList
-        ArrayList infoPrecio = new ArrayList<>();
-// Consulta
-        String query="Select precio from hotel where Nombre='"+nombreHotel+"'";
-// Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
-        ResultSet rs= consultas.consultaBD(con, query);
-//  Recorrer todos los datos a mostrar
-        try{
-            while(rs.next()){
-//           Si descomentamos la siguiente linea nos muestra todos los datos del hotel que ocincide con la ubicacion
-
-//              System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
-
-//  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
-
-                int precio=rs.getInt(1);
-                
-                infoPrecio.add(precio);
-
-            }
-//        Control de errores
-        }catch(Exception e){
-            System.out.println("Precio  "+e.getMessage());
-        }
-//        System.out.println("Hoteles en son "+consultaUbicacion);
-       System.out.println(infoPrecio);
-        return infoPrecio;
-    }
 }
 

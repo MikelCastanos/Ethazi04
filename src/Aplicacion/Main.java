@@ -22,8 +22,8 @@ public class Main {
 
     hotel.HotelPorLugar("Bilbao");
     hotel.ubicacion();
-   // insertarReserva insertar= new insertarReserva();
-   // insertar.insertar();
+    insertarReserva insertar= new insertarReserva();
+    insertar.insertar("12345678","Santxo");
 
    // hotel.HotelPorLugar("Bilbao");
     //hotel.ubicacion();

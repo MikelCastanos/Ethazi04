@@ -20,10 +20,12 @@ public class Main {
 
 //pasamos por parametro la ciudad donde queremos buscar el hotel
 
-    hotel.HotelPorLugar("Bilbao");
+    hotel.HotelPorLugar("Barcelona");
     hotel.ubicacion();
     insertarReserva insertar= new insertarReserva();
     insertar.insertar("12345678","Santxo");
+    
+    
 
    // hotel.HotelPorLugar("Bilbao");
     //hotel.ubicacion();

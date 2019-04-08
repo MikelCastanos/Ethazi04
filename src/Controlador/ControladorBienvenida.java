@@ -38,16 +38,15 @@ public class ControladorBienvenida extends JFrame{
         public ControladorBienvenida(JButton boton_siguiente){
         boton_siguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                impr();
+                abrirVentanaUbicacion();
                 
-
                 
             }
             
         });
     }
         
-        public void impr(){
+        public void abrirVentanaUbicacion(){
             
             //HACER DISPOSE SI HAY AGALLAS.
             

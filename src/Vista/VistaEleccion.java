@@ -25,10 +25,6 @@ public class VistaEleccion extends JFrame {
     public VistaEleccion(){
         boton_siguiente3=new javax.swing.JButton();
         
-        
-        
-        
-        
         setLayout(null);
         
         mensaje_eleccion=new JLabel("Estos es lo que hemos encontrado para ti:");
@@ -46,6 +42,7 @@ public class VistaEleccion extends JFrame {
 
         
         ControladorEleccion cont=new ControladorEleccion(boton_siguiente3);
+        cont.rellenarComboBox2(eleccion);
         
         
         

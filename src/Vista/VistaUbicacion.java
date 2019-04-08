@@ -65,9 +65,7 @@ public class VistaUbicacion extends JFrame{
     }
 
 
-    public void cogerUbi(){
-        System.out.println(ubicacion.getSelectedItem().toString());
-    }
+
 
 
     

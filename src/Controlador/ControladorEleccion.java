@@ -12,12 +12,17 @@ import java.util.Iterator;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import Controlador.ControladorUbicacion;
+import static Controlador.ControladorUbicacion.seleccionUbicacion;
+
 
 /**
  *
  * @author ikasleaETHAZI
  */
 public class ControladorEleccion {
+    
+    public ControladorEleccion(){}
     
         public ControladorEleccion(JButton boton_siguiente2){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
@@ -27,6 +32,22 @@ public class ControladorEleccion {
             
         });}
         
+        
+           public void rellenarComboBox2 (JComboBox eleccion){
+           ConsultaHotel hotel= new ConsultaHotel();
+          
+           
+           
+          hotel.HotelPorLugar(seleccionUbicacion);
+               
+           
+        Iterator<String> ite= hotel.HotelPorLugar(seleccionUbicacion).iterator();
+        while(ite.hasNext()){
+           eleccion.addItem(ite.next()); 
+        }
+         }
+        
+
     }
         
 

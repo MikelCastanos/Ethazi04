@@ -28,7 +28,7 @@ public class ControladorUbicacion {
     Modelo modelo;
     ActionListener actionListener;
     
-    String prueba2;
+    static String seleccionUbicacion;
     
     public ControladorUbicacion(){}
     
@@ -54,6 +54,8 @@ public class ControladorUbicacion {
             vistae.setBounds(0,0,600,600);
             vistae.setVisible(true);
             cogerDatos(ubicacion);
+            System.out.println(seleccionUbicacion);
+
             
 
     }
@@ -71,9 +73,14 @@ public class ControladorUbicacion {
 
        
          public void cogerDatos(JComboBox ubicacion){
-             prueba2=ubicacion.getSelectedItem().toString();
-             System.out.println(prueba2);
+             seleccionUbicacion=ubicacion.getSelectedItem().toString();
+             
          }
+
+   /* public static String getSeleccionUbicacion() {
+        return seleccionUbicacion;
+    }*/
+         
 
 
 

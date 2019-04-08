@@ -99,7 +99,7 @@ public class ConsultaHotel {
             }
 //        Control de errores
         }catch(Exception e){
-            System.out.println(e.getMessage());
+            System.out.println("Ubicacion  "+e.getMessage());
         }
         System.out.println("Hoteles en son "+consultaUbicacion);
         return consultaUbicacion;

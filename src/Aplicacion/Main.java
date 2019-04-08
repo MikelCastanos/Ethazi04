@@ -7,6 +7,7 @@ import Vista.*;
 import Controlador.*;
 import Controlador.*;
 import Modelo.ConsultaHotel;
+import Modelo.insertarReserva;
 import javax.swing.SwingUtilities;
 import vista.VistaPago;
 
@@ -21,7 +22,8 @@ public class Main {
 //pasamos por parametro la ciudad donde queremos buscar el hotel
     hotel.HotelPorLugar("Bilbao");
     hotel.ubicacion();
-
+    insertarReserva insertar= new insertarReserva();
+    insertar.insertar();
 
     //VistaPago vistab=new VistaPago();
 

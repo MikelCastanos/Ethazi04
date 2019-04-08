@@ -6,12 +6,12 @@ import java.awt.event.*;
 import javax.swing.ImageIcon;
 import static vista.VistaPago.*;
 
-public class pagoMenor extends JFrame implements ActionListener{
+public class VistaPagoMenor extends JFrame implements ActionListener{
     public static JLabel mensajemenor, mensajemenor2, logo1;
     public double medebes=((precioFinalcents-cantidad_insertada)/100);
     public static JButton boton_masdinero;
     
-    public pagoMenor(){
+    public VistaPagoMenor(){
             
         setLayout(null);
         

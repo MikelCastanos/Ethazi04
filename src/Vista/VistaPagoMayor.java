@@ -1,13 +1,13 @@
 
 package vista;
 
+import Controlador.ControladorPagoMayor;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.ImageIcon;
 import static vista.VistaPago.*;
 
-public class pagoMayor extends JFrame implements ActionListener {
+
+public class VistaPagoMayor extends JFrame {
     
     public static double precioFinal2, precioFinal2cents;
     public static double vueltasCentimos;
@@ -30,18 +30,13 @@ public class pagoMayor extends JFrame implements ActionListener {
     public static JLabel mensaje200,mensaje100,mensaje50,mensaje20,mensaje10,mensaje5,mensaje2,mensaje1,mensaje50c,mensaje20c,mensaje10c,mensaje5c,mensaje2c,mensaje1c;
     public static JButton terminar_compra;
     
-    public pagoMayor(){
+    public VistaPagoMayor(){
             
      setLayout(null);  
             precioFinal2=Math.floor(((10)*1.21)*100d)/100d;
             precioFinal2cents=precioFinal2*100;
             vueltasCentimos=cantidad_insertada-precioFinal2cents;
 
-        ImageIcon icono=new ImageIcon("src//images/salding.png");
-        logo1=new JLabel(icono);
-        logo1.setSize(100,100);
-        add(logo1);
-        validate();
         
             mensajeVueltas=new JLabel("Cantidad a devolver: "+vueltasCentimos/100+" Euros");
             mensajeVueltas.setBounds(220,70,220,20);
@@ -231,19 +226,16 @@ public class pagoMayor extends JFrame implements ActionListener {
     
             terminar_compra=new JButton("Terminar");
             terminar_compra.setBounds(200,650,100,30);
-            terminar_compra.addActionListener(this);
             add(terminar_compra);
+    
+            ControladorPagoMayor cont=new ControladorPagoMayor(terminar_compra);
+    
+    }
+
+    public static JButton getTerminar_compra() {
+        return terminar_compra;
     }
     
-    public void actionPerformed(ActionEvent e) {
-            
-        if(e.getSource()==terminar_compra){
-            
-            VistaBienvenida crono=new VistaBienvenida();
-            crono.setBounds(0,0,400,300);
-            crono.setVisible(true);
-            crono.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            dispose();
-        }
-    }
+    
+
 }

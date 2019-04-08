@@ -1,17 +1,18 @@
 package vista;
 
+import Controlador.ControladorPagoIgual;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.ImageIcon;
 
 
-public class pagoIgual extends JFrame implements ActionListener {
+public class VistaPagoIgual extends JFrame{
     public static JLabel mensajejusto, mensajejusto2, logo1;
     public static JButton boton_finalizar;
     
     
-    public pagoIgual(){
+    public VistaPagoIgual(){
             
             setLayout(null);
             
@@ -27,19 +28,16 @@ public class pagoIgual extends JFrame implements ActionListener {
             
             boton_finalizar=new JButton("Finalizar");
             boton_finalizar.setBounds(115,180,150,30);
-            boton_finalizar.addActionListener(this);
-            add(boton_finalizar); }
+            add(boton_finalizar); 
     
-    public void actionPerformed(ActionEvent e) {
-        
-        if(e.getSource()==boton_finalizar){
-           
-            VistaBienvenida crono=new VistaBienvenida();
-            crono.setBounds(0,0,400,300);
-            crono.setVisible(true);
-            crono.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            dispose();
+            ControladorPagoIgual cont=new ControladorPagoIgual(boton_finalizar);
+    
     }
-    }}
+
+    public static JButton getBoton_finalizar() {
+        return boton_finalizar;
+    }
+    
+}
     
 

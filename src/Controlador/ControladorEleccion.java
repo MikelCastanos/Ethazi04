@@ -23,32 +23,47 @@ import Vista.VistaEstanciaSeleccionada;
  */
 public class ControladorEleccion {
     
+    public static String seleccionEleccion;
+    
     public ControladorEleccion(){}
     
-        public ControladorEleccion(JButton boton_siguiente2){
+        public ControladorEleccion(JButton boton_siguiente2,JComboBox eleccion){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-            VistaEstanciaSeleccionada vistaes=new VistaEstanciaSeleccionada();
-            vistaes.setBounds(0,0,600,600);
-            vistaes.setVisible(true);
+        accionBotonEleccion(eleccion);
             }
             
         });}
+
+
         
         
            public void rellenarComboBox2 (JComboBox eleccion){
            ConsultaHotel hotel= new ConsultaHotel();
           
-           
-           
           hotel.HotelPorLugar(seleccionUbicacion);
-               
-           
+                
         Iterator<String> ite= hotel.HotelPorLugar(seleccionUbicacion).iterator();
         while(ite.hasNext()){
            eleccion.addItem(ite.next()); 
         }
          }
+           
+           public void accionBotonEleccion(JComboBox eleccion){
+               cogerDatosEleccion(eleccion);
+            VistaEstanciaSeleccionada vistaes=new VistaEstanciaSeleccionada(eleccion);
+            vistaes.setBounds(0,0,600,600);
+            vistaes.setVisible(true);
+            
+               
+           }
+           
+          public void cogerDatosEleccion(JComboBox eleccion){
+             seleccionEleccion=eleccion.getSelectedItem().toString();
+             
+         }
+           
+
         
 
     }

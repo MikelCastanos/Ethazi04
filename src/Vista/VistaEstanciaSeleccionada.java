@@ -5,9 +5,16 @@
  */
 package Vista;
 
+import Controlador.ControladorEleccion;
+import static Controlador.ControladorEleccion.seleccionEleccion;
+import Controlador.ControladorEstanciaSeleccionada;
+import Modelo.ConsultaHotel;
+import javax.swing.Icon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
 
 /**
  *
@@ -18,10 +25,13 @@ public class VistaEstanciaSeleccionada extends JFrame{
     
         JLabel mensajeEstancia,datosEstancia;
         JButton boton_siguiente4;
+        
     
+    public VistaEstanciaSeleccionada(){} 
     
-    
-    public VistaEstanciaSeleccionada(){
+    public VistaEstanciaSeleccionada(JComboBox eleccion){
+        
+        
         
         boton_siguiente4=new javax.swing.JButton();
         
@@ -31,17 +41,22 @@ public class VistaEstanciaSeleccionada extends JFrame{
         mensajeEstancia.setBounds(10,20,200,30);
         add(mensajeEstancia);
         
-        
-        
-        datosEstancia=new JLabel("");
-        datosEstancia.setBounds(10,40,200,30);
+        ConsultaHotel cons=new ConsultaHotel();
+        datosEstancia=new JLabel(cons.consultaCompleta(seleccionEleccion).toString());  
+        datosEstancia.setBounds(10,40,400,30);
         add(datosEstancia);
-        
-        
-        
+
         boton_siguiente4=new JButton("Siguiente");
         boton_siguiente4.setBounds(10,140,100,30);
         add(boton_siguiente4);
+        
+        ControladorEstanciaSeleccionada cont=new ControladorEstanciaSeleccionada(boton_siguiente4);
+        
+        ControladorEleccion cont3=new ControladorEleccion();
+        cont3.cogerDatosEleccion(eleccion);
+        cont.sacarDatosEstancia();
+        
+
         
     }
     

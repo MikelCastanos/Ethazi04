@@ -5,10 +5,47 @@
  */
 package Controlador;
 
+import static Controlador.ControladorEleccion.seleccionEleccion;
+import Modelo.ConsultaHotel;
+import Vista.VistaEstanciaSeleccionada;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import vista.VistaPago;
+
 /**
  *
  * @author shabi
  */
 public class ControladorEstanciaSeleccionada {
     
-}
+    int precio1;
+    
+    public ControladorEstanciaSeleccionada(JButton boton_siguiente3){
+                   
+        boton_siguiente3.addMouseListener(new MouseAdapter(){
+            public void mouseClicked(MouseEvent e){
+                irPago();
+            }
+            
+        });}
+    
+    
+    public void irPago(){
+                ConsultaHotel cons=new ConsultaHotel();
+                precio1=(int) cons.consultaCompleta(seleccionEleccion).get(2);
+                System.out.println("El precio es: ");
+                System.out.println(precio1);
+                VistaPago vistap=new VistaPago();
+                vistap.setBounds(0,0,600,730);
+                vistap.setVisible(true);
+    }
+    
+    public void sacarDatosEstancia(){
+           ConsultaHotel hotel= new ConsultaHotel();
+           hotel.consultaCompleta(seleccionEleccion);
+    }
+    }
+    
+

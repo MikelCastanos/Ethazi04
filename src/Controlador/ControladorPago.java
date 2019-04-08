@@ -128,6 +128,12 @@ public class ControladorPago {
         VistaPago.getBoton_5e().addActionListener(actionListener);
         VistaPago.getBoton_2e().addActionListener(actionListener);
         VistaPago.getBoton_1e().addActionListener(actionListener);
+        VistaPago.getBoton_50c().addActionListener(actionListener);
+        VistaPago.getBoton_20c().addActionListener(actionListener);
+        VistaPago.getBoton_10c().addActionListener(actionListener);
+        VistaPago.getBoton_5c().addActionListener(actionListener);
+        VistaPago.getBoton_2c().addActionListener(actionListener);
+        VistaPago.getBoton_1c().addActionListener(actionListener);
     }
                
 
@@ -167,7 +173,7 @@ public class ControladorPago {
             pagoIgual.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);}
             //dispose();}
            
-            if(e.getSource()==boton_200e){ 
+            if(getBoton_200e()==boton_200e){ 
             cantidad_insertada=cantidad_insertada+billete200;
 
             VistaPago Pago=new VistaPago();
@@ -175,7 +181,7 @@ public class ControladorPago {
             Pago.setVisible(true);
            // dispose();       
            }
-           if(e.getSource()==boton_100e){ 
+           if(getBoton_100e()==boton_100e){ 
             cantidad_insertada=cantidad_insertada+billete100;
 
             VistaPago Pago=new VistaPago();
@@ -183,7 +189,7 @@ public class ControladorPago {
             Pago.setVisible(true);
            // dispose();       
            }
-           if(e.getSource()==boton_50e){ 
+           if(getBoton_50e()==boton_50e){ 
             cantidad_insertada=cantidad_insertada+billete50;
 
             VistaPago Pago=new VistaPago();
@@ -191,7 +197,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_20e){ 
+           if(getBoton_20e()==boton_20e){ 
             cantidad_insertada=cantidad_insertada+billete20;
 
             VistaPago Pago=new VistaPago();
@@ -199,7 +205,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_10e){ 
+           if(getBoton_10e()==boton_10e){ 
             cantidad_insertada=cantidad_insertada+billete10;
 
             VistaPago Pago=new VistaPago();
@@ -207,7 +213,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_5e){ 
+           if(getBoton_5e()==boton_5e){ 
             cantidad_insertada=cantidad_insertada+billete5;
 
             VistaPago Pago=new VistaPago();
@@ -215,7 +221,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_2e){ 
+           if(getBoton_2e()==boton_2e){ 
             cantidad_insertada=cantidad_insertada+moneda2;
 
             VistaPago Pago=new VistaPago();
@@ -223,7 +229,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_1e){ 
+           if(getBoton_1e()==boton_1e){ 
             cantidad_insertada=cantidad_insertada+moneda1;
 
             VistaPago Pago=new VistaPago();
@@ -231,7 +237,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_50c){ 
+           if(getBoton_50c()==boton_50c){ 
             cantidad_insertada=cantidad_insertada+moneda50c;
 
             VistaPago Pago=new VistaPago();
@@ -239,7 +245,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_20c){ 
+           if(getBoton_20c()==boton_20c){ 
             cantidad_insertada=cantidad_insertada+moneda20c;
 
             VistaPago Pago=new VistaPago();
@@ -247,7 +253,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_10c){ 
+           if(getBoton_10c()==boton_10c){ 
             cantidad_insertada=cantidad_insertada+moneda10c;
 
             VistaPago Pago=new VistaPago();
@@ -255,7 +261,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_5c){ 
+           if(getBoton_5c()==boton_5c){ 
             cantidad_insertada=cantidad_insertada+moneda5c;
 
             VistaPago Pago=new VistaPago();
@@ -263,7 +269,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_2c){ 
+           if(getBoton_2c()==boton_2c){ 
             cantidad_insertada=cantidad_insertada+moneda2c;
 
             VistaPago Pago=new VistaPago();
@@ -271,7 +277,7 @@ public class ControladorPago {
             Pago.setVisible(true);
             //dispose();       
            }
-           if(e.getSource()==boton_1c){ 
+           if(getBoton_1c()==boton_1c){ 
             cantidad_insertada=cantidad_insertada+moneda1c;
 
             VistaPago Pago=new VistaPago();

@@ -19,7 +19,7 @@ import javax.swing.SwingUtilities;
 public class VistaEleccion extends JFrame {
     
         JLabel mensaje_eleccion;
-        JComboBox eleccion;
+        public JComboBox eleccion;
         static JButton boton_siguiente3;
     
     public VistaEleccion(){
@@ -42,6 +42,8 @@ public class VistaEleccion extends JFrame {
 
         
         ControladorEleccion cont=new ControladorEleccion(boton_siguiente3);
+        
+
     }
     
     

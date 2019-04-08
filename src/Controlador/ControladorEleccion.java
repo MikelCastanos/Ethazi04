@@ -5,9 +5,12 @@
  */
 package Controlador;
 
+import Modelo.ConsultaHotel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Iterator;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,4 +28,10 @@ public class ControladorEleccion {
         });
     }
     
-}
+
+        
+        
+    }
+
+    
+

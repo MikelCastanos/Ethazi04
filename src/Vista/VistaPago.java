@@ -21,7 +21,7 @@ public class VistaPago extends JFrame {
 
    
 public VistaPago(){
-            
+          
             setLayout(null);
           
             boton_volver=new javax.swing.JButton();
@@ -216,30 +216,8 @@ public VistaPago(){
         return boton_1c;
     }
 
-    public static int getBillete200() {
-        return billete200;
-    }
-
-    public static int getBillete100() {
-        return billete100;
-    }
-
-    public static int getBillete50() {
-        return billete50;
-    }
-
-    public static int getBillete20() {
-        return billete20;
-    }
-
-    public static int getBillete10() {
-        return billete10;
-    }
-
-    public static int getBillete5() {
-        return billete5;
-    }
-
+    
+    
 }
 
 

@@ -16,10 +16,10 @@ public class VistaBienvenida extends JFrame{
     
     JLabel mensaje_bienvenida;
     static JButton boton_siguiente;
-    
+   
     
     public VistaBienvenida(){
-      
+    
         boton_siguiente=new javax.swing.JButton();
 
         setLayout(null);

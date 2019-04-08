@@ -105,28 +105,42 @@ public class ConsultaHotel {
         return consultaUbicacion;
     }
   
-   public int cosultaPrecio(String nombreHotel){
-//        Instanciar BBDD
+   public ArrayList consultaCompleta(String nombreHotel){
+// Instanciar BBDD
+
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
         Connection con= conexion.conectar();
-        int precio=0;
-//        Consulta
-        String query="Select precio from hotel where nombre='"+nombreHotel+"'";
-//        Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
+// Crear ArrayList
+        ArrayList infoCompleta = new ArrayList<>();
+// Consulta
+        String query="Select * from hotel where Nombre='"+nombreHotel+"'";
+// Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(con, query);
-//        Recorrer todos los datos a mostrar
+//  Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
-                precio=rs.getInt("Precio");
-                System.out.println(precio);
+//           Si descomentamos la siguiente linea nos muestra todos los datos del hotel que ocincide con la ubicacion
+
+//              System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
+
+//  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
+                int codigoHotel=rs.getInt(1);
+                String nombre=rs.getString(2);
+                int precio=rs.getInt(3);
+                String ubicacion=rs.getString(4);
+                infoCompleta.add(codigoHotel);
+                infoCompleta.add(nombre);
+                infoCompleta.add(precio);
+                infoCompleta.add(ubicacion);
             }
 //        Control de errores
         }catch(Exception e){
-            System.out.println("Error Precio");
-            System.out.println(e.getMessage());
+            System.out.println("Ubicacion  "+e.getMessage());
         }
-        return precio;
-    }     
+//        System.out.println("Hoteles en son "+consultaUbicacion);
+       System.out.println(infoCompleta);
+        return infoCompleta;
+    }
 }
 

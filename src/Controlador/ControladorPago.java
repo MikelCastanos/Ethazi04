@@ -18,9 +18,15 @@ import static vista.VistaPago.*;
 
 
 public class ControladorPago extends JFrame {
+   public double calculo_preciototal= Controlador.ControladorEstanciaSeleccionada.precio1cents;
+   public int billete200=20000,billete100=10000,billete50=5000,billete20=2000,billete10=1000,billete5=500,moneda2=200,moneda1=100,moneda50c=50,moneda20c=20,moneda10c=10,moneda5c=5,moneda2c=2,moneda1c=1;
+   public static double cantidad_insertada=0;
+   public static double precioFinal, precioFinalcents;
+   
     VistaPago pago;
     Modelo modelo;
     ActionListener actionListener;
+   
 
     
     public ControladorPago(JButton boton_volver, JButton boton_continuar, JButton boton_200e, JButton boton_100e,
@@ -173,7 +179,7 @@ public class ControladorPago extends JFrame {
            }
 }
             
-        public void e100(){
+      public void e100(){
            if(getBoton_100e()==boton_100e){ 
             cantidad_insertada=cantidad_insertada+billete100;
 
@@ -236,6 +242,8 @@ public class ControladorPago extends JFrame {
             Pago.setVisible(true);
            }       
            }
+           
+           
            public void c50(){
            if(getBoton_50c()==boton_50c){ 
             cantidad_insertada=cantidad_insertada+moneda50c;
@@ -245,6 +253,8 @@ public class ControladorPago extends JFrame {
             Pago.setVisible(true);
            }      
            }
+           
+           
            public void c20(){
            if(getBoton_20c()==boton_20c){ 
             cantidad_insertada=cantidad_insertada+moneda20c;
@@ -254,6 +264,8 @@ public class ControladorPago extends JFrame {
             Pago.setVisible(true);
            }       
            }
+           
+           
            public void c10(){
            if(getBoton_10c()==boton_10c){ 
             cantidad_insertada=cantidad_insertada+moneda10c;
@@ -263,6 +275,8 @@ public class ControladorPago extends JFrame {
             Pago.setVisible(true);
            }       
            }
+           
+           
            public void c5(){
            if(getBoton_5c()==boton_5c){ 
             cantidad_insertada=cantidad_insertada+moneda5c;
@@ -272,6 +286,8 @@ public class ControladorPago extends JFrame {
             Pago.setVisible(true);
            }      
            }
+           
+           
            public void c2(){
            if(getBoton_2c()==boton_2c){ 
             cantidad_insertada=cantidad_insertada+moneda2c;
@@ -281,6 +297,8 @@ public class ControladorPago extends JFrame {
             Pago.setVisible(true);
            }      
            }
+           
+           
            public void c1(){
            if(getBoton_1c()==boton_1c){ 
             cantidad_insertada=cantidad_insertada+moneda1c;

@@ -2,13 +2,17 @@
 package vista;
 
 import Controlador.ControladorPagoMayor;
+import static Controlador.ControladorPagoMayor.*;
 import javax.swing.*;
 import javax.swing.ImageIcon;
-import static vista.VistaPago.*;
+import vista.VistaPago;
+import static Controlador.ControladorPago.*;
 
 
-public class VistaPagoMayor extends JFrame {
+
+public class VistaPagoMayor extends JFrame{
     
+
     public static double precioFinal2, precioFinal2cents;
     public static double vueltasCentimos;
     public static double vueltasBillete200;

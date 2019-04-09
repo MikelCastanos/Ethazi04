@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.ImageIcon;
 import static vista.VistaPago.*;
+import vista.VistaPago;
+import static Controlador.ControladorPago.*;
+import Controlador.ControladorPago;
 
 public class VistaPagoMenor extends JFrame implements ActionListener{
     public static JLabel mensajemenor, mensajemenor2, logo1;

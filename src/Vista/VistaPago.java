@@ -1,13 +1,9 @@
 package vista;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.ImageIcon;
 import static Controlador.ControladorPago.*;
 import Controlador.ControladorPago;
-
-
 
 public class VistaPago extends JFrame {
     

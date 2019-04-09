@@ -2,8 +2,6 @@ package vista;
 
 import Controlador.ControladorPagoIgual;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.ImageIcon;
 
 

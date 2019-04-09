@@ -10,7 +10,6 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import vista.VistaPagoIgual;
-import static vista.VistaPagoIgual.boton_finalizar;
 
 public class ControladorPagoIgual {
     

@@ -133,7 +133,7 @@ public class ControladorPago extends JFrame {
  
             if(cantidad_insertada>precioFinalcents){  
             VistaPagoMayor pagoMayor=new VistaPagoMayor();
-            pagoMayor.setBounds(0,0,600,750);
+            pagoMayor.setBounds(0,0,600,730);
             pagoMayor.setVisible(true);
             pagoMayor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             }
@@ -159,7 +159,7 @@ public class ControladorPago extends JFrame {
             
             
             VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setBounds(0,0,400,300);
+            iniciostart.setBounds(0,0,600,730);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
             

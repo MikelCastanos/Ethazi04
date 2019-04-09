@@ -36,7 +36,7 @@ public class Main {
     VistaBienvenida vistab=new VistaBienvenida();
 
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    vistab.setBounds(0,0,600,850);
+    vistab.setBounds(0,0,600,730);
     vistab.setVisible(true);
 
     }}

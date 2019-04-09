@@ -52,7 +52,7 @@ public class ControladorEleccion {
            public void accionBotonEleccion(JComboBox eleccion){
                cogerDatosEleccion(eleccion);
             VistaEstanciaSeleccionada vistaes=new VistaEstanciaSeleccionada(eleccion);
-            vistaes.setBounds(0,0,600,600);
+            vistaes.setBounds(0,0,600,730);
             vistaes.setVisible(true);
             
                

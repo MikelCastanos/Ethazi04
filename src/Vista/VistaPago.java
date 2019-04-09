@@ -11,9 +11,9 @@ public class VistaPago extends JFrame {
    public static JLabel mensajePago,  preciototal, preciototal_IVA, men_cantidad_insertada,men_cantidad_pagar, logo1,mensajeRestante;
   
 public VistaPago(){
-          
+
             setLayout(null);
-          
+
             boton_volver=new javax.swing.JButton();
             boton_continuar=new javax.swing.JButton();
             boton_200e=new javax.swing.JButton();
@@ -141,6 +141,11 @@ public VistaPago(){
        cont = new ControladorPago(boton_volver, boton_continuar, boton_200e, boton_100e, boton_50e, boton_20e, boton_10e,
                boton_5e, boton_2e, boton_1e, boton_50c, boton_20c, boton_10c, boton_5c, boton_2c, boton_1c);
             
+            ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(585,695);
+            add(logo1);
+            validate();   
 }
 
     public static JButton getBoton_volver() {

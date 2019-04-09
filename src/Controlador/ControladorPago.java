@@ -157,7 +157,7 @@ public class ControladorPago extends JFrame {
         
         if(getBoton_volver()==boton_volver){
             
-            
+            cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
             iniciostart.setBounds(0,0,600,730);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

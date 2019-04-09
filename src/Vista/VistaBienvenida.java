@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import Controlador.*;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import static vista.VistaPago.logo1;
 
 /**
  *
@@ -23,17 +25,22 @@ public class VistaBienvenida extends JFrame{
         boton_siguiente=new javax.swing.JButton();
 
         setLayout(null);
-        mensaje_bienvenida=new JLabel("Bienvenido a Bidai-On");
-        mensaje_bienvenida.setBounds(10,20,200,30);
-        add(mensaje_bienvenida);
+        /*mensaje_bienvenida=new JLabel("¡BIENVENIDO A BIDAI-ON!");
+        mensaje_bienvenida.setBounds(200,200,200,30);
+        add(mensaje_bienvenida);*/
         
-        boton_siguiente=new JButton("Siguiente");
-        boton_siguiente.setBounds(10,60,100,30);
+        boton_siguiente=new JButton("¡EMPEZEMOS!");
+        boton_siguiente.setBounds(400,625,150,30);
         add(boton_siguiente);
         
         
         ControladorBienvenida cont=new ControladorBienvenida(boton_siguiente);
         
+        ImageIcon icono=new ImageIcon("src//images/fondoP.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(585,695);
+            add(logo1);
+            validate(); 
         
     }
 

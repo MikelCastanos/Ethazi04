@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import vista.VistaPagoMayor;
+import static Controlador.ControladorPago.*;
 
 
 public class ControladorPagoMayor {
@@ -38,7 +39,7 @@ public class ControladorPagoMayor {
     }
         
         public void impr(){
-    
+    cantidad_insertada=0;
     VistaBienvenida vistab=new VistaBienvenida();
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     vistab.setBounds(0,0,600,730);

@@ -12,8 +12,10 @@ import javax.swing.JLabel;
 import Controlador.*;
 import static Vista.VistaBienvenida.boton_siguiente;
 import java.util.Date;
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.SwingUtilities;
+import static vista.VistaPago.logo1;
 
 /**
  *
@@ -32,12 +34,12 @@ public class VistaUbicacion extends JFrame{
         boton_siguiente2=new javax.swing.JButton();
         
         setLayout(null);
-        mensaje_ubicacion=new JLabel("Seleccionar Ubicacion");
-        mensaje_ubicacion.setBounds(10,20,200,30);
+        mensaje_ubicacion=new JLabel("SELECCIONAR UBICACIÓN");
+        mensaje_ubicacion.setBounds(200,200,200,30);
         add(mensaje_ubicacion);
         
         ubicacion=new JComboBox();
-        ubicacion.setBounds(10,40,200,30);
+        ubicacion.setBounds(180,230,200,30);
         add(ubicacion);
         
        /* mensaje_alojamiento=new JLabel("Tipo de Alojamiento");
@@ -49,13 +51,26 @@ public class VistaUbicacion extends JFrame{
         add(tipo_alojamiento);*/
         
         boton_siguiente2=new JButton("Siguiente");
-        boton_siguiente2.setBounds(10,140,100,30);
+        boton_siguiente2.setBounds(450,340,100,30);
         add(boton_siguiente2);
         
         ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2,ubicacion);
         
                 
         cont.rellenarComboBox(ubicacion);
+        
+        ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(575,200);
+            add(logo2);
+            validate();
+        
+        ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(585,695);
+            add(logo1);
+            validate();
+            
         
     }
 

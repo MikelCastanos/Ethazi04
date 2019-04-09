@@ -10,10 +10,12 @@ import static Controlador.ControladorEleccion.seleccionEleccion;
 import Controlador.ControladorEstanciaSeleccionada;
 import Modelo.ConsultaHotel;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import static vista.VistaPago.logo1;
 
 
 /**
@@ -23,7 +25,7 @@ import javax.swing.JLabel;
 public class VistaEstanciaSeleccionada extends JFrame{
     
     
-        JLabel mensajeEstancia,datosEstancia;
+        JLabel mensajeEstancia,datosEstancia,mensajeEstancia1;
         JButton boton_siguiente4;
         
     
@@ -37,17 +39,21 @@ public class VistaEstanciaSeleccionada extends JFrame{
         
         setLayout(null);
         
-        mensajeEstancia=new JLabel("Estos son los datos de tu estancia: ");
-        mensajeEstancia.setBounds(10,20,200,30);
+        mensajeEstancia=new JLabel("¡GRAN ELECCIÓN!");
+        mensajeEstancia.setBounds(230,200,350,30);
         add(mensajeEstancia);
+        
+        mensajeEstancia1=new JLabel("Estos son los datos de tu elección:");
+        mensajeEstancia1.setBounds(190,225,350,30);
+        add(mensajeEstancia1);
         
         ConsultaHotel cons=new ConsultaHotel();
         datosEstancia=new JLabel(cons.consultaCompleta(seleccionEleccion).toString());  
-        datosEstancia.setBounds(10,40,400,30);
+        datosEstancia.setBounds(175,275,400,30);
         add(datosEstancia);
 
         boton_siguiente4=new JButton("Siguiente");
-        boton_siguiente4.setBounds(10,140,100,30);
+        boton_siguiente4.setBounds(450,340,100,30);
         add(boton_siguiente4);
         
         ControladorEstanciaSeleccionada cont=new ControladorEstanciaSeleccionada(boton_siguiente4);
@@ -56,6 +62,17 @@ public class VistaEstanciaSeleccionada extends JFrame{
         cont3.cogerDatosEleccion(eleccion);
         cont.sacarDatosEstancia();
         
+        ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(575,200);
+            add(logo2);
+            validate();
+        
+        ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(585,695);
+            add(logo1);
+            validate();
 
         
     }

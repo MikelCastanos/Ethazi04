@@ -13,14 +13,14 @@ public class VistaPagoMenor extends JFrame implements ActionListener{
     
     public VistaPagoMenor(){
             
-        setLayout(null);
         
-            ImageIcon icono=new ImageIcon("src//images/salding.png");
+        setLayout(null);
+        ImageIcon icono=new ImageIcon("src//images/!.png");
             logo1=new JLabel(icono);
-            logo1.setSize(100,100);
+            logo1.setSize(100,150);
             add(logo1);
-            validate(); 
-            
+            validate();
+        
             mensajemenor=new JLabel("La cantidad insertada es inferior al precio total.");
             mensajemenor.setBounds(120,40,400,20);
             add(mensajemenor);

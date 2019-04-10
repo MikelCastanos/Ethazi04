@@ -7,6 +7,7 @@ package Controlador;
 
 import static Controlador.ControladorEleccion.seleccionEleccion;
 import Modelo.ConsultaHotel;
+import Modelo.insertarReserva;
 import Vista.VistaEstanciaSeleccionada;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -23,12 +24,16 @@ public class ControladorEstanciaSeleccionada {
     
     public static int precio1;
     public static int precio1cents;
+    public static int codigoHotelInsertar;
+    public static String nombreHotelInsertar;
+    
     
     public ControladorEstanciaSeleccionada(JButton boton_siguiente3){
                    
         boton_siguiente3.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 irPago();
+                insertarDatosEstancia();
             }
             
         });}
@@ -49,6 +54,13 @@ public class ControladorEstanciaSeleccionada {
     public void sacarDatosEstancia(){
            ConsultaHotel hotel= new ConsultaHotel();
            hotel.consultaCompleta(seleccionEleccion);
+    }
+    public void insertarDatosEstancia(){
+        ConsultaHotel cons=new ConsultaHotel();
+        codigoHotelInsertar=(int) cons.consultaCompleta(seleccionEleccion).get(0);
+        nombreHotelInsertar=(String) cons.consultaCompleta(seleccionEleccion).get(1);
+        insertarReserva insertar= new insertarReserva();
+        insertar.insertar(codigoHotelInsertar,nombreHotelInsertar); 
     }
     }
     

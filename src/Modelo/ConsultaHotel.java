@@ -86,12 +86,12 @@ public class ConsultaHotel {
         String query="Select * from hotel GROUP BY Ubicacion";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(con, query);
-//  Recorrer todos los datos a mostrar
+//Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
-//           Si descomentamos la siguiente linea nos muestra todos los datos del hotel que ocincide con la ubicacion
+//Si descomentamos la siguiente linea nos muestra todos los datos del hotel que ocincide con la ubicacion
 
-//              System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
+//System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
 
 //  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
                 String ubicacion=rs.getString(4);

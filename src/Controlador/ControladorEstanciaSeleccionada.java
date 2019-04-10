@@ -11,6 +11,9 @@ import Modelo.insertarReserva;
 import Vista.VistaEstanciaSeleccionada;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -34,6 +37,7 @@ public class ControladorEstanciaSeleccionada {
             public void mouseClicked(MouseEvent e){
                 irPago();
                 insertarDatosEstancia();
+                generarArchivoTexto();
             }
             
         });}
@@ -62,6 +66,22 @@ public class ControladorEstanciaSeleccionada {
         insertarReserva insertar= new insertarReserva();
         insertar.insertar(codigoHotelInsertar,nombreHotelInsertar); 
     }
-    }
     
+    public void generarArchivoTexto(){
+        FileWriter fw;
+    
+        try {
+            ConsultaHotel cons=new ConsultaHotel();
+            
+            fw = new FileWriter(new File("mytextfile.txt"));
+            
+            fw.write(String.format(cons.consultaCompleta(seleccionEleccion).toString()));
+            
+
+            fw.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+}
 

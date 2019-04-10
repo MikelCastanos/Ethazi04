@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import Vista.*;
 import Modelo.*;
 import Aplicacion.*;
+import BBDD.Conexion;
 import java.awt.event.MouseEvent;
 import java.util.Iterator;
 import javax.swing.JComboBox;
@@ -56,7 +57,7 @@ public class ControladorUbicacion {
             vistae.setVisible(true);
             cogerDatos(ubicacion);
             System.out.println(seleccionUbicacion);
-            
+
             
             
 

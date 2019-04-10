@@ -6,6 +6,7 @@ import static Controlador.ControladorPagoMayor.*;
 import javax.swing.*;
 import javax.swing.ImageIcon;
 import static Controlador.ControladorPago.*;
+import static vista.VistaPago.logo1;
 
 
 
@@ -36,12 +37,12 @@ public class VistaPagoMayor extends JFrame{
     public VistaPagoMayor(){
             
      setLayout(null);  
-            precioFinal2=Math.floor(((10)*1.21)*100d)/100d;
-            precioFinal2cents=precioFinal2*100;
+            precioFinal2=Controlador.ControladorEstanciaSeleccionada.precio1cents;
+            precioFinal2cents=precioFinal2;
             vueltasCentimos=cantidad_insertada-precioFinal2cents;
 
         
-            mensajeVueltas=new JLabel("Cantidad a devolver: "+vueltasCentimos/100+" Euros");
+            mensajeVueltas=new JLabel("CANTIDAD A DEVOLVER: "+vueltasCentimos/100+"€");
             mensajeVueltas.setBounds(220,70,220,20);
             add(mensajeVueltas);
             
@@ -231,6 +232,12 @@ public class VistaPagoMayor extends JFrame{
             terminar_compra.setBounds(200,650,100,30);
             add(terminar_compra);
     
+            ImageIcon icono=new ImageIcon("src//images/fondoPago.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(585,695);
+            add(logo1);
+            validate();
+            
             ControladorPagoMayor cont=new ControladorPagoMayor(terminar_compra);
     
     }

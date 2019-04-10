@@ -53,6 +53,7 @@ public class ControladorBienvenida extends JFrame{
 
             VistaUbicacion vistau=new VistaUbicacion();
             vistau.setBounds(0,0,600,730);
+            vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistau.setVisible(true);
         }
     

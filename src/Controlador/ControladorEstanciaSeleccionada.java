@@ -11,6 +11,7 @@ import Vista.VistaEstanciaSeleccionada;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import vista.VistaPago;
 
@@ -40,6 +41,7 @@ public class ControladorEstanciaSeleccionada {
                 System.out.println(precio1);
                 VistaPago vistap=new VistaPago();
                 vistap.setBounds(0,0,600,730);
+                vistap.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistap.setVisible(true);
                 precio1cents=precio1*100;
     }

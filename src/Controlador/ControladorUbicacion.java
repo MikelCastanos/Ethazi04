@@ -52,6 +52,7 @@ public class ControladorUbicacion {
         
             VistaEleccion vistae=new VistaEleccion(ubicacion);
             vistae.setBounds(0,0,600,730);
+            vistae.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistae.setVisible(true);
             cogerDatos(ubicacion);
             System.out.println(seleccionUbicacion);

@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 import Controlador.ControladorUbicacion;
 import static Controlador.ControladorUbicacion.seleccionUbicacion;
 import Vista.VistaEstanciaSeleccionada;
+import javax.swing.JFrame;
 
 
 /**
@@ -53,6 +54,7 @@ public class ControladorEleccion {
                cogerDatosEleccion(eleccion);
             VistaEstanciaSeleccionada vistaes=new VistaEstanciaSeleccionada(eleccion);
             vistaes.setBounds(0,0,600,730);
+            vistaes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistaes.setVisible(true);
             
                

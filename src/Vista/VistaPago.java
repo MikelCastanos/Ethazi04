@@ -118,7 +118,7 @@ public VistaPago(){
             boton_1c.setBounds(300,450,50,50);
             add(boton_1c);
             
-            precioFinal=Math.floor(((Controlador.ControladorEstanciaSeleccionada.precio1)*1.21)*100d)/100d;
+            precioFinal=Controlador.ControladorEstanciaSeleccionada.precio1;
             precioFinalcents=precioFinal*100;
             
             preciototal_IVA= new JLabel("Precio Final (IVA incluido): "+precioFinal+"€");
@@ -141,7 +141,7 @@ public VistaPago(){
        cont = new ControladorPago(boton_volver, boton_continuar, boton_200e, boton_100e, boton_50e, boton_20e, boton_10e,
                boton_5e, boton_2e, boton_1e, boton_50c, boton_20c, boton_10c, boton_5c, boton_2c, boton_1c);
             
-            ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            ImageIcon icono=new ImageIcon("src//images/fondoPago.png");
             logo1=new JLabel(icono);
             logo1.setSize(585,695);
             add(logo1);

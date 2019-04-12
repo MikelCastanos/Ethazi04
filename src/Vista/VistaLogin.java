@@ -48,9 +48,10 @@ public class VistaLogin extends JFrame {
         contrasenaField.setBounds(100,160,120,30);
         add(contrasenaField);
         
-                botonLogin=new JButton("Entrar");
+        botonLogin=new JButton("Entrar");
         botonLogin.setBounds(100,200,120,30);
         add(botonLogin);
+        
         
         
     }

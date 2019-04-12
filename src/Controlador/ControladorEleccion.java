@@ -32,6 +32,7 @@ public class ControladorEleccion {
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
         accionBotonEleccion(eleccion);
+        
             }
             
         });}
@@ -56,7 +57,8 @@ public class ControladorEleccion {
             vistaes.setBounds(0,0,600,730);
             vistaes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistaes.setVisible(true);
-            
+          ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
+          con.cargarValores();
                
            }
            

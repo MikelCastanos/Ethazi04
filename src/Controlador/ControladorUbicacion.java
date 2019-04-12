@@ -66,7 +66,7 @@ public class ControladorUbicacion {
 
          public void rellenarComboBox (JComboBox ubicacion){
            ConsultaHotel hotel= new ConsultaHotel();
-           hotel.ubicacion();
+//           hotel.ubicacion();
            
         Iterator<String> i= hotel.ubicacion().iterator();
         while(i.hasNext()){

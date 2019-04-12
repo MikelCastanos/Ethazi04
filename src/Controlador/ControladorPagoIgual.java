@@ -1,6 +1,7 @@
 
 package Controlador;
 
+import BBDD.Conexion;
 import Modelo.Modelo;
 import Vista.VistaBienvenida;
 import java.awt.event.ActionEvent;
@@ -38,12 +39,14 @@ public class ControladorPagoIgual {
     }
         
         public void impr(){
+    Conexion conn= new Conexion();
+    conn.desconectar();
     cantidad_insertada=0;
     VistaBienvenida vistab=new VistaBienvenida();
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     vistab.setBounds(0,0,600,730);
     vistab.setVisible(true);
-            
+       
         }
 }
     

@@ -14,6 +14,7 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -29,7 +30,7 @@ public class ControladorEstanciaSeleccionada {
     public static int precio1cents;
     public static int codigoHotelInsertar;
     public static String nombreHotelInsertar;
-    
+    public static ArrayList datosHotel= new ArrayList<>();
     
     public ControladorEstanciaSeleccionada(JButton boton_siguiente3){
                    
@@ -41,18 +42,31 @@ public class ControladorEstanciaSeleccionada {
             }
             
         });}
+    public ControladorEstanciaSeleccionada(){
+        
+    }
+//    metodo para cargara variables desde el arraylist que recibimos de la consulta 
+//    revisar los demas ocntroladores para hacer algo parecido y no llamar a las consultas tantas veces
+    public void cargarValores(){
+        
+        ConsultaHotel cons=new ConsultaHotel();
+        datosHotel= cons.consultaCompleta(seleccionEleccion);
+        precio1=(int)datosHotel.get(2);
+        codigoHotelInsertar=(int)datosHotel.get(0);
+        nombreHotelInsertar=(String)datosHotel.get(1);
+    }
     
     
     public void irPago(){
-                ConsultaHotel cons=new ConsultaHotel();
-                precio1=(int) cons.consultaCompleta(seleccionEleccion).get(2);
-                System.out.println("El precio es: ");
-                System.out.println(precio1);
-                VistaPago vistap=new VistaPago();
-                vistap.setBounds(0,0,600,730);
-                vistap.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistap.setVisible(true);
-                precio1cents=precio1*100;
+        ConsultaHotel cons=new ConsultaHotel();
+//        precio1=(int) cons.consultaCompleta(seleccionEleccion).get(2);
+        System.out.println("El precio es: ");
+        System.out.println(precio1);
+        VistaPago vistap=new VistaPago();
+        vistap.setBounds(0,0,600,730);
+        vistap.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        vistap.setVisible(true);
+        precio1cents=precio1*100;
     }
     
     public void sacarDatosEstancia(){
@@ -61,8 +75,8 @@ public class ControladorEstanciaSeleccionada {
     }
     public void insertarDatosEstancia(){
         ConsultaHotel cons=new ConsultaHotel();
-        codigoHotelInsertar=(int) cons.consultaCompleta(seleccionEleccion).get(0);
-        nombreHotelInsertar=(String) cons.consultaCompleta(seleccionEleccion).get(1);
+//        codigoHotelInsertar=(int) cons.consultaCompleta(seleccionEleccion).get(0);
+//        nombreHotelInsertar=(String) cons.consultaCompleta(seleccionEleccion).get(1);
         insertarReserva insertar= new insertarReserva();
         insertar.insertar(codigoHotelInsertar,nombreHotelInsertar); 
     }

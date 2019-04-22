@@ -52,7 +52,7 @@ public class ConsultaHotel {
 // Crear ArrayList
         ArrayList<String> consulta = new ArrayList<String>();
 // Consulta
-        String query="Select * from hotel where ubicacion='"+ubicacionHotel+"'";
+        String query="select distinct nombre_hotel from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel where ciudad='"+ubicacionHotel+"'";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(con, query);
 //  Recorrer todos los datos a mostrar
@@ -63,7 +63,7 @@ public class ConsultaHotel {
 //              System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
 
 //  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
-                String nombreHotel=rs.getString(2);
+                String nombreHotel=rs.getString(1);
                 consulta.add(nombreHotel);
             }
 //        Control de errores
@@ -83,7 +83,7 @@ public class ConsultaHotel {
 // Crear ArrayList
         ArrayList<String> consultaUbicacion = new ArrayList<String>();
 // Consulta
-        String query="Select * from hotel GROUP BY Ubicacion";
+        String query="select distinct ciudad from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel;";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(con, query);
 //Recorrer todos los datos a mostrar
@@ -94,7 +94,7 @@ public class ConsultaHotel {
 //System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
 
 //  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
-                String ubicacion=rs.getString(4);
+                String ubicacion=rs.getString(1);
                 consultaUbicacion.add(ubicacion);
             }
 //        Control de errores
@@ -114,7 +114,7 @@ public class ConsultaHotel {
 // Crear ArrayList
         ArrayList infoCompleta = new ArrayList<>();
 // Consulta
-        String query="Select * from hotel where Nombre='"+nombreHotel+"'";
+        String query="Select * from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel where nombre_hotel='"+nombreHotel+"'";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(con, query);
 //  Recorrer todos los datos a mostrar
@@ -127,12 +127,21 @@ public class ConsultaHotel {
 //  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
                 int codigoHotel=rs.getInt(1);
                 String nombre=rs.getString(2);
-                int precio=rs.getInt(3);
-                String ubicacion=rs.getString(4);
+                int codioPostal=rs.getInt(3);
+//                String ubicacion=rs.getString(4);
+                String ciudad=rs.getString(5);
+                String provincia=rs.getString(6);
+                String calle=rs.getString(7);
+
                 infoCompleta.add(codigoHotel);
                 infoCompleta.add(nombre);
-                infoCompleta.add(precio);
-                infoCompleta.add(ubicacion);
+                infoCompleta.add(codioPostal);
+//                infoCompleta.add(ubicacion);
+                infoCompleta.add(ciudad);
+                infoCompleta.add(provincia);
+                infoCompleta.add(calle);
+
+
             }
 //        Control de errores
         }catch(Exception e){

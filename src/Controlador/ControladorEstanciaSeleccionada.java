@@ -26,10 +26,17 @@ import vista.VistaPago;
  */
 public class ControladorEstanciaSeleccionada {
     
+    public static int codigoHabitacionInsertar;
+    public static int codigoUsuarioInsertar;
+    public static String fechaGestion;
+    public static String fechaEntrada;
+    public static String fechaSalida;
+
+
+
     public static int precio1;
     public static int precio1cents;
     public static int codigoHotelInsertar;
-    public static String nombreHotelInsertar;
     public static ArrayList datosHotel= new ArrayList<>();
     
     public ControladorEstanciaSeleccionada(JButton boton_siguiente3){
@@ -51,9 +58,13 @@ public class ControladorEstanciaSeleccionada {
         
         ConsultaHotel cons=new ConsultaHotel();
         datosHotel= cons.consultaCompleta(seleccionEleccion);
-        precio1=(int)datosHotel.get(2);
+        codigoHabitacionInsertar=100;
         codigoHotelInsertar=(int)datosHotel.get(0);
-        nombreHotelInsertar=(String)datosHotel.get(1);
+        codigoUsuarioInsertar=2000;
+        fechaGestion="2019-02-03";
+        fechaEntrada="2019-03-04";
+        fechaSalida="2019-03-06";
+        precio1=80;
     }
     
     
@@ -78,7 +89,7 @@ public class ControladorEstanciaSeleccionada {
 //        codigoHotelInsertar=(int) cons.consultaCompleta(seleccionEleccion).get(0);
 //        nombreHotelInsertar=(String) cons.consultaCompleta(seleccionEleccion).get(1);
         insertarReserva insertar= new insertarReserva();
-        insertar.insertar(codigoHotelInsertar,nombreHotelInsertar); 
+        insertar.insertar(codigoHabitacionInsertar,codigoHotelInsertar,codigoUsuarioInsertar,fechaGestion,fechaEntrada,fechaSalida,precio1); 
     }
     
     public void generarArchivoTexto(){

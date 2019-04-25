@@ -8,6 +8,7 @@ package Vista;
 import Controlador.ControladorEleccion;
 import static Controlador.ControladorEleccion.seleccionEleccion;
 import Controlador.ControladorEstanciaSeleccionada;
+import Modelo.Alojamiento;
 import Modelo.ConsultaHotel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -47,8 +48,11 @@ public class VistaEstanciaSeleccionada extends JFrame{
         mensajeEstancia1.setBounds(190,225,350,30);
         add(mensajeEstancia1);
         
-        ConsultaHotel cons=new ConsultaHotel();
-        datosEstancia=new JLabel(cons.consultaCompleta(seleccionEleccion).toString());  
+//        ConsultaHotel cons=new ConsultaHotel();
+//        datosEstancia=new JLabel(cons.consultaCompleta(seleccionEleccion).toString()); 
+        
+
+        datosEstancia=new JLabel(Alojamiento.getNombre()+" "+Alojamiento.getProvincia()+" "+Alojamiento.getCiudad()+" "+Alojamiento.getCalle());
         datosEstancia.setBounds(175,275,400,30);
         add(datosEstancia);
 

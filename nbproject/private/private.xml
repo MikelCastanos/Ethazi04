@@ -3,9 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ira_a/Documents/NetBeansProjects/ethazi4/Ethazi04/src/Modelo/ConsultaHotel.java</file>
-            <file>file:/C:/Users/ira_a/Documents/NetBeansProjects/ethazi4/Ethazi04/src/Modelo/insertarReserva.java</file>
-            <file>file:/C:/Users/ira_a/Documents/NetBeansProjects/ethazi4/Ethazi04/src/Aplicacion/Main.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Vista/VistaPagoMenor.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Vista/VistaBienvenida.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Vista/VistaUbicacion.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Modelo/ConsultaHotel.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Modelo/Estancia.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Controlador/ControladorPago.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Aplicacion/Main.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Vista/VistaEstanciaSeleccionada.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Modelo/Cocina.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Controlador/ControladorBienvenida.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Controlador/ControladorEstanciaSeleccionada.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Modelo/Hotel.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Controlador/ControladorEleccion.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Controlador/ControladorUbicacion.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Vista/VistaPago.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Modelo/Dormitorio.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Modelo/Comedor.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Vista/VistaEleccion.java</file>
+            <file>file:/D:/Proyectos%20Java/Ethazi04/src/Vista/VistaPagoMayor.java</file>
         </group>
     </open-files>
 </project-private>

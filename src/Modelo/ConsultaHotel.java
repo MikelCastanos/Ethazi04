@@ -17,6 +17,8 @@ import java.util.ArrayList;
  */
 public class ConsultaHotel {
     
+    public static Alojamiento hotel1=new Alojamiento();
+    
 //    Consulta estandar la dejo por si acaso pinta los datos d elos hoteles
     
     public void cargarHoteles(){
@@ -141,6 +143,18 @@ public class ConsultaHotel {
                 infoCompleta.add(provincia);
                 infoCompleta.add(calle);
 
+                
+                
+                Alojamiento.setNombre(rs.getString(2));
+                Alojamiento.setProvincia(rs.getString(6));
+                Alojamiento.setCalle(rs.getString(7));
+                Alojamiento.setCodigo_postal(3);
+                Alojamiento.setCiudad(rs.getString(5));
+                
+               
+                System.out.println(Alojamiento.getCalle());
+                
+                
 
             }
 //        Control de errores

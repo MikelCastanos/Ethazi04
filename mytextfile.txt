@@ -1,1 +1,1 @@
-[1003, Ekiza, 20008, Donosti, Gipuzkoa, Avd. de Satrustegi 13]
+[1005, Ritz, 87, Madrid, CA Madrid, Calle del Ritz 7]

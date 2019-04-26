@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Controlador.ControladorLogin;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,11 +17,12 @@ import javax.swing.JTextField;
  * @author ikasleaETHAZI
  */
 public class VistaLogin extends JFrame {
+
     
     JLabel mensaje_login, label_usuario, label_password;
-    JTextField usuarioField;
-    JPasswordField contrasenaField;
-    JButton botonLogin;
+    public static JTextField usuarioField;
+    public static JPasswordField contrasenaField;
+    public static JButton botonLogin;
     
     public VistaLogin(){
         
@@ -52,16 +54,44 @@ public class VistaLogin extends JFrame {
         botonLogin.setBounds(100,200,120,30);
         add(botonLogin);
         
+        ControladorLogin contL=new ControladorLogin(botonLogin);
+        
         
         
     }
     
     
+    
+    /*
     public static void main(String[] args) {
         VistaLogin vista=new VistaLogin();
         vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         vista.setBounds(0,0,600,600);
         vista.setVisible(true);
     }
-    
+    */
+
+    public static JTextField getUsuarioField() {
+        return usuarioField;
+    }
+
+    public  void setUsuarioField(JTextField usuarioField) {
+        this.usuarioField = usuarioField;
+    }
+
+    public static JPasswordField getContrasenaField() {
+        return contrasenaField;
+    }
+
+    public void setContrasenaField(JPasswordField contrasenaField) {
+        this.contrasenaField = contrasenaField;
+    }
+
+    public static JButton getBotonLogin() {
+        return botonLogin;
+    }
+
+    public static void setBotonLogin(JButton botonLogin) {
+        VistaLogin.botonLogin = botonLogin;
+    }
 }

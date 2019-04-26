@@ -34,7 +34,7 @@ public class VistaBienvenida extends JFrame{
         add(boton_siguiente);
         
         
-        ControladorBienvenida cont=new ControladorBienvenida(boton_siguiente);
+       ControladorBienvenida cont=new ControladorBienvenida(boton_siguiente);
         
         ImageIcon icono=new ImageIcon("src//images/fondoP.png");
             logo1=new JLabel(icono);

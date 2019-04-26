@@ -28,7 +28,7 @@ import Vista.VistaEleccion;
 
 
 
-public class ControladorBienvenida extends JFrame{
+public class ControladorBienvenida {
     
     VistaBienvenida vista;
     VistaUbicacion vista2;
@@ -38,7 +38,7 @@ public class ControladorBienvenida extends JFrame{
         public ControladorBienvenida(JButton boton_siguiente){
         boton_siguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                abrirVentanaUbicacion();
+                abrirVentanaLogin();
                 
                 
             }
@@ -46,15 +46,22 @@ public class ControladorBienvenida extends JFrame{
         });
     }
         
-        public void abrirVentanaUbicacion(){
+        public void abrirVentanaLogin(){
             
             //HACER DISPOSE SI HAY AGALLAS.
             
-
+            /*
             VistaUbicacion vistau=new VistaUbicacion();
             vistau.setBounds(0,0,600,730);
             vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistau.setVisible(true);
+            */
+            
+        VistaLogin vista=new VistaLogin();
+        vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        vista.setBounds(0,0,600,725);
+        vista.setVisible(true);
+        
         }
     
     

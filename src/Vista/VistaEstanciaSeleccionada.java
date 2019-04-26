@@ -51,8 +51,10 @@ public class VistaEstanciaSeleccionada extends JFrame{
 //        ConsultaHotel cons=new ConsultaHotel();
 //        datosEstancia=new JLabel(cons.consultaCompleta(seleccionEleccion).toString()); 
         
-
-        datosEstancia=new JLabel(Alojamiento.getNombre()+" "+Alojamiento.getProvincia()+" "+Alojamiento.getCiudad()+" "+Alojamiento.getCalle());
+        Alojamiento alojamiento= new Alojamiento();
+        alojamiento.mostrar();
+        System.out.println("Vista datos: "+alojamiento.getCalle());
+        datosEstancia=new JLabel("Datos: "+alojamiento.getNombre()+" "+alojamiento.getProvincia()+" "+alojamiento.getCiudad()+" "+alojamiento.getCalle());
         datosEstancia.setBounds(175,275,400,30);
         add(datosEstancia);
 

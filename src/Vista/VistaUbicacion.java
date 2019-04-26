@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import Controlador.*;
 import static Vista.VistaBienvenida.boton_siguiente;
+import com.toedter.calendar.JDateChooser;
 import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
@@ -23,10 +24,11 @@ import static vista.VistaPago.logo1;
  */
 public class VistaUbicacion extends JFrame{
     
-    JLabel mensaje_ubicacion, mensaje_alojamiento;
-    JComboBox ubicacion,tipo_alojamiento;
+    JLabel mensaje_ubicacion, mensaje_alojamiento,mensaje_num_habitaciones,mensaje_fecha_inicio,mensaje_fecha_fin;
+    JComboBox ubicacion,tipo_alojamiento, combobox_numero_habitaciones;
     Date fecha_entrada, fecha_salida;
     static JButton boton_siguiente2;
+    JDateChooser fecha_inicio,fecha_fin;
     
     public static String seleccionUbicacion;
     
@@ -42,21 +44,52 @@ public class VistaUbicacion extends JFrame{
         ubicacion.setBounds(180,230,200,30);
         add(ubicacion);
         
-       /* mensaje_alojamiento=new JLabel("Tipo de Alojamiento");
-        mensaje_alojamiento.setBounds(10,70,200,30);
-        add(mensaje_alojamiento);
+        mensaje_num_habitaciones=new JLabel("Cantidad Habitaciones:");
         
-        tipo_alojamiento=new JComboBox();
-        tipo_alojamiento.setBounds(10,100,200,30);
-        add(tipo_alojamiento);*/
+        
+        //      JLabel y JComboBox del Numero de Habitaciones
+        
+        mensaje_num_habitaciones.setBounds(100,300,200,30);
+        add(mensaje_num_habitaciones);
+        
+        combobox_numero_habitaciones=new JComboBox();
+        combobox_numero_habitaciones.addItem(1);
+        combobox_numero_habitaciones.addItem(2);
+        combobox_numero_habitaciones.addItem(3);
+        combobox_numero_habitaciones.addItem(4);
+        combobox_numero_habitaciones.addItem(5);
+        combobox_numero_habitaciones.setBounds(300,300,50,30);
+        add(combobox_numero_habitaciones);
+        
+        
+        //      JLabel y JDateChooser de la FECHA INICIO
+        
+        mensaje_fecha_inicio=new JLabel("Fecha Inicio:");
+        mensaje_fecha_inicio.setBounds(90,400,100,30);
+        add(mensaje_fecha_inicio);
+        
+        fecha_inicio=new JDateChooser();
+        fecha_inicio.setMinSelectableDate(new Date());
+        fecha_inicio.setBounds(170,400,100,30);
+        add(fecha_inicio);
+        
+        //      JLabel y JDateChooser de la FECHA FIN
+        
+        mensaje_fecha_fin=new JLabel("Fecha Fin:");
+        mensaje_fecha_fin.setBounds(290,400,100,30);
+        add(mensaje_fecha_fin);
+        
+        fecha_fin=new JDateChooser();
+        fecha_fin.setMinSelectableDate(new Date());
+        fecha_fin.setBounds(350,400,100,30);
+        add(fecha_fin);
         
         boton_siguiente2=new JButton("Siguiente");
-        boton_siguiente2.setBounds(450,340,100,30);
+        boton_siguiente2.setBounds(450,600,100,30);
         add(boton_siguiente2);
         
         ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2,ubicacion);
-        
-                
+    
         cont.rellenarComboBox(ubicacion);
         
         ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
@@ -74,10 +107,7 @@ public class VistaUbicacion extends JFrame{
         
     }
 
-    public  JButton getBoton_siguiente2() {
 
-        return boton_siguiente2;
-    }
 
 
 

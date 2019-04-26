@@ -14,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import Controlador.ControladorUbicacion;
 import static Controlador.ControladorUbicacion.seleccionUbicacion;
+import Vista.VistaConfigurarHabitacion;
 import Vista.VistaEstanciaSeleccionada;
 import javax.swing.JFrame;
 
@@ -53,12 +54,18 @@ public class ControladorEleccion {
            
            public void accionBotonEleccion(JComboBox eleccion){
                cogerDatosEleccion(eleccion);
-            VistaEstanciaSeleccionada vistaes=new VistaEstanciaSeleccionada(eleccion);
-            vistaes.setBounds(0,0,600,730);
-            vistaes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            vistaes.setVisible(true);
-          ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
-          con.cargarValores();
+            //VistaEstanciaSeleccionada vistaes=new VistaEstanciaSeleccionada(eleccion);
+            //vistaes.setBounds(0,0,600,730);
+            //vistaes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            //vistaes.setVisible(true);
+
+          //ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
+          //con.cargarValores();
+          
+          VistaConfigurarHabitacion vistaCon=new VistaConfigurarHabitacion(eleccion);
+                  vistaCon.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        vistaCon.setBounds(0,0,600,725);
+               vistaCon.setVisible(true);
                
            }
            

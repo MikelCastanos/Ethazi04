@@ -25,9 +25,11 @@ public class VistaConfigurarHabitacion extends JFrame{
     
     JLabel mensaje_configuracion,mensaje_cama_individual,mensaje_cama_doble,mensaje_cama_niño;
     JComboBox camaSimpleBox,camaDobleBox,camaNiñoBox;
-    JButton irInfoReserva;
+    static JButton irEstanciaSeleccionada;
     
-    public VistaConfigurarHabitacion(){
+    public VistaConfigurarHabitacion(JComboBox eleccion){
+        
+        irEstanciaSeleccionada=new javax.swing.JButton();
         
         setLayout(null);
         mensaje_configuracion=new JLabel("Configure la habitacion:");
@@ -67,21 +69,22 @@ public class VistaConfigurarHabitacion extends JFrame{
         camaNiñoBox.setBounds(200,400,100,30);
         add(camaNiñoBox);        
         
-        irInfoReserva=new JButton("Siguiente");
-        irInfoReserva.setBounds(400,500,150,30);
-        add(irInfoReserva);
+        irEstanciaSeleccionada=new JButton("Siguiente");
+        irEstanciaSeleccionada.setBounds(400,500,150,30);
+        add(irEstanciaSeleccionada);
         
+        ControladorConfigurarHabitacion cont=new ControladorConfigurarHabitacion(irEstanciaSeleccionada,eleccion);
 }
     
     
     
-    
+    /*
     public static void main(String[] args) {
         VistaConfigurarHabitacion ir=new VistaConfigurarHabitacion();
         ir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ir.setBounds(0,0,600,725);
                ir.setVisible(true);
                        
-    }
+    }*/
     
 }

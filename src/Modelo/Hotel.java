@@ -14,25 +14,27 @@ import Modelo.Alojamiento;
 public class Hotel extends Alojamiento{
     
     
-    int num_estrellas,codigoHotel;
-    
-    
+    static int num_estrellas,codigoHotel;
 
-    public int getNum_estrellas() {
+    public static int getNum_estrellas() {
         return num_estrellas;
     }
 
-    public void setNum_estrellas(int num_estrellas) {
-        this.num_estrellas = num_estrellas;
+    public static void setNum_estrellas(int num_estrellas) {
+        Hotel.num_estrellas = num_estrellas;
     }
 
-    public int getCodigoHotel() {
+    public static int getCodigoHotel() {
         return codigoHotel;
     }
 
-    public void setCodigoHotel(int codigoHotel) {
-        this.codigoHotel = codigoHotel;
+    public static void setCodigoHotel(int codigoHotel) {
+        Hotel.codigoHotel = codigoHotel;
     }
+    
+    
+
+
     
 
     

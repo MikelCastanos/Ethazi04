@@ -10,6 +10,7 @@ import static Controlador.ControladorEleccion.seleccionEleccion;
 import Controlador.ControladorEstanciaSeleccionada;
 import Modelo.Alojamiento;
 import Modelo.ConsultaHotel;
+import Modelo.Hotel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -54,8 +55,10 @@ public class VistaEstanciaSeleccionada extends JFrame{
         Alojamiento alojamiento= new Alojamiento();
         alojamiento.mostrar();
         System.out.println("Vista datos: "+alojamiento.getCalle());
-        datosEstancia=new JLabel("Datos: "+alojamiento.getNombre()+" "+alojamiento.getProvincia()+" "+alojamiento.getCiudad()+" "+alojamiento.getCalle());
-        datosEstancia.setBounds(175,275,400,30);
+        ControladorEstanciaSeleccionada.sacarDatosEstancia();
+        //datosEstancia=new JLabel("Datos: "+Alojamiento.getNombre()+" "+alojamiento.getProvincia()+" "+alojamiento.getCiudad()+" "+alojamiento.getCalle());
+        datosEstancia=new JLabel("Codigo Hotel: "+Hotel.getCodigoHotel()+" Nombre: "+Alojamiento.getNombre()+" Provincia: "+Alojamiento.getProvincia()+" Ciudad: "+Alojamiento.getCiudad()+" Calle: "+Alojamiento.getCalle());
+        datosEstancia.setBounds(40,275,550,30);
         add(datosEstancia);
 
         boton_siguiente4=new JButton("Siguiente");

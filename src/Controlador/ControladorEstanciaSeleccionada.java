@@ -80,7 +80,7 @@ public class ControladorEstanciaSeleccionada {
         precio1cents=precio1*100;
     }
     
-    public void sacarDatosEstancia(){
+    public static void sacarDatosEstancia(){
            ConsultaHotel hotel= new ConsultaHotel();
            hotel.consultaCompleta(seleccionEleccion);
     }

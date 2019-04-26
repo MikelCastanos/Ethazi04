@@ -17,8 +17,6 @@ import java.util.ArrayList;
  */
 public class ConsultaHotel {
     
-//    public static Alojamiento hotel1=new Alojamiento();
-    
 //    Consulta estandar la dejo por si acaso pinta los datos d elos hoteles
     
     public void cargarHoteles(){
@@ -143,14 +141,23 @@ public class ConsultaHotel {
                 infoCompleta.add(provincia);
                 infoCompleta.add(calle);
                 
-                Alojamiento alojamiento= new Alojamiento(nombre,calle,provincia,codioPostal);
                 
-//                
-//                Alojamiento.setNombre(rs.getString(2));
-//                Alojamiento.setProvincia(rs.getString(6));
-//                Alojamiento.setCalle(rs.getString(7));
-//                Alojamiento.setCodigo_postal(3);
-//                Alojamiento.setCiudad(rs.getString(5));
+                
+                //Llenamos el Objeto de Hotel con los Getters y Setters heredados o propios
+                
+                //Setters de la clase Alojamiento que se extienden a Hotel
+                Hotel.setNombre(rs.getString(2));
+                Hotel.setProvincia(rs.getString(6));
+                Hotel.setCalle(rs.getString(7));
+                Hotel.setCodigo_postal(rs.getInt(3));
+                Hotel.setCiudad(rs.getString(5));
+                
+                //Unico Setter que es PROPIO de Hotel
+                Hotel.setCodigoHotel(rs.getInt(1));
+                
+                //HABRIA QUE SACAR EL PRECIO 
+                
+                
                 
                
 //                System.out.println(Alojamiento.getCalle());

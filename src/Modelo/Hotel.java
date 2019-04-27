@@ -14,7 +14,7 @@ import Modelo.Alojamiento;
 public class Hotel extends Alojamiento{
     
     
-    static int num_estrellas,codigoHotel;
+    protected static int num_estrellas,codigoHotel;
 
     public static int getNum_estrellas() {
         return num_estrellas;

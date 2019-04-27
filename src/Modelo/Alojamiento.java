@@ -3,9 +3,9 @@ package Modelo;
 
 public class Alojamiento {
     
-    public static  String nombre, calle, ciudad, provincia;
-    public static  int codigo_postal;
-    public static  int num_habitaciones;
+    protected static  String nombre, calle, ciudad, provincia;
+    protected static  int codigo_postal;
+    protected static  int num_habitaciones;
 
     
     //Constructores innecesarios porque al no poner ninguno se utiliza el constructor vacio standard

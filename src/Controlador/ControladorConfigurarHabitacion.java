@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.Habitacion;
 import Vista.VistaEstanciaSeleccionada;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -40,4 +41,8 @@ public class ControladorConfigurarHabitacion {
           ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
           con.cargarValores();
      }
+     
+       public void cogerDatosEleccion(JComboBox camaSimpleBox){
+             Habitacion.setCama_simple((int) camaSimpleBox.getSelectedItem());
+         }
 }

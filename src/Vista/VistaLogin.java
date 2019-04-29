@@ -54,7 +54,7 @@ public class VistaLogin extends JFrame {
         botonLogin.setBounds(100,200,120,30);
         add(botonLogin);
         
-        ControladorLogin contL=new ControladorLogin(botonLogin);
+        ControladorLogin contL=new ControladorLogin(botonLogin,contrasenaField,usuarioField);
         
         
         

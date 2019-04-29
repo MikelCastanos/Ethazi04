@@ -20,11 +20,11 @@ import javax.swing.JFrame;
 public class ControladorConfigurarHabitacion {
     
     public ControladorConfigurarHabitacion(){}
-     public ControladorConfigurarHabitacion(JButton irEstanciaSeleccionada,JComboBox eleccion){
+     public ControladorConfigurarHabitacion(JButton irEstanciaSeleccionada,JComboBox eleccion,JComboBox camaSimpleBox,JComboBox camaDobleBox,JComboBox camaNiñoBox){
         irEstanciaSeleccionada.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 cargarEstanciaSeleccionada(eleccion);
-                
+                cogerDatosEleccion(camaSimpleBox,camaDobleBox,camaNiñoBox);
                 
             }
             
@@ -42,7 +42,11 @@ public class ControladorConfigurarHabitacion {
           con.cargarValores();
      }
      
-       public void cogerDatosEleccion(JComboBox camaSimpleBox){
-             Habitacion.setCama_simple((int) camaSimpleBox.getSelectedItem());
+       public void cogerDatosEleccion(JComboBox camaSimpleBox,JComboBox camaDobleBox,JComboBox camaNiñoBox){
+            Habitacion.setCama_simple((int) camaSimpleBox.getSelectedItem());
+            Habitacion.setCama_doble((int) camaDobleBox.getSelectedItem());
+            Habitacion.setCama_nino((int) camaNiñoBox.getSelectedItem());
+            
+            System.out.println(Habitacion.getCama_simple()+" "+Habitacion.getCama_doble()+" "+Habitacion.getCama_nino());
          }
 }

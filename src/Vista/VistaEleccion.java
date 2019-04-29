@@ -24,7 +24,7 @@ public class VistaEleccion extends JFrame {
         public JComboBox eleccion;
         static JButton boton_siguiente3;
     
-    public VistaEleccion(JComboBox ubicacion){
+    public VistaEleccion(JComboBox ubicacion,JComboBox combobox_numero_habitaciones){
         boton_siguiente3=new javax.swing.JButton();
         
         setLayout(null);
@@ -43,7 +43,7 @@ public class VistaEleccion extends JFrame {
         add(boton_siguiente3);
 
         ControladorUbicacion cont2=new ControladorUbicacion();
-        cont2.cogerDatos(ubicacion);
+        cont2.cogerDatos(ubicacion,combobox_numero_habitaciones);
         ControladorEleccion cont=new ControladorEleccion(boton_siguiente3,eleccion);
         cont.rellenarComboBox2(eleccion);
         

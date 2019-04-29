@@ -11,4 +11,27 @@ package Modelo;
  */
 public class Usuario {
     
+    protected static String nombreUsuarioLogin;
+    protected static String passwordLogin;
+
+    public static String getNombreUsuarioLogin() {
+        return nombreUsuarioLogin;
+    }
+
+    public static void setNombreUsuarioLogin(String nombreUsuarioLogin) {
+        Usuario.nombreUsuarioLogin = nombreUsuarioLogin;
+    }
+
+    public static String getPasswordLogin() {
+        return passwordLogin;
+    }
+
+    public static void setPasswordLogin(String passwordLogin) {
+        Usuario.passwordLogin = passwordLogin;
+    }
+    
+    
+    
+    
+    
 }

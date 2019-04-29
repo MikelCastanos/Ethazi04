@@ -33,10 +33,10 @@ public class ControladorUbicacion {
     
     public ControladorUbicacion(){}
     
-    public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion){
+    public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                accionBoton(ubicacion);
+                accionBoton(ubicacion,combobox_numero_habitaciones);
                 
             }
             
@@ -49,13 +49,13 @@ public class ControladorUbicacion {
     }
    
     
-    public void accionBoton(JComboBox ubicacion){
+    public void accionBoton(JComboBox ubicacion, JComboBox combobox_numero_habitaciones){
         
-            VistaEleccion vistae=new VistaEleccion(ubicacion);
+            VistaEleccion vistae=new VistaEleccion(ubicacion,combobox_numero_habitaciones);
             vistae.setBounds(0,0,600,730);
             vistae.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistae.setVisible(true);
-            cogerDatos(ubicacion);
+            cogerDatos(ubicacion,combobox_numero_habitaciones);
             System.out.println(seleccionUbicacion);
 
             
@@ -75,8 +75,13 @@ public class ControladorUbicacion {
          }
 
        
-         public void cogerDatos(JComboBox ubicacion){
-             seleccionUbicacion=ubicacion.getSelectedItem().toString();
+         public void cogerDatos(JComboBox ubicacion, JComboBox combobox_numero_habitaciones){
+            seleccionUbicacion=ubicacion.getSelectedItem().toString();
+            Hotel.setNum_habitaciones((int)combobox_numero_habitaciones.getSelectedItem());
+            
+            
+            
+             
              
          }
 

@@ -73,7 +73,7 @@ public class VistaConfigurarHabitacion extends JFrame{
         irEstanciaSeleccionada.setBounds(400,500,150,30);
         add(irEstanciaSeleccionada);
         
-        ControladorConfigurarHabitacion cont=new ControladorConfigurarHabitacion(irEstanciaSeleccionada,eleccion);
+        ControladorConfigurarHabitacion cont=new ControladorConfigurarHabitacion(irEstanciaSeleccionada,eleccion,camaSimpleBox,camaDobleBox,camaNiñoBox);
 }
     
     

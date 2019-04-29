@@ -34,11 +34,11 @@ public class ConsultaLogin {
         Consultas consultas= new Consultas();
         com.mysql.jdbc.Connection con= conexion.conectar();
         
-        String passLogin = new String(VistaLogin.contrasenaField.getPassword());
-        String usuarioLogin = VistaLogin.usuarioField.getText();
-        System.out.println(usuarioLogin);
-        System.out.println(passLogin);
-        String query="select * from usuario where nombre_usuario='"+usuarioLogin+"' and contrasena='"+passLogin+"'";
+
+        
+
+
+        String query="select * from usuario where nombre_usuario='"+Usuario.getNombreUsuarioLogin()+"' and contrasena='"+ Usuario.getPasswordLogin()+"'";
         
 
         try{

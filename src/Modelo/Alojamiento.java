@@ -6,6 +6,7 @@ public class Alojamiento {
     protected static  String nombre, calle, ciudad, provincia;
     protected static  int codigo_postal;
     protected static  int num_habitaciones;
+    
 
     
     //Constructores innecesarios porque al no poner ninguno se utiliza el constructor vacio standard

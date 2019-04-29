@@ -14,7 +14,7 @@ public class Habitacion extends Hotel{
     protected static int cod_habitacion;
     protected static int cama_simple;
     protected static int cama_doble;
-    protected static int cama_individial;
+    protected static int cama_nino;
     protected static double precio_habitacion;
 
     public Habitacion() {
@@ -44,12 +44,12 @@ public class Habitacion extends Hotel{
         Habitacion.cama_doble = cama_doble;
     }
 
-    public static int getCama_individial() {
-        return cama_individial;
+    public static int getCama_nino() {
+        return cama_nino;
     }
 
-    public static void setCama_individial(int cama_individial) {
-        Habitacion.cama_individial = cama_individial;
+    public static void setCama_nino(int cama_nino) {
+        Habitacion.cama_nino = cama_nino;
     }
 
     public static double getPrecio_habitacion() {

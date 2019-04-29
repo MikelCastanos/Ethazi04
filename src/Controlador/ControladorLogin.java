@@ -43,7 +43,7 @@ public class ControladorLogin {
             
             public void cogerDatos(JPasswordField contrasenaField, JTextField usuarioField){
                 Usuario.setPasswordLogin(String.valueOf(VistaLogin.contrasenaField.getPassword()));
-                Usuario.setNombreUsuarioLogin(VistaLogin.usuarioField.getText());
-                System.out.println(Usuario.getPasswordLogin()+" "+Usuario.getNombreUsuarioLogin());
+                Usuario.setDniUsuarioLogin(VistaLogin.dniField.getText());
+                System.out.println(Usuario.getPasswordLogin()+" "+Usuario.getDniUsuarioLogin());
          }
 }

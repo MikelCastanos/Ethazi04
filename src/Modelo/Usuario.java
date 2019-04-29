@@ -11,16 +11,18 @@ package Modelo;
  */
 public class Usuario {
     
-    protected static String nombreUsuarioLogin;
+    protected static String dniUsuarioLogin;
     protected static String passwordLogin;
 
-    public static String getNombreUsuarioLogin() {
-        return nombreUsuarioLogin;
+    public static String getDniUsuarioLogin() {
+        return dniUsuarioLogin;
     }
 
-    public static void setNombreUsuarioLogin(String nombreUsuarioLogin) {
-        Usuario.nombreUsuarioLogin = nombreUsuarioLogin;
+    public static void setDniUsuarioLogin(String dniUsuarioLogin) {
+        Usuario.dniUsuarioLogin = dniUsuarioLogin;
     }
+
+
 
     public static String getPasswordLogin() {
         return passwordLogin;

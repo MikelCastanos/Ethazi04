@@ -38,7 +38,7 @@ public class ConsultaLogin {
         
 
 
-        String query="select * from usuario where nombre_usuario='"+Usuario.getNombreUsuarioLogin()+"' and contrasena='"+ Usuario.getPasswordLogin()+"'";
+        String query="select * from usuario where dni='"+Usuario.getDniUsuarioLogin()+"' and contrasena='"+ Usuario.getPasswordLogin()+"'";
         
 
         try{

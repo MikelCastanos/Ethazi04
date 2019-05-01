@@ -47,6 +47,9 @@ public class ControladorConfigurarHabitacion {
             Habitacion.setCama_doble((int) camaDobleBox.getSelectedItem());
             Habitacion.setCama_nino((int) camaNiñoBox.getSelectedItem());
             Habitacion.coincidencia();
+            Habitacion.comprobarDisponibilidad();
+            System.out.println(Habitacion.isDisponibilidad());
+
             System.out.println(Habitacion.getCama_simple()+" "+Habitacion.getCama_doble()+" "+Habitacion.getCama_nino());
          }
        

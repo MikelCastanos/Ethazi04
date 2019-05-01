@@ -86,7 +86,7 @@ public class ControladorUbicacion {
          public void fechaSeleccionada(JDateChooser fecha_inicio,JDateChooser fecha_fin){
 //            
              try {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String date = sdf.format(fecha_inicio.getDate());
                 Alojamiento.setFechaEntrada(date);
                 } catch (Exception e) {
@@ -96,7 +96,7 @@ public class ControladorUbicacion {
              System.out.println("Fecha entrada "+Alojamiento.getFechaEntrada());
              
                           try {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String date = sdf.format(fecha_fin.getDate());
                 Alojamiento.setFechaSalida(date);
                 } catch (Exception e) {

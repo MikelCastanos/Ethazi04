@@ -33,21 +33,25 @@ public class consultaHabitacion {
         }
     }
     
-    public void habitacionesDisponibles(){
+    public boolean  habitacionesDisponibles(){
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
         Connection con= conexion.conectar();
         
-        String query="select habitacion.cama_infantil, habitacion.cama_simple, habitacion.cama_doble, "
-                + "habitacion.precio_habitacion, hotel.nombre_hotel from habitacion inner join hotel on "
-                + " habitacion.cod_hotel=hotel.cod_hotel";
+        String query="select cod_habitacion, fecha_entrada, fecha_salida from reserva where (cod_habitacion=100)AND(fecha_entrada='2019-05-111')AND('2019-05-26');";
         ResultSet rs= consultas.consultaBD(con, query);
+        boolean disponible=true;
         try{
-            while(rs.next()){
-                System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
+            if (rs.next()) {
+            System.out.println ("Comprobacion reserva: "+rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3));
+            disponible=false;
+            }else{
+            disponible=true;   
             }
+
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
+            return disponible;
     }
 }

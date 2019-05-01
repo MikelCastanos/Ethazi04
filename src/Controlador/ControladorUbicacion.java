@@ -41,8 +41,10 @@ public class ControladorUbicacion {
     public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                checkearFechas(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
-                
+                fechaSeleccionada(fecha_inicio,fecha_fin);
+                if(Alojamiento.getFechaEntrada()!=null && Alojamiento.getFechaSalida()!=null){
+                  checkearFechas(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);  
+                }
             }
             
         });
@@ -62,7 +64,7 @@ public class ControladorUbicacion {
             vistae.setVisible(true);
             cogerDatos(ubicacion,combobox_numero_habitaciones);
             System.out.println(seleccionUbicacion);
-            fechaSeleccionada(fecha_inicio,fecha_fin);
+            
             
 
     }
@@ -116,7 +118,7 @@ public class ControladorUbicacion {
                 }
              System.out.println("Fecha entrada "+Alojamiento.getFechaEntrada());
              
-                          try {
+                try {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String date = sdf.format(fecha_fin.getDate());
                 Alojamiento.setFechaSalida(date);

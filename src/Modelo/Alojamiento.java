@@ -26,6 +26,10 @@ public class Alojamiento {
         Alojamiento.fechaSalida = fechaSalida;
     }
 
+    public static String getFechaSalida() {
+        return fechaSalida;
+    }
+
     
     //Constructores innecesarios porque al no poner ninguno se utiliza el constructor vacio standard
    /*

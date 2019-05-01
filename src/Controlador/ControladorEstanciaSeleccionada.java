@@ -8,6 +8,9 @@ package Controlador;
 import static Controlador.ControladorEleccion.seleccionEleccion;
 import Modelo.Alojamiento;
 import Modelo.ConsultaHotel;
+import Modelo.Habitacion;
+import Modelo.Hotel;
+import Modelo.Usuario;
 import Modelo.insertarReserva;
 import Vista.VistaEstanciaSeleccionada;
 import java.awt.event.MouseAdapter;
@@ -35,8 +38,8 @@ public class ControladorEstanciaSeleccionada {
 
 
 
-    public static int precio1;
-    public static int precio1cents;
+    public static double precio1;
+    public static double precio1cents;
     public static int codigoHotelInsertar;
     public static ArrayList datosHotel= new ArrayList<>();
     
@@ -60,12 +63,12 @@ public class ControladorEstanciaSeleccionada {
         ConsultaHotel cons=new ConsultaHotel();
         datosHotel= cons.consultaCompleta(seleccionEleccion);
         codigoHabitacionInsertar=100;
-        codigoHotelInsertar=(int)datosHotel.get(0);
-        dniInsertar="12345678A";
+        codigoHotelInsertar=Hotel.getCodigoHotel();
+        dniInsertar=Usuario.getDniUsuarioLogin();
         fechaGestion="2019-02-03";
         fechaEntrada=Alojamiento.getFechaEntrada();
         fechaSalida=Alojamiento.dniInsertar();
-        precio1=80;
+        precio1=Habitacion.getPrecio_habitacion();
     }
     
     

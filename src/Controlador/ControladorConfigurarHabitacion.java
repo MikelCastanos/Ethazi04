@@ -12,6 +12,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,8 +39,7 @@ public class ControladorConfigurarHabitacion {
             vistaes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistaes.setVisible(true);
 
-          ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
-          con.cargarValores();
+          
      }
      
        public void cogerDatosEleccion(JComboBox camaSimpleBox,JComboBox camaDobleBox,JComboBox camaNiñoBox){
@@ -48,8 +48,14 @@ public class ControladorConfigurarHabitacion {
             Habitacion.setCama_nino((int) camaNiñoBox.getSelectedItem());
             Habitacion.coincidencia();
             Habitacion.comprobarDisponibilidad();
+            if(!Habitacion.isDisponibilidad()){
+              JOptionPane.showMessageDialog(null,"La habitacion elejida no esta disponible en esas fechas");  
+            }
             System.out.println(Habitacion.isDisponibilidad());
-
+            
+            ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
+            con.cargarValores();
+            
             System.out.println(Habitacion.getCama_simple()+" "+Habitacion.getCama_doble()+" "+Habitacion.getCama_nino());
          }
        

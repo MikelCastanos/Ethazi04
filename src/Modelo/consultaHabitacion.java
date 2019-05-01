@@ -27,6 +27,7 @@ public class consultaHabitacion {
         try{
             while(rs.next()){
                 System.out.println ("Habitacion que coincide con las camas seleccionadas :"+rs.getInt (1) + " " + rs.getInt (2)+ " " + rs.getInt(3)+ " " + rs.getDouble (4)+ " " + rs.getInt (5));
+             Habitacion.setPrecio_habitacion(rs.getDouble (4));   
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
@@ -38,20 +39,23 @@ public class consultaHabitacion {
         Consultas consultas= new Consultas();
         Connection con= conexion.conectar();
         
-        String query="select cod_habitacion, fecha_entrada, fecha_salida from reserva where (cod_habitacion=100)AND(fecha_entrada='2019-05-111')AND('2019-05-26');";
-        ResultSet rs= consultas.consultaBD(con, query);
-        boolean disponible=true;
-        try{
-            if (rs.next()) {
-            System.out.println ("Comprobacion reserva: "+rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3));
-            disponible=false;
-            }else{
-            disponible=true;   
-            }
+        String query="select if (exists (select cod_habitacion, fecha_entrada, fecha_salida from reserva where "
+                + "(cod_habitacion="+Habitacion.getCod_habitacion()+")AND(fecha_entrada='"+Alojamiento.getFechaEntrada()+"')AND(fecha_entrada='"+Alojamiento.getFechaSalida()+"')));";
+        boolean rs= consultas.boleano(con, query);
 
+        
+        try{
+//            if (rs.next()) {
+//                
+//            System.out.println ("Comprobacion reserva: "+rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3));
+//            return rs.getBoolean(1);
+//            
+//            }
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
-            return disponible;
+        return false;
     }
+               
+
 }

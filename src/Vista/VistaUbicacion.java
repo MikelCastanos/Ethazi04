@@ -26,7 +26,7 @@ public class VistaUbicacion extends JFrame{
     
     JLabel mensaje_ubicacion, mensaje_alojamiento,mensaje_num_habitaciones,mensaje_fecha_inicio,mensaje_fecha_fin;
     JComboBox ubicacion,tipo_alojamiento, combobox_numero_habitaciones;
-    Date fecha_entrada, fecha_salida;
+    //Date fecha_entrada, fecha_salida;
     static JButton boton_siguiente2;
     JDateChooser fecha_inicio,fecha_fin;
     

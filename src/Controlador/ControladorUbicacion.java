@@ -25,6 +25,8 @@ import Vista.VistaUbicacion;
 import com.toedter.calendar.JDateChooser;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class ControladorUbicacion {
     
@@ -39,7 +41,7 @@ public class ControladorUbicacion {
     public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                accionBoton(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
+                checkearFechas(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
                 
             }
             
@@ -63,6 +65,25 @@ public class ControladorUbicacion {
             fechaSeleccionada(fecha_inicio,fecha_fin);
             
 
+    }
+    
+    public void checkearFechas(JComboBox ubicacion, JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
+
+        String fecha1=fecha_inicio.getDate().toString();
+        String fecha2=fecha_inicio.getDate().toString();
+        System.out.println(fecha1);
+        System.out.println(fecha2);
+        
+
+        if(fecha_inicio.getDate().compareTo(fecha_fin.getDate())==0||fecha_inicio.getDate().compareTo(fecha_fin.getDate())>0){
+            JOptionPane.showMessageDialog(null,"Fecha fin invalida. Selecciona al menos una noche.");
+        }
+        
+        
+        else{
+            accionBoton(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
+        } 
+        
     }
     
 

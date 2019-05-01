@@ -22,6 +22,9 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import Modelo.ConsultaHotel;
 import Vista.VistaUbicacion;
+import com.toedter.calendar.JDateChooser;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ControladorUbicacion {
     
@@ -33,10 +36,10 @@ public class ControladorUbicacion {
     
     public ControladorUbicacion(){}
     
-    public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones){
+    public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                accionBoton(ubicacion,combobox_numero_habitaciones);
+                accionBoton(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
                 
             }
             
@@ -49,7 +52,7 @@ public class ControladorUbicacion {
     }
    
     
-    public void accionBoton(JComboBox ubicacion, JComboBox combobox_numero_habitaciones){
+    public void accionBoton(JComboBox ubicacion, JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
         
             VistaEleccion vistae=new VistaEleccion(ubicacion,combobox_numero_habitaciones);
             vistae.setBounds(0,0,600,730);
@@ -57,8 +60,7 @@ public class ControladorUbicacion {
             vistae.setVisible(true);
             cogerDatos(ubicacion,combobox_numero_habitaciones);
             System.out.println(seleccionUbicacion);
-
-            
+            fechaSeleccionada(fecha_inicio,fecha_fin);
             
 
     }
@@ -79,15 +81,32 @@ public class ControladorUbicacion {
             seleccionUbicacion=ubicacion.getSelectedItem().toString();
             Hotel.setNum_habitaciones((int)combobox_numero_habitaciones.getSelectedItem());
             
-            
-            
+         }
+         
+         public void fechaSeleccionada(JDateChooser fecha_inicio,JDateChooser fecha_fin){
+//            
+             try {
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                String date = sdf.format(fecha_inicio.getDate());
+                Alojamiento.setFechaEntrada(date);
+                } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Elija una fecha de Entrada ", "Error..!!", JOptionPane.ERROR_MESSAGE);
+                 
+                }
+             System.out.println("Fecha entrada "+Alojamiento.getFechaEntrada());
              
-             
+                          try {
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+                String date = sdf.format(fecha_fin.getDate());
+                Alojamiento.setFechaSalida(date);
+                } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Elija una fecha de Salida ", "Error..!!", JOptionPane.ERROR_MESSAGE);
+                 
+                }
+                System.out.println("Fecha salida "+Alojamiento.dniInsertar());
          }
 
-   /* public static String getSeleccionUbicacion() {
-        return seleccionUbicacion;
-    }*/
+//   Crear metodo que NO permita selecionar una fecha de salida anterior a la fecha de entrada !
          
 
 

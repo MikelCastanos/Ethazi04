@@ -6,7 +6,25 @@ public class Alojamiento {
     protected static  String nombre, calle, ciudad, provincia;
     protected static  int codigo_postal;
     protected static  int num_habitaciones;
+    protected static String fechaEntrada;
+    protected static String fechaSalida;
+
     
+    public static String getFechaEntrada() {
+        return fechaEntrada;
+    }
+
+    public static void setFechaEntrada(String fechaEntrada) {
+        Alojamiento.fechaEntrada = fechaEntrada;
+    }
+
+    public static String dniInsertar() {
+        return fechaSalida;
+    }
+
+    public static void setFechaSalida(String fechaSalida) {
+        Alojamiento.fechaSalida = fechaSalida;
+    }
 
     
     //Constructores innecesarios porque al no poner ninguno se utiliza el constructor vacio standard

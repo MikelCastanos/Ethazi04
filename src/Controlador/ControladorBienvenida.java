@@ -57,11 +57,15 @@ public class ControladorBienvenida {
             vistau.setVisible(true);
             */
             
-        VistaLogin vista=new VistaLogin();
-        vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        vista.setBounds(0,0,600,725);
-        vista.setVisible(true);
-        
+//        VistaLogin vista=new VistaLogin();
+//        vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        vista.setBounds(0,0,600,725);
+//        vista.setVisible(true);
+
+            VistaUbicacion vistau=new VistaUbicacion();
+            vistau.setBounds(0,0,600,730);
+            vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            vistau.setVisible(true);
         }
     
     

@@ -23,6 +23,9 @@ public class VistaEleccion extends JFrame {
         JLabel mensaje_eleccion;
         public JComboBox eleccion;
         static JButton boton_siguiente3;
+
+    public VistaEleccion() {
+    }
     
     public VistaEleccion(JComboBox ubicacion,JComboBox combobox_numero_habitaciones){
         boton_siguiente3=new javax.swing.JButton();

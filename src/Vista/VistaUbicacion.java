@@ -88,7 +88,7 @@ public class VistaUbicacion extends JFrame{
         boton_siguiente2.setBounds(450,600,100,30);
         add(boton_siguiente2);
         
-        ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2,ubicacion,combobox_numero_habitaciones);
+        ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2,ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
     
         cont.rellenarComboBox(ubicacion);
         

@@ -6,6 +6,7 @@
 package Controlador;
 
 import static Controlador.ControladorEleccion.seleccionEleccion;
+import Modelo.Alojamiento;
 import Modelo.ConsultaHotel;
 import Modelo.insertarReserva;
 import Vista.VistaEstanciaSeleccionada;
@@ -27,7 +28,7 @@ import vista.VistaPago;
 public class ControladorEstanciaSeleccionada {
     
     public static int codigoHabitacionInsertar;
-    public static int codigoUsuarioInsertar;
+    public static String dniInsertar;
     public static String fechaGestion;
     public static String fechaEntrada;
     public static String fechaSalida;
@@ -60,10 +61,10 @@ public class ControladorEstanciaSeleccionada {
         datosHotel= cons.consultaCompleta(seleccionEleccion);
         codigoHabitacionInsertar=100;
         codigoHotelInsertar=(int)datosHotel.get(0);
-        codigoUsuarioInsertar=2000;
+        dniInsertar="12345678A";
         fechaGestion="2019-02-03";
-        fechaEntrada="2019-03-04";
-        fechaSalida="2019-03-06";
+        fechaEntrada=Alojamiento.getFechaEntrada();
+        fechaSalida=Alojamiento.dniInsertar();
         precio1=80;
     }
     
@@ -89,7 +90,7 @@ public class ControladorEstanciaSeleccionada {
 //        codigoHotelInsertar=(int) cons.consultaCompleta(seleccionEleccion).get(0);
 //        nombreHotelInsertar=(String) cons.consultaCompleta(seleccionEleccion).get(1);
         insertarReserva insertar= new insertarReserva();
-        insertar.insertar(codigoHabitacionInsertar,codigoHotelInsertar,codigoUsuarioInsertar,fechaGestion,fechaEntrada,fechaSalida,precio1); 
+        insertar.insertar(codigoHabitacionInsertar,codigoHotelInsertar,dniInsertar,fechaGestion,fechaEntrada,fechaSalida,precio1); 
     }
     
     public void generarArchivoTexto(){

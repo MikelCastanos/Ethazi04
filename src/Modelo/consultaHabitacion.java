@@ -16,7 +16,24 @@ import java.sql.ResultSet;
  */
 public class consultaHabitacion {
 //    Hotel.getCodigoHotel();
-    public void cargarHoteles(){
+    public void habitaciones(int camaInfantil,int camaSimple, int camaDoble, int codHotel){
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+        Connection con= conexion.conectar();
+        
+        String query="select cama_infantil, cama_simple, cama_doble, precio_habitacion, cod_habitacion from habitacion "
+                + "where (cod_hotel=" +codHotel+ ")AND(cama_doble="+camaDoble +")AND(cama_simple="+camaSimple+" )AND(cama_infantil="+camaInfantil+");";
+        ResultSet rs= consultas.consultaBD(con, query);
+        try{
+            while(rs.next()){
+                System.out.println ("Habitacion que coincide con las camas seleccionadas :"+rs.getInt (1) + " " + rs.getInt (2)+ " " + rs.getInt(3)+ " " + rs.getDouble (4)+ " " + rs.getInt (5));
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    public void habitacionesDisponibles(){
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
         Connection con= conexion.conectar();

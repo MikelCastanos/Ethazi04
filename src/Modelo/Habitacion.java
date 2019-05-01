@@ -16,8 +16,17 @@ public class Habitacion extends Hotel{
     protected static int cama_doble;
     protected static int cama_nino;
     protected static double precio_habitacion;
+    protected boolean disponibilidad;
 
     public Habitacion() {
+    }
+
+    public boolean isDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(boolean disponibilidad) {
+        this.disponibilidad = disponibilidad;
     }
 
     public static int getCod_habitacion() {
@@ -60,6 +69,9 @@ public class Habitacion extends Hotel{
         Habitacion.precio_habitacion = precio_habitacion;
     }
     
-    
+    public static void coincidencia(){
+        consultaHabitacion habitacion= new consultaHabitacion();
+        habitacion.habitaciones(getCama_nino(),getCama_simple(),getCama_doble(),Hotel.getCodigoHotel());
+    }
     
 }

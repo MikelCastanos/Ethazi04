@@ -16,7 +16,7 @@ public class insertarReserva{
     
 //    Metodo para insertar los datos de la reserva en la tabla
     
-    public void insertar(int codHabitacion, int codHotel, int codUsuario, String fechaGestion, String fechaEntrada, String fechaSalida, double precioReserva){
+    public void insertar(int codHabitacion, int codHotel, String dni, String fechaGestion, String fechaEntrada, String fechaSalida, double precioReserva){
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
@@ -24,8 +24,8 @@ public class insertarReserva{
         
         String query="";
         
-        query="INSERT into reserva (cod_habitacion,cod_hotel,cod_usuario,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+ codHabitacion +"','"+ codHotel +"', '"
-                + codUsuario + "','"+ fechaGestion +"','"+ fechaEntrada +"','"+ fechaSalida +"','"+ precioReserva +"')";
+        query="INSERT into reserva (cod_habitacion,cod_hotel,dni,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+ codHabitacion +"','"+ codHotel +"', '"
+                + dni + "','"+ fechaGestion +"','"+ fechaEntrada +"','"+ fechaSalida +"','"+ precioReserva +"')";
         
         consultas.insertarDatosBD(con, query);
     }

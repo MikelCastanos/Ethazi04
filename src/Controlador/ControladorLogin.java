@@ -6,6 +6,7 @@
 package Controlador;
 
 import static Modelo.ConsultaLogin.consultaLogin;
+import static Modelo.ConsultaLogin.consultaRegistro;
 import Modelo.Modelo;
 import Modelo.Usuario;
 import Vista.VistaBienvenida;
@@ -13,8 +14,13 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import Vista.VistaLogin;
+import static Vista.VistaLogin.botonRegistro;
+import static Vista.VistaLogin.registroContrasenaField2;
+import static Vista.VistaLogin.registroDniField;
+import static Vista.VistaLogin.registroNombreField;
 import Vista.VistaUbicacion;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -25,7 +31,7 @@ import javax.swing.JTextField;
 public class ControladorLogin {
 
     
-            public ControladorLogin(JButton botonLogin,JPasswordField contrasenaField, JTextField usuarioField){
+            public ControladorLogin(JButton botonLogin,JButton botonRegistro,JPasswordField contrasenaField, JTextField usuarioField,JPasswordField registroContrasenaField,JTextField registroDniField,JTextField registroNombreField,JPasswordField registroContrasenaField2){
         botonLogin.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
@@ -35,15 +41,49 @@ public class ControladorLogin {
             }
             
         });
+        
+        
+                botonRegistro.addMouseListener(new MouseAdapter(){
+            public void mouseClicked(MouseEvent e){
+                
+                cogerDatosRegistro(registroContrasenaField,registroContrasenaField2,registroDniField,registroNombreField);
+                llamarRegistro();
+                
+            }
+            
+        });
     }
             
             public void testLogin(){
                 consultaLogin();
             }
             
+            public void llamarRegistro(){
+                if(Usuario.getPasswordRegistro().equals(Usuario.getPasswordRegistro2())){
+                consultaRegistro();
+                    JOptionPane.showMessageDialog(null,"Ahora puede acceder con su usuario y contraseña");
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Las contraseñas no coinciden");
+                }
+                
+            }
+            
+            
+            
             public void cogerDatos(JPasswordField contrasenaField, JTextField usuarioField){
                 Usuario.setPasswordLogin(String.valueOf(VistaLogin.contrasenaField.getPassword()));
                 Usuario.setDniUsuarioLogin(VistaLogin.dniField.getText());
                 System.out.println(Usuario.getPasswordLogin()+" "+Usuario.getDniUsuarioLogin());
          }
+            
+            
+            public void cogerDatosRegistro(JPasswordField registroContrasenaField, JPasswordField registroContrasenaField2, JTextField registroDniField,JTextField registroNombreField){
+                Usuario.setDniUsuarioRegistro(VistaLogin.registroDniField.getText());
+                Usuario.setPasswordRegistro(String.valueOf(VistaLogin.registroContrasenaField.getPassword()));
+                Usuario.setPasswordRegistro2(String.valueOf(VistaLogin.registroContrasenaField2.getPassword()));
+                Usuario.setNombreRegistro(VistaLogin.registroNombreField.getText());
+                System.out.println(Usuario.getDniUsuarioRegistro()+" "+Usuario.getNombreRegistro()+" "+Usuario.getPasswordRegistro()+" "+Usuario.getPasswordRegistro2());
+            }
+            
 }

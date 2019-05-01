@@ -62,4 +62,18 @@ public class ConsultaLogin {
             }
     }
     
+    public static void consultaRegistro(){
+                
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+        com.mysql.jdbc.Connection con= conexion.conectar();
+        
+        System.out.println(Usuario.getDniUsuarioRegistro()+" "+Usuario.getNombreRegistro()+" "+Usuario.getPasswordRegistro());
+        
+        String query="insert into usuario (dni,nombre_usuario, contrasena) values('"+Usuario.getDniUsuarioRegistro()+"','"+Usuario.getNombreRegistro()+"','"+Usuario.getPasswordRegistro()+"')";
+        
+        consultas.insertarDatosBD(con, query);
+
+    }
+    
 }

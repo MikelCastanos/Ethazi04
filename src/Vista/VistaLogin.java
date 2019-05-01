@@ -7,6 +7,7 @@ package Vista;
 
 import Controlador.ControladorLogin;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
@@ -23,6 +24,7 @@ public class VistaLogin extends JFrame {
     public static JTextField dniField,registroDniField,registroNombreField;
     public static JPasswordField contrasenaField,registroContrasenaField,registroContrasenaField2;
     public static JButton botonLogin,botonRegistro;
+    public static JFormattedTextField dniField2;
     
     public VistaLogin(){
         
@@ -99,13 +101,12 @@ public class VistaLogin extends JFrame {
 
         
         botonRegistro=new JButton("Registrar");
-        botonRegistro.setBounds(425,400,120,30);
+        botonRegistro.setBounds(425,280,120,30);
         add(botonRegistro);
         
-        ControladorLogin contL=new ControladorLogin(botonLogin,contrasenaField,dniField);
+        ControladorLogin contL=new ControladorLogin(botonLogin,botonRegistro,contrasenaField,dniField,registroContrasenaField,registroContrasenaField2,registroNombreField,registroContrasenaField2);
         
-        
-        
+  
     }
 
 

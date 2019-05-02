@@ -24,9 +24,12 @@ import Modelo.ConsultaHotel;
 import Vista.VistaUbicacion;
 import com.toedter.calendar.JDateChooser;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import static java.util.concurrent.TimeUnit.DAYS;
 
 public class ControladorUbicacion {
     
@@ -92,6 +95,17 @@ public class ControladorUbicacion {
         
         else{
             accionBoton(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
+            
+            //ESTE CODIGO CALCULA EL NUMERO DE DIAS QUE HAY ENTRE LA FECHA ENTRADA Y LA FECHA SALIDA
+            Date date1=fecha_inicio.getDate();
+            Date date2=fecha_fin.getDate();
+
+            Instant now = date1.toInstant();
+            Instant now2 = date2.toInstant();
+            int otro = (int) ChronoUnit.DAYS.between(now,now2);
+           
+            
+            Alojamiento.setDiasEstancia(otro);
         } }
         
     }
@@ -111,6 +125,7 @@ public class ControladorUbicacion {
          public void cogerDatos(JComboBox ubicacion, JComboBox combobox_numero_habitaciones){
             seleccionUbicacion=ubicacion.getSelectedItem().toString();
             Hotel.setNum_habitaciones((int)combobox_numero_habitaciones.getSelectedItem());
+            
             
          }
          

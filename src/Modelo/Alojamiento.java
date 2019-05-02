@@ -8,6 +8,8 @@ public class Alojamiento {
     protected static  int num_habitaciones;
     protected static String fechaEntrada;
     protected static String fechaSalida;
+    protected static int diasEstancia;
+    
     
     
     public static String getFechaEntrada() {
@@ -89,6 +91,14 @@ public class Alojamiento {
 
     public static void setNum_habitaciones(int num_habitaciones) {
         Alojamiento.num_habitaciones = num_habitaciones;
+    }
+
+    public static int getDiasEstancia() {
+        return diasEstancia;
+    }
+
+    public static void setDiasEstancia(int diasEstancia) {
+        Alojamiento.diasEstancia = diasEstancia;
     }
     
     

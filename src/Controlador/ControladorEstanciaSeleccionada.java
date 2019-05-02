@@ -35,10 +35,11 @@ public class ControladorEstanciaSeleccionada {
     public static String fechaGestion;
     public static String fechaEntrada;
     public static String fechaSalida;
-
+    
 
 
     public static double precio1;
+    public static double precio1ConDias;
     public static double precio1cents;
     public static int codigoHotelInsertar;
     public static ArrayList datosHotel= new ArrayList<>();
@@ -69,6 +70,9 @@ public class ControladorEstanciaSeleccionada {
         fechaEntrada=Alojamiento.getFechaEntrada();
         fechaSalida=Alojamiento.dniInsertar();
         precio1=Habitacion.getPrecio_habitacion();
+        precio1ConDias=Habitacion.getPrecio_habitacion()*Alojamiento.getDiasEstancia();
+        precio1cents=precio1ConDias*100;
+       
     }
     
     
@@ -81,7 +85,7 @@ public class ControladorEstanciaSeleccionada {
         vistap.setBounds(0,0,600,730);
         vistap.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         vistap.setVisible(true);
-        precio1cents=precio1*100;
+        
     }
     
     public static void sacarDatosEstancia(){

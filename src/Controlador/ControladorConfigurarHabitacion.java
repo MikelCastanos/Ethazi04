@@ -5,7 +5,10 @@
  */
 package Controlador;
 
+import static Controlador.ControladorEleccion.contadorHab;
+import Modelo.Alojamiento;
 import Modelo.Habitacion;
+import Vista.VistaConfigurarHabitacion;
 import Vista.VistaEstanciaSeleccionada;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -24,7 +27,8 @@ public class ControladorConfigurarHabitacion {
      public ControladorConfigurarHabitacion(JButton irEstanciaSeleccionada,JComboBox eleccion,JComboBox camaSimpleBox,JComboBox camaDobleBox,JComboBox camaNiñoBox){
         irEstanciaSeleccionada.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                cargarEstanciaSeleccionada(eleccion);
+                //cargarEstanciaSeleccionada(eleccion);
+                configMasHabitaciones(eleccion);
                 cogerDatosEleccion(camaSimpleBox,camaDobleBox,camaNiñoBox);
                 
             }
@@ -48,10 +52,10 @@ public class ControladorConfigurarHabitacion {
             Habitacion.setCama_nino((int) camaNiñoBox.getSelectedItem());
             Habitacion.coincidencia();
             Habitacion.comprobarDisponibilidad();
-            if(!Habitacion.isDisponibilidad()){
-              JOptionPane.showMessageDialog(null,"La habitacion elejida no esta disponible en esas fechas");  
-            }
-            System.out.println(Habitacion.isDisponibilidad());
+//            if(!Habitacion.isDisponibilidad()){
+//              JOptionPane.showMessageDialog(null,"La habitacion elejida no esta disponible en esas fechas");  
+//            }
+//            System.out.println(Habitacion.isDisponibilidad());
             
             ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
             con.cargarValores();
@@ -60,4 +64,17 @@ public class ControladorConfigurarHabitacion {
          }
        
 
+                 public void configMasHabitaciones(JComboBox eleccion){
+              
+              if(contadorHab<Alojamiento.getNum_habitaciones()){
+                  contadorHab++;
+            VistaConfigurarHabitacion vistaCon=new VistaConfigurarHabitacion(eleccion);
+            vistaCon.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            vistaCon.setBounds(0,0,600,725);
+            vistaCon.setVisible(true);
+              }
+              else{
+                  cargarEstanciaSeleccionada(eleccion);
+              }
+          }
 }

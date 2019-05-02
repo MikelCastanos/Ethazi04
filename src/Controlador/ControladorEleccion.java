@@ -14,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import Controlador.ControladorUbicacion;
 import static Controlador.ControladorUbicacion.seleccionUbicacion;
+import Modelo.Alojamiento;
 import Vista.VistaConfigurarHabitacion;
 import Vista.VistaEstanciaSeleccionada;
 import javax.swing.JFrame;
@@ -26,6 +27,7 @@ import javax.swing.JFrame;
 public class ControladorEleccion {
     
     public static String seleccionEleccion;
+    public static int contadorHab=0;
     
     public ControladorEleccion(){}
     
@@ -61,11 +63,12 @@ public class ControladorEleccion {
 
           //ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
           //con.cargarValores();
-          
-          VistaConfigurarHabitacion vistaCon=new VistaConfigurarHabitacion(eleccion);
-                  vistaCon.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        vistaCon.setBounds(0,0,600,725);
-               vistaCon.setVisible(true);
+            contadorHab++;   
+            VistaConfigurarHabitacion vistaCon=new VistaConfigurarHabitacion(eleccion);
+            vistaCon.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            vistaCon.setBounds(0,0,600,725);
+            vistaCon.setVisible(true);
+
                
            }
            
@@ -74,7 +77,15 @@ public class ControladorEleccion {
              
          }
            
-
+//          public void configMasHabitaciones(JComboBox eleccion){
+//              
+//              if(contadorHab<Alojamiento.getNum_habitaciones()){
+//            VistaConfigurarHabitacion vistaCon=new VistaConfigurarHabitacion(eleccion);
+//            vistaCon.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//            vistaCon.setBounds(0,0,600,725);
+//            vistaCon.setVisible(true);
+//              }
+//          }
         
 
     }

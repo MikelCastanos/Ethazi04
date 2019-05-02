@@ -41,10 +41,10 @@ public class ControladorUbicacion {
     public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                fechaSeleccionada(fecha_inicio,fecha_fin);
-                if(Alojamiento.getFechaEntrada()!=null && Alojamiento.getFechaSalida()!=null){
-                  checkearFechas(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);  
-                }
+               fechaSeleccionada(fecha_inicio,fecha_fin);
+                checkearFechas(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
+                
+
             }
             
         });
@@ -64,6 +64,7 @@ public class ControladorUbicacion {
             vistae.setVisible(true);
             cogerDatos(ubicacion,combobox_numero_habitaciones);
             System.out.println(seleccionUbicacion);
+            System.out.println("Numero de habitaciones: "+Alojamiento.getNum_habitaciones());
             
             
 
@@ -71,12 +72,19 @@ public class ControladorUbicacion {
     
     public void checkearFechas(JComboBox ubicacion, JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
 
-        String fecha1=fecha_inicio.getDate().toString();
-        String fecha2=fecha_inicio.getDate().toString();
-        System.out.println(fecha1);
-        System.out.println(fecha2);
+//        String fecha1=fecha_inicio.getDate().toString();
+//        String fecha2=fecha_inicio.getDate().toString();
+//        System.out.println(fecha1);
+//        System.out.println(fecha2);
         
+        Date fech1=fecha_inicio.getDate();
+        Date fech2=fecha_fin.getDate();
 
+        if(fech1==null||fech2==null){
+            JOptionPane.showMessageDialog(null,"Debe seleccionar una Fecha de inicio y una Fecha fin");
+        }
+        
+       if(fech1!=null&&fech2!=null){
         if(fecha_inicio.getDate().compareTo(fecha_fin.getDate())==0||fecha_inicio.getDate().compareTo(fecha_fin.getDate())>0){
             JOptionPane.showMessageDialog(null,"Fecha fin invalida. Selecciona al menos una noche.");
         }
@@ -84,7 +92,7 @@ public class ControladorUbicacion {
         
         else{
             accionBoton(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
-        } 
+        } }
         
     }
     

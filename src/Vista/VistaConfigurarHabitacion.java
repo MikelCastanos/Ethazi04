@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import Controlador.*;
+import static Controlador.ControladorEleccion.contadorHab;
 import static Vista.VistaBienvenida.boton_siguiente;
 import com.toedter.calendar.JDateChooser;
 import java.util.Date;
@@ -32,7 +33,7 @@ public class VistaConfigurarHabitacion extends JFrame{
         irEstanciaSeleccionada=new javax.swing.JButton();
         
         setLayout(null);
-        mensaje_configuracion=new JLabel("Configure la habitacion:");
+        mensaje_configuracion=new JLabel("Está configurando la habitacion: "+contadorHab);
         mensaje_configuracion.setBounds(200,100,350,30);
         add(mensaje_configuracion);
     

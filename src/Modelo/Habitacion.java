@@ -77,10 +77,10 @@ public class Habitacion extends Hotel{
     public static void comprobarDisponibilidad(){
         consultaHabitacion habitacion2= new consultaHabitacion();
         habitacion2.habitacionesDisponibles();
-        if (!habitacion2.habitacionesDisponibles()){
-        setDisponibilidad(false); 
-        }else{
-        setDisponibilidad(true);    
-        }
+//        if (!habitacion2.habitacionesDisponibles()){
+//        setDisponibilidad(false); 
+//        }else{
+//        setDisponibilidad(true);    
+//        }
     }
 }

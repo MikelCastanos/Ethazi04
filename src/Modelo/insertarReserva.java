@@ -14,6 +14,8 @@ import com.mysql.jdbc.Connection;
  */
 public class insertarReserva{
     
+    String fechagest="2019-09-11";
+    String preprecio="80";
 //    Metodo para insertar los datos de la reserva en la tabla
     
     public void insertar(int codHabitacion, int codHotel, String dni, String fechaGestion, String fechaEntrada, String fechaSalida, double precioReserva){
@@ -24,9 +26,10 @@ public class insertarReserva{
         
         String query="";
         
-        query="INSERT into reserva (cod_habitacion,cod_hotel,dni,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+ codHabitacion +"','"+ codHotel +"', '"
-                + dni + "','"+ fechaGestion +"','"+ fechaEntrada +"','"+ fechaSalida +"','"+ precioReserva +"')";
+        //query="INSERT into reserva (cod_habitacion,cod_hotel,dni,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+ codHabitacion +"','"+ codHotel +"', '" + dni + "','"+ fechaGestion +"','"+ fechaEntrada +"','"+ fechaSalida +"','"+ precioReserva +"')";
         
+        query="insert into reserva(cod_habitacion,cod_hotel,dni,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+Habitacion.getCod_habitacion()+"','"+Hotel.getCodigoHotel()+"','"+Usuario.getDniUsuarioLogin()+"','"+fechagest+"','"+Alojamiento.getFechaEntrada()+"','"+Alojamiento.getFechaSalida()+"','"+preprecio+"')";
+        System.out.println(query);
         consultas.insertarDatosBD(con, query);
     }
 }

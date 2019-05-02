@@ -8,7 +8,7 @@ public class Alojamiento {
     protected static  int num_habitaciones;
     protected static String fechaEntrada;
     protected static String fechaSalida;
-
+    
     
     public static String getFechaEntrada() {
         return fechaEntrada;

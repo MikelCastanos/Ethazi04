@@ -28,8 +28,9 @@ public class ControladorConfigurarHabitacion {
         irEstanciaSeleccionada.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 //cargarEstanciaSeleccionada(eleccion);
-                cogerDatosEleccion(camaSimpleBox,camaDobleBox,camaNiñoBox);
                 configMasHabitaciones(eleccion);
+                cogerDatosEleccion(camaSimpleBox,camaDobleBox,camaNiñoBox);
+                
                 
                 
             }

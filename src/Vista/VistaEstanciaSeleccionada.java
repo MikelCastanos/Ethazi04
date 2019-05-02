@@ -12,6 +12,7 @@ import Modelo.Alojamiento;
 import Modelo.ConsultaHotel;
 import Modelo.Habitacion;
 import Modelo.Hotel;
+import Modelo.Usuario;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -28,7 +29,7 @@ import static vista.VistaPago.logo1;
 public class VistaEstanciaSeleccionada extends JFrame{
     
     
-        JLabel mensajeEstancia,datosEstancia,datosEstancia2,mensajeEstancia1,datosHabitacion,datosFechaReserva;
+        JLabel mensajeEstancia,datosEstancia,datosEstancia2,mensajeEstancia1,datosHabitacion,datosFechaReserva,datosCliente;
         JButton boton_siguiente4;
         
     
@@ -66,13 +67,17 @@ public class VistaEstanciaSeleccionada extends JFrame{
         datosEstancia2.setBounds(40,305,550,30);
         add(datosEstancia2);
         
-        datosHabitacion=new JLabel("Camas Simple: "+Habitacion.getCama_simple()+" Cama Doble: "+Habitacion.getCama_doble()+" Cama niño: "+Habitacion.getCama_nino());
-        datosHabitacion.setBounds(40,405,550,30);
-        add(datosHabitacion);
+//        datosHabitacion=new JLabel("Camas Simple: "+Habitacion.getCama_simple()+" Cama Doble: "+Habitacion.getCama_doble()+" Cama niño: "+Habitacion.getCama_nino());
+//        datosHabitacion.setBounds(40,405,550,30);
+//        add(datosHabitacion);
         
         datosFechaReserva=new JLabel("Fecha Entrada: "+Alojamiento.getFechaEntrada()+" Fecha Salida: "+Alojamiento.getFechaSalida());
-        datosFechaReserva.setBounds(40,435,550,30);
+        datosFechaReserva.setBounds(40,405,550,30);
         add(datosFechaReserva);
+        
+                datosCliente=new JLabel("DNI: "+Usuario.getDniUsuarioLogin());
+        datosCliente.setBounds(40,435,550,30);
+        add(datosCliente);
         
         boton_siguiente4=new JButton("Siguiente");
         boton_siguiente4.setBounds(450,465,100,30);

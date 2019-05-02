@@ -10,6 +10,7 @@ import static Controlador.ControladorEleccion.seleccionEleccion;
 import Controlador.ControladorEstanciaSeleccionada;
 import Modelo.Alojamiento;
 import Modelo.ConsultaHotel;
+import Modelo.Habitacion;
 import Modelo.Hotel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -27,7 +28,7 @@ import static vista.VistaPago.logo1;
 public class VistaEstanciaSeleccionada extends JFrame{
     
     
-        JLabel mensajeEstancia,datosEstancia,mensajeEstancia1;
+        JLabel mensajeEstancia,datosEstancia,datosEstancia2,mensajeEstancia1,datosHabitacion,datosFechaReserva;
         JButton boton_siguiente4;
         
     
@@ -57,12 +58,24 @@ public class VistaEstanciaSeleccionada extends JFrame{
         System.out.println("Vista datos: "+alojamiento.getCalle());
         ControladorEstanciaSeleccionada.sacarDatosEstancia();
         //datosEstancia=new JLabel("Datos: "+Alojamiento.getNombre()+" "+alojamiento.getProvincia()+" "+alojamiento.getCiudad()+" "+alojamiento.getCalle());
-        datosEstancia=new JLabel("Codigo Hotel: "+Hotel.getCodigoHotel()+" Nombre: "+Alojamiento.getNombre()+" Provincia: "+Alojamiento.getProvincia()+" Ciudad: "+Alojamiento.getCiudad()+" Calle: "+Alojamiento.getCalle());
+        datosEstancia=new JLabel("Codigo Hotel: "+Hotel.getCodigoHotel()+" Nombre: "+Alojamiento.getNombre());
         datosEstancia.setBounds(40,275,550,30);
         add(datosEstancia);
-
+        
+        datosEstancia2=new JLabel("Provincia: "+Alojamiento.getProvincia()+" Ciudad: "+Alojamiento.getCiudad()+" Calle: "+Alojamiento.getCalle());
+        datosEstancia2.setBounds(40,305,550,30);
+        add(datosEstancia2);
+        
+        datosHabitacion=new JLabel("Camas Simple: "+Habitacion.getCama_simple()+" Cama Doble: "+Habitacion.getCama_doble()+" Cama niño: "+Habitacion.getCama_nino());
+        datosHabitacion.setBounds(40,405,550,30);
+        add(datosHabitacion);
+        
+        datosFechaReserva=new JLabel("Fecha Entrada: "+Alojamiento.getFechaEntrada()+" Fecha Salida: "+Alojamiento.getFechaSalida());
+        datosFechaReserva.setBounds(40,435,550,30);
+        add(datosFechaReserva);
+        
         boton_siguiente4=new JButton("Siguiente");
-        boton_siguiente4.setBounds(450,340,100,30);
+        boton_siguiente4.setBounds(450,465,100,30);
         add(boton_siguiente4);
         
         ControladorEstanciaSeleccionada cont=new ControladorEstanciaSeleccionada(boton_siguiente4);

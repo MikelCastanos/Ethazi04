@@ -52,7 +52,7 @@ public class ConsultaHotel {
 // Crear ArrayList
         ArrayList<String> consulta = new ArrayList<String>();
 // Consulta
-        String query="select distinct nombre_hotel from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel where ciudad='"+ubicacionHotel+"'";
+        String query="select nombre_hotel from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel where ciudad='"+ubicacionHotel+"'";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(con, query);
 //  Recorrer todos los datos a mostrar

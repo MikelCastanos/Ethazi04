@@ -66,7 +66,7 @@ public class ControladorEstanciaSeleccionada {
         codigoHabitacionInsertar=100;
         codigoHotelInsertar=Hotel.getCodigoHotel();
         dniInsertar=Usuario.getDniUsuarioLogin();
-        fechaGestion="2019-02-03";
+        fechaGestion=insertarReserva.formatted;
         fechaEntrada=Alojamiento.getFechaEntrada();
         fechaSalida=Alojamiento.dniInsertar();
         precio1=Habitacion.getPrecio_habitacion();

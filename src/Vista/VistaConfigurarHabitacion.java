@@ -44,7 +44,6 @@ public class VistaConfigurarHabitacion extends JFrame{
         camaSimpleBox=new JComboBox();
         camaSimpleBox.addItem(0);
         camaSimpleBox.addItem(1);
-        camaSimpleBox.addItem(2);
         camaSimpleBox.setBounds(200,200,100,30);
         add(camaSimpleBox);
         

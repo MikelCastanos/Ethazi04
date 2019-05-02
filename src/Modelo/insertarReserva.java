@@ -16,10 +16,10 @@ import java.util.Date;
  * @author ikasleaETHAZI
  */
 public class insertarReserva{
-    SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+    public static SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 
-    Date fechagest=Calendar.getInstance().getTime();
-    String formatted= format1.format(fechagest);
+    public static Date fechagest=Calendar.getInstance().getTime();
+    public static String formatted= format1.format(fechagest);
     int preprecio=(int)Habitacion.getPrecio_habitacion()*Alojamiento.getDiasEstancia();
     String precioString=Integer.toString(preprecio);
 //    Metodo para insertar los datos de la reserva en la tabla

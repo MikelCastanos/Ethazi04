@@ -29,7 +29,7 @@ public class VistaBienvenida extends JFrame{
         mensaje_bienvenida.setBounds(200,200,200,30);
         add(mensaje_bienvenida);*/
         
-        boton_siguiente=new JButton("¡EMPEZEMOS!");
+        boton_siguiente=new JButton("¡EMPECEMOS!");
         boton_siguiente.setBounds(400,625,150,30);
         add(boton_siguiente);
         

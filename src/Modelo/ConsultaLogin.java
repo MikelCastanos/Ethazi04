@@ -43,7 +43,7 @@ public class ConsultaLogin {
 
         try{
            //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
-        ResultSet rs= consultas.consultaBD(con, query);
+        ResultSet rs= consultas.consultaBD(query);
             if(rs.next())
             {
             VistaUbicacion vistau=new VistaUbicacion();
@@ -72,7 +72,7 @@ public class ConsultaLogin {
         
         String query="insert into usuario (dni,nombre_usuario, contrasena) values('"+Usuario.getDniUsuarioRegistro()+"','"+Usuario.getNombreRegistro()+"','"+Usuario.getPasswordRegistro()+"')";
         
-        consultas.insertarDatosBD(con, query);
+        consultas.insertarDatosBD(query);
 
     }
     

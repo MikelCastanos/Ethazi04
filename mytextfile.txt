@@ -1,1 +1,1 @@
-[1000, Gran Bilbao, 48004, Bilbao, Bizkaia, Indalecio Prieto SN]
+[1006, Hotel Arts Barcelona, 10043, Barcelona, Catalunya, Puigdemont 123]

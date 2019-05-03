@@ -23,12 +23,12 @@ public class ConsultaHotel {
 //        Instanciar BBDD
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
-        Connection con= conexion.conectar();
+
         
 //        Consulta
         String query="Select * from hotel";
 //        Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
-        ResultSet rs= consultas.consultaBD(con, query);
+        ResultSet rs= consultas.consultaBD(query);
 //        Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
@@ -48,13 +48,13 @@ public class ConsultaHotel {
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
-        Connection con= conexion.conectar();
+
 // Crear ArrayList
         ArrayList<String> consulta = new ArrayList<String>();
 // Consulta
         String query="select nombre_hotel from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel where ciudad='"+ubicacionHotel+"'";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
-        ResultSet rs= consultas.consultaBD(con, query);
+        ResultSet rs= consultas.consultaBD(query);
 //  Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
@@ -79,13 +79,13 @@ public class ConsultaHotel {
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
-        Connection con= conexion.conectar();
+
 // Crear ArrayList
         ArrayList<String> consultaUbicacion = new ArrayList<String>();
 // Consulta
         String query="select distinct ciudad from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel;";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
-        ResultSet rs= consultas.consultaBD(con, query);
+        ResultSet rs= consultas.consultaBD(query);
 //Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
@@ -110,13 +110,13 @@ public class ConsultaHotel {
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
-        Connection con= conexion.conectar();
+
 // Crear ArrayList
         ArrayList infoCompleta = new ArrayList<>();
 // Consulta
         String query="Select * from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel where nombre_hotel='"+nombreHotel+"'";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
-        ResultSet rs= consultas.consultaBD(con, query);
+        ResultSet rs= consultas.consultaBD(query);
 //  Recorrer todos los datos a mostrar
         try{
             while(rs.next()){

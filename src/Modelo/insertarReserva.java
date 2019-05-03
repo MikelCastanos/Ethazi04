@@ -28,7 +28,7 @@ public class insertarReserva{
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
-        Connection con= conexion.conectar();
+
         
         String query="";
         
@@ -36,6 +36,6 @@ public class insertarReserva{
         
         query="insert into reserva(cod_habitacion,cod_hotel,dni,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+Habitacion.getCod_habitacion()+"','"+Hotel.getCodigoHotel()+"','"+Usuario.getDniUsuarioLogin()+"','"+formatted+"','"+Alojamiento.getFechaEntrada()+"','"+Alojamiento.getFechaSalida()+"','"+precioString+"')";
         System.out.println(query);
-        consultas.insertarDatosBD(con, query);
+        consultas.insertarDatosBD(query);
     }
 }

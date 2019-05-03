@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  *
  * @author ira_a
  */
-public class consultaHabitacion {
+public class consultaHabitacion{
 //    Hotel.getCodigoHotel();
     public void habitaciones(int camaInfantil,int camaSimple, int camaDoble, int codHotel){
         Conexion conexion= new Conexion();

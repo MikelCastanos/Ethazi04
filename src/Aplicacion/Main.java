@@ -4,12 +4,6 @@ package Aplicacion;
 //import BBDD.Consultas;
 import javax.swing.JFrame;
 import Vista.*;
-import Controlador.*;
-import Controlador.*;
-import Modelo.ConsultaHotel;
-import Modelo.insertarReserva;
-import javax.swing.SwingUtilities;
-import vista.VistaPago;
 
 public class Main {
     

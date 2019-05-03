@@ -6,7 +6,6 @@ import static Controlador.ControladorPagoMayor.*;
 import javax.swing.*;
 import javax.swing.ImageIcon;
 import static Controlador.ControladorPago.*;
-import static vista.VistaPago.logo1;
 
 
 

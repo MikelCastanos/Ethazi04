@@ -13,7 +13,7 @@ import vista.VistaPago;
 
 public class Main {
     
-    public static void main(String[] args){
+    public static void main(String[] args){ 
 
 //    ConsultaHotel hotel= new ConsultaHotel();
 //    hotel.cargarHoteles();

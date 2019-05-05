@@ -1,5 +1,6 @@
 package Controlador;
 
+import BBDD.Conexion;
 import Vista.VistaBienvenida;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,25 +10,24 @@ import Modelo.*;
 import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import vista.VistaPago;
-import vista.VistaPagoIgual;
 import vista.VistaPagoMayor;
-import vista.VistaPagoMenor;
 import static vista.VistaPago.*;
+import Modelo.Alojamiento;
+import Modelo.Habitacion;
+import javax.swing.JOptionPane;
 
 
 
 
 public class ControladorPago extends JFrame {
-  // public double calculo_preciototal= Controlador.ControladorEstanciaSeleccionada.precio1cents;
    public int billete200=20000,billete100=10000,billete50=5000,billete20=2000,billete10=1000,billete5=500,moneda2=200,moneda1=100,moneda50c=50,moneda20c=20,moneda10c=10,moneda5c=5,moneda2c=2,moneda1c=1;
    public static double cantidad_insertada=0;
-   public static double precioFinal, precioFinalcents;
+   public static double precioFinal = Habitacion.getPrecio_habitacion()*Alojamiento.getDiasEstancia();
+   public static double precioFinalcents = precioFinal*100;
    
     VistaPago pago;
     Modelo modelo;
     ActionListener actionListener;
-   
-
     
     public ControladorPago(JButton boton_volver, JButton boton_continuar, JButton boton_200e, JButton boton_100e,
             JButton boton_50e, JButton boton_20e, JButton boton_10e, JButton boton_5e, JButton boton_2e, JButton boton_1e,
@@ -123,11 +123,9 @@ public class ControladorPago extends JFrame {
                   c50(); c20(); c10(); c5(); c2(); c1();
               }
         };
-
     }
    
-    public void continuar(){
-            
+    public void continuar(){         
             
             if(getBoton_continuar()==boton_continuar){   
  
@@ -139,31 +137,29 @@ public class ControladorPago extends JFrame {
             }
             
             if(cantidad_insertada<precioFinalcents){  
-            VistaPagoMenor pagoMenor=new VistaPagoMenor();
-            pagoMenor.setBounds(0,0,450,300);
-            pagoMenor.setVisible(true);
-            pagoMenor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);}
-
+            JOptionPane.showMessageDialog(null,"¡¡¡La cantidad de dinero insertada es insuficiente!!!. For favor inserte el resto del dinero.");}
             
             if(cantidad_insertada==precioFinalcents){  
-            VistaPagoIgual pagoIgual=new VistaPagoIgual();
-            pagoIgual.setBounds(0,0,450,300);
-            pagoIgual.setVisible(true);
-            pagoIgual.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);}
-            contol();
-           }
+            JOptionPane.showMessageDialog(null,"¡La cantidad de dinero insertada es exacta!. Muchas gracias por su reserva.");
+           Conexion conn= new Conexion();
+           conn.desconectar();
+           cantidad_insertada=0;
+           VistaBienvenida vistab=new VistaBienvenida();
+           vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+           vistab.setBounds(0,0,600,730);
+           vistab.setVisible(true);
+            }
     }
+    }
+    
     public void volver(){
         
-        if(getBoton_volver()==boton_volver){
-            
+        if(getBoton_volver()==boton_volver){            
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
             iniciostart.setBounds(0,0,600,730);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            iniciostart.setVisible(true);
-            
-            
+            iniciostart.setVisible(true);                      
            }
     }
     
@@ -171,7 +167,6 @@ public class ControladorPago extends JFrame {
         
     if(getBoton_200e()==boton_200e){ 
             cantidad_insertada=cantidad_insertada+billete200;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -182,127 +177,115 @@ public class ControladorPago extends JFrame {
       public void e100(){
            if(getBoton_100e()==boton_100e){ 
             cantidad_insertada=cantidad_insertada+billete100;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Pago.setVisible(true);     
            }
     }
+      
         public void e50(){
            if(getBoton_50e()==boton_50e){ 
             cantidad_insertada=cantidad_insertada+billete50;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);     
-           }}
+           }
+        }
+        
            public void e20(){
            if(getBoton_20e()==boton_20e){ 
             cantidad_insertada=cantidad_insertada+billete20;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
-            Pago.setVisible(true);
-            //dispose();       
+            Pago.setVisible(true);     
            }
            }
+           
            public void e10(){
            if(getBoton_10e()==boton_10e){ 
             cantidad_insertada=cantidad_insertada+billete10;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);      
-           }}
+           }
+           }
+           
            public void e5(){
            if(getBoton_5e()==boton_5e){ 
             cantidad_insertada=cantidad_insertada+billete5;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
            }
            }
+           
            public void e2(){
            if(getBoton_2e()==boton_2e){ 
             cantidad_insertada=cantidad_insertada+moneda2;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
            }     
            }
+           
            public void e1(){
            if(getBoton_1e()==boton_1e){ 
             cantidad_insertada=cantidad_insertada+moneda1;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
            }       
            }
-           
-           
+                     
            public void c50(){
            if(getBoton_50c()==boton_50c){ 
             cantidad_insertada=cantidad_insertada+moneda50c;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
            }      
            }
-           
-           
+                     
            public void c20(){
            if(getBoton_20c()==boton_20c){ 
             cantidad_insertada=cantidad_insertada+moneda20c;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
            }       
            }
-           
-           
+                     
            public void c10(){
            if(getBoton_10c()==boton_10c){ 
             cantidad_insertada=cantidad_insertada+moneda10c;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
            }       
            }
-           
-           
+                      
            public void c5(){
            if(getBoton_5c()==boton_5c){ 
             cantidad_insertada=cantidad_insertada+moneda5c;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
            }      
            }
-           
-           
+                      
            public void c2(){
            if(getBoton_2c()==boton_2c){ 
             cantidad_insertada=cantidad_insertada+moneda2c;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
            }      
            }
-           
-           
+                      
            public void c1(){
            if(getBoton_1c()==boton_1c){ 
             cantidad_insertada=cantidad_insertada+moneda1c;
-
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);

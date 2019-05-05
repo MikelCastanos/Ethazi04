@@ -4,8 +4,6 @@ import javax.swing.*;
 import javax.swing.ImageIcon;
 import static Controlador.ControladorPago.*;
 import Controlador.ControladorPago;
-import Modelo.Alojamiento;
-import Modelo.Habitacion;
 
 public class VistaPago extends JFrame {
     
@@ -119,9 +117,6 @@ public VistaPago(){
             boton_1c.setIcon(new ImageIcon("src/images/1c.gif"));
             boton_1c.setBounds(300,450,50,50);
             add(boton_1c);
-            
-            precioFinal=Habitacion.getPrecio_habitacion()*Alojamiento.getDiasEstancia();
-            precioFinalcents=precioFinal*100;
             
             preciototal_IVA= new JLabel("Precio Final (IVA incluido): "+precioFinal+"€");
             preciototal_IVA.setBounds(200,100,300,20);

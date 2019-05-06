@@ -5,17 +5,14 @@
  */
 package Vista;
 
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import Controlador.*;
-import static Vista.VistaBienvenida.boton_siguiente;
 import com.toedter.calendar.JDateChooser;
 import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
-import javax.swing.SwingUtilities;
 import static vista.VistaPago.logo1;
 
 /**

@@ -5,18 +5,14 @@
  */
 package Controlador;
 
-import Modelo.ConsultaHotel;
+import Modelo.Hotel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Iterator;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
-import Controlador.ControladorUbicacion;
 import static Controlador.ControladorUbicacion.seleccionUbicacion;
-import Modelo.Alojamiento;
 import Vista.VistaConfigurarHabitacion;
-import Vista.VistaEstanciaSeleccionada;
 import javax.swing.JFrame;
 
 
@@ -44,7 +40,7 @@ public class ControladorEleccion {
         
         
            public void rellenarComboBox2 (JComboBox eleccion){
-           ConsultaHotel hotel= new ConsultaHotel();
+           Hotel hotel= new Hotel();
           
           hotel.HotelPorLugar(seleccionUbicacion);
                 

@@ -7,12 +7,10 @@ package Controlador;
 
 import static Controlador.ControladorEleccion.seleccionEleccion;
 import Modelo.Alojamiento;
-import Modelo.ConsultaHotel;
 import Modelo.Habitacion;
 import Modelo.Hotel;
 import Modelo.Usuario;
 import Modelo.insertarReserva;
-import Vista.VistaEstanciaSeleccionada;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
@@ -21,7 +19,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import vista.VistaPago;
 
 /**
@@ -42,7 +39,7 @@ public class ControladorEstanciaSeleccionada {
     public static double precio1ConDias;
     public static double precio1cents;
     public static int codigoHotelInsertar;
-    public static ArrayList datosHotel= new ArrayList<>();
+      ArrayList datosHotel= new ArrayList<>();
     
     public ControladorEstanciaSeleccionada(JButton boton_siguiente3){
                    
@@ -61,7 +58,7 @@ public class ControladorEstanciaSeleccionada {
 //    revisar los demas ocntroladores para hacer algo parecido y no llamar a las consultas tantas veces
     public void cargarValores(){
         
-        ConsultaHotel cons=new ConsultaHotel();
+        Hotel cons=new Hotel();
         datosHotel= cons.consultaCompleta(seleccionEleccion);
         codigoHabitacionInsertar=100;
         codigoHotelInsertar=Hotel.getCodigoHotel();
@@ -77,7 +74,7 @@ public class ControladorEstanciaSeleccionada {
     
     
     public void irPago(){
-        ConsultaHotel cons=new ConsultaHotel();
+        Hotel cons=new Hotel();
 //        precio1=(int) cons.consultaCompleta(seleccionEleccion).get(2);
         System.out.println("El precio es: ");
         System.out.println(precio1);
@@ -89,11 +86,11 @@ public class ControladorEstanciaSeleccionada {
     }
     
     public static void sacarDatosEstancia(){
-           ConsultaHotel hotel= new ConsultaHotel();
+           Hotel hotel= new Hotel();
            hotel.consultaCompleta(seleccionEleccion);
     }
     public void insertarDatosEstancia(){
-        ConsultaHotel cons=new ConsultaHotel();
+        Hotel cons=new Hotel();
 //        codigoHotelInsertar=(int) cons.consultaCompleta(seleccionEleccion).get(0);
 //        nombreHotelInsertar=(String) cons.consultaCompleta(seleccionEleccion).get(1);
         insertarReserva insertar= new insertarReserva();
@@ -104,7 +101,7 @@ public class ControladorEstanciaSeleccionada {
         FileWriter fw;
     
         try {
-            ConsultaHotel cons=new ConsultaHotel();
+            Hotel cons=new Hotel();
             
             fw = new FileWriter(new File("mytextfile.txt"));
             

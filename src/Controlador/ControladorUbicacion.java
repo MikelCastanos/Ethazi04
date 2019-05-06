@@ -6,30 +6,22 @@
 package Controlador;
 
 import Vista.VistaBienvenida;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 import Vista.*;
 import Modelo.*;
-import Aplicacion.*;
-import BBDD.Conexion;
 import java.awt.event.MouseEvent;
 import java.util.Iterator;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
-import Modelo.ConsultaHotel;
-import Vista.VistaUbicacion;
+import Modelo.Hotel;
 import com.toedter.calendar.JDateChooser;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import static java.util.concurrent.TimeUnit.DAYS;
 
 public class ControladorUbicacion {
     
@@ -112,7 +104,7 @@ public class ControladorUbicacion {
     
 
          public void rellenarComboBox (JComboBox ubicacion){
-           ConsultaHotel hotel= new ConsultaHotel();
+           Hotel hotel= new Hotel();
 //           hotel.ubicacion();
            
         Iterator<String> i= hotel.ubicacion().iterator();

@@ -6,14 +6,10 @@
 package Vista;
 
 import Controlador.ControladorEleccion;
-import static Controlador.ControladorEleccion.seleccionEleccion;
 import Controlador.ControladorEstanciaSeleccionada;
 import Modelo.Alojamiento;
-import Modelo.ConsultaHotel;
-import Modelo.Habitacion;
 import Modelo.Hotel;
 import Modelo.Usuario;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;

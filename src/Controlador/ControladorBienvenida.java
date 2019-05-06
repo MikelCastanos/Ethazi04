@@ -11,20 +11,13 @@ package Controlador;
  */
 
 import Vista.VistaBienvenida;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 import Vista.*;
 import Modelo.*;
-import Aplicacion.*;
 import java.awt.event.MouseEvent;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
-import Modelo.ConsultaHotel;
-import Vista.VistaEleccion;
 
 
 

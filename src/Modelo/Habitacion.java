@@ -5,10 +5,11 @@
  */
 package Modelo;
 
-/**
- *
- * @author ira_a
- */
+import BBDD.Conexion;
+import BBDD.Consultas;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 public class Habitacion extends Hotel{
     
     protected static int cod_habitacion;
@@ -70,17 +71,60 @@ public class Habitacion extends Hotel{
     }
     
     public static void coincidencia(){
-        consultaHabitacion habitacion= new consultaHabitacion();
+        Habitacion habitacion= new Habitacion();
         habitacion.habitaciones(getCama_nino(),getCama_simple(),getCama_doble(),Hotel.getCodigoHotel());
     }
     
     public static void comprobarDisponibilidad(){
-        consultaHabitacion habitacion2= new consultaHabitacion();
+        Habitacion habitacion2= new Habitacion();
         habitacion2.habitacionesDisponibles();
 //        if (!habitacion2.habitacionesDisponibles()){
 //        setDisponibilidad(false); 
 //        }else{
 //        setDisponibilidad(true);    
 //        }
+    }
+    
+    
+    public void habitaciones(int camaInfantil,int camaSimple, int camaDoble, int codHotel){
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+
+        
+        String query="select cama_infantil, cama_simple, cama_doble, precio_habitacion, cod_habitacion from habitacion "
+                + "where (cod_hotel=" +codHotel+ ")AND(cama_doble="+camaDoble +")AND(cama_simple="+camaSimple+" )AND(cama_infantil="+camaInfantil+");";
+        ResultSet rs= consultas.consultaBD(query);
+        try{
+            while(rs.next()){
+                System.out.println ("Habitacion que coincide con las camas seleccionadas :"+rs.getInt (1) + " " + rs.getInt (2)+ " " + rs.getInt(3)+ " " + rs.getDouble (4)+ " " + rs.getInt (5));
+             Habitacion.setPrecio_habitacion(rs.getDouble (4));   
+             Habitacion.setCod_habitacion(rs.getInt(5));
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    public void  habitacionesDisponibles(){
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+
+        
+//        String query="select if (exists (select cod_habitacion, fecha_entrada, fecha_salida from reserva where "
+//                + "(cod_habitacion="+Habitacion.getCod_habitacion()+")AND(fecha_entrada='"+Alojamiento.getFechaEntrada()+"')AND(fecha_entrada='"+Alojamiento.getFechaSalida()+"')));";
+        String query="select cod_habitacion, fecha_entrada, fecha_salida from reserva where "
+                + "(cod_habitacion="+Habitacion.getCod_habitacion()+")AND(fecha_entrada='"+Alojamiento.getFechaEntrada()+"')AND(fecha_salida='"+Alojamiento.getFechaSalida()+"')";
+        System.out.println(query);
+        ResultSet rs= consultas.consultaBD(query);
+
+        
+        try{
+            while(rs.next()) {
+              JOptionPane.showMessageDialog(null,"Las habitaciones que cumplen sus requerimientos no estan disponibles");
+          }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        
     }
 }

@@ -5,8 +5,8 @@
  */
 package Controlador;
 
-import static Modelo.ConsultaLogin.consultaLogin;
-import static Modelo.ConsultaLogin.consultaRegistro;
+import static Modelo.Usuario.consultaLogin;
+import static Modelo.Usuario.consultaRegistro;
 import Modelo.Usuario;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;

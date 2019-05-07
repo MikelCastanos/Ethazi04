@@ -27,18 +27,18 @@ import vista.VistaPago;
  */
 public class ControladorEstanciaSeleccionada {
     
-    public static int codigoHabitacionInsertar;
-    public static String dniInsertar;
-    public static String fechaGestion;
-    public static String fechaEntrada;
-    public static String fechaSalida;
+    public  int codigoHabitacionInsertar;
+    public  String dniInsertar;
+    public  String fechaGestion;
+    public  String fechaEntrada;
+    public  String fechaSalida;
     
 
 
-    public static double precio1;
-    public static double precio1ConDias;
-    public static double precio1cents;
-    public static int codigoHotelInsertar;
+    public  double precio1;
+    public  double precio1ConDias;
+    public  double precio1cents;
+    public  int codigoHotelInsertar;
       ArrayList datosHotel= new ArrayList<>();
     
     public ControladorEstanciaSeleccionada(JButton boton_siguiente3){

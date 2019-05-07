@@ -23,7 +23,7 @@ import javax.swing.JFrame;
 public class ControladorEleccion {
     
     public static String seleccionEleccion;
-    public static int contadorHab=0;
+    
     
     public ControladorEleccion(){}
     
@@ -42,7 +42,7 @@ public class ControladorEleccion {
            public void rellenarComboBox2 (JComboBox eleccion){
            Hotel hotel= new Hotel();
           
-          hotel.HotelPorLugar(seleccionUbicacion);
+          hotel.HotelPorLugar(ControladorUbicacion.seleccionUbicacion);
                 
         Iterator<String> ite= hotel.HotelPorLugar(seleccionUbicacion).iterator();
         while(ite.hasNext()){
@@ -59,7 +59,7 @@ public class ControladorEleccion {
 
           //ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
           //con.cargarValores();
-            contadorHab++;   
+              
             VistaConfigurarHabitacion vistaCon=new VistaConfigurarHabitacion(eleccion);
             vistaCon.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistaCon.setBounds(0,0,600,725);

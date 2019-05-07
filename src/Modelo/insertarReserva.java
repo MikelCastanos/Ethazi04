@@ -20,7 +20,7 @@ public class insertarReserva{
 
     public static Date fechagest=Calendar.getInstance().getTime();
     public static String formatted= format1.format(fechagest);
-    int preprecio=(int)Habitacion.getPrecio_habitacion()*Alojamiento.alojamiento1.getDiasEstancia();
+    int preprecio=(int)Habitacion.habitacion1.getPrecio_habitacion()*Alojamiento.alojamiento1.getDiasEstancia();
     String precioString=Integer.toString(preprecio);
 //    Metodo para insertar los datos de la reserva en la tabla
     
@@ -34,7 +34,7 @@ public class insertarReserva{
         
         //query="INSERT into reserva (cod_habitacion,cod_hotel,dni,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+ codHabitacion +"','"+ codHotel +"', '" + dni + "','"+ fechaGestion +"','"+ fechaEntrada +"','"+ fechaSalida +"','"+ precioReserva +"')";
         
-        query="insert into reserva(cod_habitacion,cod_hotel,dni,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+Habitacion.getCod_habitacion()+"','"+Hotel.getCodigoHotel()+"','"+Usuario.getDniUsuarioLogin()+"','"+formatted+"','"+Alojamiento.alojamiento1.getFechaEntrada()+"','"+Alojamiento.alojamiento1.getFechaSalida()+"','"+precioString+"')";
+        query="insert into reserva(cod_habitacion,cod_hotel,dni,fecha_gestion,fecha_entrada,fecha_salida,precio_reserva)VALUES('"+Habitacion.habitacion1.getCod_habitacion()+"','"+Hotel.getCodigoHotel()+"','"+Usuario.getDniUsuarioLogin()+"','"+formatted+"','"+Alojamiento.alojamiento1.getFechaEntrada()+"','"+Alojamiento.alojamiento1.getFechaSalida()+"','"+precioString+"')";
         System.out.println(query);
         consultas.insertarDatosBD(query);
     }

@@ -48,10 +48,10 @@ public class ControladorConfigurarHabitacion {
      }
      
        public void cogerDatosEleccion(JComboBox camaSimpleBox,JComboBox camaDobleBox,JComboBox camaNiñoBox){
-            Habitacion.setCama_simple((int) camaSimpleBox.getSelectedItem());
-            Habitacion.setCama_doble((int) camaDobleBox.getSelectedItem());
-            Habitacion.setCama_nino((int) camaNiñoBox.getSelectedItem());
-            Habitacion.coincidencia();
+            Habitacion.habitacion1.setCama_simple((int) camaSimpleBox.getSelectedItem());
+            Habitacion.habitacion1.setCama_doble((int) camaDobleBox.getSelectedItem());
+            Habitacion.habitacion1.setCama_nino((int) camaNiñoBox.getSelectedItem());
+            Habitacion.habitacion1.coincidencia();
             Habitacion.comprobarDisponibilidad();
 //            if(!Habitacion.isDisponibilidad()){
 //              JOptionPane.showMessageDialog(null,"La habitacion elejida no esta disponible en esas fechas");  
@@ -61,7 +61,7 @@ public class ControladorConfigurarHabitacion {
             ControladorEstanciaSeleccionada con= new ControladorEstanciaSeleccionada();
             con.cargarValores();
             
-            System.out.println(Habitacion.getCama_simple()+" "+Habitacion.getCama_doble()+" "+Habitacion.getCama_nino());
+            System.out.println(Habitacion.habitacion1.getCama_simple()+" "+Habitacion.habitacion1.getCama_doble()+" "+Habitacion.habitacion1.getCama_nino());
          }
        
 

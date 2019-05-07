@@ -59,7 +59,7 @@ public class ControladorEstanciaSeleccionada {
     public void cargarValores(){
         
         Hotel cons=new Hotel();
-        
+
         datosHotel= cons.consultaCompleta(seleccionEleccion);
         codigoHabitacionInsertar=100;
         codigoHotelInsertar=Hotel.getCodigoHotel();
@@ -67,8 +67,8 @@ public class ControladorEstanciaSeleccionada {
         fechaGestion=insertarReserva.formatted;
         fechaEntrada=Alojamiento.alojamiento1.getFechaEntrada();
         fechaSalida=Alojamiento.alojamiento1.getFechaSalida();
-        precio1=Habitacion.getPrecio_habitacion();
-        precio1ConDias=Habitacion.getPrecio_habitacion()*Alojamiento.alojamiento1.getDiasEstancia();
+        precio1=Habitacion.habitacion1.getPrecio_habitacion();
+        precio1ConDias=Habitacion.habitacion1.getPrecio_habitacion()*Alojamiento.alojamiento1.getDiasEstancia();
         precio1cents=precio1ConDias*100;
        
     }

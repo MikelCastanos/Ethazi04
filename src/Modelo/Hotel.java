@@ -133,11 +133,11 @@ public class Hotel extends Alojamiento{
                 //Llenamos el Objeto de Hotel con los Getters y Setters heredados o propios
                 
                 //Setters de la clase Alojamiento que se extienden a Hotel
-                Hotel.setNombre(rs.getString(2));
-                Hotel.setProvincia(rs.getString(6));
-                Hotel.setCalle(rs.getString(7));
-                Hotel.setCodigo_postal(rs.getInt(3));
-                Hotel.setCiudad(rs.getString(5));
+                Alojamiento.alojamiento1.setNombre(rs.getString(2));
+                Alojamiento.alojamiento1.setProvincia(rs.getString(6));
+                Alojamiento.alojamiento1.setCalle(rs.getString(7));
+                Alojamiento.alojamiento1.setCodigo_postal(rs.getInt(3));
+                Alojamiento.alojamiento1.setCiudad(rs.getString(5));
                 
                 //Unico Setter que es PROPIO de Hotel
                 Hotel.setCodigoHotel(rs.getInt(1));

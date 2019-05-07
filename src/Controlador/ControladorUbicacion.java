@@ -59,7 +59,7 @@ public class ControladorUbicacion {
             vistae.setVisible(true);
             cogerDatos(ubicacion,combobox_numero_habitaciones);
             System.out.println(seleccionUbicacion);
-            System.out.println("Numero de habitaciones: "+Alojamiento.getNum_habitaciones());
+            System.out.println("Numero de habitaciones: "+Alojamiento.alojamiento1.getNum_habitaciones());
             
             
 
@@ -97,7 +97,7 @@ public class ControladorUbicacion {
             int otro = (int) ChronoUnit.DAYS.between(now,now2);
            
             
-            Alojamiento.setDiasEstancia(otro);
+            Alojamiento.alojamiento1.setDiasEstancia(otro);
         } }
         
     }
@@ -116,7 +116,7 @@ public class ControladorUbicacion {
        
          public void cogerDatos(JComboBox ubicacion, JComboBox combobox_numero_habitaciones){
             seleccionUbicacion=ubicacion.getSelectedItem().toString();
-            Hotel.setNum_habitaciones((int)combobox_numero_habitaciones.getSelectedItem());
+            Alojamiento.alojamiento1.setNum_habitaciones((int)combobox_numero_habitaciones.getSelectedItem());
             
             
          }
@@ -126,22 +126,22 @@ public class ControladorUbicacion {
              try {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String date = sdf.format(fecha_inicio.getDate());
-                Alojamiento.setFechaEntrada(date);
+                Alojamiento.alojamiento1.setFechaEntrada(date);
                 } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Elija una fecha de Entrada ", "Error..!!", JOptionPane.ERROR_MESSAGE);
                  
                 }
-             System.out.println("Fecha entrada "+Alojamiento.getFechaEntrada());
+             System.out.println("Fecha entrada "+Alojamiento.alojamiento1.getFechaEntrada());
              
                 try {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String date = sdf.format(fecha_fin.getDate());
-                Alojamiento.setFechaSalida(date);
+                Alojamiento.alojamiento1.setFechaSalida(date);
                 } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Elija una fecha de Salida ", "Error..!!", JOptionPane.ERROR_MESSAGE);
                  
                 }
-                System.out.println("Fecha salida "+Alojamiento.dniInsertar());
+                System.out.println("Fecha salida "+Alojamiento.alojamiento1.getFechaEntrada());
          }
 
 //   Crear metodo que NO permita selecionar una fecha de salida anterior a la fecha de entrada !

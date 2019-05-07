@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
 public class ControladorPago extends JFrame {
    public int billete200=20000,billete100=10000,billete50=5000,billete20=2000,billete10=1000,billete5=500,moneda2=200,moneda1=100,moneda50c=50,moneda20c=20,moneda10c=10,moneda5c=5,moneda2c=2,moneda1c=1;
    public static double cantidad_insertada=0;
-   public  double precioFinal = Habitacion.getPrecio_habitacion()*Alojamiento.getDiasEstancia();
+   public  double precioFinal = Habitacion.getPrecio_habitacion()*Alojamiento.alojamiento1.getDiasEstancia();
    public  double precioFinalcents = precioFinal*100;
    
     VistaPago pago;

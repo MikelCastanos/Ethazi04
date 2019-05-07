@@ -113,7 +113,7 @@ public class Habitacion extends Hotel{
 //        String query="select if (exists (select cod_habitacion, fecha_entrada, fecha_salida from reserva where "
 //                + "(cod_habitacion="+Habitacion.getCod_habitacion()+")AND(fecha_entrada='"+Alojamiento.getFechaEntrada()+"')AND(fecha_entrada='"+Alojamiento.getFechaSalida()+"')));";
         String query="select cod_habitacion, fecha_entrada, fecha_salida from reserva where "
-                + "(cod_habitacion="+Habitacion.getCod_habitacion()+")AND(fecha_entrada='"+Alojamiento.getFechaEntrada()+"')AND(fecha_salida='"+Alojamiento.getFechaSalida()+"')";
+                + "(cod_habitacion="+Habitacion.getCod_habitacion()+")AND(fecha_entrada='"+Alojamiento.alojamiento1.getFechaEntrada()+"')AND(fecha_salida='"+Alojamiento.alojamiento1.getFechaSalida()+"')";
         System.out.println(query);
         ResultSet rs= consultas.consultaBD(query);
 

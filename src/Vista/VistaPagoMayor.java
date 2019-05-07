@@ -2,6 +2,7 @@
 package vista;
 
 import Controlador.ControladorEstanciaSeleccionada;
+import Controlador.ControladorPago;
 import Controlador.ControladorPagoMayor;
 import static Controlador.ControladorPagoMayor.*;
 import javax.swing.*;
@@ -37,10 +38,11 @@ public class VistaPagoMayor extends JFrame{
     public VistaPagoMayor(){
             
      setLayout(null);  
+            ControladorPago controp=new ControladorPago();
             ControladorEstanciaSeleccionada contro=new ControladorEstanciaSeleccionada();
             precioFinal2=contro.precio1cents;
             precioFinal2cents=precioFinal2;
-            vueltasCentimos=cantidad_insertada-precioFinal2cents;
+            vueltasCentimos=controp.cantidad_insertada-precioFinal2cents;
 
         
             mensajeVueltas=new JLabel("CANTIDAD A DEVOLVER: "+vueltasCentimos/100+"€");

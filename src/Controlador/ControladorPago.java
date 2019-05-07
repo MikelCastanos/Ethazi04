@@ -21,13 +21,15 @@ import javax.swing.JOptionPane;
 
 public class ControladorPago extends JFrame {
    public int billete200=20000,billete100=10000,billete50=5000,billete20=2000,billete10=1000,billete5=500,moneda2=200,moneda1=100,moneda50c=50,moneda20c=20,moneda10c=10,moneda5c=5,moneda2c=2,moneda1c=1;
-   public static double cantidad_insertada=0;
-   public static double precioFinal = Habitacion.getPrecio_habitacion()*Alojamiento.getDiasEstancia();
-   public static double precioFinalcents = precioFinal*100;
+   public  double cantidad_insertada=0;
+   public  double precioFinal = Habitacion.getPrecio_habitacion()*Alojamiento.getDiasEstancia();
+   public  double precioFinalcents = precioFinal*100;
    
     VistaPago pago;
     Modelo modelo;
     ActionListener actionListener;
+    
+    public ControladorPago(){}
     
     public ControladorPago(JButton boton_volver, JButton boton_continuar, JButton boton_200e, JButton boton_100e,
             JButton boton_50e, JButton boton_20e, JButton boton_10e, JButton boton_5e, JButton boton_2e, JButton boton_1e,

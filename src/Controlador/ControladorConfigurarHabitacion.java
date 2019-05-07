@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import static Controlador.ControladorEleccion.contadorHab;
+
 import Modelo.Alojamiento;
 import Modelo.Habitacion;
 import Vista.VistaConfigurarHabitacion;
@@ -67,15 +67,9 @@ public class ControladorConfigurarHabitacion {
 
                  public void configMasHabitaciones(JComboBox eleccion){
               
-              if(contadorHab<Alojamiento.getNum_habitaciones()){
-                  contadorHab++;
-            VistaConfigurarHabitacion vistaCon=new VistaConfigurarHabitacion(eleccion);
-            vistaCon.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            vistaCon.setBounds(0,0,600,725);
-            vistaCon.setVisible(true);
-              }
-              else{
+
+
                   cargarEstanciaSeleccionada(eleccion);
-              }
+
           }
 }

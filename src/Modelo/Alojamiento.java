@@ -3,103 +3,88 @@ package Modelo;
 
 public class Alojamiento {
     
-    protected static  String nombre, calle, ciudad, provincia;
-    protected static  int codigo_postal;
-    protected static  int num_habitaciones;
-    protected static String fechaEntrada;
-    protected static String fechaSalida;
-    protected static int diasEstancia;
-    
-    
-    
-    public static String getFechaEntrada() {
-        return fechaEntrada;
-    }
+    protected   String nombre, calle, ciudad, provincia;
+    protected   int codigo_postal;
+    protected   int num_habitaciones;
+    protected  String fechaEntrada;
+    protected  String fechaSalida;
+    protected  int diasEstancia;
 
-    public static void setFechaEntrada(String fechaEntrada) {
-        Alojamiento.fechaEntrada = fechaEntrada;
-    }
-
-    public static String dniInsertar() {
-        return fechaSalida;
-    }
-
-    public static void setFechaSalida(String fechaSalida) {
-        Alojamiento.fechaSalida = fechaSalida;
-    }
-
-    public static String getFechaSalida() {
-        return fechaSalida;
-    }
-
-    
-    //Constructores innecesarios porque al no poner ninguno se utiliza el constructor vacio standard
-   /*
-    public Alojamiento(String nombre,String calle,String provincia,int codigo_postal) {
-        this.nombre=nombre;
-        this.calle=calle;
-        this.provincia=provincia;
-        this.codigo_postal=codigo_postal;
-    }
-
-    public Alojamiento() {
-    }*/
-
-    public static String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public static void setNombre(String nombre) {
-        Alojamiento.nombre = nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public static String getCalle() {
+    public String getCalle() {
         return calle;
     }
 
-    public static void setCalle(String calle) {
-        Alojamiento.calle = calle;
+    public void setCalle(String calle) {
+        this.calle = calle;
     }
 
-    public static String getCiudad() {
+    public String getCiudad() {
         return ciudad;
     }
 
-    public static void setCiudad(String ciudad) {
-        Alojamiento.ciudad = ciudad;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
-    public static String getProvincia() {
+    public String getProvincia() {
         return provincia;
     }
 
-    public static void setProvincia(String provincia) {
-        Alojamiento.provincia = provincia;
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
-    public static int getCodigo_postal() {
+    public int getCodigo_postal() {
         return codigo_postal;
     }
 
-    public static void setCodigo_postal(int codigo_postal) {
-        Alojamiento.codigo_postal = codigo_postal;
+    public void setCodigo_postal(int codigo_postal) {
+        this.codigo_postal = codigo_postal;
     }
 
-    public static int getNum_habitaciones() {
+    public int getNum_habitaciones() {
         return num_habitaciones;
     }
 
-    public static void setNum_habitaciones(int num_habitaciones) {
-        Alojamiento.num_habitaciones = num_habitaciones;
+    public void setNum_habitaciones(int num_habitaciones) {
+        this.num_habitaciones = num_habitaciones;
     }
 
-    public static int getDiasEstancia() {
+    public String getFechaEntrada() {
+        return fechaEntrada;
+    }
+
+    public void setFechaEntrada(String fechaEntrada) {
+        this.fechaEntrada = fechaEntrada;
+    }
+
+    public String getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public void setFechaSalida(String fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
+
+    public int getDiasEstancia() {
         return diasEstancia;
     }
 
-    public static void setDiasEstancia(int diasEstancia) {
-        Alojamiento.diasEstancia = diasEstancia;
+    public void setDiasEstancia(int diasEstancia) {
+        this.diasEstancia = diasEstancia;
     }
+    
+    
+    
+   
     
     
     
@@ -115,6 +100,9 @@ public class Alojamiento {
     
     
 
+    public static Alojamiento alojamiento1=new Alojamiento();
+    public static Alojamiento alojamiento2=new Alojamiento();
+    public static Alojamiento alojamiento3=new Alojamiento();
     
     
     

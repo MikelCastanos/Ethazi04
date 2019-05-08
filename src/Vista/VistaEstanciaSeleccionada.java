@@ -55,11 +55,11 @@ public class VistaEstanciaSeleccionada extends JFrame{
         System.out.println("Vista datos: "+alojamiento.getCalle());
         ControladorEstanciaSeleccionada.sacarDatosEstancia();
         //datosEstancia=new JLabel("Datos: "+Alojamiento.getNombre()+" "+alojamiento.getProvincia()+" "+alojamiento.getCiudad()+" "+alojamiento.getCalle());
-        datosEstancia=new JLabel("Codigo Hotel: "+Hotel.getCodigoHotel()+" Nombre: "+Alojamiento.alojamiento1.getNombre());
+        datosEstancia=new JLabel("Codigo Hotel: "+Hotel.hotel1.getCodigoHotel()+" Nombre: "+Hotel.hotel1.getNombre());
         datosEstancia.setBounds(40,275,550,30);
         add(datosEstancia);
         
-        datosEstancia2=new JLabel("Provincia: "+Alojamiento.alojamiento1.getProvincia()+" Ciudad: "+Alojamiento.alojamiento1.getCiudad()+" Calle: "+Alojamiento.alojamiento1.getCalle());
+        datosEstancia2=new JLabel("Provincia: "+Hotel.hotel1.getProvincia()+" Ciudad: "+Hotel.hotel1.getCiudad()+" Calle: "+Hotel.hotel1.getCalle());
         datosEstancia2.setBounds(40,305,550,30);
         add(datosEstancia2);
         
@@ -67,11 +67,11 @@ public class VistaEstanciaSeleccionada extends JFrame{
 //        datosHabitacion.setBounds(40,405,550,30);
 //        add(datosHabitacion);
         
-        datosFechaReserva=new JLabel("Fecha Entrada: "+Alojamiento.alojamiento1.getFechaEntrada()+" Fecha Salida: "+Alojamiento.alojamiento1.getFechaSalida());
+        datosFechaReserva=new JLabel("Fecha Entrada: "+Hotel.hotel1.getFechaEntrada()+" Fecha Salida: "+Hotel.hotel1.getFechaSalida());
         datosFechaReserva.setBounds(40,405,550,30);
         add(datosFechaReserva);
         
-                datosCliente=new JLabel("DNI: "+Usuario.getDniUsuarioLogin());
+                datosCliente=new JLabel("DNI: "+Usuario.usuarioLogin.getDniUsuarioLogin());
         datosCliente.setBounds(40,435,550,30);
         add(datosCliente);
         

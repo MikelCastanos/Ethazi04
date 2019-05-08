@@ -74,7 +74,7 @@ public static Habitacion habitacion1=new Habitacion();
     
     public void coincidencia(){
         
-        habitaciones(getCama_nino(),getCama_simple(),getCama_doble(),Hotel.getCodigoHotel());
+        habitaciones(getCama_nino(),getCama_simple(),getCama_doble(),Hotel.hotel1.getCodigoHotel());
     }
     
     public static void comprobarDisponibilidad(){
@@ -115,7 +115,7 @@ public static Habitacion habitacion1=new Habitacion();
 //        String query="select if (exists (select cod_habitacion, fecha_entrada, fecha_salida from reserva where "
 //                + "(cod_habitacion="+Habitacion.getCod_habitacion()+")AND(fecha_entrada='"+Alojamiento.getFechaEntrada()+"')AND(fecha_entrada='"+Alojamiento.getFechaSalida()+"')));";
         String query="select cod_habitacion, fecha_entrada, fecha_salida from reserva where "
-                + "(cod_habitacion="+getCod_habitacion()+")AND(fecha_entrada='"+Alojamiento.alojamiento1.getFechaEntrada()+"')AND(fecha_salida='"+Alojamiento.alojamiento1.getFechaSalida()+"')";
+                + "(cod_habitacion="+getCod_habitacion()+")AND(fecha_entrada='"+Hotel.hotel1.getFechaEntrada()+"')AND(fecha_salida='"+Hotel.hotel1.getFechaSalida()+"')";
         System.out.println(query);
         ResultSet rs= consultas.consultaBD(query);
 

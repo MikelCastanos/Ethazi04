@@ -25,7 +25,7 @@ public class ControladorBienvenida {
     
     VistaBienvenida vista;
     VistaUbicacion vista2;
-    Modelo modelo;
+    
     ActionListener actionListener;
     
         public ControladorBienvenida(JButton boton_siguiente){

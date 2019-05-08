@@ -17,67 +17,71 @@ import javax.swing.JFrame;
 
 public class Usuario {
     
-    protected static String dniUsuarioLogin;
-    protected static String passwordLogin;
-    protected static String dniUsuarioRegistro;
-    protected static String passwordRegistro,passwordRegistro2;
-    protected static String nombreRegistro;
+    protected  String dniUsuarioLogin;
+    protected  String passwordLogin;
+    protected  String dniUsuarioRegistro;
+    protected  String passwordRegistro,passwordRegistro2;
+    protected  String nombreRegistro;
 
-    public static String getDniUsuarioLogin() {
+    public static Usuario usuarioLogin=new Usuario();
+    public static Usuario usuarioRegistro=new Usuario();
+    
+    
+    public String getDniUsuarioLogin() {
         return dniUsuarioLogin;
     }
 
-    public static void setDniUsuarioLogin(String dniUsuarioLogin) {
-        Usuario.dniUsuarioLogin = dniUsuarioLogin;
+    public void setDniUsuarioLogin(String dniUsuarioLogin) {
+        this.dniUsuarioLogin = dniUsuarioLogin;
     }
 
-
-
-    public static String getPasswordLogin() {
+    public String getPasswordLogin() {
         return passwordLogin;
     }
 
-    public static void setPasswordLogin(String passwordLogin) {
-        Usuario.passwordLogin = passwordLogin;
+    public void setPasswordLogin(String passwordLogin) {
+        this.passwordLogin = passwordLogin;
     }
 
-    public static String getDniUsuarioRegistro() {
+    public String getDniUsuarioRegistro() {
         return dniUsuarioRegistro;
     }
 
-    public static void setDniUsuarioRegistro(String dniUsuarioRegistro) {
-        Usuario.dniUsuarioRegistro = dniUsuarioRegistro;
+    public void setDniUsuarioRegistro(String dniUsuarioRegistro) {
+        this.dniUsuarioRegistro = dniUsuarioRegistro;
     }
 
-    public static String getPasswordRegistro() {
+    public String getPasswordRegistro() {
         return passwordRegistro;
     }
 
-    public static void setPasswordRegistro(String passwordRegistro) {
-        Usuario.passwordRegistro = passwordRegistro;
+    public void setPasswordRegistro(String passwordRegistro) {
+        this.passwordRegistro = passwordRegistro;
     }
 
-    public static String getPasswordRegistro2() {
+    public String getPasswordRegistro2() {
         return passwordRegistro2;
     }
 
-    public static void setPasswordRegistro2(String passwordRegistro2) {
-        Usuario.passwordRegistro2 = passwordRegistro2;
+    public void setPasswordRegistro2(String passwordRegistro2) {
+        this.passwordRegistro2 = passwordRegistro2;
     }
 
-    public static String getNombreRegistro() {
+    public String getNombreRegistro() {
         return nombreRegistro;
     }
 
-    public static void setNombreRegistro(String nombreRegistro) {
-        Usuario.nombreRegistro = nombreRegistro;
+    public void setNombreRegistro(String nombreRegistro) {
+        this.nombreRegistro = nombreRegistro;
     }
+
+   
     
     static PreparedStatement pst = null;
     static ResultSet rs = null;
     static Connection con = null;
     
-    public static void consultaLogin(){
+    public  void consultaLogin(){
         
         //        Instanciar BBDD
         Conexion conexion= new Conexion();
@@ -88,7 +92,7 @@ public class Usuario {
         
 
 
-        String query="select * from usuario where dni='"+Usuario.getDniUsuarioLogin()+"' and contrasena='"+ Usuario.getPasswordLogin()+"'";
+        String query="select * from usuario where dni='"+Usuario.usuarioLogin.getDniUsuarioLogin()+"' and contrasena='"+ Usuario.usuarioLogin.getPasswordLogin()+"'";
         
 
         try{
@@ -112,15 +116,15 @@ public class Usuario {
             }
     }
     
-    public static void consultaRegistro(){
+    public  void consultaRegistro(){
                 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
         com.mysql.jdbc.Connection con= conexion.conectar();
         
-        System.out.println(Usuario.getDniUsuarioRegistro()+" "+Usuario.getNombreRegistro()+" "+Usuario.getPasswordRegistro());
+        System.out.println(Usuario.usuarioRegistro.getDniUsuarioRegistro()+" "+Usuario.usuarioRegistro.getNombreRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro());
         
-        String query="insert into usuario (dni,nombre_usuario, contrasena) values('"+Usuario.getDniUsuarioRegistro()+"','"+Usuario.getNombreRegistro()+"','"+Usuario.getPasswordRegistro()+"')";
+        String query="insert into usuario (dni,nombre_usuario, contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"','"+Usuario.usuarioRegistro.getNombreRegistro()+"','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
         
         consultas.insertarDatosBD(query);
 

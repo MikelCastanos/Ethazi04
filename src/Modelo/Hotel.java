@@ -11,24 +11,27 @@ import java.util.ArrayList;
  */
 public class Hotel extends Alojamiento{
     
+    public static Hotel hotel1=new Hotel();
     
-    protected static int num_estrellas,codigoHotel;
+    protected int num_estrellas,codigoHotel;
 
-    public static int getNum_estrellas() {
+    public int getNum_estrellas() {
         return num_estrellas;
     }
 
-    public static void setNum_estrellas(int num_estrellas) {
-        Hotel.num_estrellas = num_estrellas;
+    public void setNum_estrellas(int num_estrellas) {
+        this.num_estrellas = num_estrellas;
     }
 
-    public static int getCodigoHotel() {
+    public int getCodigoHotel() {
         return codigoHotel;
     }
 
-    public static void setCodigoHotel(int codigoHotel) {
-        Hotel.codigoHotel = codigoHotel;
+    public void setCodigoHotel(int codigoHotel) {
+        this.codigoHotel = codigoHotel;
     }
+
+
     
     public ArrayList<String>ubicacion(){
 // Instanciar BBDD
@@ -133,14 +136,14 @@ public class Hotel extends Alojamiento{
                 //Llenamos el Objeto de Hotel con los Getters y Setters heredados o propios
                 
                 //Setters de la clase Alojamiento que se extienden a Hotel
-                Alojamiento.alojamiento1.setNombre(rs.getString(2));
-                Alojamiento.alojamiento1.setProvincia(rs.getString(6));
-                Alojamiento.alojamiento1.setCalle(rs.getString(7));
-                Alojamiento.alojamiento1.setCodigo_postal(rs.getInt(3));
-                Alojamiento.alojamiento1.setCiudad(rs.getString(5));
+                hotel1.setNombre(rs.getString(2));
+                hotel1.setProvincia(rs.getString(6));
+                hotel1.setCalle(rs.getString(7));
+                hotel1.setCodigo_postal(rs.getInt(3));
+                hotel1.setCiudad(rs.getString(5));
                 
                 //Unico Setter que es PROPIO de Hotel
-                Hotel.setCodigoHotel(rs.getInt(1));
+                hotel1.setCodigoHotel(rs.getInt(1));
                 
                 //HABRIA QUE SACAR EL PRECIO 
                 

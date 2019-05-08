@@ -5,8 +5,8 @@
  */
 package Controlador;
 
-import static Modelo.Usuario.consultaLogin;
-import static Modelo.Usuario.consultaRegistro;
+
+
 import Modelo.Usuario;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -47,12 +47,12 @@ public class ControladorLogin {
     }
             
             public void testLogin(){
-                consultaLogin();
+                Modelo.Usuario.usuarioLogin.consultaLogin();
             }
             
             public void llamarRegistro(){
-                if(Usuario.getPasswordRegistro().equals(Usuario.getPasswordRegistro2())){
-                consultaRegistro();
+                if(Usuario.usuarioRegistro.getPasswordRegistro().equals(Usuario.usuarioRegistro.getPasswordRegistro2())){
+                Modelo.Usuario.usuarioRegistro.consultaRegistro();
                     JOptionPane.showMessageDialog(null,"Ahora puede acceder con su usuario y contraseña");
                 }
                 else{
@@ -64,18 +64,18 @@ public class ControladorLogin {
             
             
             public void cogerDatos(JPasswordField contrasenaField, JTextField usuarioField){
-                Usuario.setPasswordLogin(String.valueOf(VistaLogin.contrasenaField.getPassword()));
-                Usuario.setDniUsuarioLogin(VistaLogin.dniField.getText());
-                System.out.println(Usuario.getPasswordLogin()+" "+Usuario.getDniUsuarioLogin());
+                Usuario.usuarioLogin.setPasswordLogin(String.valueOf(VistaLogin.contrasenaField.getPassword()));
+                Usuario.usuarioLogin.setDniUsuarioLogin(VistaLogin.dniField.getText());
+                System.out.println(Usuario.usuarioLogin.getPasswordLogin()+" "+Usuario.usuarioLogin.getDniUsuarioLogin());
          }
             
             
             public void cogerDatosRegistro(JPasswordField registroContrasenaField, JPasswordField registroContrasenaField2, JTextField registroDniField,JTextField registroNombreField){
-                Usuario.setDniUsuarioRegistro(VistaLogin.registroDniField.getText());
-                Usuario.setPasswordRegistro(String.valueOf(VistaLogin.registroContrasenaField.getPassword()));
-                Usuario.setPasswordRegistro2(String.valueOf(VistaLogin.registroContrasenaField2.getPassword()));
-                Usuario.setNombreRegistro(VistaLogin.registroNombreField.getText());
-                System.out.println(Usuario.getDniUsuarioRegistro()+" "+Usuario.getNombreRegistro()+" "+Usuario.getPasswordRegistro()+" "+Usuario.getPasswordRegistro2());
+                Usuario.usuarioRegistro.setDniUsuarioRegistro(VistaLogin.registroDniField.getText());
+                Usuario.usuarioRegistro.setPasswordRegistro(String.valueOf(VistaLogin.registroContrasenaField.getPassword()));
+                Usuario.usuarioRegistro.setPasswordRegistro2(String.valueOf(VistaLogin.registroContrasenaField2.getPassword()));
+                Usuario.usuarioRegistro.setNombreRegistro(VistaLogin.registroNombreField.getText());
+                System.out.println(Usuario.usuarioRegistro.getDniUsuarioRegistro()+" "+Usuario.usuarioRegistro.getNombreRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro2());
             }
             
 }

@@ -11,7 +11,7 @@ import Modelo.Casa;
  *
  * @author ikasleaETHAZI
  */
-public class Apartamento extends Casa {
+public class Apartamento extends Alojamiento {
     
     String piso;
     

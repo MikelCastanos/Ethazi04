@@ -28,7 +28,7 @@ public class ControladorTresHabitaciones {
         });
     }
     
-                public void habitacionSeleccionada(JComboBox comboBoxResultados2Habitaciones1,JComboBox comboBoxResultados2Habitaciones2,JComboBox comboBoxResultados2Habitaciones3){
+                public void habitacionSeleccionada3(JComboBox comboBoxResultados3Habitaciones1,JComboBox comboBoxResultados3Habitaciones2,JComboBox comboBoxResultados3Habitaciones3){
                     
 //                        Aqui habria que hacer un get por ejemplo del Codigo Habitacion que ha sido seleccionada en el ComboBox y despues pasarlo al objeto que corresponda
 //                        Como ejemplo seria:
@@ -44,7 +44,7 @@ public class ControladorTresHabitaciones {
 //                         Modelo.Habitacion.habitacion1.setCama_nino(0);
 //                         Modelo.Habitacion.habitacion1.setPrecio_habitacion(50.0);
 //                         
-//                         y asi con los objetos necesarios, en este caso 3
+//                         y asi con los objetos necesarios, en este caso serian habitacion1, habitacion2 y habitacion3
                          
                     
 

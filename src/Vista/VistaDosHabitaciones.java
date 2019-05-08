@@ -61,16 +61,10 @@ public class VistaDosHabitaciones extends JFrame{
             add(logo1);
             validate();
             
-                                        ControladorDosHabitaciones controladorUnaHab=new ControladorDosHabitaciones(botonSiguienteDosHabitaciones,comboBoxResultados2Habitaciones1,comboBoxResultados2Habitaciones2);
+                                        ControladorDosHabitaciones controladorDosHab=new ControladorDosHabitaciones(botonSiguienteDosHabitaciones,comboBoxResultados2Habitaciones1,comboBoxResultados2Habitaciones2);
 
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     
     
-    public static void main(String[] args) {
-        VistaDosHabitaciones vi=new VistaDosHabitaciones();
-                        vi.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vi.setBounds(0,0,600,725);
-                vi.setVisible(true);
-    }
 }

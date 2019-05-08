@@ -53,8 +53,6 @@ public class VistaUbicacionHotel extends JFrame{
         combobox_numero_habitaciones.addItem(1);
         combobox_numero_habitaciones.addItem(2);
         combobox_numero_habitaciones.addItem(3);
-        combobox_numero_habitaciones.addItem(4);
-        combobox_numero_habitaciones.addItem(5);
         combobox_numero_habitaciones.setBounds(300,300,50,30);
         add(combobox_numero_habitaciones);
         

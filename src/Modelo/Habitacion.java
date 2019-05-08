@@ -18,7 +18,12 @@ public class Habitacion extends Hotel{
     protected  int cama_nino;
     protected  double precio_habitacion;
     protected  boolean disponibilidad;
+    
+    
 public static Habitacion habitacion1=new Habitacion();
+public static Habitacion habitacion2=new Habitacion();
+public static Habitacion habitacion3=new Habitacion();
+
     public Habitacion() {
     }
 

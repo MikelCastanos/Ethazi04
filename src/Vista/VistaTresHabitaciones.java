@@ -67,15 +67,10 @@ public class VistaTresHabitaciones extends JFrame {
             add(logo1);
             validate();
             
-             ControladorTresHabitaciones controladorUnaHab=new ControladorTresHabitaciones(botonSiguienteTresHabitaciones,comboBoxResultados3Habitaciones1,comboBoxResultados3Habitaciones2,comboBoxResultados3Habitaciones3);
+             ControladorTresHabitaciones controladorTresHab=new ControladorTresHabitaciones(botonSiguienteTresHabitaciones,comboBoxResultados3Habitaciones1,comboBoxResultados3Habitaciones2,comboBoxResultados3Habitaciones3);
 
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     
-        public static void main(String[] args) {
-        VistaTresHabitaciones vi=new VistaTresHabitaciones();
-                        vi.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vi.setBounds(0,0,600,725);
-                vi.setVisible(true);
-    }
+
 }

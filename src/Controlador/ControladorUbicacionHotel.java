@@ -47,11 +47,33 @@ public class ControladorUbicacionHotel {
     
     public void accionBoton(JComboBox ubicacion, JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
         
-            VistaEleccion vistae=new VistaEleccion(ubicacion,combobox_numero_habitaciones);
-            vistae.setBounds(0,0,600,730);
-            vistae.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            vistae.setVisible(true);
+            
+        
+//            VistaEleccion vistae=new VistaEleccion();
+//            vistae.setBounds(0,0,600,730);
+//            vistae.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//            vistae.setVisible(true);
             cogerDatos(ubicacion,combobox_numero_habitaciones);
+            
+            if(Hotel.hotel1.getNum_habitaciones()==1){
+                VistaUnaHabitacion vistauna=new VistaUnaHabitacion();
+                vistauna.setBounds(0,0,600,730);
+                vistauna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                vistauna.setVisible(true);
+            }
+            if(Hotel.hotel1.getNum_habitaciones()==2){
+                VistaDosHabitaciones vistados=new VistaDosHabitaciones();
+                vistados.setBounds(0,0,600,730);
+                vistados.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                vistados.setVisible(true);
+            }
+            if(Hotel.hotel1.getNum_habitaciones()==3){
+                VistaTresHabitaciones vistatres=new VistaTresHabitaciones();
+                vistatres.setBounds(0,0,600,730);
+                vistatres.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                vistatres.setVisible(true);
+            }
+            
             System.out.println(seleccionUbicacion);
             System.out.println("Numero de habitaciones: "+Hotel.hotel1.getNum_habitaciones());
             

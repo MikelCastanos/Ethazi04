@@ -55,10 +55,5 @@ public class VistaUnaHabitacion extends JFrame {
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     
-    public static void main(String[] args) {
-        VistaUnaHabitacion vi=new VistaUnaHabitacion();
-                        vi.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vi.setBounds(0,0,600,725);
-                vi.setVisible(true);
-    }
+
 }

@@ -26,4 +26,8 @@ public class ControladorUnaHabitacion {
             
         });
     }
+            
+            public void habitacionSeleccionada(JComboBox comboBoxResultadosHabitaciones){
+                comboBoxResultadosHabitaciones.getSelectedItem();
+            }
 }

@@ -24,8 +24,8 @@ public class VistaUbicacionCasa extends JFrame {
     
     public VistaUbicacionCasa(){
     
-            botonSiguienteUbicacionCasa=new javax.swing.JButton();
-                    botonSiguienteUbicacionCasa=new JButton("Siguiente");
+        botonSiguienteUbicacionCasa=new javax.swing.JButton();
+        botonSiguienteUbicacionCasa=new JButton("Siguiente");
         botonSiguienteUbicacionCasa.setBounds(450,600,100,30);
         add(botonSiguienteUbicacionCasa);
         

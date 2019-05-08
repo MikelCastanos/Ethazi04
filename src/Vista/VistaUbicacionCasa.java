@@ -25,6 +25,9 @@ public class VistaUbicacionCasa extends JFrame {
     public VistaUbicacionCasa(){
     
             botonSiguienteUbicacionCasa=new javax.swing.JButton();
+                    botonSiguienteUbicacionCasa=new JButton("Siguiente");
+        botonSiguienteUbicacionCasa.setBounds(450,600,100,30);
+        add(botonSiguienteUbicacionCasa);
         
         setLayout(null);
 
@@ -76,14 +79,12 @@ public class VistaUbicacionCasa extends JFrame {
         
         
         //Pasamos lo importante al Controlador y rellenamos el combobox
-                ControladorUbicacionCasa contUC=new ControladorUbicacionCasa(botonSiguienteUbicacionCasa,comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
+                ControladorUbicacionCasa controladorUC=new ControladorUbicacionCasa(botonSiguienteUbicacionCasa,comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
 
-                contUC.rellenarComboBox(comboBoxUbicacionCasa);
+                controladorUC.rellenarComboBox(comboBoxUbicacionCasa);
         
 
-        botonSiguienteUbicacionCasa=new JButton("Siguiente");
-        botonSiguienteUbicacionCasa.setBounds(450,600,100,30);
-        add(botonSiguienteUbicacionCasa);
+
         
         
         ImageIcon icon=new ImageIcon("src//images/Bidaion.png");

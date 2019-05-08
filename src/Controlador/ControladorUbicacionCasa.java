@@ -44,7 +44,7 @@ public class ControladorUbicacionCasa {
     public ControladorUbicacionCasa(JButton botonSiguienteUbicacionCasa,JComboBox comboBoxUbicacionCasa,JComboBox comboBoxNumeroPersonasCasa,JDateChooser fechaEntradaCasa,JDateChooser fechaSalidaCasa){
         botonSiguienteUbicacionCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                impr();
+                System.out.println("CHECK");
                 
 
             }
@@ -53,9 +53,7 @@ public class ControladorUbicacionCasa {
     }
     
     
-    public void impr(){
-        System.out.println("VAYA2");
-    }
+
     public void rellenarComboBox (JComboBox comboBoxUbicacionCasa){
            Hotel hotel=new Hotel();
 //           hotel.ubicacion();

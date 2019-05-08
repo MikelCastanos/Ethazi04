@@ -11,7 +11,7 @@ import java.awt.event.MouseEvent;
 import java.util.Iterator;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import static Controlador.ControladorUbicacion.seleccionUbicacion;
+import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import Vista.VistaConfigurarHabitacion;
 import javax.swing.JFrame;
 
@@ -42,7 +42,7 @@ public class ControladorEleccion {
            public void rellenarComboBox2 (JComboBox eleccion){
            Hotel hotel= new Hotel();
           
-          hotel.HotelPorLugar(ControladorUbicacion.seleccionUbicacion);
+          hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
                 
         Iterator<String> ite= hotel.HotelPorLugar(seleccionUbicacion).iterator();
         while(ite.hasNext()){

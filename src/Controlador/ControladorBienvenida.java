@@ -24,7 +24,7 @@ import javax.swing.JFrame;
 public class ControladorBienvenida {
     
     VistaBienvenida vista;
-    VistaUbicacion vista2;
+    VistaUbicacionHotel vista2;
     
     ActionListener actionListener;
     
@@ -44,7 +44,7 @@ public class ControladorBienvenida {
             //HACER DISPOSE SI HAY AGALLAS.
             
             /*
-            VistaUbicacion vistau=new VistaUbicacion();
+            VistaUbicacionHotel vistau=new VistaUbicacionHotel();
             vistau.setBounds(0,0,600,730);
             vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistau.setVisible(true);
@@ -58,7 +58,7 @@ public class ControladorBienvenida {
 
 
         /*
-            VistaUbicacion vistau=new VistaUbicacion();
+            VistaUbicacionHotel vistau=new VistaUbicacionHotel();
             vistau.setBounds(0,0,600,730);
             vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistau.setVisible(true);

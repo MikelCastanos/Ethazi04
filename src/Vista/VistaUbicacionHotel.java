@@ -19,7 +19,7 @@ import static vista.VistaPago.logo1;
  *
  * @author ikasleaETHAZI
  */
-public class VistaUbicacion extends JFrame{
+public class VistaUbicacionHotel extends JFrame{
     
     JLabel mensaje_ubicacion, mensaje_alojamiento,mensaje_num_habitaciones,mensaje_fecha_inicio,mensaje_fecha_fin;
     JComboBox ubicacion,tipo_alojamiento, combobox_numero_habitaciones;
@@ -29,7 +29,7 @@ public class VistaUbicacion extends JFrame{
     
     public static String seleccionUbicacion;
     
-    public VistaUbicacion(){
+    public VistaUbicacionHotel(){
         boton_siguiente2=new javax.swing.JButton();
         
         setLayout(null);
@@ -85,7 +85,7 @@ public class VistaUbicacion extends JFrame{
         boton_siguiente2.setBounds(450,600,100,30);
         add(boton_siguiente2);
         
-        ControladorUbicacion cont=new ControladorUbicacion(boton_siguiente2,ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
+        ControladorUbicacionHotel cont=new ControladorUbicacionHotel(boton_siguiente2,ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
     
         cont.rellenarComboBox(ubicacion);
         

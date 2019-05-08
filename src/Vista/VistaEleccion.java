@@ -45,7 +45,7 @@ public class VistaEleccion extends JFrame {
         boton_siguiente3.setBounds(450,340,100,30);
         add(boton_siguiente3);
 
-        ControladorUbicacion cont2=new ControladorUbicacion();
+        ControladorUbicacionHotel cont2=new ControladorUbicacionHotel();
         cont2.cogerDatos(ubicacion,combobox_numero_habitaciones);
         ControladorEleccion cont=new ControladorEleccion(boton_siguiente3,eleccion);
         cont.rellenarComboBox2(eleccion);

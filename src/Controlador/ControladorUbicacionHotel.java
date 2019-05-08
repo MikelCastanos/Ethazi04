@@ -23,7 +23,7 @@ import java.time.Instant;
 import java.util.Date;
 import java.time.temporal.ChronoUnit;
 
-public class ControladorUbicacion {
+public class ControladorUbicacionHotel {
     
     VistaBienvenida vista;
     
@@ -31,9 +31,9 @@ public class ControladorUbicacion {
     
     static String seleccionUbicacion;
     
-    public ControladorUbicacion(){}
+    public ControladorUbicacionHotel(){}
     
-    public ControladorUbicacion(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
+    public ControladorUbicacionHotel(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                fechaSeleccionada(fecha_inicio,fecha_fin);

@@ -25,9 +25,6 @@ import java.time.temporal.ChronoUnit;
 
 public class ControladorUbicacionHotel {
     
-    VistaBienvenida vista;
-    
-    ActionListener actionListener;
     
     static String seleccionUbicacion;
     

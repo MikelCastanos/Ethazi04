@@ -27,7 +27,7 @@ public class VistaUbicacionHotel extends JFrame{
     static JButton boton_siguiente2;
     JDateChooser fecha_inicio,fecha_fin;
     
-    public static String seleccionUbicacion;
+    //public static String seleccionUbicacion;
     
     public VistaUbicacionHotel(){
         boton_siguiente2=new javax.swing.JButton();

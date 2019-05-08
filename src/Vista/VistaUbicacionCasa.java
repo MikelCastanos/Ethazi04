@@ -17,7 +17,7 @@ import static vista.VistaPago.logo1;
 
 public class VistaUbicacionCasa extends JFrame {
     
-    JButton botonSiguienteUbicacionCasa;
+    static JButton botonSiguienteUbicacionCasa;
     JLabel mensajeUbicacionCasa,numeroPersonasCasa,labelFechaEntrada,labelFechaSalida;
     JComboBox comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa;
     JDateChooser fechaEntradaCasa,fechaSalidaCasa;
@@ -74,16 +74,13 @@ public class VistaUbicacionCasa extends JFrame {
         fechaSalidaCasa.setBounds(350,400,100,30);
         add(fechaSalidaCasa);
         
+        
+        //Pasamos lo importante al Controlador y rellenamos el combobox
                 ControladorUbicacionCasa contUC=new ControladorUbicacionCasa(botonSiguienteUbicacionCasa,comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
 
-        contUC.rellenarComboBox(comboBoxUbicacionCasa);
+                contUC.rellenarComboBox(comboBoxUbicacionCasa);
         
-        
-       
-        
-        
-        
-        
+
         botonSiguienteUbicacionCasa=new JButton("Siguiente");
         botonSiguienteUbicacionCasa.setBounds(450,600,100,30);
         add(botonSiguienteUbicacionCasa);

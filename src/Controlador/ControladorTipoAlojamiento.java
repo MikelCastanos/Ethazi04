@@ -1,5 +1,7 @@
 package Controlador;
 
+import Vista.VistaUbicacionApartamento;
+import Vista.VistaUbicacionCasa;
 import Vista.VistaUbicacionHotel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -32,10 +34,16 @@ public class ControladorTipoAlojamiento {
                 vistaUH.setVisible(true);
               }
               if(radioCasa.isSelected()){
-                  System.out.println("Casa");
+                VistaUbicacionCasa vistaUC=new VistaUbicacionCasa();
+                vistaUC.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                vistaUC.setBounds(0,0,600,725);
+                vistaUC.setVisible(true);
               }
               if(radioApartamento.isSelected()){
-                  System.out.println("Apartamento");
+                VistaUbicacionApartamento vistaUA=new VistaUbicacionApartamento();
+                vistaUA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                vistaUA.setBounds(0,0,600,725);
+                vistaUA.setVisible(true);
               }
               
           }  

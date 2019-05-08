@@ -15,4 +15,6 @@ public class Apartamento extends Alojamiento {
     
     String piso;
     
+    public static Apartamento apartamento1=new Apartamento();
+    
 }

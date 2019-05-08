@@ -5,10 +5,12 @@
  */
 package Vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author shabi
  */
-public class VistaUbicacionApartamento {
+public class VistaUbicacionApartamento extends JFrame {
     
 }

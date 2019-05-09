@@ -18,9 +18,9 @@ import static vista.VistaPago.logo1;
 public class VistaUbicacionCasa extends JFrame {
     
     static JButton botonSiguienteUbicacionCasa;
-    JLabel mensajeUbicacionCasa,numeroPersonasCasa,labelFechaEntrada,labelFechaSalida;
-    JComboBox comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa;
-    JDateChooser fechaEntradaCasa,fechaSalidaCasa;
+    public JLabel mensajeUbicacionCasa,numeroPersonasCasa,labelFechaEntrada,labelFechaSalida;
+    public JComboBox comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa;
+    public JDateChooser fechaEntradaCasa,fechaSalidaCasa;
     
     public VistaUbicacionCasa(){
     

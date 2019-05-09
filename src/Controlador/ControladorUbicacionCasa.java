@@ -45,7 +45,7 @@ public class ControladorUbicacionCasa {
         botonSiguienteUbicacionCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("CHECK");
-                
+                cogerTodosDatos(comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
 
             }
             
@@ -64,4 +64,68 @@ public class ControladorUbicacionCasa {
         }
          }
     
-}
+    
+    public void cogerTodosDatos(JComboBox comboBoxUbicacionCasa, JComboBox comboBoxNumeroPersonasCasa,JDateChooser fechaEntradaCasa,JDateChooser fechaSalidaCasa){
+        
+        
+        //COGEMOS EL NUMERO DE PERSONAS DEL COMBOBOX Y LO PASAMOS AL MODELO
+        Alojamiento.alojamiento1.setNum_personas((int)comboBoxNumeroPersonasCasa.getSelectedItem());
+        System.out.println(Alojamiento.alojamiento1.getNum_personas());
+        
+        //PASAMOS LOS JDATECHOOSER A FECHA NORMAL
+        Date fech1=fechaEntradaCasa.getDate();
+        Date fech2=fechaSalidaCasa.getDate();
+
+        
+        //CHECKEAMOS QUE NO HAYA FECHAS VACIAS
+        if(fech1==null||fech2==null){
+            JOptionPane.showMessageDialog(null,"Debe seleccionar una Fecha de inicio y una Fecha fin");
+        }
+        
+        //SI LAS FECHAS NO ESTAN VACIAS LAS COMPARAMOS PARA QUE LA FECHA FINAL SEA MAYOR A LA FECHA INICIO
+       if(fech1!=null&&fech2!=null){
+        if(fechaEntradaCasa.getDate().compareTo(fechaSalidaCasa.getDate())==0||fechaEntradaCasa.getDate().compareTo(fechaSalidaCasa.getDate())>0){
+            JOptionPane.showMessageDialog(null,"Fecha fin invalida. Selecciona al menos una noche.");
+        }
+        
+        
+        else{
+            
+            
+            //ESTE CODIGO CALCULA EL NUMERO DE DIAS QUE HAY ENTRE LA FECHA ENTRADA Y LA FECHA SALIDA
+
+            //Creamos un formato para darle a las fechas
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                String date = sdf.format(fechaEntradaCasa.getDate());
+                
+                //Set de FechaEntrada al Modelo
+                Alojamiento.alojamiento1.setFechaEntrada(date);
+                
+                String date2 = sdf.format(fechaSalidaCasa.getDate());
+                //Set de FechaSalida al Modelo
+                Alojamiento.alojamiento1.setFechaSalida(date2);
+                
+                //Cogemos las fechas otra vez para calcular los dias que hay entre medio
+            Date dat1=fechaEntradaCasa.getDate();
+            Date dat2=fechaSalidaCasa.getDate();
+
+            Instant now = dat1.toInstant();
+            Instant now2 = dat2.toInstant();
+            int otro = (int) ChronoUnit.DAYS.between(now,now2);
+            
+            //Llevamos el numero de dias al Modelo
+            Alojamiento.alojamiento1.setDiasEstancia(otro);
+            
+            Alojamiento.alojamiento1.setCiudad((String)comboBoxUbicacionCasa.getSelectedItem());
+            
+                System.out.println("Fecha entrada "+Alojamiento.alojamiento1.getFechaEntrada());
+                System.out.println("Fecha entrada "+Alojamiento.alojamiento1.getFechaSalida());
+                System.out.println("Dias Estancia: "+Alojamiento.alojamiento1.getDiasEstancia());
+                System.out.println("Ciudad Alojamiento: "+ Alojamiento.alojamiento1.getCiudad());
+        } }}}
+       
+       
+
+                
+    
+

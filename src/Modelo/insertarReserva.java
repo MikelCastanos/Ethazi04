@@ -20,7 +20,7 @@ public class insertarReserva{
 
     public static Date fechagest=Calendar.getInstance().getTime();
     public static String formatted= format1.format(fechagest);
-    int preprecio=(int)Habitacion.habitacion1.getPrecio_habitacion()*Hotel.hotel1.getDiasEstancia();
+    int preprecio=(int)Habitacion.habitacion1.getPrecio_habitacion()*Alojamiento.alojamiento1.getDiasEstancia();
     String precioString=Integer.toString(preprecio);
 //    Metodo para insertar los datos de la reserva en la tabla
     

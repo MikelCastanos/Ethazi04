@@ -15,6 +15,26 @@ public class Casa extends Alojamiento {
     
     int num_baños, tamaño;
     
+    
     public static Casa casa1=new Casa();
+
+    public int getNum_baños() {
+        return num_baños;
+    }
+
+    public void setNum_baños(int num_baños) {
+        this.num_baños = num_baños;
+    }
+
+    public int getTamaño() {
+        return tamaño;
+    }
+
+    public void setTamaño(int tamaño) {
+        this.tamaño = tamaño;
+    }
+
+    
+    
     
 }

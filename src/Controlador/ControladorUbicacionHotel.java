@@ -102,7 +102,7 @@ public class ControladorUbicacionHotel {
             int otro = (int) ChronoUnit.DAYS.between(now,now2);
            
             
-            Hotel.hotel1.setDiasEstancia(otro);
+            Alojamiento.alojamiento1.setDiasEstancia(otro);
         } }
         
     }

@@ -6,6 +6,7 @@ public class Alojamiento {
     protected   String nombre, calle, ciudad, provincia;
     protected   int codigo_postal;
     protected   int num_habitaciones;
+    protected   int num_personas;
     protected  String fechaEntrada;
     protected  String fechaSalida;
     protected  int diasEstancia;
@@ -81,6 +82,16 @@ public class Alojamiento {
     public void setDiasEstancia(int diasEstancia) {
         this.diasEstancia = diasEstancia;
     }
+
+    public int getNum_personas() {
+        return num_personas;
+    }
+
+    public void setNum_personas(int num_personas) {
+        this.num_personas = num_personas;
+    }
+    
+    
     
     
     

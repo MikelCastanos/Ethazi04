@@ -68,7 +68,7 @@ public class ControladorEstanciaSeleccionada {
         fechaEntrada=Hotel.hotel1.getFechaEntrada();
         fechaSalida=Hotel.hotel1.getFechaSalida();
         precio1=Habitacion.habitacion1.getPrecio_habitacion();
-        precio1ConDias=Habitacion.habitacion1.getPrecio_habitacion()*Hotel.hotel1.getDiasEstancia();
+        precio1ConDias=Habitacion.habitacion1.getPrecio_habitacion()*Alojamiento.alojamiento1.getDiasEstancia();
         precio1cents=precio1ConDias*100;
        
     }

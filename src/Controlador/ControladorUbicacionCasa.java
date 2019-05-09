@@ -45,7 +45,7 @@ public class ControladorUbicacionCasa {
         botonSiguienteUbicacionCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("CHECK");
-                cogerTodosDatos(comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
+                cogerDatosUbicacionCasa(comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
 
             }
             
@@ -65,7 +65,7 @@ public class ControladorUbicacionCasa {
          }
     
     
-    public void cogerTodosDatos(JComboBox comboBoxUbicacionCasa, JComboBox comboBoxNumeroPersonasCasa,JDateChooser fechaEntradaCasa,JDateChooser fechaSalidaCasa){
+    public void cogerDatosUbicacionCasa(JComboBox comboBoxUbicacionCasa, JComboBox comboBoxNumeroPersonasCasa,JDateChooser fechaEntradaCasa,JDateChooser fechaSalidaCasa){
         
         
         //COGEMOS EL NUMERO DE PERSONAS DEL COMBOBOX Y LO PASAMOS AL MODELO
@@ -116,6 +116,7 @@ public class ControladorUbicacionCasa {
             //Llevamos el numero de dias al Modelo
             Alojamiento.alojamiento1.setDiasEstancia(otro);
             
+            //Llevamos la ciudad seleccionada al Modelo
             Alojamiento.alojamiento1.setCiudad((String)comboBoxUbicacionCasa.getSelectedItem());
             
                 System.out.println("Fecha entrada "+Alojamiento.alojamiento1.getFechaEntrada());

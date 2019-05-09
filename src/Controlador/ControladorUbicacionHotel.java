@@ -55,24 +55,13 @@ public class ControladorUbicacionHotel {
 //            vistae.setVisible(true);
             cogerDatos(ubicacion,combobox_numero_habitaciones);
             
-            if(Hotel.hotel1.getNum_habitaciones()==1){
-                VistaUnaHabitacion vistauna=new VistaUnaHabitacion();
-                vistauna.setBounds(0,0,600,730);
-                vistauna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistauna.setVisible(true);
-            }
-            if(Hotel.hotel1.getNum_habitaciones()==2){
-                VistaDosHabitaciones vistados=new VistaDosHabitaciones();
-                vistados.setBounds(0,0,600,730);
-                vistados.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistados.setVisible(true);
-            }
-            if(Hotel.hotel1.getNum_habitaciones()==3){
-                VistaTresHabitaciones vistatres=new VistaTresHabitaciones();
-                vistatres.setBounds(0,0,600,730);
-                vistatres.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistatres.setVisible(true);
-            }
+            
+            VistaComplementos VistaComple=new VistaComplementos();
+                VistaComple.setBounds(0,0,600,730);
+                VistaComple.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                VistaComple.setVisible(true);
+            
+
             
             System.out.println(seleccionUbicacion);
             System.out.println("Numero de habitaciones: "+Hotel.hotel1.getNum_habitaciones());

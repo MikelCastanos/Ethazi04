@@ -44,9 +44,9 @@ public class ControladorUbicacionCasa {
     public ControladorUbicacionCasa(JButton botonSiguienteUbicacionCasa,JComboBox comboBoxUbicacionCasa,JComboBox comboBoxNumeroPersonasCasa,JDateChooser fechaEntradaCasa,JDateChooser fechaSalidaCasa){
         botonSiguienteUbicacionCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                System.out.println("CHECK");
+                
                 cogerDatosUbicacionCasa(comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
-                siguienteVentana();
+                siguienteVentanaCasa();
             }
             
         });
@@ -119,15 +119,15 @@ public class ControladorUbicacionCasa {
             //Llevamos la ciudad seleccionada al Modelo
             Alojamiento.alojamiento1.setCiudad((String)comboBoxUbicacionCasa.getSelectedItem());
             
-                System.out.println("Fecha entrada "+Alojamiento.alojamiento1.getFechaEntrada());
-                System.out.println("Fecha entrada "+Alojamiento.alojamiento1.getFechaSalida());
-                System.out.println("Dias Estancia: "+Alojamiento.alojamiento1.getDiasEstancia());
-                System.out.println("Ciudad Alojamiento: "+ Alojamiento.alojamiento1.getCiudad());
-                System.out.println("Numero de Personas: "+Alojamiento.alojamiento1.getNum_personas());
+                System.out.println("Fecha entrada Casa: "+Alojamiento.alojamiento1.getFechaEntrada());
+                System.out.println("Fecha entrada Casa: "+Alojamiento.alojamiento1.getFechaSalida());
+                System.out.println("Dias Estancia Casa: "+Alojamiento.alojamiento1.getDiasEstancia());
+                System.out.println("Ciudad Alojamiento Casa: "+ Alojamiento.alojamiento1.getCiudad());
+                System.out.println("Numero de Personas Casa: "+Alojamiento.alojamiento1.getNum_personas());
         } }}
 
 
-    public void siguienteVentana(){
+    public void siguienteVentanaCasa(){
         
 
 //            VistaEleccion vistae=new VistaEleccion();

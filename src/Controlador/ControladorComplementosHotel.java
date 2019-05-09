@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.Alojamiento;
 import Modelo.Hotel;
 import Vista.VistaDosHabitaciones;
 import Vista.VistaTresHabitaciones;
@@ -17,10 +18,10 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 
 
-public class ControladorComplementos {
+public class ControladorComplementosHotel {
     
-                        public ControladorComplementos(JButton botonSiguienteComplementos,JCheckBox checkboxWifi,JCheckBox checkboxPiscina,JCheckBox checkboxSpa,JCheckBox checkboxParking,JCheckBox checkboxAA,JCheckBox checkboxRestaurante,JCheckBox checkboxBar,JCheckBox checkboxGym){
-        botonSiguienteComplementos.addMouseListener(new MouseAdapter(){
+                        public ControladorComplementosHotel(JButton botonSiguienteComplementosHotel,JCheckBox checkboxWifi,JCheckBox checkboxPiscina,JCheckBox checkboxSpa,JCheckBox checkboxParking,JCheckBox checkboxAA,JCheckBox checkboxRestaurante,JCheckBox checkboxBar,JCheckBox checkboxGym){
+        botonSiguienteComplementosHotel.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
                 irSeleccionarHabitacion();
@@ -33,19 +34,19 @@ public class ControladorComplementos {
                         
                         public void irSeleccionarHabitacion(){
                                         
-            if(Hotel.hotel1.getNum_habitaciones()==1){
+            if(Alojamiento.alojamiento1.getNum_habitaciones()==1){
                 VistaUnaHabitacion vistauna=new VistaUnaHabitacion();
                 vistauna.setBounds(0,0,600,730);
                 vistauna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistauna.setVisible(true);
             }
-            if(Hotel.hotel1.getNum_habitaciones()==2){
+            if(Alojamiento.alojamiento1.getNum_habitaciones()==2){
                 VistaDosHabitaciones vistados=new VistaDosHabitaciones();
                 vistados.setBounds(0,0,600,730);
                 vistados.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistados.setVisible(true);
             }
-            if(Hotel.hotel1.getNum_habitaciones()==3){
+            if(Alojamiento.alojamiento1.getNum_habitaciones()==3){
                 VistaTresHabitaciones vistatres=new VistaTresHabitaciones();
                 vistatres.setBounds(0,0,600,730);
                 vistatres.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

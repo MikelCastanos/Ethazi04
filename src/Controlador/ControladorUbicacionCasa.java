@@ -46,7 +46,7 @@ public class ControladorUbicacionCasa {
             public void mouseClicked(MouseEvent e){
                 System.out.println("CHECK");
                 cogerDatosUbicacionCasa(comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
-
+                siguienteVentana();
             }
             
         });
@@ -123,7 +123,38 @@ public class ControladorUbicacionCasa {
                 System.out.println("Fecha entrada "+Alojamiento.alojamiento1.getFechaSalida());
                 System.out.println("Dias Estancia: "+Alojamiento.alojamiento1.getDiasEstancia());
                 System.out.println("Ciudad Alojamiento: "+ Alojamiento.alojamiento1.getCiudad());
-        } }}}
+                System.out.println("Numero de Personas: "+Alojamiento.alojamiento1.getNum_personas());
+        } }}
+
+
+    public void siguienteVentana(){
+        
+            
+        
+//            VistaEleccion vistae=new VistaEleccion();
+//            vistae.setBounds(0,0,600,730);
+//            vistae.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//            vistae.setVisible(true);
+           // cogerDatos(ubicacion,combobox_numero_habitaciones);
+            
+            
+            VistaComplementosHotel VistaComple=new VistaComplementosHotel();
+                VistaComple.setBounds(0,0,600,730);
+                VistaComple.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                VistaComple.setVisible(true);
+            
+
+            
+            
+
+            
+            
+
+    }
+
+
+
+}
        
        
 

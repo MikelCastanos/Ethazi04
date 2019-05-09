@@ -5,26 +5,26 @@
  */
 package Vista;
 
-import Controlador.ControladorComplementos;
+import Controlador.ControladorComplementosHotel;
 import javax.swing.*;
 import static vista.VistaPago.logo1;
 
-public class VistaComplementos extends JFrame {
+public class VistaComplementosHotel extends JFrame {
     
     JLabel mensajeComplementos;
     JLabel labelWifi,labelPiscina,labelSpa,labelParking,labelAA,labelRestaurante,labelBar,labelGym;
-    JCheckBox checkboxWifi,checkboxPiscina,checkboxSpa,checkboxParking,checkboxAA,checkboxRestaurante,checkboxBar,checkboxGym;
-    JButton botonSiguienteComplementos;
+    JCheckBox checkboxWifiHotel,checkboxPiscinaHotel,checkboxSpaHotel,checkboxParkingHotel,checkboxAAHotel,checkboxRestauranteHotel,checkboxBarHotel,checkboxGymHotel;
+    JButton botonSiguienteComplementosHotel;
     
-    public VistaComplementos(){
+    public VistaComplementosHotel(){
         
         
         setLayout(null);
         
-        botonSiguienteComplementos=new javax.swing.JButton();
-        botonSiguienteComplementos=new JButton("Siguiente");
-        botonSiguienteComplementos.setBounds(450,600,100,30);
-        add(botonSiguienteComplementos);
+       // botonSiguienteComplementosHotel=new javax.swing.JButton();
+        botonSiguienteComplementosHotel=new JButton("Siguiente");
+        botonSiguienteComplementosHotel.setBounds(450,600,100,30);
+        add(botonSiguienteComplementosHotel);
         
         mensajeComplementos=new JLabel("Seleccione los complementos:");
         mensajeComplementos.setBounds(200,200,200,30);
@@ -37,17 +37,17 @@ public class VistaComplementos extends JFrame {
         labelWifi.setBounds(120,250,200,30);
         add(labelWifi);
         
-        checkboxWifi=new JCheckBox();
-        checkboxWifi.setBounds(150,250,30,30);
-        add(checkboxWifi);
+        checkboxWifiHotel=new JCheckBox();
+        checkboxWifiHotel.setBounds(150,250,30,30);
+        add(checkboxWifiHotel);
         
                 labelPiscina=new JLabel("Piscina:");
         labelPiscina.setBounds(350,250,200,30);
         add(labelPiscina);
         
-        checkboxPiscina=new JCheckBox();
-        checkboxPiscina.setBounds(400,250,30,30);
-        add(checkboxPiscina);
+        checkboxPiscinaHotel=new JCheckBox();
+        checkboxPiscinaHotel.setBounds(400,250,30,30);
+        add(checkboxPiscinaHotel);
         
         //Segunda Fila
         
@@ -55,17 +55,17 @@ public class VistaComplementos extends JFrame {
         labelSpa.setBounds(120,300,200,30);
         add(labelSpa);
         
-        checkboxSpa=new JCheckBox();
-        checkboxSpa.setBounds(150,300,30,30);
-        add(checkboxSpa);
+        checkboxSpaHotel=new JCheckBox();
+        checkboxSpaHotel.setBounds(150,300,30,30);
+        add(checkboxSpaHotel);
         
         labelParking=new JLabel("Parking:");
         labelParking.setBounds(350,300,200,30);
         add(labelParking);
         
-        checkboxParking=new JCheckBox();
-        checkboxParking.setBounds(400,300,30,30);
-        add(checkboxParking);
+        checkboxParkingHotel=new JCheckBox();
+        checkboxParkingHotel.setBounds(400,300,30,30);
+        add(checkboxParkingHotel);
         
         //Tercera Fila
         
@@ -73,17 +73,17 @@ public class VistaComplementos extends JFrame {
         labelAA.setBounds(32,350,200,30);
         add(labelAA);
         
-        checkboxAA=new JCheckBox();
-        checkboxAA.setBounds(150,350,30,30);
-        add(checkboxAA);
+        checkboxAAHotel=new JCheckBox();
+        checkboxAAHotel.setBounds(150,350,30,30);
+        add(checkboxAAHotel);
         
         labelRestaurante=new JLabel("Restaurante:");
         labelRestaurante.setBounds(325,350,200,30);
         add(labelRestaurante);
         
-        checkboxRestaurante=new JCheckBox();
-        checkboxRestaurante.setBounds(400,350,30,30);
-        add(checkboxRestaurante);
+        checkboxRestauranteHotel=new JCheckBox();
+        checkboxRestauranteHotel.setBounds(400,350,30,30);
+        add(checkboxRestauranteHotel);
         
         //Cuarta Fila
         
@@ -91,17 +91,17 @@ public class VistaComplementos extends JFrame {
         labelBar.setBounds(120,400,200,30);
         add(labelBar);
         
-        checkboxBar=new JCheckBox();
-        checkboxBar.setBounds(150,400,30,30);
-        add(checkboxBar);
+        checkboxBarHotel=new JCheckBox();
+        checkboxBarHotel.setBounds(150,400,30,30);
+        add(checkboxBarHotel);
         
         labelGym=new JLabel("Gimnasio:");
         labelGym.setBounds(340,400,200,30);
         add(labelGym);
         
-        checkboxGym=new JCheckBox();
-        checkboxGym.setBounds(400,400,30,30);
-        add(checkboxGym);
+        checkboxGymHotel=new JCheckBox();
+        checkboxGymHotel.setBounds(400,400,30,30);
+        add(checkboxGymHotel);
         
                     ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
             JLabel logo2 = new JLabel(icon);
@@ -115,7 +115,7 @@ public class VistaComplementos extends JFrame {
             add(logo1);
             validate();
             
-            ControladorComplementos controladorComple=new ControladorComplementos(botonSiguienteComplementos,checkboxWifi,checkboxPiscina,checkboxSpa,checkboxParking,checkboxAA,checkboxRestaurante,checkboxBar,checkboxGym);
+            ControladorComplementosHotel controladorComple1=new ControladorComplementosHotel(botonSiguienteComplementosHotel,checkboxWifiHotel,checkboxPiscinaHotel,checkboxSpaHotel,checkboxParkingHotel,checkboxAAHotel,checkboxRestauranteHotel,checkboxBarHotel,checkboxGymHotel);
 
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }

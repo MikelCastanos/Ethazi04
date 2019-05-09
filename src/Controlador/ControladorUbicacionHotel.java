@@ -58,7 +58,7 @@ public class ControladorUbicacionHotel {
            // cogerDatos(ubicacion,combobox_numero_habitaciones);
             
             
-            VistaComplementos VistaComple=new VistaComplementos();
+            VistaComplementosHotel VistaComple=new VistaComplementosHotel();
                 VistaComple.setBounds(0,0,600,730);
                 VistaComple.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 VistaComple.setVisible(true);

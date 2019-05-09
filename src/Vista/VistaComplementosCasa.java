@@ -36,7 +36,7 @@ public class VistaComplementosCasa extends JFrame{
         botonSiguienteComplementosCasa.setBounds(450,600,100,30);
         add(botonSiguienteComplementosCasa);
         
-        mensajeComplementos=new JLabel("Seleccione los complementos:");
+        mensajeComplementos=new JLabel("Seleccione los complementos de la casa:");
         mensajeComplementos.setBounds(200,200,200,30);
         add(mensajeComplementos);
         

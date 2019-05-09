@@ -21,7 +21,7 @@ public class VistaComplementosHotel extends JFrame {
         
         setLayout(null);
         
-       // botonSiguienteComplementosHotel=new javax.swing.JButton();
+        botonSiguienteComplementosHotel=new javax.swing.JButton();
         botonSiguienteComplementosHotel=new JButton("Siguiente");
         botonSiguienteComplementosHotel.setBounds(450,600,100,30);
         add(botonSiguienteComplementosHotel);

@@ -138,10 +138,10 @@ public class ControladorUbicacionCasa {
            // cogerDatos(ubicacion,combobox_numero_habitaciones);
             
             
-            VistaComplementosHotel VistaComple=new VistaComplementosHotel();
-                VistaComple.setBounds(0,0,600,730);
-                VistaComple.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                VistaComple.setVisible(true);
+            VistaComplementosCasa VistaCompleCa=new VistaComplementosCasa();
+                VistaCompleCa.setBounds(0,0,600,730);
+                VistaCompleCa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                VistaCompleCa.setVisible(true);
             
 
             

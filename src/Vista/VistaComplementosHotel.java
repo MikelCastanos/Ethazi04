@@ -13,7 +13,7 @@ public class VistaComplementosHotel extends JFrame {
     
     JLabel mensajeComplementos;
     JLabel labelWifi,labelPiscina,labelSpa,labelParking,labelAA,labelRestaurante,labelBar,labelGym;
-    JCheckBox checkboxWifiHotel,checkboxPiscinaHotel,checkboxSpaHotel,checkboxParkingHotel,checkboxAAHotel,checkboxRestauranteHotel,checkboxBarHotel,checkboxGymHotel;
+    public static JCheckBox checkboxWifiHotel,checkboxPiscinaHotel,checkboxSpaHotel,checkboxParkingHotel,checkboxAAHotel,checkboxRestauranteHotel,checkboxBarHotel,checkboxGymHotel;
     JButton botonSiguienteComplementosHotel;
     
     public VistaComplementosHotel(){

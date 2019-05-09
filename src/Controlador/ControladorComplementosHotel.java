@@ -7,6 +7,7 @@ package Controlador;
 
 import Modelo.Alojamiento;
 import Modelo.Hotel;
+import Vista.VistaComplementosHotel;
 import Vista.VistaDosHabitacionesHotel;
 import Vista.VistaTresHabitacionesHotel;
 import Vista.VistaUnaHabitacionHotel;
@@ -31,6 +32,43 @@ public class ControladorComplementosHotel {
         });
     }
     
+                        public void comprobarCheckBoxesComplementosHotel(){
+            
+            
+            
+            if(VistaComplementosHotel.checkboxWifiHotel.isSelected()){
+            Modelo.Complementos.hotelComplementos.setWifi(true);
+        }
+        
+            if(VistaComplementosHotel.checkboxSpaHotel.isSelected()){
+            Modelo.Complementos.hotelComplementos.setSpa(true);
+        }
+
+            if(VistaComplementosHotel.checkboxPiscinaHotel.isSelected()){
+            Modelo.Complementos.hotelComplementos.setPiscina(true);
+        }
+
+            if(VistaComplementosHotel.checkboxParkingHotel.isSelected()){
+            Modelo.Complementos.hotelComplementos.setParking(true);
+        }
+
+            if(VistaComplementosHotel.checkboxAAHotel.isSelected()){
+            Modelo.Complementos.hotelComplementos.setAireacondicionado(true);
+        }
+
+            if(VistaComplementosHotel.checkboxRestauranteHotel.isSelected()){
+            Modelo.Complementos.hotelComplementos.setRestaurante(true);
+        }
+
+            if(VistaComplementosHotel.checkboxBarHotel.isSelected()){
+            Modelo.Complementos.hotelComplementos.setBar(true);
+        }
+
+            if(VistaComplementosHotel.checkboxGymHotel.isSelected()){
+            Modelo.Complementos.hotelComplementos.setGimnasio(true);
+        }
+        
+        }
                         
                         public void irSeleccionarHabitacion(){
                                         

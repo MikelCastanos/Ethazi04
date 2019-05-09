@@ -78,5 +78,7 @@ public class Complementos {
     }
     
     
-    
+    public static Complementos casaComplementos=new Complementos();
+    public static Complementos apartamentoComplementos=new Complementos();
+    public static Complementos hotelComplementos=new Complementos();
 }

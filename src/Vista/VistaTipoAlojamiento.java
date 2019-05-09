@@ -2,10 +2,12 @@ package Vista;
 
 import Controlador.ControladorTipoAlojamiento;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
+import static vista.VistaPago.logo1;
 
 /**
  *
@@ -46,6 +48,18 @@ public class VistaTipoAlojamiento extends JFrame{
         JButton botonTipoAlojamiento=new JButton("Siguiente");
         botonTipoAlojamiento.setBounds(400,350,100,30);
         add(botonTipoAlojamiento);
+        
+                ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(575,200);
+            add(logo2);
+            validate();
+        
+        ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(585,695);
+            add(logo1);
+            validate();
         
         ControladorTipoAlojamiento cont=new ControladorTipoAlojamiento(botonTipoAlojamiento,radioHotel,radioCasa,radioApartamento);
     }

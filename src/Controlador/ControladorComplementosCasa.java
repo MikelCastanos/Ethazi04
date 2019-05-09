@@ -6,6 +6,8 @@
 package Controlador;
 
 
+import Modelo.Complementos;
+import Vista.VistaComplementosCasa;
 import Vista.VistaUnaCasa;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -25,7 +27,9 @@ public class ControladorComplementosCasa {
             public void mouseClicked(MouseEvent e){
                 
                 siguienteVentana();
-                
+                printCheckBox();
+                comprobarCheckBoxesComplementosCasa();
+                printCheckBox();
             }
             
         });
@@ -37,5 +41,59 @@ public class ControladorComplementosCasa {
        vista1casa.setBounds(0,0,600,725);
        vista1casa.setVisible(true);
         }
+        
+        public void comprobarCheckBoxesComplementosCasa(){
+            
+            
+            
+            if(VistaComplementosCasa.checkboxWifiCasa.isSelected()){
+            Modelo.Complementos.casaComplementos.setWifi(true);
+        }
+        
+            if(VistaComplementosCasa.checkboxSpaCasa.isSelected()){
+            Modelo.Complementos.casaComplementos.setSpa(true);
+        }
+
+            if(VistaComplementosCasa.checkboxPiscinaCasa.isSelected()){
+            Modelo.Complementos.casaComplementos.setPiscina(true);
+        }
+
+            if(VistaComplementosCasa.checkboxParkingCasa.isSelected()){
+            Modelo.Complementos.casaComplementos.setParking(true);
+        }
+
+            if(VistaComplementosCasa.checkboxAACasa.isSelected()){
+            Modelo.Complementos.casaComplementos.setAireacondicionado(true);
+        }
+
+            if(VistaComplementosCasa.checkboxRestauranteCasa.isSelected()){
+            Modelo.Complementos.casaComplementos.setRestaurante(true);
+        }
+
+            if(VistaComplementosCasa.checkboxBarCasa.isSelected()){
+            Modelo.Complementos.casaComplementos.setBar(true);
+        }
+
+            if(VistaComplementosCasa.checkboxGymCasa.isSelected()){
+            Modelo.Complementos.casaComplementos.setGimnasio(true);
+        }
+        
+        }
+        
+      public void printCheckBox(){
+            System.out.println(Modelo.Complementos.casaComplementos.isWifi());
+            System.out.println(Modelo.Complementos.casaComplementos.isSpa());
+            System.out.println(Modelo.Complementos.casaComplementos.isAireacondicionado());
+            System.out.println(Modelo.Complementos.casaComplementos.isBar());
+            System.out.println(Modelo.Complementos.casaComplementos.isGimnasio());
+            System.out.println(Modelo.Complementos.casaComplementos.isRestaurante());
+            System.out.println(Modelo.Complementos.casaComplementos.isParking());
+            System.out.println(Modelo.Complementos.casaComplementos.isPiscina());
+            
+            
+           
+                  }    
     
+        
+      //  checkboxWifiCasa,checkboxPiscinaCasa,checkboxSpaCasa,checkboxParkingCasa,checkboxAACasa,checkboxRestauranteCasa,checkboxBarCasa,checkboxGymCasa
 }

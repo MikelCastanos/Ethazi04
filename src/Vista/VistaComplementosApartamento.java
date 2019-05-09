@@ -22,7 +22,7 @@ public class VistaComplementosApartamento extends JFrame{
     
      JLabel mensajeComplementos;
     JLabel labelWifi,labelPiscina,labelSpa,labelParking,labelAA,labelRestaurante,labelBar,labelGym;
-    JCheckBox checkboxWifiApartamento,checkboxPiscinaApartamento,checkboxSpaApartamento,checkboxParkingApartamento,checkboxAAApartamento,checkboxRestauranteApartamento,checkboxBarApartamento,checkboxGymApartamento;
+    public static JCheckBox checkboxWifiApartamento,checkboxPiscinaApartamento,checkboxSpaApartamento,checkboxParkingApartamento,checkboxAAApartamento,checkboxRestauranteApartamento,checkboxBarApartamento,checkboxGymApartamento;
      JButton botonSiguienteComplementosApartamento;
     
     public VistaComplementosApartamento(){

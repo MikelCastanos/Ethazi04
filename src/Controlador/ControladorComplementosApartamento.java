@@ -6,6 +6,7 @@
 package Controlador;
 
 
+import Vista.VistaComplementosApartamento;
 import Vista.VistaUnApartamento;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -23,6 +24,7 @@ public class ControladorComplementosApartamento {
         botonSiguienteComplementosApartamento.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
+                comprobarCheckBoxesComplementosApartamento();
                 siguienteVentana();
                 
             }
@@ -37,6 +39,44 @@ public class ControladorComplementosApartamento {
       vista1Apartamento.setVisible(true);
        
             
+        }
+        
+         public void comprobarCheckBoxesComplementosApartamento(){
+            
+            
+            
+            if(VistaComplementosApartamento.checkboxWifiApartamento.isSelected()){
+            Modelo.Complementos.apartamentoComplementos.setWifi(true);
+        }
+        
+            if(VistaComplementosApartamento.checkboxSpaApartamento.isSelected()){
+            Modelo.Complementos.apartamentoComplementos.setSpa(true);
+        }
+
+            if(VistaComplementosApartamento.checkboxPiscinaApartamento.isSelected()){
+            Modelo.Complementos.apartamentoComplementos.setPiscina(true);
+        }
+
+            if(VistaComplementosApartamento.checkboxParkingApartamento.isSelected()){
+            Modelo.Complementos.apartamentoComplementos.setParking(true);
+        }
+
+            if(VistaComplementosApartamento.checkboxAAApartamento.isSelected()){
+            Modelo.Complementos.apartamentoComplementos.setAireacondicionado(true);
+        }
+
+            if(VistaComplementosApartamento.checkboxRestauranteApartamento.isSelected()){
+            Modelo.Complementos.apartamentoComplementos.setRestaurante(true);
+        }
+
+            if(VistaComplementosApartamento.checkboxBarApartamento.isSelected()){
+            Modelo.Complementos.apartamentoComplementos.setBar(true);
+        }
+
+            if(VistaComplementosApartamento.checkboxGymApartamento.isSelected()){
+            Modelo.Complementos.apartamentoComplementos.setGimnasio(true);
+        }
+        
         }
     
 }

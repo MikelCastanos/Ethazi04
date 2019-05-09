@@ -5,17 +5,6 @@
  */
 package Controlador;
 
-import Modelo.Casa;
-import Modelo.Hotel;
-import com.toedter.calendar.JDateChooser;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.ActionListener;
-import java.util.Iterator;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import Vista.VistaBienvenida;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 import Vista.*;

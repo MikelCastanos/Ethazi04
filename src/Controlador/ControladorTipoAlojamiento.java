@@ -1,5 +1,7 @@
 package Controlador;
 
+import static Controlador.ControladorPago.cantidad_insertada;
+import Vista.VistaBienvenida;
 import Vista.VistaUbicacionApartamento;
 import Vista.VistaUbicacionCasa;
 import Vista.VistaUbicacionHotel;
@@ -7,7 +9,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
+import javax.swing.SwingUtilities;
+
 
 /**
  *
@@ -15,16 +20,23 @@ import javax.swing.JRadioButton;
  */
 public class ControladorTipoAlojamiento {
     
-            public ControladorTipoAlojamiento(JButton botonTipoAlojamiento,JRadioButton radioHotel,JRadioButton radioCasa,JRadioButton radioApartamento){
+            public ControladorTipoAlojamiento(JButton botonTipoAlojamiento,JButton botonCancelar,JRadioButton radioHotel,JRadioButton radioCasa,JRadioButton radioApartamento){
         botonTipoAlojamiento.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 comprobarSelected(radioHotel,radioCasa,radioApartamento);
                 
                 
             }
-            
+
         });
+        
+        botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
     }
+             });
+        
+            }
             
           public void comprobarSelected(JRadioButton radioHotel,JRadioButton radioCasa,JRadioButton radioApartamento ){
               if(radioHotel.isSelected()){
@@ -46,6 +58,16 @@ public class ControladorTipoAlojamiento {
                 vistaUA.setVisible(true);
               }
               
-          }  
+          }
+          
+          public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
             
 }

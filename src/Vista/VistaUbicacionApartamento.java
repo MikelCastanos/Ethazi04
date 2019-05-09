@@ -15,6 +15,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import static vista.VistaPago.logo1;
+import Controlador.ControladorTipoAlojamiento;
 
 /**
  *
@@ -22,17 +23,20 @@ import static vista.VistaPago.logo1;
  */
 public class VistaUbicacionApartamento extends JFrame {
     
-    static JButton botonSiguienteUbicacionApartamento;
     public JLabel mensajeUbicacionCasa,numeroPersonasCasa,labelFechaEntrada,labelFechaSalida;
     public JComboBox comboBoxUbicacionApartamento,comboBoxNumeroPersonasApartamento;
     public JDateChooser fechaEntradaApartamento,fechaSalidaApartamento;
     
     public VistaUbicacionApartamento(){
         
-        botonSiguienteUbicacionApartamento=new javax.swing.JButton();
-        botonSiguienteUbicacionApartamento=new JButton("Siguiente");
+         
+        JButton botonSiguienteUbicacionApartamento=new JButton("Siguiente");
         botonSiguienteUbicacionApartamento.setBounds(450,600,100,30);
         add(botonSiguienteUbicacionApartamento);
+        
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
         
         setLayout(null);
 
@@ -84,7 +88,7 @@ public class VistaUbicacionApartamento extends JFrame {
         
         
         //Pasamos lo importante al Controlador y rellenamos el combobox
-                ControladorUbicacionApartamento controladorUA=new ControladorUbicacionApartamento(botonSiguienteUbicacionApartamento,comboBoxUbicacionApartamento,comboBoxNumeroPersonasApartamento,fechaEntradaApartamento,fechaSalidaApartamento);
+                ControladorUbicacionApartamento controladorUA=new ControladorUbicacionApartamento(botonCancelar,botonSiguienteUbicacionApartamento,comboBoxUbicacionApartamento,comboBoxNumeroPersonasApartamento,fechaEntradaApartamento,fechaSalidaApartamento);
 
                 controladorUA.rellenarComboBox(comboBoxUbicacionApartamento);
         

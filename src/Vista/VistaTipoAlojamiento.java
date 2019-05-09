@@ -46,8 +46,12 @@ public class VistaTipoAlojamiento extends JFrame{
         add(mensajeTipoAlojamiento);
         
         JButton botonTipoAlojamiento=new JButton("Siguiente");
-        botonTipoAlojamiento.setBounds(400,350,100,30);
+        botonTipoAlojamiento.setBounds(450,600,100,30);
         add(botonTipoAlojamiento);
+        
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
         
                 ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
         JLabel logo2 = new JLabel(icon);
@@ -61,7 +65,7 @@ public class VistaTipoAlojamiento extends JFrame{
             add(logo1);
             validate();
         
-        ControladorTipoAlojamiento cont=new ControladorTipoAlojamiento(botonTipoAlojamiento,radioHotel,radioCasa,radioApartamento);
+        ControladorTipoAlojamiento cont=new ControladorTipoAlojamiento(botonTipoAlojamiento,botonCancelar,radioHotel,radioCasa,radioApartamento);
     }
     
     

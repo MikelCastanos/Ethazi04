@@ -6,10 +6,12 @@
 package Controlador;
 
 
+import Vista.VistaUnaCasa;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 
 
 /**
@@ -22,15 +24,18 @@ public class ControladorComplementosCasa {
         botonSiguienteComplementosCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
-                asd();
+                siguienteVentana();
                 
             }
             
         });
     }
         
-        public void asd(){
-            System.out.println("YAY");
+        public void siguienteVentana(){
+            VistaUnaCasa vista1casa=new VistaUnaCasa();
+                   vista1casa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       vista1casa.setBounds(0,0,600,725);
+       vista1casa.setVisible(true);
         }
     
 }

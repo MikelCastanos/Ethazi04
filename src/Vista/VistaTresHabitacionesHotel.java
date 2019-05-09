@@ -9,13 +9,13 @@ import Controlador.ControladorTresHabitaciones;
 import javax.swing.*;
 import static vista.VistaPago.logo1;
 
-public class VistaTresHabitaciones extends JFrame {
+public class VistaTresHabitacionesHotel extends JFrame {
     
     JLabel labelResultados3Habitaciones,labelPrimeraHabitacion,labelSegundaHabitacion,labelTerceraHabitacion;
     JComboBox comboBoxResultados3Habitaciones1,comboBoxResultados3Habitaciones2,comboBoxResultados3Habitaciones3;
     JButton botonSiguienteTresHabitaciones;
     
-    public VistaTresHabitaciones(){
+    public VistaTresHabitacionesHotel(){
         setLayout(null);
         
         botonSiguienteTresHabitaciones=new javax.swing.JButton();

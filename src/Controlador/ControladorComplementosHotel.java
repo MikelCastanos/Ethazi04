@@ -7,9 +7,9 @@ package Controlador;
 
 import Modelo.Alojamiento;
 import Modelo.Hotel;
-import Vista.VistaDosHabitaciones;
-import Vista.VistaTresHabitaciones;
-import Vista.VistaUnaHabitacion;
+import Vista.VistaDosHabitacionesHotel;
+import Vista.VistaTresHabitacionesHotel;
+import Vista.VistaUnaHabitacionHotel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
@@ -35,19 +35,19 @@ public class ControladorComplementosHotel {
                         public void irSeleccionarHabitacion(){
                                         
             if(Alojamiento.alojamiento1.getNum_habitaciones()==1){
-                VistaUnaHabitacion vistauna=new VistaUnaHabitacion();
+                VistaUnaHabitacionHotel vistauna=new VistaUnaHabitacionHotel();
                 vistauna.setBounds(0,0,600,730);
                 vistauna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistauna.setVisible(true);
             }
             if(Alojamiento.alojamiento1.getNum_habitaciones()==2){
-                VistaDosHabitaciones vistados=new VistaDosHabitaciones();
+                VistaDosHabitacionesHotel vistados=new VistaDosHabitacionesHotel();
                 vistados.setBounds(0,0,600,730);
                 vistados.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistados.setVisible(true);
             }
             if(Alojamiento.alojamiento1.getNum_habitaciones()==3){
-                VistaTresHabitaciones vistatres=new VistaTresHabitaciones();
+                VistaTresHabitacionesHotel vistatres=new VistaTresHabitacionesHotel();
                 vistatres.setBounds(0,0,600,730);
                 vistatres.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistatres.setVisible(true);

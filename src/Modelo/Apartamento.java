@@ -11,10 +11,19 @@ import Modelo.Casa;
  *
  * @author ikasleaETHAZI
  */
-public class Apartamento extends Alojamiento {
+public class Apartamento extends Casa {
     
     String piso;
     
     public static Apartamento apartamento1=new Apartamento();
+
+    public String getPiso() {
+        return piso;
+    }
+
+    public void setPiso(String piso) {
+        this.piso = piso;
+    }
+    
     
 }

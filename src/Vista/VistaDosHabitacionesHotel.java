@@ -9,7 +9,7 @@ import Controlador.ControladorDosHabitaciones;
 import javax.swing.*;
 import static vista.VistaPago.logo1;
 
-public class VistaDosHabitaciones extends JFrame{
+public class VistaDosHabitacionesHotel extends JFrame{
     
     JLabel labelResultados2Habitaciones,labelPrimeraHabitacion,labelSegundaHabitacion;
     JComboBox comboBoxResultados2Habitaciones1,comboBoxResultados2Habitaciones2;
@@ -19,7 +19,7 @@ public class VistaDosHabitaciones extends JFrame{
     
     
     
-    public VistaDosHabitaciones(){
+    public VistaDosHabitacionesHotel(){
         setLayout(null);
         
         botonSiguienteDosHabitaciones=new javax.swing.JButton();

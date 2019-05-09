@@ -13,14 +13,14 @@ import static vista.VistaPago.logo1;
  *
  * @author shabi
  */
-public class VistaUnaHabitacion extends JFrame {
+public class VistaUnaHabitacionHotel extends JFrame {
     
     JLabel labelResultadosHabitacion;
     JComboBox comboBoxResultadosHabitaciones;
     JButton botonSiguienteUnaHabitacion;
     
     
-    public VistaUnaHabitacion(){
+    public VistaUnaHabitacionHotel(){
         
         setLayout(null);
         

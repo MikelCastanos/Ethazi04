@@ -129,8 +129,7 @@ public class ControladorUbicacionCasa {
 
     public void siguienteVentana(){
         
-            
-        
+
 //            VistaEleccion vistae=new VistaEleccion();
 //            vistae.setBounds(0,0,600,730);
 //            vistae.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -142,13 +141,6 @@ public class ControladorUbicacionCasa {
                 VistaCompleCa.setBounds(0,0,600,730);
                 VistaCompleCa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 VistaCompleCa.setVisible(true);
-            
-
-            
-            
-
-            
-            
 
     }
 

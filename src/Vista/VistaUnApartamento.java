@@ -34,6 +34,9 @@ public class VistaUnApartamento extends JFrame{
         botonSiguienteUnaApartamento.setBounds(450,600,100,30);
         add(botonSiguienteUnaApartamento);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
         
         labelResultadosHabitacion=new JLabel("Estas son los Apartamentos disponibles:");
         labelResultadosHabitacion.setBounds(200,200,200,30);
@@ -55,7 +58,7 @@ public class VistaUnApartamento extends JFrame{
             add(logo1);
             validate();
             
-                            ControladorUnApartamento controladorUnaApartamento=new ControladorUnApartamento(botonSiguienteUnaApartamento,comboBoxResultadosApartamento);
+                            ControladorUnApartamento controladorUnaApartamento=new ControladorUnApartamento(botonCancelar,botonSiguienteUnaApartamento,comboBoxResultadosApartamento);
 
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionApartamento);
     }

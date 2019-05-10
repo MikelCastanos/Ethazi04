@@ -47,6 +47,9 @@ public class VistaConfigurarHabitacion extends JFrame{
         camaSimpleBox.setBounds(200,200,100,30);
         add(camaSimpleBox);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
         
         mensaje_cama_doble=new JLabel("Camas Dobles:");
         mensaje_cama_doble.setBounds(50,300,150,30);
@@ -73,7 +76,7 @@ public class VistaConfigurarHabitacion extends JFrame{
         irEstanciaSeleccionada.setBounds(400,500,150,30);
         add(irEstanciaSeleccionada);
         
-        ControladorConfigurarHabitacion cont=new ControladorConfigurarHabitacion(irEstanciaSeleccionada,eleccion,camaSimpleBox,camaDobleBox,camaNiñoBox);
+        ControladorConfigurarHabitacion cont=new ControladorConfigurarHabitacion(botonCancelar,irEstanciaSeleccionada,eleccion,camaSimpleBox,camaDobleBox,camaNiñoBox);
 }
     
     

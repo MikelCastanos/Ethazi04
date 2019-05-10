@@ -27,6 +27,10 @@ public class VistaDosHabitacionesHotel extends JFrame{
         botonSiguienteDosHabitaciones.setBounds(450,600,100,30);
         add(botonSiguienteDosHabitaciones);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
         labelResultados2Habitaciones=new JLabel("Estos son los resultados: ");
         labelResultados2Habitaciones.setBounds(200,200,200,30);
         add(labelResultados2Habitaciones);
@@ -61,7 +65,7 @@ public class VistaDosHabitacionesHotel extends JFrame{
             add(logo1);
             validate();
             
-                                        ControladorDosHabitaciones controladorDosHab=new ControladorDosHabitaciones(botonSiguienteDosHabitaciones,comboBoxResultados2Habitaciones1,comboBoxResultados2Habitaciones2);
+                                        ControladorDosHabitaciones controladorDosHab=new ControladorDosHabitaciones(botonCancelar,botonSiguienteDosHabitaciones,comboBoxResultados2Habitaciones1,comboBoxResultados2Habitaciones2);
 
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }

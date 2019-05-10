@@ -37,6 +37,10 @@ public class VistaEstanciaSeleccionada extends JFrame{
         
         boton_siguiente4=new javax.swing.JButton();
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
         setLayout(null);
         
         mensajeEstancia=new JLabel("¡GRAN ELECCIÓN!");
@@ -79,7 +83,7 @@ public class VistaEstanciaSeleccionada extends JFrame{
         boton_siguiente4.setBounds(450,465,100,30);
         add(boton_siguiente4);
         
-        ControladorEstanciaSeleccionada cont=new ControladorEstanciaSeleccionada(boton_siguiente4);
+        ControladorEstanciaSeleccionada cont=new ControladorEstanciaSeleccionada(botonCancelar,boton_siguiente4);
         
         ControladorEleccion cont3=new ControladorEleccion();
         cont3.cogerDatosEleccion(eleccion);

@@ -15,6 +15,9 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import static Controlador.ControladorPago.cantidad_insertada;
+import Vista.VistaBienvenida;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -23,7 +26,7 @@ import javax.swing.JFrame;
 public class ControladorConfigurarHabitacion {
     
     public ControladorConfigurarHabitacion(){}
-     public ControladorConfigurarHabitacion(JButton irEstanciaSeleccionada,JComboBox eleccion,JComboBox camaSimpleBox,JComboBox camaDobleBox,JComboBox camaNiñoBox){
+     public ControladorConfigurarHabitacion(JButton botonCancelar,JButton irEstanciaSeleccionada,JComboBox eleccion,JComboBox camaSimpleBox,JComboBox camaDobleBox,JComboBox camaNiñoBox){
         irEstanciaSeleccionada.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 //cargarEstanciaSeleccionada(eleccion);
@@ -35,7 +38,23 @@ public class ControladorConfigurarHabitacion {
             }
             
         });
+    botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
     }
+             });
+        
+            }
+
+public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
      
      
      public void cargarEstanciaSeleccionada(JComboBox eleccion){

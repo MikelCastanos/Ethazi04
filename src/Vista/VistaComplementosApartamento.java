@@ -34,6 +34,10 @@ public class VistaComplementosApartamento extends JFrame{
         botonSiguienteComplementosApartamento.setBounds(450,600,100,30);
         add(botonSiguienteComplementosApartamento);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
         mensajeComplementos=new JLabel("Seleccione los complementos de la Apartamento:");
         mensajeComplementos.setBounds(200,200,200,30);
         add(mensajeComplementos);
@@ -123,7 +127,7 @@ public class VistaComplementosApartamento extends JFrame{
             add(logo1);
             validate();
             
-            ControladorComplementosApartamento controlap = new ControladorComplementosApartamento(botonSiguienteComplementosApartamento,checkboxWifiApartamento,checkboxPiscinaApartamento,checkboxSpaApartamento,checkboxParkingApartamento,checkboxAAApartamento,checkboxRestauranteApartamento,checkboxBarApartamento,checkboxGymApartamento);
+            ControladorComplementosApartamento controlap = new ControladorComplementosApartamento(botonCancelar,botonSiguienteComplementosApartamento,checkboxWifiApartamento,checkboxPiscinaApartamento,checkboxSpaApartamento,checkboxParkingApartamento,checkboxAAApartamento,checkboxRestauranteApartamento,checkboxBarApartamento,checkboxGymApartamento);
 
         
     }

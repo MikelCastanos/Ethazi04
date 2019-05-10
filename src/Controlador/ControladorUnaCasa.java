@@ -9,6 +9,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import static Controlador.ControladorPago.cantidad_insertada;
+import Vista.VistaBienvenida;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,7 +20,7 @@ import javax.swing.JComboBox;
  */
 public class ControladorUnaCasa {
     
-                public ControladorUnaCasa(JButton botonSiguienteUnaCasa,JComboBox comboBoxResultadosCasa){
+                public ControladorUnaCasa(JButton botonCancelar,JButton botonSiguienteUnaCasa,JComboBox comboBoxResultadosCasa){
         botonSiguienteUnaCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Casa");
@@ -25,7 +29,23 @@ public class ControladorUnaCasa {
             }
             
         });
+    botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
     }
+             });
+        
+            }
+
+public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
             
             public void habitacionSeleccionada(JComboBox comboBoxResultadosCasa){
                 comboBoxResultadosCasa.getSelectedItem();

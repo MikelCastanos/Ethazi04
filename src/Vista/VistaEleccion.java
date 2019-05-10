@@ -30,6 +30,10 @@ public class VistaEleccion extends JFrame {
     public VistaEleccion(JComboBox ubicacion,JComboBox combobox_numero_habitaciones){
         boton_siguiente3=new javax.swing.JButton();
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
         setLayout(null);
         
         mensaje_eleccion=new JLabel("ESTAS SON LAS ESTANCIAS QUE HEMOS ENCONTRADO:");
@@ -47,7 +51,7 @@ public class VistaEleccion extends JFrame {
 
         ControladorUbicacionHotel cont2=new ControladorUbicacionHotel();
         //cont2.cogerDatos(ubicacion,combobox_numero_habitaciones);
-        ControladorEleccion cont=new ControladorEleccion(boton_siguiente3,eleccion);
+        ControladorEleccion cont=new ControladorEleccion(botonCancelar,boton_siguiente3,eleccion);
         cont.rellenarComboBox2(eleccion);
         
         ImageIcon icon=new ImageIcon("src//images/Bidaion.png");

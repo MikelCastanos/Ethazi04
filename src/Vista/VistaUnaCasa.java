@@ -33,6 +33,9 @@ public class VistaUnaCasa extends JFrame{
         botonSiguienteUnaCasa.setBounds(450,600,100,30);
         add(botonSiguienteUnaCasa);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
         
         labelResultadosHabitacion=new JLabel("Estas son las casas disponibles:");
         labelResultadosHabitacion.setBounds(200,200,200,30);
@@ -54,7 +57,7 @@ public class VistaUnaCasa extends JFrame{
             add(logo1);
             validate();
             
-                            ControladorUnaCasa controladorUnaCasa=new ControladorUnaCasa(botonSiguienteUnaCasa,comboBoxResultadosCasa);
+                            ControladorUnaCasa controladorUnaCasa=new ControladorUnaCasa(botonCancelar,botonSiguienteUnaCasa,comboBoxResultadosCasa);
 
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }

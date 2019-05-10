@@ -23,6 +23,10 @@ public class VistaTresHabitacionesHotel extends JFrame {
         botonSiguienteTresHabitaciones.setBounds(450,600,100,30);
         add(botonSiguienteTresHabitaciones);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
         labelResultados3Habitaciones=new JLabel("Estos son los resultados: ");
         labelResultados3Habitaciones.setBounds(200,200,200,30);
         add(labelResultados3Habitaciones);
@@ -67,7 +71,7 @@ public class VistaTresHabitacionesHotel extends JFrame {
             add(logo1);
             validate();
             
-             ControladorTresHabitaciones controladorTresHab=new ControladorTresHabitaciones(botonSiguienteTresHabitaciones,comboBoxResultados3Habitaciones1,comboBoxResultados3Habitaciones2,comboBoxResultados3Habitaciones3);
+             ControladorTresHabitaciones controladorTresHab=new ControladorTresHabitaciones(botonCancelar,botonSiguienteTresHabitaciones,comboBoxResultados3Habitaciones1,comboBoxResultados3Habitaciones2,comboBoxResultados3Habitaciones3);
 
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }

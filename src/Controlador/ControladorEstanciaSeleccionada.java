@@ -20,7 +20,9 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import vista.VistaPago;
-
+import static Controlador.ControladorPago.cantidad_insertada;
+import Vista.VistaBienvenida;
+import javax.swing.JOptionPane;
 /**
  *
  * @author shabi
@@ -41,7 +43,7 @@ public class ControladorEstanciaSeleccionada {
     public  int codigoHotelInsertar;
       ArrayList datosHotel= new ArrayList<>();
     
-    public ControladorEstanciaSeleccionada(JButton boton_siguiente3){
+    public ControladorEstanciaSeleccionada(JButton botonCancelar,JButton boton_siguiente3){
                    
         boton_siguiente3.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
@@ -50,7 +52,26 @@ public class ControladorEstanciaSeleccionada {
                 generarArchivoTexto();
             }
             
-        });}
+        });
+    
+    botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
+    }
+             });
+        
+            }
+
+public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
+    
     public ControladorEstanciaSeleccionada(){
         
     }

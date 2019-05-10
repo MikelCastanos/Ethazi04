@@ -26,6 +26,10 @@ public class VistaComplementosHotel extends JFrame {
         botonSiguienteComplementosHotel.setBounds(450,600,100,30);
         add(botonSiguienteComplementosHotel);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
         mensajeComplementos=new JLabel("Seleccione los complementos:");
         mensajeComplementos.setBounds(200,200,200,30);
         add(mensajeComplementos);
@@ -115,7 +119,7 @@ public class VistaComplementosHotel extends JFrame {
             add(logo1);
             validate();
             
-            ControladorComplementosHotel controladorComple1=new ControladorComplementosHotel(botonSiguienteComplementosHotel,checkboxWifiHotel,checkboxPiscinaHotel,checkboxSpaHotel,checkboxParkingHotel,checkboxAAHotel,checkboxRestauranteHotel,checkboxBarHotel,checkboxGymHotel);
+            ControladorComplementosHotel controladorComple1=new ControladorComplementosHotel(botonCancelar,botonSiguienteComplementosHotel,checkboxWifiHotel,checkboxPiscinaHotel,checkboxSpaHotel,checkboxParkingHotel,checkboxAAHotel,checkboxRestauranteHotel,checkboxBarHotel,checkboxGymHotel);
 
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }

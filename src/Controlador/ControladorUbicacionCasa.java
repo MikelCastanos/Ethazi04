@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import static Controlador.ControladorPago.cantidad_insertada;
 import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 import Vista.*;
@@ -30,7 +31,7 @@ public class ControladorUbicacionCasa {
     
     public ControladorUbicacionCasa(){}
 
-    public ControladorUbicacionCasa(JButton botonSiguienteUbicacionCasa,JComboBox comboBoxUbicacionCasa,JComboBox comboBoxNumeroPersonasCasa,JDateChooser fechaEntradaCasa,JDateChooser fechaSalidaCasa){
+    public ControladorUbicacionCasa(JButton botonCancelar,JButton botonSiguienteUbicacionCasa,JComboBox comboBoxUbicacionCasa,JComboBox comboBoxNumeroPersonasCasa,JDateChooser fechaEntradaCasa,JDateChooser fechaSalidaCasa){
         botonSiguienteUbicacionCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
@@ -39,10 +40,23 @@ public class ControladorUbicacionCasa {
             }
             
         });
+    botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
     }
-    
-    
+             });
+        
+            }
 
+public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
     public void rellenarComboBox (JComboBox comboBoxUbicacionCasa){
            Hotel hotel=new Hotel();
 //           hotel.ubicacion();

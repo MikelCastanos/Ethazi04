@@ -83,7 +83,11 @@ public class VistaUbicacionHotel extends JFrame{
         boton_siguiente2.setBounds(450,600,100,30);
         add(boton_siguiente2);
         
-        ControladorUbicacionHotel cont=new ControladorUbicacionHotel(boton_siguiente2,ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
+        ControladorUbicacionHotel cont=new ControladorUbicacionHotel(botonCancelar,boton_siguiente2,ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
     
         cont.rellenarComboBox(ubicacion);
         

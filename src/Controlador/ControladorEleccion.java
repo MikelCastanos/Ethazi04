@@ -14,7 +14,9 @@ import javax.swing.JComboBox;
 import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import Vista.VistaConfigurarHabitacion;
 import javax.swing.JFrame;
-
+import static Controlador.ControladorPago.cantidad_insertada;
+import Vista.VistaBienvenida;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,14 +29,32 @@ public class ControladorEleccion {
     
     public ControladorEleccion(){}
     
-        public ControladorEleccion(JButton boton_siguiente2,JComboBox eleccion){
+        public ControladorEleccion(JButton botonCancelar,JButton boton_siguiente2,JComboBox eleccion){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
         accionBotonEleccion(eleccion);
         
             }
             
-        });}
+        });
+        
+        botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
+    }
+             });
+        
+            }
+
+public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
 
 
         

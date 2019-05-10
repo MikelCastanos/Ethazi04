@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import static Controlador.ControladorPago.cantidad_insertada;
 import Vista.VistaBienvenida;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -30,7 +31,7 @@ public class ControladorUbicacionHotel {
     
     public ControladorUbicacionHotel(){}
     
-    public ControladorUbicacionHotel(JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
+    public ControladorUbicacionHotel(JButton botonCancelar,JButton boton_siguiente2,JComboBox ubicacion,JComboBox combobox_numero_habitaciones,JDateChooser fecha_inicio,JDateChooser fecha_fin){
         boton_siguiente2.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                //fechaSeleccionada(fecha_inicio,fecha_fin);
@@ -42,10 +43,23 @@ public class ControladorUbicacionHotel {
             }
             
         });
+    botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
     }
+             });
+        
+            }
 
-
-   
+public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
     
     public void siguienteVentana(){
         

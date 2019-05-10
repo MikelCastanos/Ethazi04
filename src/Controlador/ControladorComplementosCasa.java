@@ -14,6 +14,9 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import static Controlador.ControladorPago.cantidad_insertada;
+import Vista.VistaBienvenida;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -22,7 +25,7 @@ import javax.swing.JFrame;
  */
 public class ControladorComplementosCasa {
     
-        public ControladorComplementosCasa(JButton botonSiguienteComplementosCasa,JCheckBox checkboxWifiCasa,JCheckBox checkboxPiscinaCasa,JCheckBox checkboxSpaCasa,JCheckBox checkboxParkingCasa,JCheckBox checkboxAACasa,JCheckBox checkboxRestauranteCasa,JCheckBox checkboxBarCasa,JCheckBox checkboxGymCasa){
+        public ControladorComplementosCasa(JButton botonCancelar,JButton botonSiguienteComplementosCasa,JCheckBox checkboxWifiCasa,JCheckBox checkboxPiscinaCasa,JCheckBox checkboxSpaCasa,JCheckBox checkboxParkingCasa,JCheckBox checkboxAACasa,JCheckBox checkboxRestauranteCasa,JCheckBox checkboxBarCasa,JCheckBox checkboxGymCasa){
         botonSiguienteComplementosCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
@@ -33,7 +36,23 @@ public class ControladorComplementosCasa {
             }
             
         });
+    botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
     }
+             });
+        
+            }
+
+public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
         
         public void siguienteVentana(){
             VistaUnaCasa vista1casa=new VistaUnaCasa();

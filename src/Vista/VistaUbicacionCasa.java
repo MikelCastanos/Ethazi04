@@ -29,6 +29,10 @@ public class VistaUbicacionCasa extends JFrame {
         botonSiguienteUbicacionCasa.setBounds(450,600,100,30);
         add(botonSiguienteUbicacionCasa);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
         setLayout(null);
 
         mensajeUbicacionCasa=new JLabel("SELECCIONAR UBICACIÓN CASA");
@@ -79,7 +83,7 @@ public class VistaUbicacionCasa extends JFrame {
         
         
         //Pasamos lo importante al Controlador y rellenamos el combobox
-                ControladorUbicacionCasa controladorUC=new ControladorUbicacionCasa(botonSiguienteUbicacionCasa,comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
+                ControladorUbicacionCasa controladorUC=new ControladorUbicacionCasa(botonCancelar,botonSiguienteUbicacionCasa,comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
 
                 controladorUC.rellenarComboBox(comboBoxUbicacionCasa);
         

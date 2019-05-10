@@ -13,6 +13,9 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import static Controlador.ControladorPago.cantidad_insertada;
+import Vista.VistaBienvenida;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,7 +23,7 @@ import javax.swing.JFrame;
  */
 public class ControladorComplementosApartamento {
     
-            public ControladorComplementosApartamento(JButton botonSiguienteComplementosApartamento,JCheckBox checkboxWifiApartamento,JCheckBox checkboxPiscinaApartamento,JCheckBox checkboxSpaApartamento,JCheckBox checkboxParkingApartamento,JCheckBox checkboxAAApartamento,JCheckBox checkboxRestauranteApartamento,JCheckBox checkboxBarApartamento,JCheckBox checkboxGymApartamento){
+            public ControladorComplementosApartamento(JButton botonCancelar,JButton botonSiguienteComplementosApartamento,JCheckBox checkboxWifiApartamento,JCheckBox checkboxPiscinaApartamento,JCheckBox checkboxSpaApartamento,JCheckBox checkboxParkingApartamento,JCheckBox checkboxAAApartamento,JCheckBox checkboxRestauranteApartamento,JCheckBox checkboxBarApartamento,JCheckBox checkboxGymApartamento){
         botonSiguienteComplementosApartamento.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
@@ -30,7 +33,23 @@ public class ControladorComplementosApartamento {
             }
             
         });
+    botonCancelar.addMouseListener(new MouseAdapter(){
+             public void mouseClicked(MouseEvent a){
+                cancelar();
     }
+             });
+        
+            }
+
+public void cancelar(){
+          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
+          
+          }
         
         public void siguienteVentana(){
            VistaUnApartamento vista1Apartamento=new VistaUnApartamento();

@@ -36,6 +36,10 @@ public class VistaComplementosCasa extends JFrame{
         botonSiguienteComplementosCasa.setBounds(450,600,100,30);
         add(botonSiguienteComplementosCasa);
         
+        JButton botonCancelar=new JButton("Cancelar");
+        botonCancelar.setBounds(340,600,100,30);
+        add(botonCancelar);
+        
         mensajeComplementos=new JLabel("Seleccione los complementos de la casa:");
         mensajeComplementos.setBounds(200,200,200,30);
         add(mensajeComplementos);
@@ -125,7 +129,7 @@ public class VistaComplementosCasa extends JFrame{
             add(logo1);
             validate();
             
-            ControladorComplementosCasa controla = new ControladorComplementosCasa(botonSiguienteComplementosCasa,checkboxWifiCasa,checkboxPiscinaCasa,checkboxSpaCasa,checkboxParkingCasa,checkboxAACasa,checkboxRestauranteCasa,checkboxBarCasa,checkboxGymCasa);
+            ControladorComplementosCasa controla = new ControladorComplementosCasa(botonCancelar,botonSiguienteComplementosCasa,checkboxWifiCasa,checkboxPiscinaCasa,checkboxSpaCasa,checkboxParkingCasa,checkboxAACasa,checkboxRestauranteCasa,checkboxBarCasa,checkboxGymCasa);
 
     }
 }

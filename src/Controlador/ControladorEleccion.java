@@ -58,17 +58,18 @@ public void cancelar(){
 
 
         
-        
-           public void rellenarComboBox2 (JComboBox eleccion){
-           Hotel hotel= new Hotel();
-          
-          hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
-                
-        Iterator<String> ite= hotel.HotelPorLugar(seleccionUbicacion).iterator();
-        while(ite.hasNext()){
-           eleccion.addItem(ite.next()); 
-        }
-         }
+//        
+//           public void rellenarComboBox2 (JComboBox eleccion){
+//           Hotel hotel= new Hotel();
+//          
+//          hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
+//                
+//            Iterator<String> ite= hotel.HotelPorLugar(seleccionUbicacion).iterator();
+//            while(ite.hasNext()){
+//                System.out.println(ite);
+//            eleccion.addItem(ite.next()); 
+//        }
+//         }
            
            public void accionBotonEleccion(JComboBox eleccion){
                cogerDatosEleccion(eleccion);

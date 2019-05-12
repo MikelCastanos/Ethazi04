@@ -42,7 +42,7 @@ public class Hotel extends Alojamiento{
 // Crear ArrayList
         ArrayList<String> consultaUbicacion = new ArrayList<String>();
 // Consulta
-        String query="select distinct ciudad from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel;";
+        String query="select distinct alojamiento.ciudad from alojamiento inner join hotel on hotel.cod_hotel=alojamiento.cod_alojamiento where alojamiento.tipo='H';";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(query);
 //Recorrer todos los datos a mostrar
@@ -64,16 +64,17 @@ public class Hotel extends Alojamiento{
         return consultaUbicacion;
     }
     
-    public ArrayList<String>HotelPorLugar(String ubicacionHotel){
+    public ArrayList<String>AlojamientoPorLugar(String ubicacionHotel, char tipoAlojamiento){
 // Instanciar BBDD
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
-
+        System.out.println(tipoAlojamiento);
 // Crear ArrayList
         ArrayList<String> consulta = new ArrayList<String>();
 // Consulta
-        String query="select nombre_hotel from hotel inner join ubicacion on hotel.cod_hotel=ubicacion.cod_hotel where ciudad='"+ubicacionHotel+"'";
+        String query="select hotel.nombre_hotel from hotel inner join alojamiento "
+                + "on hotel.cod_hotel=alojamiento.cod_alojamiento where alojamiento.tipo='"+tipoAlojamiento+"' AND alojamiento.ciudad='"+ubicacionHotel+"'";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(query);
 //  Recorrer todos los datos a mostrar

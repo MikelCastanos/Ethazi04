@@ -20,6 +20,7 @@ import javax.swing.SwingUtilities;
  */
 public class ControladorTipoAlojamiento {
     
+    static char tipoDeAlojamiento;
             public ControladorTipoAlojamiento(JButton botonTipoAlojamiento,JButton botonCancelar,JRadioButton radioHotel,JRadioButton radioCasa,JRadioButton radioApartamento){
         botonTipoAlojamiento.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
@@ -38,26 +39,30 @@ public class ControladorTipoAlojamiento {
         
             }
             
-          public void comprobarSelected(JRadioButton radioHotel,JRadioButton radioCasa,JRadioButton radioApartamento ){
+          public char comprobarSelected(JRadioButton radioHotel,JRadioButton radioCasa,JRadioButton radioApartamento ){
+//              char tipoDeAlojamiento='n';
               if(radioHotel.isSelected()){
                 VistaUbicacionHotel vistaUH=new VistaUbicacionHotel();        
                 vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistaUH.setBounds(0,0,600,725);
                 vistaUH.setVisible(true);
+                tipoDeAlojamiento= 'H';
               }
               if(radioCasa.isSelected()){
                 VistaUbicacionCasa vistaUC=new VistaUbicacionCasa();
                 vistaUC.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistaUC.setBounds(0,0,600,725);
                 vistaUC.setVisible(true);
+                tipoDeAlojamiento= 'C';
               }
               if(radioApartamento.isSelected()){
                 VistaUbicacionApartamento vistaUA=new VistaUbicacionApartamento();
                 vistaUA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistaUA.setBounds(0,0,600,725);
                 vistaUA.setVisible(true);
+                tipoDeAlojamiento= 'A';
               }
-              
+            return tipoDeAlojamiento;
           }
           
           public void cancelar(){

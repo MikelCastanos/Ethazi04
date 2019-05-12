@@ -53,8 +53,8 @@ public class VistaUnaHabitacionHotel extends JFrame {
             add(logo1);
             validate();
             
-                            ControladorUnaHabitacion controladorUnaHab=new ControladorUnaHabitacion(botonCancelar,botonSiguienteUnaHabitacion,comboBoxResultadosHabitaciones);
-
+        ControladorUnaHabitacion controladorUnaHab=new ControladorUnaHabitacion(botonCancelar,botonSiguienteUnaHabitacion,comboBoxResultadosHabitaciones);
+        controladorUnaHab.rellenarComboBox(comboBoxResultadosHabitaciones);
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     

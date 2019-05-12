@@ -125,7 +125,7 @@ public class Usuario {
         
         System.out.println(Usuario.usuarioRegistro.getDniUsuarioRegistro()+" "+Usuario.usuarioRegistro.getNombreRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro());
         
-        String query="insert into usuario (dni,nombre_usuario, contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"','"+Usuario.usuarioRegistro.getNombreRegistro()+"','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
+        String query="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"','"+Usuario.usuarioRegistro.getNombreRegistro()+"','Arri','2000-10-20','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
         
         consultas.insertarDatosBD(query);
 

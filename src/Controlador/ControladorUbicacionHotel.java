@@ -132,6 +132,7 @@ public void cancelar(){
         while(i.hasNext()){
            ubicacion.addItem(i.next()); 
         }
+        
          }
 
        

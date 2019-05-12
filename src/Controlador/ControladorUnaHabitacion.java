@@ -6,9 +6,14 @@
 package Controlador;
 
 import static Controlador.ControladorPago.cantidad_insertada;
+import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
+import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
+import Controlador.ControladorTipoAlojamiento;
+import Modelo.Hotel;
 import Vista.VistaBienvenida;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Iterator;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -24,20 +29,20 @@ public class ControladorUnaHabitacion {
         botonSiguienteUnaHabitacion.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Una Habitacion");
-                
+                rellenarComboBox(comboBoxResultadosHabitaciones);
                 
             }
             
-        });
-    botonCancelar.addMouseListener(new MouseAdapter(){
-             public void mouseClicked(MouseEvent a){
-                cancelar();
-    }
+            });
+        botonCancelar.addMouseListener(new MouseAdapter(){
+                 public void mouseClicked(MouseEvent a){
+                    cancelar();
+        }
              });
         
             }
 
-public void cancelar(){
+        public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
@@ -46,8 +51,18 @@ public void cancelar(){
             iniciostart.setVisible(true);
           
           }
+        public void rellenarComboBox (JComboBox comboBoxResultadosHabitaciones){
+            Hotel hotel= new Hotel();
+//            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
             
+            Iterator<String> ite= hotel.AlojamientoPorLugar(seleccionUbicacion, tipoDeAlojamiento).iterator();
+            while(ite.hasNext()){
+            comboBoxResultadosHabitaciones.addItem(ite.next()); 
+          }
+           }
+        
             public void habitacionSeleccionada(JComboBox comboBoxResultadosHabitaciones){
                 comboBoxResultadosHabitaciones.getSelectedItem();
             }
+            
 }

@@ -58,7 +58,7 @@ public class VistaUnaCasa extends JFrame{
             validate();
             
                             ControladorUnaCasa controladorUnaCasa=new ControladorUnaCasa(botonCancelar,botonSiguienteUnaCasa,comboBoxResultadosCasa);
-
+                            controladorUnaCasa.rellenarComboBox(comboBoxResultadosCasa);
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     

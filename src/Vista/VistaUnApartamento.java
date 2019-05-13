@@ -59,7 +59,7 @@ public class VistaUnApartamento extends JFrame{
             validate();
             
                             ControladorUnApartamento controladorUnaApartamento=new ControladorUnApartamento(botonCancelar,botonSiguienteUnaApartamento,comboBoxResultadosApartamento);
-
+                            controladorUnaApartamento.rellenarComboBox(comboBoxResultadosApartamento);
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionApartamento);
     }
     

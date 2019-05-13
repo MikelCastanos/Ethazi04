@@ -55,8 +55,10 @@ public class VistaHotelesDisponibles extends JFrame {
             add(logo1);
             validate();
             
-                    ControladorHotelesDisponibles controladorUnaHab=new ControladorHotelesDisponibles(botonCancelar,botonSiguienteHotel,comboBoxResultadosHotel);
+                    ControladorHotelesDisponibles controladorHD=new ControladorHotelesDisponibles(botonCancelar,botonSiguienteHotel,comboBoxResultadosHotel);
         //controladorUnaHab.rellenarComboBox(comboBoxResultadosHabitaciones);
+        
+        controladorHD.rellenarComboBox(comboBoxResultadosHotel);
     }
     
 }

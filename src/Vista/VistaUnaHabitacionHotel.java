@@ -33,7 +33,7 @@ public class VistaUnaHabitacionHotel extends JFrame {
         botonCancelar.setBounds(340,600,100,30);
         add(botonCancelar);
         
-        labelResultadosHabitacion=new JLabel("Estos son los resultados:");
+        labelResultadosHabitacion=new JLabel("Estos son las  habitaciones:");
         labelResultadosHabitacion.setBounds(200,200,200,30);
         add(labelResultadosHabitacion);
         
@@ -54,7 +54,7 @@ public class VistaUnaHabitacionHotel extends JFrame {
             validate();
             
         ControladorUnaHabitacion controladorUnaHab=new ControladorUnaHabitacion(botonCancelar,botonSiguienteUnaHabitacion,comboBoxResultadosHabitaciones);
-        controladorUnaHab.rellenarComboBox(comboBoxResultadosHabitaciones);
+        //controladorUnaHab.rellenarComboBox(comboBoxResultadosHabitaciones);
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     

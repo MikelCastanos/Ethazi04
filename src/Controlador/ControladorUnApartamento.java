@@ -10,7 +10,12 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import static Controlador.ControladorPago.cantidad_insertada;
+import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
+import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
+import Modelo.Apartamento;
+import Modelo.Hotel;
 import Vista.VistaBienvenida;
+import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -51,5 +56,14 @@ public void cancelar(){
                 comboBoxResultadosApartamento.getSelectedItem();
             }
     
+            public void rellenarComboBox (JComboBox comboBoxResultadosHotel){
+            Apartamento apartamento= new Apartamento();
+//            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
+            
+            Iterator<String> ite= apartamento.ApartamentoPorLugar(seleccionUbicacion).iterator();
+            while(ite.hasNext()){
+            comboBoxResultadosHotel.addItem(ite.next()); 
+          }
+           }
 }
 

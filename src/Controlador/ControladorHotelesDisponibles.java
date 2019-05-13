@@ -6,13 +6,17 @@
 package Controlador;
 
 import static Controlador.ControladorPago.cantidad_insertada;
+import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
+import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import Modelo.Alojamiento;
+import Modelo.Hotel;
 import Vista.VistaBienvenida;
 import Vista.VistaDosHabitacionesHotel;
 import Vista.VistaTresHabitacionesHotel;
 import Vista.VistaUnaHabitacionHotel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Iterator;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -73,5 +77,15 @@ public class ControladorHotelesDisponibles {
                 vistatres.setVisible(true);
             }
                         }
+                 
+                         public void rellenarComboBox (JComboBox comboBoxResultadosHotel){
+            Hotel hotel= new Hotel();
+//            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
+            
+            Iterator<String> ite= hotel.AlojamientoPorLugar(seleccionUbicacion, tipoDeAlojamiento).iterator();
+            while(ite.hasNext()){
+            comboBoxResultadosHotel.addItem(ite.next()); 
+          }
+           }
     
 }

@@ -7,6 +7,7 @@ package Controlador;
 
 import static Controlador.ControladorPago.cantidad_insertada;
 import Modelo.Alojamiento;
+import Modelo.Apartamento;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
 import Vista.VistaComplementosApartamento;
@@ -47,12 +48,12 @@ public class ControladorUbicacionApartamento {
              });
     }
         
-            public void rellenarComboBox (JComboBox comboBoxUbicacionApartamento){
-           Hotel hotel=new Hotel();
-//           hotel.ubicacion();
-           
-        Iterator<String> i= hotel.ubicacion().iterator();
-        while(i.hasNext()){
+        public void rellenarComboBox (JComboBox comboBoxUbicacionApartamento){
+        Apartamento apartamento= new Apartamento();
+    //           hotel.ubicacion();
+
+         Iterator<String> i= apartamento.ubicacionApartamento().iterator();
+         while(i.hasNext()){
            comboBoxUbicacionApartamento.addItem(i.next()); 
         }
          }

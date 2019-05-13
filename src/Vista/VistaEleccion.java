@@ -52,7 +52,7 @@ public class VistaEleccion extends JFrame {
         ControladorUbicacionHotel cont2=new ControladorUbicacionHotel();
         //cont2.cogerDatos(ubicacion,combobox_numero_habitaciones);
         ControladorEleccion cont=new ControladorEleccion(botonCancelar,boton_siguiente3,eleccion);
-        cont.rellenarComboBox2(eleccion);
+        //        cont.rellenarComboBox2(eleccion);
         
         ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
         JLabel logo2 = new JLabel(icon);

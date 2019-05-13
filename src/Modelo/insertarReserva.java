@@ -24,6 +24,7 @@ public class insertarReserva{
     String precioString=Integer.toString(preprecio);
 //    Metodo para insertar los datos de la reserva en la tabla
     
+    //cod_reserva, fecha_entrada, fecha_salida,fecha_gestion,fecha_tos,dni, cod_huesped, cod_alojamiento
     public void insertar(int codHabitacion, int codHotel, String dni, String fechaGestion, String fechaEntrada, String fechaSalida, double precioReserva){
 
         Conexion conexion= new Conexion();

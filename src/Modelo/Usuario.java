@@ -23,9 +23,13 @@ public class Usuario {
     protected  String dniUsuarioRegistro;
     protected  String passwordRegistro,passwordRegistro2;
     protected  String nombreRegistro;
+    protected  String dniCambioPassword;
+    protected  String passwordViejaCambioPassword;
+    protected  String passwordNuevaCambioPassword2;
 
     public static Usuario usuarioLogin=new Usuario();
     public static Usuario usuarioRegistro=new Usuario();
+    public static Usuario usuarioCambio=new Usuario();
     
     
     public String getDniUsuarioLogin() {
@@ -76,6 +80,31 @@ public class Usuario {
         this.nombreRegistro = nombreRegistro;
     }
 
+    public String getDniCambioPassword() {
+        return dniCambioPassword;
+    }
+
+    public void setDniCambioPassword(String dniCambioPassword) {
+        this.dniCambioPassword = dniCambioPassword;
+    }
+
+    public String getPasswordViejaCambioPassword() {
+        return passwordViejaCambioPassword;
+    }
+
+    public void setPasswordViejaCambioPassword(String passwordViejaCambioPassword) {
+        this.passwordViejaCambioPassword = passwordViejaCambioPassword;
+    }
+
+    public String getPasswordNuevaCambioPassword2() {
+        return passwordNuevaCambioPassword2;
+    }
+
+    public void setPasswordNuevaCambioPassword2(String passwordNuevaCambioPassword2) {
+        this.passwordNuevaCambioPassword2 = passwordNuevaCambioPassword2;
+    }
+
+    
    
     
     static PreparedStatement pst = null;
@@ -88,14 +117,9 @@ public class Usuario {
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
         com.mysql.jdbc.Connection con= conexion.conectar();
-        
-
-        
-
 
         String query="select * from usuario where dni='"+Usuario.usuarioLogin.getDniUsuarioLogin()+"' and contrasena='"+ Usuario.usuarioLogin.getPasswordLogin()+"'";
         
-
         try{
            //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(query);
@@ -124,10 +148,20 @@ public class Usuario {
         com.mysql.jdbc.Connection con= conexion.conectar();
         
         System.out.println(Usuario.usuarioRegistro.getDniUsuarioRegistro()+" "+Usuario.usuarioRegistro.getNombreRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro());
-        
         String query="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"','"+Usuario.usuarioRegistro.getNombreRegistro()+"','Arri','2000-10-20','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
+        try{
+            ResultSet rs1= consultas.consultaBD(query);
+        if(rs1.next()){
+            consultas.insertarDatosBD(query);
+        }
+        else{
+        JOptionPane.showMessageDialog(null, "El usuario ya existe. Pruebe a iniciar sesión para continuar.");  
+        }
+        }
+        catch(SQLException | HeadlessException ex){
+            
+        }
         
-        consultas.insertarDatosBD(query);
 
     }
     

@@ -10,6 +10,9 @@ public class Alojamiento {
     protected  String fechaEntrada;
     protected  String fechaSalida;
     protected  int diasEstancia;
+    protected double precioBase;
+    protected double precioFestivo;
+    protected double precioEstival;
 
     public String getNombre() {
         return nombre;
@@ -90,13 +93,30 @@ public class Alojamiento {
     public void setNum_personas(int num_personas) {
         this.num_personas = num_personas;
     }
-    
-    
-    
-    
-    
-   
-    
+
+    public double getPrecioBase() {
+        return precioBase;
+    }
+
+    public void setPrecioBase(double precioBase) {
+        this.precioBase = precioBase;
+    }
+
+    public double getPrecioFestivo() {
+        return precioFestivo;
+    }
+
+    public void setPrecioFestivo(double precioFestivo) {
+        this.precioFestivo = precioFestivo;
+    }
+
+    public double getPrecioEstival() {
+        return precioEstival;
+    }
+
+    public void setPrecioEstival(double precioEstival) {
+        this.precioEstival = precioEstival;
+    }
     
     
     

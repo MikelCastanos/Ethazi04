@@ -60,7 +60,7 @@ public class ControladorUnaHabitacion {
             System.out.println("PRINT DE PRUEBA");
             System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
             
-            Iterator<String> ite= hotel.HabitacionHoteles(Alojamiento.alojamiento1.getCiudad(), ControladorHotelesDisponibles.hotelSeleccionado).iterator();
+            Iterator<String> ite= hotel.HabitacionHoteles(Hotel.hotel1.getCodigoHotel()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHabitaciones.addItem(ite.next()); 
           }

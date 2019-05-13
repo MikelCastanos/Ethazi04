@@ -23,7 +23,7 @@ import javax.swing.JTextField;
 public class ControladorLogin {
 
     
-            public ControladorLogin(JButton botonLogin,JButton botonRegistro,JPasswordField contrasenaField, JTextField usuarioField,JPasswordField registroContrasenaField,JTextField registroDniField,JTextField registroNombreField,JPasswordField registroContrasenaField2){
+            public ControladorLogin(JButton botonLogin,JButton botonRegistro,JButton botonCambio,JTextField cambioPasswordDNI, JPasswordField cambioPasswordPass, JPasswordField cambioPasswordNueva,JPasswordField contrasenaField, JTextField usuarioField,JPasswordField registroContrasenaField,JTextField registroDniField,JTextField registroNombreField,JPasswordField registroContrasenaField2){
         botonLogin.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
@@ -40,6 +40,15 @@ public class ControladorLogin {
                 
                 cogerDatosRegistro(registroContrasenaField,registroContrasenaField2,registroDniField,registroNombreField);
                 llamarRegistro();
+                
+            }
+            
+        });
+                botonCambio.addMouseListener(new MouseAdapter(){
+                            public void mouseClicked(MouseEvent e){
+                
+                cogerDatosCambio();
+                
                 
             }
             
@@ -76,6 +85,16 @@ public class ControladorLogin {
                 Usuario.usuarioRegistro.setPasswordRegistro2(String.valueOf(VistaLogin.registroContrasenaField2.getPassword()));
                 Usuario.usuarioRegistro.setNombreRegistro(VistaLogin.registroNombreField.getText());
                 System.out.println(Usuario.usuarioRegistro.getDniUsuarioRegistro()+" "+Usuario.usuarioRegistro.getNombreRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro2());
+            }
+            
+            
+            public void cogerDatosCambio(){
+                Usuario.usuarioCambio.setDniCambioPassword(VistaLogin.cambioPasswordDNI.getText());
+                Usuario.usuarioCambio.setPasswordViejaCambioPassword(String.valueOf(VistaLogin.cambioPasswordPass.getPassword()));
+                Usuario.usuarioCambio.setPasswordNuevaCambioPassword2(String.valueOf(VistaLogin.cambioPasswordNueva.getPassword()));
+                System.out.println(Usuario.usuarioCambio.getDniCambioPassword());
+                System.out.println(Usuario.usuarioCambio.getPasswordViejaCambioPassword());
+                System.out.println(Usuario.usuarioCambio.getPasswordNuevaCambioPassword2());
             }
             
 }

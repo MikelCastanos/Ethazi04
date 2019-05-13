@@ -29,6 +29,7 @@ public class Usuario {
 
     public static Usuario usuarioLogin=new Usuario();
     public static Usuario usuarioRegistro=new Usuario();
+    public static Usuario usuarioCambio=new Usuario();
     
     
     public String getDniUsuarioLogin() {

@@ -19,6 +19,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import static Controlador.ControladorPago.cantidad_insertada;
 import Vista.VistaBienvenida;
+import Vista.VistaHotelesDisponibles;
 import javax.swing.JOptionPane;
 
 
@@ -28,7 +29,7 @@ public class ControladorComplementosHotel {
         botonSiguienteComplementosHotel.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
-                irSeleccionarHabitacion();
+                irSeleccionarHotel();
                 
             }
             
@@ -89,25 +90,12 @@ public void cancelar(){
         
         }
                         
-                        public void irSeleccionarHabitacion(){
-                                        
-            if(Alojamiento.alojamiento1.getNum_habitaciones()==1){
-                VistaUnaHabitacionHotel vistauna=new VistaUnaHabitacionHotel();
-                vistauna.setBounds(0,0,600,730);
-                vistauna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistauna.setVisible(true);
-            }
-            if(Alojamiento.alojamiento1.getNum_habitaciones()==2){
-                VistaDosHabitacionesHotel vistados=new VistaDosHabitacionesHotel();
-                vistados.setBounds(0,0,600,730);
-                vistados.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistados.setVisible(true);
-            }
-            if(Alojamiento.alojamiento1.getNum_habitaciones()==3){
-                VistaTresHabitacionesHotel vistatres=new VistaTresHabitacionesHotel();
-                vistatres.setBounds(0,0,600,730);
-                vistatres.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistatres.setVisible(true);
-            }
+                       
+                        
+                        public void irSeleccionarHotel(){
+                                            VistaHotelesDisponibles vistaHD=new VistaHotelesDisponibles();
+                vistaHD.setBounds(0,0,600,730);
+                vistaHD.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                vistaHD.setVisible(true);
                         }
 }

@@ -77,6 +77,8 @@ public class Hotel extends Alojamiento{
                 + "on hotel.cod_hotel=alojamiento.cod_alojamiento where alojamiento.tipo='"+tipoAlojamiento+"' AND alojamiento.ciudad='"+ubicacionHotel+"'";
 // Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(query);
+        
+        
 //  Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
@@ -188,7 +190,38 @@ public class Hotel extends Alojamiento{
 //    Busca los hoteles que se encuentran en la ubicacion que se le pasa por paramatro
 //    Devuelve un arrayList con los hoteles de esa ubicacion
     
+public ArrayList<String>HabitacionHoteles(String ubicacionHotel, String nombreHotel){
 
+
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+
+        ArrayList<String> consulta2 = new ArrayList<String>();
+        String query="SELECT habitacion_hotel.cod_habitacion_hotel, camas.cama_doble, "
+                + "camas.cama_simple,camas.cama_nino, alojamiento.ciudad FROM habitacion_hotel "
+                + "INNER JOIN camas ON habitacion_hotel.cod_habitacion_hotel=camas.cod_habitacion_hotel "
+                + "INNER JOIN alojamiento ON habitacion_hotel.cod_hotel=alojamiento.cod_alojamiento "
+                + "INNER JOIN hotel ON alojamiento.cod_alojamiento=hotel.cod_hotel WHERE "
+                + "hotel.nombre_hotel='"+nombreHotel+"' AND alojamiento.ciudad='"+ubicacionHotel+"'";
+        ResultSet rs= consultas.consultaBD(query);
+        try{
+            while(rs.next()){
+       
+                String codigo=rs.getString(1);
+                String cama1=rs.getString(2);
+                String cama2=rs.getString(3);
+                String cama3=rs.getString(4);
+                consulta2.add("Codigo: "+codigo+"Simple: "+cama1+"Doble: "+cama2+"Niño: "+cama3);
+                
+                
+            }
+
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return consulta2;
+    }
     
     
 }

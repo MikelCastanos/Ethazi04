@@ -7,6 +7,7 @@ package Vista;
 
 
 import Controlador.ControladorUnaHabitacion;
+import Modelo.Alojamiento;
 import javax.swing.*;
 import static vista.VistaPago.logo1;
 /**
@@ -55,6 +56,7 @@ public class VistaUnaHabitacionHotel extends JFrame {
             
         ControladorUnaHabitacion controladorUnaHab=new ControladorUnaHabitacion(botonCancelar,botonSiguienteUnaHabitacion,comboBoxResultadosHabitaciones);
         //controladorUnaHab.rellenarComboBox(comboBoxResultadosHabitaciones);
+        controladorUnaHab.rellenarComboBox(comboBoxResultadosHabitaciones);
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     

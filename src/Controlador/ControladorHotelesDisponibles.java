@@ -28,10 +28,12 @@ import javax.swing.JOptionPane;
  */
 public class ControladorHotelesDisponibles {
     
+    static String hotelSeleccionado;
+    
                 public ControladorHotelesDisponibles(JButton botonCancelar,JButton botonSiguienteHotel,JComboBox comboBoxResultadosHotel){
         botonSiguienteHotel.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
-                
+                hotelSeleccionado=(String) comboBoxResultadosHotel.getSelectedItem();
                 //rellenarComboBox(comboBoxResultadosHabitaciones);
                 irSeleccionarHabitacion();
                 
@@ -63,6 +65,7 @@ public class ControladorHotelesDisponibles {
                 vistauna.setBounds(0,0,600,730);
                 vistauna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistauna.setVisible(true);
+                
             }
             if(Alojamiento.alojamiento1.getNum_habitaciones()==2){
                 VistaDosHabitacionesHotel vistados=new VistaDosHabitacionesHotel();
@@ -87,5 +90,7 @@ public class ControladorHotelesDisponibles {
             comboBoxResultadosHotel.addItem(ite.next()); 
           }
            }
+                         
+                         
     
 }

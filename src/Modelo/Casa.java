@@ -66,7 +66,7 @@ public class Casa extends Alojamiento {
         return consultaUbicacion;
     }
         
-  public ArrayList<String>ApartamentoPorLugar(String ubicacionAlojamiento){
+  public ArrayList<String>CasaPorLugar(String ubicacionAlojamiento){
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();

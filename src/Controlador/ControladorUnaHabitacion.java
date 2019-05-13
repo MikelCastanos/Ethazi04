@@ -5,10 +5,12 @@
  */
 package Controlador;
 
+import static Controlador.ControladorHotelesDisponibles.hotelSeleccionado;
 import static Controlador.ControladorPago.cantidad_insertada;
 import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
 import Controlador.ControladorTipoAlojamiento;
+import Modelo.Alojamiento;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
 import java.awt.event.MouseAdapter;
@@ -53,9 +55,12 @@ public class ControladorUnaHabitacion {
           }
         public void rellenarComboBox (JComboBox comboBoxResultadosHabitaciones){
             Hotel hotel= new Hotel();
-//            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
+//            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);ç
+
+            System.out.println("PRINT DE PRUEBA");
+            System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
             
-            Iterator<String> ite= hotel.AlojamientoPorLugar(seleccionUbicacion, tipoDeAlojamiento).iterator();
+            Iterator<String> ite= hotel.HabitacionHoteles(Alojamiento.alojamiento1.getCiudad(), ControladorHotelesDisponibles.hotelSeleccionado).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHabitaciones.addItem(ite.next()); 
           }

@@ -12,6 +12,7 @@ import javax.swing.JComboBox;
 import static Controlador.ControladorPago.cantidad_insertada;
 import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
 import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
+import Modelo.Alojamiento;
 import Modelo.Apartamento;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
@@ -60,7 +61,7 @@ public void cancelar(){
             Apartamento apartamento= new Apartamento();
 //            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
             
-            Iterator<String> ite= apartamento.ApartamentoPorLugar(seleccionUbicacion).iterator();
+            Iterator<String> ite= apartamento.ApartamentoPorLugar(Alojamiento.alojamiento1.getCiudad()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 
           }

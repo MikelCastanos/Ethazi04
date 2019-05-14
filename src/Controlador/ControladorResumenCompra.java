@@ -27,7 +27,7 @@ import javax.swing.JOptionPane;
  *
  * @author shabi
  */
-public class ControladorEstanciaSeleccionada {
+public class ControladorResumenCompra {
     
     public  int codigoHabitacionInsertar;
     public  String dniInsertar;
@@ -43,7 +43,7 @@ public class ControladorEstanciaSeleccionada {
     public  int codigoHotelInsertar;
       ArrayList datosHotel= new ArrayList<>();
     
-    public ControladorEstanciaSeleccionada(JButton botonCancelar,JButton boton_siguiente3){
+    public ControladorResumenCompra(JButton botonCancelar,JButton boton_siguiente3){
                    
         boton_siguiente3.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
@@ -72,7 +72,7 @@ public void cancelar(){
           
           }
     
-    public ControladorEstanciaSeleccionada(){
+    public ControladorResumenCompra(){
         
     }
 //    metodo para cargara variables desde el arraylist que recibimos de la consulta 

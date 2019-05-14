@@ -1,7 +1,7 @@
 
 package vista;
 
-import Controlador.ControladorEstanciaSeleccionada;
+import Controlador.ControladorResumenCompra;
 import Controlador.ControladorPago;
 import Controlador.ControladorPagoMayor;
 import static Controlador.ControladorPagoMayor.*;
@@ -39,7 +39,7 @@ public class VistaPagoMayor extends JFrame{
             
      setLayout(null);  
             ControladorPago controp=new ControladorPago();
-            ControladorEstanciaSeleccionada contro=new ControladorEstanciaSeleccionada();
+            ControladorResumenCompra contro=new ControladorResumenCompra();
             precioFinal2=contro.precio1cents;
             precioFinal2cents=precioFinal2;
             vueltasCentimos=controp.cantidad_insertada-precioFinal2cents;

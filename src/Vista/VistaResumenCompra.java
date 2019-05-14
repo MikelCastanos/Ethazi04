@@ -6,7 +6,7 @@
 package Vista;
 
 //import Controlador.ControladorEleccion;
-import Controlador.ControladorEstanciaSeleccionada;
+import Controlador.ControladorResumenCompra;
 import Modelo.Alojamiento;
 import Modelo.Hotel;
 import Modelo.Usuario;
@@ -22,16 +22,16 @@ import static vista.VistaPago.logo1;
  *
  * @author shabi
  */
-public class VistaEstanciaSeleccionada extends JFrame{
+public class VistaResumenCompra extends JFrame{
     
     
         JLabel mensajeEstancia,datosEstancia,datosEstancia2,mensajeEstancia1,datosHabitacion,datosFechaReserva,datosCliente;
         JButton boton_siguiente4;
         
     
-    public VistaEstanciaSeleccionada(){} 
+    public VistaResumenCompra(){} 
     
-    public VistaEstanciaSeleccionada(JComboBox eleccion){
+    public VistaResumenCompra(JComboBox eleccion){
         
         
         
@@ -57,7 +57,7 @@ public class VistaEstanciaSeleccionada extends JFrame{
         Alojamiento alojamiento= new Alojamiento();
         alojamiento.mostrar();
         System.out.println("Vista datos: "+alojamiento.getCalle());
-        ControladorEstanciaSeleccionada.sacarDatosEstancia();
+        ControladorResumenCompra.sacarDatosEstancia();
         //datosEstancia=new JLabel("Datos: "+Alojamiento.getNombre()+" "+alojamiento.getProvincia()+" "+alojamiento.getCiudad()+" "+alojamiento.getCalle());
         datosEstancia=new JLabel("Codigo Hotel: "+Hotel.hotel1.getCodigoHotel()+" Nombre: "+Hotel.hotel1.getNombre());
         datosEstancia.setBounds(40,275,550,30);
@@ -83,7 +83,7 @@ public class VistaEstanciaSeleccionada extends JFrame{
         boton_siguiente4.setBounds(450,465,100,30);
         add(boton_siguiente4);
         
-        ControladorEstanciaSeleccionada cont=new ControladorEstanciaSeleccionada(botonCancelar,boton_siguiente4);
+        ControladorResumenCompra cont=new ControladorResumenCompra(botonCancelar,boton_siguiente4);
         
        // ControladorEleccion cont3=new ControladorEleccion();
         //cont3.cogerDatosEleccion(eleccion);

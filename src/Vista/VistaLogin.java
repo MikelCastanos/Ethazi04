@@ -23,18 +23,23 @@ public class VistaLogin extends JFrame {
     JLabel mensaje_login, label_usuario, label_password,mensaje_registro,label_dni_registro,label_nombre_registro,label_password_registro,label_password_registro2;
     public static JTextField dniField,registroDniField,registroNombreField;
     public static JPasswordField contrasenaField,registroContrasenaField,registroContrasenaField2;
-    public static JButton botonLogin,botonRegistro,botonCambio;
+    public static JButton botonLogin,botonRegistro,botonCambio,botonBorrar;
     public static JFormattedTextField dniField2;
     
     JLabel mensaje_cambiar_password,label_cambio_dni,label_cambio_password,label_cambio_password2;
     public static JTextField cambioPasswordDNI;
     public static JPasswordField cambioPasswordPass,cambioPasswordNueva;
     
+    JLabel mensaje_borrar_usuario, label_dni_borrar_usuario, label_password_borrar_usuario;
+    public static JTextField dniBorrarUsuario;
+    public static JPasswordField passwordBorrarUsuario;
+    
     public VistaLogin(){
         
         botonLogin=new javax.swing.JButton();
         botonRegistro=new javax.swing.JButton();
         botonCambio=new javax.swing.JButton();
+        botonBorrar=new javax.swing.JButton();
         setLayout(null);
         
         
@@ -103,7 +108,6 @@ public class VistaLogin extends JFrame {
         registroContrasenaField2.setBounds(425,240,120,30);
         add(registroContrasenaField2);  
         
-
         
         botonRegistro=new JButton("Registrar");
         botonRegistro.setBounds(425,280,120,30);
@@ -140,11 +144,38 @@ public class VistaLogin extends JFrame {
         cambioPasswordNueva.setBounds(120,480,120,30);
         add(cambioPasswordNueva);
         
-                botonCambio=new JButton("Registrar");
+                botonCambio=new JButton("Cambiar");
         botonCambio.setBounds(120,520,120,30);
         add(botonCambio);
         
-        ControladorLogin contL=new ControladorLogin(botonLogin,botonRegistro,botonCambio,cambioPasswordDNI,cambioPasswordPass,cambioPasswordNueva,contrasenaField,dniField,registroContrasenaField,registroContrasenaField2,registroNombreField,registroContrasenaField2);
+        
+        //Borrar Usuario
+        mensaje_borrar_usuario=new JLabel("Eliminar Usuario");
+        mensaje_borrar_usuario.setBounds(400,370,120,30);
+        add(mensaje_borrar_usuario);
+        
+        
+        label_dni_borrar_usuario=new JLabel("DNI:");
+        label_dni_borrar_usuario.setBounds(300,400,120,30);
+        add(label_dni_borrar_usuario);
+        
+        dniBorrarUsuario=new JTextField("");
+        dniBorrarUsuario.setBounds(425,400,120,30);
+        add(dniBorrarUsuario);
+        
+        label_password_borrar_usuario=new JLabel("Password:");
+        label_password_borrar_usuario.setBounds(300,440,120,30);
+        add(label_password_borrar_usuario);
+        
+                passwordBorrarUsuario=new JPasswordField("");
+        passwordBorrarUsuario.setBounds(425,440,120,30);
+        add(passwordBorrarUsuario);
+        
+        botonBorrar=new JButton("Eliminar");
+        botonBorrar.setBounds(425,480,120,30);
+        add(botonBorrar);
+        
+        ControladorLogin contL=new ControladorLogin(botonBorrar,dniBorrarUsuario,passwordBorrarUsuario,botonLogin,botonRegistro,botonCambio,cambioPasswordDNI,cambioPasswordPass,cambioPasswordNueva,contrasenaField,dniField,registroContrasenaField,registroContrasenaField2,registroNombreField,registroContrasenaField2);
         
   
     }

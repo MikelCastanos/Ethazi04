@@ -26,10 +26,13 @@ public class Usuario {
     protected  String dniCambioPassword;
     protected  String passwordViejaCambioPassword;
     protected  String passwordNuevaCambioPassword2;
+    protected  String dniUsuarioBorrar;
+    protected  String passwordUsuarioBorrar;
 
     public static Usuario usuarioLogin=new Usuario();
     public static Usuario usuarioRegistro=new Usuario();
     public static Usuario usuarioCambio=new Usuario();
+    public static Usuario usuarioBorrar=new Usuario();
     
     
     public String getDniUsuarioLogin() {
@@ -104,6 +107,22 @@ public class Usuario {
         this.passwordNuevaCambioPassword2 = passwordNuevaCambioPassword2;
     }
 
+    public String getDniUsuarioBorrar() {
+        return dniUsuarioBorrar;
+    }
+
+    public void setDniUsuarioBorrar(String dniUsuarioBorrar) {
+        this.dniUsuarioBorrar = dniUsuarioBorrar;
+    }
+
+    public String getPasswordUsuarioBorrar() {
+        return passwordUsuarioBorrar;
+    }
+
+    public void setPasswordUsuarioBorrar(String passwordUsuarioBorrar) {
+        this.passwordUsuarioBorrar = passwordUsuarioBorrar;
+    }
+
     
    
     
@@ -166,7 +185,7 @@ public class Usuario {
     }
     
     public void consultaLoginCambioPassword(){
-                Conexion conexion= new Conexion();
+        Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
         com.mysql.jdbc.Connection con= conexion.conectar();
         
@@ -195,6 +214,38 @@ public class Usuario {
             }
         
     }
+    
+        public void consultaBorrarUsuario(){
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+        com.mysql.jdbc.Connection con= conexion.conectar();
+        
+        System.out.println(Usuario.usuarioBorrar.getDniUsuarioBorrar()+" "+Usuario.usuarioBorrar.getPasswordUsuarioBorrar());
+        String query="select * from usuario where dni='"+Usuario.usuarioBorrar.getDniUsuarioBorrar()+"' and contrasena='"+ Usuario.usuarioBorrar.getPasswordUsuarioBorrar()+"'";
+        
+         try{
+           //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
+        ResultSet rs= consultas.consultaBD(query);
+            if(rs.next())
+            {
+                //METODO CAMBIO PASSWORD
+                //String query2="UPDATE USUARIO SET contrasena='"+Usuario.usuarioCambio.getPasswordNuevaCambioPassword2()+"' WHERE dni='"+Usuario.usuarioCambio.getDniCambioPassword()+"'";
+                String query3="DELETE FROM USUARIO WHERE dni='"+Usuario.usuarioBorrar.getDniUsuarioBorrar()+"'";    
+                consultas.actualizarBD(query3);
+                JOptionPane.showMessageDialog(null, "Su usuario ha sido borrado.");
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Usuario y/o Contraseña incorrectos");
+            }
+            }
+            catch(SQLException | HeadlessException ex)
+            {
+                JOptionPane.showMessageDialog(null,ex);
+            }
+        
+    }
+
 
         
     }

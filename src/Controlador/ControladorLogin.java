@@ -23,7 +23,7 @@ import javax.swing.JTextField;
 public class ControladorLogin {
 
     
-            public ControladorLogin(JButton botonLogin,JButton botonRegistro,JButton botonCambio,JTextField cambioPasswordDNI, JPasswordField cambioPasswordPass, JPasswordField cambioPasswordNueva,JPasswordField contrasenaField, JTextField usuarioField,JPasswordField registroContrasenaField,JTextField registroDniField,JTextField registroNombreField,JPasswordField registroContrasenaField2){
+            public ControladorLogin(JButton botonBorrar,JTextField dniBorrarUsuario,JPasswordField passwordBorrarUsuario,JButton botonLogin,JButton botonRegistro,JButton botonCambio,JTextField cambioPasswordDNI, JPasswordField cambioPasswordPass, JPasswordField cambioPasswordNueva,JPasswordField contrasenaField, JTextField usuarioField,JPasswordField registroContrasenaField,JTextField registroDniField,JTextField registroNombreField,JPasswordField registroContrasenaField2){
         botonLogin.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
@@ -49,6 +49,17 @@ public class ControladorLogin {
                 
                 cogerDatosCambio();
                 Modelo.Usuario.usuarioCambio.consultaLoginCambioPassword();
+                
+            }
+            
+        });
+                
+                botonBorrar.addMouseListener(new MouseAdapter(){
+                            public void mouseClicked(MouseEvent e){
+                
+                cogerDatosBorrar();
+                Modelo.Usuario.usuarioBorrar.consultaBorrarUsuario();
+                //Modelo.Usuario.usuarioCambio.consultaLoginCambioPassword();
                 
             }
             
@@ -96,6 +107,14 @@ public class ControladorLogin {
                 System.out.println(Usuario.usuarioCambio.getDniCambioPassword());
                 System.out.println(Usuario.usuarioCambio.getPasswordViejaCambioPassword());
                 System.out.println(Usuario.usuarioCambio.getPasswordNuevaCambioPassword2());
+            }
+            
+            public void cogerDatosBorrar(){
+                Usuario.usuarioBorrar.setDniUsuarioBorrar(VistaLogin.dniBorrarUsuario.getText());
+                Usuario.usuarioBorrar.setPasswordUsuarioBorrar(String.valueOf(VistaLogin.passwordBorrarUsuario.getPassword()));
+                System.out.println(Usuario.usuarioBorrar.getDniUsuarioBorrar());
+                System.out.println(Usuario.usuarioBorrar.getPasswordUsuarioBorrar());
+                
             }
             
 }

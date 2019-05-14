@@ -5,7 +5,7 @@
  */
 package Vista;
 
-import Controlador.ControladorEleccion;
+//import Controlador.ControladorEleccion;
 import Controlador.ControladorEstanciaSeleccionada;
 import Modelo.Alojamiento;
 import Modelo.Hotel;
@@ -85,8 +85,8 @@ public class VistaEstanciaSeleccionada extends JFrame{
         
         ControladorEstanciaSeleccionada cont=new ControladorEstanciaSeleccionada(botonCancelar,boton_siguiente4);
         
-        ControladorEleccion cont3=new ControladorEleccion();
-        cont3.cogerDatosEleccion(eleccion);
+       // ControladorEleccion cont3=new ControladorEleccion();
+        //cont3.cogerDatosEleccion(eleccion);
         cont.sacarDatosEstancia();
         
         ImageIcon icon=new ImageIcon("src//images/Bidaion.png");

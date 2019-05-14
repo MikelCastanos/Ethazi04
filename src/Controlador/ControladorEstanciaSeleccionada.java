@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import static Controlador.ControladorEleccion.seleccionEleccion;
+//import static Controlador.ControladorEleccion.seleccionEleccion;
 import Modelo.Alojamiento;
 import Modelo.Habitacion;
 import Modelo.Hotel;
@@ -81,7 +81,7 @@ public void cancelar(){
         
         Hotel cons=new Hotel();
 
-        datosHotel= cons.consultaCompleta(seleccionEleccion);
+        //datosHotel= cons.consultaCompleta(seleccionEleccion);
         codigoHabitacionInsertar=100;
         codigoHotelInsertar=Hotel.hotel1.getCodigoHotel();
         dniInsertar=Usuario.usuarioLogin.getDniUsuarioLogin();
@@ -125,7 +125,7 @@ public void cancelar(){
             
             fw = new FileWriter(new File("mytextfile.txt"));
             
-            fw.write(String.format(cons.consultaCompleta(seleccionEleccion).toString()));
+           // fw.write(String.format(cons.consultaCompleta(seleccionEleccion).toString()));
             
 
             fw.close();

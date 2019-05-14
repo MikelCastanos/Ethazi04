@@ -140,7 +140,6 @@ public class Hotel extends Alojamiento{
                 hotel1.setCalle(direccion);
                 hotel1.setCodigo_postal(codigoPostal);
                 hotel1.setCiudad(ciudad);
-                
                 //Unico Setter que es PROPIO de Hotel
                 hotel1.setCodigoHotel(codigoHotel);
                 hotel1.setNum_estrellas(numeroEstrellas);
@@ -153,7 +152,7 @@ public class Hotel extends Alojamiento{
             System.out.println("Ubicacion  "+e.getMessage());
         }
 //        System.out.println("Hoteles en son "+consultaUbicacion);
-       System.out.println(infoCompleta);
+       System.out.println("El hotel seleccionado es : "+infoCompleta);
         return infoCompleta;
     }
     
@@ -182,15 +181,16 @@ public class Hotel extends Alojamiento{
     
 public ArrayList<String>HabitacionHoteles(int codigoHotel){
 
-
+        System.out.println("El codgio del hotel seleccionado es: "+codigoHotel);
+        
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
 
         ArrayList<String> consulta2 = new ArrayList<String>();
         String query="select hotel.cod_hotel, habitacion_hotel.cod_habitacion_hotel,habitacion_hotel.precio_base_hotel,"
                 + "habitacion_hotel.precio_festivo_hotel,habitacion_hotel.precio_estival_hotel,camas.cama_doble,camas.cama_simple,camas.cama_nino"
-                +"from habitacion_hotel inner join hotel on habitacion_hotel.cod_hotel=hotel.cod_hotel inner join camas on "
-                + "habitacion_hotel.cod_habitacion_hotel=camas.cod_habitacion_hotel where hotel.cod_hotel="+codigoHotel+";";
+                +" from habitacion_hotel inner join hotel on habitacion_hotel.cod_hotel=hotel.cod_hotel inner join camas on "
+                + "habitacion_hotel.cod_habitacion_hotel=camas.cod_habitacion_hotel where hotel.cod_hotel="+codigoHotel+"";
         ResultSet rs= consultas.consultaBD(query);
         try{
             while(rs.next()){

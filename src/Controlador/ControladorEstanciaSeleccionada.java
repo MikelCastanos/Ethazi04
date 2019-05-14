@@ -108,8 +108,8 @@ public void cancelar(){
     }
     
     public static void sacarDatosEstancia(){
-           Hotel hotel= new Hotel();
-           hotel.consultaCompleta(seleccionEleccion);
+//           Hotel hotel= new Hotel();
+//           hotel.consultaCompleta(seleccionEleccion);
     }
     public void insertarDatosEstancia(){
         Hotel cons=new Hotel();

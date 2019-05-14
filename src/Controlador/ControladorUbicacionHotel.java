@@ -123,17 +123,15 @@ public void cancelar(){
 //}    
 //    }
     
-
+//    Esto esta bien
          public void rellenarComboBox (JComboBox ubicacion){
-           Hotel hotel= new Hotel();
-//           hotel.ubicacion();
-           
-        Iterator<String> i= hotel.ubicacion().iterator();
-        while(i.hasNext()){
-           ubicacion.addItem(i.next()); 
-        }
-        
-         }
+            Hotel hotel= new Hotel();
+            Iterator<String> i= hotel.ubicacion().iterator();
+            while(i.hasNext()){
+               ubicacion.addItem(i.next()); 
+            }
+
+             }
 
        
 //         public void cogerDatos(JComboBox ubicacion, JComboBox combobox_numero_habitaciones){

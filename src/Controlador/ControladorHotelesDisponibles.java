@@ -36,7 +36,7 @@ public class ControladorHotelesDisponibles {
                 hotelSeleccionado=(String) comboBoxResultadosHotel.getSelectedItem();
                 //rellenarComboBox(comboBoxResultadosHabitaciones);
                 irSeleccionarHabitacion();
-                
+                 
             }
             
             });
@@ -83,8 +83,8 @@ public class ControladorHotelesDisponibles {
                  
             public void rellenarComboBox (JComboBox comboBoxResultadosHotel){
             Hotel hotel= new Hotel();
-//            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
-            
+                System.out.println("Controlador hoteles disponibles");
+//            hotel.consultaCompleta(hotelSeleccionado);
             Iterator<String> ite= hotel.AlojamientoPorLugar(seleccionUbicacion).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 

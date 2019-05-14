@@ -61,7 +61,7 @@ public void cancelar(){
             Apartamento apartamento= new Apartamento();
 //            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
             
-            Iterator<String> ite= apartamento.ApartamentoPorLugar(Alojamiento.alojamiento1.getCiudad()).iterator();
+            Iterator<String> ite= apartamento.ApartamentoPorLugarYpersonas(Alojamiento.alojamiento1.getCiudad(),Alojamiento.alojamiento1.getNum_personas()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 
           }

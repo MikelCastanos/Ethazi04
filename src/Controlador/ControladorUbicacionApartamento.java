@@ -50,9 +50,7 @@ public class ControladorUbicacionApartamento {
         
         public void rellenarComboBox (JComboBox comboBoxUbicacionApartamento){
         Apartamento apartamento= new Apartamento();
-    //           hotel.ubicacion();
-
-         Iterator<String> i= apartamento.ubicacionCasa().iterator();
+         Iterator<String> i= apartamento.ubicacionApartamento().iterator();
          while(i.hasNext()){
            comboBoxUbicacionApartamento.addItem(i.next()); 
         }

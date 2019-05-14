@@ -204,14 +204,11 @@ public ArrayList<String>HabitacionHoteles(int codigoHotel){
                 int camaNino=rs.getInt(8);
                 
 
-                consulta2.add("Codigo Habitacion "+codigoHabitacion);
-                consulta2.add("Precio Base "+precioBaseHotel);
-                consulta2.add("Precio Base "+precioBaseHotel);
-                consulta2.add("Precio Festivo "+precioFestivoHotel);
-                consulta2.add("Precio Estival "+precioEstivalHotel);
-                consulta2.add("Cama Doble "+camaDoble);
-                consulta2.add("Cama Simple "+camaSimple);
-                consulta2.add("Cama Nino "+camaNino);
+                consulta2.add("Cod "+codigoHabitacion+" Precio Base "+precioBaseHotel+" Cama Doble "+camaDoble+" Cama Simple "+camaSimple+" Cama Nino "+camaNino);
+//                consulta2.add("Precio Base "+precioBaseHotel);
+//                consulta2.add("Precio Festivo "+precioFestivoHotel);
+//                consulta2.add("Precio Estival "+precioEstivalHotel);
+            
                 
             }
 

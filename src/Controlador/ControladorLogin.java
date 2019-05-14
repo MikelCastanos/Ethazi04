@@ -48,7 +48,7 @@ public class ControladorLogin {
                             public void mouseClicked(MouseEvent e){
                 
                 cogerDatosCambio();
-                
+                Modelo.Usuario.usuarioCambio.consultaLoginCambioPassword();
                 
             }
             
@@ -70,6 +70,7 @@ public class ControladorLogin {
                 
             }
             
+
             
             
             public void cogerDatos(JPasswordField contrasenaField, JTextField usuarioField){

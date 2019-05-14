@@ -165,8 +165,42 @@ public class Usuario {
 
     }
     
+    public void consultaLoginCambioPassword(){
+                Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+        com.mysql.jdbc.Connection con= conexion.conectar();
+        
+        System.out.println(Usuario.usuarioCambio.getDniCambioPassword()+" "+Usuario.usuarioCambio.getPasswordViejaCambioPassword()+" "+Usuario.usuarioCambio.getPasswordNuevaCambioPassword2());
+        String query="select * from usuario where dni='"+Usuario.usuarioCambio.getDniCambioPassword()+"' and contrasena='"+ Usuario.usuarioCambio.getPasswordViejaCambioPassword()+"'";
+        
+         try{
+           //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
+        ResultSet rs= consultas.consultaBD(query);
+            if(rs.next())
+            {
+                //METODO CAMBIO PASSWORD
+                String query2="UPDATE USUARIO SET contrasena='"+Usuario.usuarioCambio.getPasswordNuevaCambioPassword2()+"' WHERE dni='"+Usuario.usuarioCambio.getDniCambioPassword()+"'";
+                    
+                consultas.actualizarBD(query2);
+                JOptionPane.showMessageDialog(null, "Enhorabuena, ahora puede entrar con la nueva contraseña");
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Usuario y/o Contraseña incorrectos");
+            }
+            }
+            catch(SQLException | HeadlessException ex)
+            {
+                JOptionPane.showMessageDialog(null,ex);
+            }
+        
+    }
+
+        
+    }
     
     
     
     
-}
+    
+

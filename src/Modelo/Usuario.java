@@ -167,14 +167,18 @@ public class Usuario {
         com.mysql.jdbc.Connection con= conexion.conectar();
         
         System.out.println(Usuario.usuarioRegistro.getDniUsuarioRegistro()+" "+Usuario.usuarioRegistro.getNombreRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro());
-        String query="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"','"+Usuario.usuarioRegistro.getNombreRegistro()+"','Arri','2000-10-20','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
+        String query1="select * from usuario where dni='"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"'";
+        
+        
         try{
-            ResultSet rs1= consultas.consultaBD(query);
+            ResultSet rs1= consultas.consultaBD(query1);
         if(rs1.next()){
-            consultas.insertarDatosBD(query);
+           JOptionPane.showMessageDialog(null, "El usuario ya existe. Pruebe a iniciar sesión para continuar."); 
         }
         else{
-        JOptionPane.showMessageDialog(null, "El usuario ya existe. Pruebe a iniciar sesión para continuar.");  
+            String query2="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"','"+Usuario.usuarioRegistro.getNombreRegistro()+"','Arri','2000-10-20','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
+            consultas.insertarDatosBD(query2);
+          
         }
         }
         catch(SQLException | HeadlessException ex){

@@ -155,29 +155,7 @@ public class Hotel extends Alojamiento{
        System.out.println("El hotel seleccionado es : "+infoCompleta);
         return infoCompleta;
     }
-    
-//    public void cargarHoteles(){
-////        Instanciar BBDD
-//        Conexion conexion= new Conexion();
-//        Consultas consultas= new Consultas();
-//        
-////        Consulta
-//        String query="Select * from hotel";
-////        Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
-//        ResultSet rs= consultas.consultaBD(query);
-////        Recorrer todos los datos a mostrar
-//        try{
-//            while(rs.next()){
-//                System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
-//            }
-////        Control de errores
-//        }catch(Exception e){
-//            System.out.println(e.getMessage());
-//        }
-//    }
-    
-//    Busca los hoteles que se encuentran en la ubicacion que se le pasa por paramatro
-//    Devuelve un arrayList con los hoteles de esa ubicacion
+
     
 public ArrayList<String>HabitacionHoteles(int codigoHotel){
 
@@ -219,16 +197,8 @@ public ArrayList<String>HabitacionHoteles(int codigoHotel){
         return consulta2;
     }
     
-    
 }
 
 
-
-
-
-
- 
-    
-//    Consulta estandar la dejo por si acaso pinta los datos d elos hoteles
     
     

@@ -39,7 +39,7 @@ public class Casa extends Alojamiento {
     }
 
     
-   public ArrayList<String>ubicacionApartamento(){
+   public ArrayList<String>ubicacionCasa(){
 // Instanciar BBDD
 
         Conexion conexion= new Conexion();
@@ -48,8 +48,8 @@ public class Casa extends Alojamiento {
 
         ArrayList<String> consultaUbicacion = new ArrayList<String>();
 
-        String query="select distinct alojamiento.ciudad from alojamiento inner join casa on casa.cod_casa=alojamiento.cod_alojamiento where alojamiento.tipo='C'";
-
+        String query="select DISTINCT ciudad from casa ";
+//        select cod_casa, maximo_huespedes,direccion from casa where maximo_huespedes>=6;
         ResultSet rs= consultas.consultaBD(query);
 
         try{
@@ -62,30 +62,30 @@ public class Casa extends Alojamiento {
         }catch(Exception e){
             System.out.println("Ubicacion  "+e.getMessage());
         }
-        System.out.println("Apartamentos en son "+consultaUbicacion);
+        System.out.println("Ubicacion de las casas "+consultaUbicacion);
         return consultaUbicacion;
     }
         
-  public ArrayList<String>CasaPorLugar(String ubicacionAlojamiento){
+  public ArrayList<String>CasaPorLugarYporPersonas(String ubicacionCasa, int numeroDePersonas){
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
 
         ArrayList<String> consulta = new ArrayList<String>();
-        String query="select alojamiento.direccion from alojamiento "
-                + "inner join casa on casa.cod_casa=alojamiento.cod_alojamiento where alojamiento.tipo='C' AND alojamiento.ciudad='"+ubicacionAlojamiento+"'";
-
+        String query="select cod_casa, maximo_huespedes,direccion,ciudad from casa where maximo_huespedes>="+numeroDePersonas+" AND ciudad='"+ubicacionCasa+"'";
         ResultSet rs= consultas.consultaBD(query);
         try{
             while(rs.next()){
 
-                String nombreHotel=rs.getString(1);
-                consulta.add(nombreHotel);
+                int cod_casa=rs.getInt(1);
+                String calle=rs.getString(3);
+                consulta.add(Integer.toString(cod_casa)+" Calle: "+calle);
+                
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
-        System.out.println("Hoteles en "+ubicacionAlojamiento+" son "+consulta);
+        System.out.println("Casas en "+ubicacionCasa+" son "+consulta);
         return consulta;
     }
            

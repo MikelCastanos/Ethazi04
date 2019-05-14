@@ -58,12 +58,10 @@ public void cancelar(){
           
           }
     public void rellenarComboBox (JComboBox comboBoxUbicacionCasa){
-           Hotel hotel=new Hotel();
-//           hotel.ubicacion();
-           
-        Iterator<String> i= hotel.ubicacion().iterator();
+        Casa casa=new Casa();
+        Iterator<String> i= casa.ubicacionCasa().iterator();
         while(i.hasNext()){
-           comboBoxUbicacionCasa.addItem(i.next()); 
+            comboBoxUbicacionCasa.addItem(i.next()); 
         }
          }
     

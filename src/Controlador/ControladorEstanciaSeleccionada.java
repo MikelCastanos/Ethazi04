@@ -113,8 +113,6 @@ public void cancelar(){
     }
     public void insertarDatosEstancia(){
         Hotel cons=new Hotel();
-//        codigoHotelInsertar=(int) cons.consultaCompleta(seleccionEleccion).get(0);
-//        nombreHotelInsertar=(String) cons.consultaCompleta(seleccionEleccion).get(1);
         insertarReserva insertar= new insertarReserva();
         insertar.insertar(codigoHabitacionInsertar,codigoHotelInsertar,dniInsertar,fechaGestion,fechaEntrada,fechaSalida,precio1); 
     }

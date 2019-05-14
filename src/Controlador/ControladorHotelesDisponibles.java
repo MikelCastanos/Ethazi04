@@ -48,8 +48,8 @@ public class ControladorHotelesDisponibles {
         
             }
                 
-                public void cancelar(){
-          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+            public void cancelar(){
+            JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
             iniciostart.setBounds(0,0,600,730);
@@ -83,8 +83,7 @@ public class ControladorHotelesDisponibles {
                  
             public void rellenarComboBox (JComboBox comboBoxResultadosHotel){
             Hotel hotel= new Hotel();
-                System.out.println("Controlador hoteles disponibles");
-//            hotel.consultaCompleta(hotelSeleccionado);
+            //Hoteles disponibles por ubicacion
             Iterator<String> ite= hotel.AlojamientoPorLugar(seleccionUbicacion).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 

@@ -42,7 +42,7 @@ public class ControladorUnaCasa {
         
             }
 
-public void cancelar(){
+            public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
@@ -61,7 +61,7 @@ public void cancelar(){
             Casa casa= new Casa();
 //            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
             
-            Iterator<String> ite= casa.CasaPorLugar(Alojamiento.alojamiento1.getCiudad()).iterator();
+            Iterator<String> ite= casa.CasaPorLugarYporPersonas(Alojamiento.alojamiento1.getCiudad(),Alojamiento.alojamiento1.getNum_personas()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosCasa.addItem(ite.next()); 
           }

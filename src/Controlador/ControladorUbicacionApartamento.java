@@ -52,7 +52,7 @@ public class ControladorUbicacionApartamento {
         Apartamento apartamento= new Apartamento();
     //           hotel.ubicacion();
 
-         Iterator<String> i= apartamento.ubicacionApartamento().iterator();
+         Iterator<String> i= apartamento.ubicacionCasa().iterator();
          while(i.hasNext()){
            comboBoxUbicacionApartamento.addItem(i.next()); 
         }

@@ -29,7 +29,7 @@ public class Apartamento extends Casa {
         this.piso = piso;
     }
     
-       public ArrayList<String>ubicacionApartamento(){
+       public ArrayList<String>ubicacionCasa(){
 // Instanciar BBDD
 
         Conexion conexion= new Conexion();

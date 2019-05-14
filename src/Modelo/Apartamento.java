@@ -29,6 +29,7 @@ public class Apartamento extends Casa {
         this.piso = piso;
     }
     
+//    Devuelve las ubicaciones en las que hay disponibles apartamentos
        public ArrayList<String>ubicacionApartamento(){
 
         Conexion conexion= new Conexion();
@@ -49,7 +50,7 @@ public class Apartamento extends Casa {
         System.out.println("Apartamentos en son "+consultaUbicacion);
         return consultaUbicacion;
     }
-       
+//      Devuelve los apartamentos disponibles en una ciudad concreta y con una capacidad concreta de personas
         public ArrayList<String>ApartamentoPorLugarYpersonas(String ubicacionApartamento, int numeroDePersonas){
 
         Conexion conexion= new Conexion();

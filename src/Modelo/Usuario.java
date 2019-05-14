@@ -197,8 +197,7 @@ public class Usuario {
         String query="select * from usuario where dni='"+Usuario.usuarioCambio.getDniCambioPassword()+"' and contrasena='"+ Usuario.usuarioCambio.getPasswordViejaCambioPassword()+"'";
         
          try{
-           //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
-        ResultSet rs= consultas.consultaBD(query);
+             ResultSet rs= consultas.consultaBD(query);
             if(rs.next())
             {
                 //METODO CAMBIO PASSWORD
@@ -228,8 +227,7 @@ public class Usuario {
         String query="select * from usuario where dni='"+Usuario.usuarioBorrar.getDniUsuarioBorrar()+"' and contrasena='"+ Usuario.usuarioBorrar.getPasswordUsuarioBorrar()+"'";
         
          try{
-           //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
-        ResultSet rs= consultas.consultaBD(query);
+            ResultSet rs= consultas.consultaBD(query);
             if(rs.next())
             {
                 //METODO CAMBIO PASSWORD

@@ -38,9 +38,8 @@ public class Casa extends Alojamiento {
         this.tamaño = tamaño;
     }
 
-    
+//Retorna las ubicaciones donde estan disponibles las casa    
    public ArrayList<String>ubicacionCasa(){
-// Instanciar BBDD
 
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
@@ -49,7 +48,6 @@ public class Casa extends Alojamiento {
         ArrayList<String> consultaUbicacion = new ArrayList<String>();
 
         String query="select DISTINCT ciudad from casa ";
-//        select cod_casa, maximo_huespedes,direccion from casa where maximo_huespedes>=6;
         ResultSet rs= consultas.consultaBD(query);
 
         try{
@@ -58,14 +56,13 @@ public class Casa extends Alojamiento {
                 String ubicacion=rs.getString(1);
                 consultaUbicacion.add(ubicacion);
             }
-//        Control de errores
         }catch(Exception e){
             System.out.println("Ubicacion  "+e.getMessage());
         }
         System.out.println("Ubicacion de las casas "+consultaUbicacion);
         return consultaUbicacion;
     }
-        
+//    retorna las casas disponibles en un lugar concreto y con un cupo de personas concreto    
   public ArrayList<String>CasaPorLugarYporPersonas(String ubicacionCasa, int numeroDePersonas){
 
         Conexion conexion= new Conexion();

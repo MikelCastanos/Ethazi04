@@ -16,13 +16,17 @@ import java.util.Date;
  * @author ikasleaETHAZI
  */
 public class insertarReserva{
+    
+//    Completar el insert y moverlo a reserva, cuando llamemos al metodo desde otra clase
+//    pasarle los datos por paramentro mediante los getters, comprobar siempre que se han hecho todos
+//    los setter correctamente
+    
     public static SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 
     public static Date fechagest=Calendar.getInstance().getTime();
     public static String formatted= format1.format(fechagest);
     int preprecio=(int)Habitacion.habitacion1.getPrecio_habitacion()*Alojamiento.alojamiento1.getDiasEstancia();
     String precioString=Integer.toString(preprecio);
-//    Metodo para insertar los datos de la reserva en la tabla
     
     //cod_reserva, fecha_entrada, fecha_salida,fecha_gestion,fecha_tos,dni, cod_huesped, cod_alojamiento
     public void insertar(int codHabitacion, int codHotel, String dni, String fechaGestion, String fechaEntrada, String fechaSalida, double precioReserva){

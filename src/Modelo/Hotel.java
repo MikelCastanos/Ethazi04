@@ -32,7 +32,7 @@ public class Hotel extends Alojamiento{
     }
 
 
-    
+ //Devuelve las ubicaciones en las que hay hoteles disponibles   
     public ArrayList<String>ubicacion(){
 // Instanciar BBDD
 
@@ -48,11 +48,7 @@ public class Hotel extends Alojamiento{
 //Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
-//Si descomentamos la siguiente linea nos muestra todos los datos del hotel que ocincide con la ubicacion
 
-//System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
-
-//  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
                 String ubicacion=rs.getString(1);
                 consultaUbicacion.add(ubicacion);
             }
@@ -64,7 +60,8 @@ public class Hotel extends Alojamiento{
         return consultaUbicacion;
     }
     
-    public ArrayList<String>AlojamientoPorLugar(String ubicacionHotel){
+//  Retorna los hoteles disponibles en una ciudad concreta
+    public ArrayList<String>HotelPorLugar(String ubicacionHotel){
 // Instanciar BBDD
 
         Conexion conexion= new Conexion();
@@ -73,22 +70,16 @@ public class Hotel extends Alojamiento{
         ArrayList<String> consulta = new ArrayList<String>();
 // Consulta
         String query="select hotel.nombre_hotel from hotel where hotel.ciudad='"+ubicacionHotel+"';";
-// Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(query);
         
         
-//  Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
-//           Si descomentamos la siguiente linea nos muestra todos los datos del hotel que ocincide con la ubicacion
-
-//              System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
 
 //  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
                 String nombreHotel=rs.getString(1);
                 consulta.add(nombreHotel);
             }
-//        Control de errores
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
@@ -106,16 +97,11 @@ public class Hotel extends Alojamiento{
         ArrayList infoCompleta = new ArrayList<>();
 // Consulta
         String query="select * from hotel where nombre_hotel='"+nombreHotel+"';";
-// Llamamos al metodo de consultasBD y le pasamos la conexion y la consulta
+// Llamamos al metodo de consultasBD y le pasamos la consulta
         ResultSet rs= consultas.consultaBD(query);
 //  Recorrer todos los datos a mostrar
         try{
             while(rs.next()){
-//           Si descomentamos la siguiente linea nos muestra todos los datos del hotel que ocincide con la ubicacion
-
-//              System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getInt(3)+ " " + rs.getString (4));
-
-//  Aqui en cambio guardamos los nombres del hotel que coinciden con la ubicaiocn en un arrayList
 
                 int codigoHotel=rs.getInt(1);
                 String nombre=rs.getString(2);
@@ -156,7 +142,7 @@ public class Hotel extends Alojamiento{
         return infoCompleta;
     }
 
-    
+    //Mover esta consulta a habitacion; devuelve las habitaciones disponibles en un hotel segun su codigo
 public ArrayList<String>HabitacionHoteles(int codigoHotel){
 
         System.out.println("El codgio del hotel seleccionado es: "+codigoHotel);
@@ -172,7 +158,8 @@ public ArrayList<String>HabitacionHoteles(int codigoHotel){
         ResultSet rs= consultas.consultaBD(query);
         try{
             while(rs.next()){
-       
+                //Guardo los datos en variables por si son necesarios para rellenar un array o lo que sea
+                //Mas adelante habra que guardar estos datos pero sobre la habitacion que haya selecionado el usuario
                 int codigoHabitacion=rs.getInt(2);
                 double precioBaseHotel=rs.getDouble(3);
                 double precioFestivoHotel=rs.getDouble(4);

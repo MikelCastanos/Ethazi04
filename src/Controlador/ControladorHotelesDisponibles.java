@@ -58,7 +58,7 @@ public class ControladorHotelesDisponibles {
           
           }
                 
-                 public void irSeleccionarHabitacion(){
+        public void irSeleccionarHabitacion(){
                                         
             if(Alojamiento.alojamiento1.getNum_habitaciones()==1){
                 VistaUnaHabitacionHotel vistauna=new VistaUnaHabitacionHotel();
@@ -84,7 +84,7 @@ public class ControladorHotelesDisponibles {
             public void rellenarComboBox (JComboBox comboBoxResultadosHotel){
             Hotel hotel= new Hotel();
             //Hoteles disponibles por ubicacion
-            Iterator<String> ite= hotel.AlojamientoPorLugar(seleccionUbicacion).iterator();
+            Iterator<String> ite= hotel.HotelPorLugar(seleccionUbicacion).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 
           }

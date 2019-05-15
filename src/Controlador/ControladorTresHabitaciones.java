@@ -11,6 +11,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import static Controlador.ControladorPago.cantidad_insertada;
+import Modelo.Alojamiento;
 import Vista.VistaBienvenida;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -24,7 +25,7 @@ public class ControladorTresHabitaciones {
         botonSiguienteTresHabitaciones.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Tres Habitaciones");
-                
+                Alojamiento.alojamiento1.calcularDiasFestivos();
                 
             }
             

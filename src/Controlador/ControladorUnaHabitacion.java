@@ -56,10 +56,10 @@ public class ControladorUnaHabitacion {
         public void rellenarComboBox (JComboBox comboBoxResultadosHabitaciones){
             Hotel hotel= new Hotel();
             //Llamamos primero a la consulta que carga todos los datos del hotel seleccionado
-            hotel.consultaCompleta(hotelSeleccionado);
+            hotel.seleccionHotelCompleta(hotelSeleccionado);
             System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
             //Hacemos la consulta de las habitaciones con el codigo del hotel selecionado
-            Iterator<String> ite= hotel.HabitacionHoteles(Hotel.hotel1.getCodigoHotel()).iterator();
+            Iterator<String> ite= hotel.informacionHabitacionSelecionada(Hotel.hotel1.getCodigoHotel()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHabitaciones.addItem(ite.next()); 
           }

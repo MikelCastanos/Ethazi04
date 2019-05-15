@@ -51,7 +51,8 @@ public class Promocion {
 
             
         
-        String query="select * from promocion where cod_promocion like '"+Promocion.promocion.getCodigoDescuento()+"'";
+        String query="select * from promocion where cod_promocion like '"+Promocion.promocion.getCodigoDescuento()+"' AND dni LIKE '"+Usuario.usuarioLogin.getDniUsuarioLogin()+"'";
+         System.out.println(query);
         
         try{
            //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta

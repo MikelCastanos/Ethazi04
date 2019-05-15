@@ -1,5 +1,16 @@
 package Modelo;
 
+import BBDD.Conexion;
+import BBDD.Consultas;
+import Vista.VistaTipoAlojamiento;
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 
 public class Alojamiento {
     
@@ -13,6 +24,9 @@ public class Alojamiento {
     protected double precioBase;
     protected double precioFestivo;
     protected double precioEstival;
+    protected int cantidadDiasFestivos;
+    protected int cantidadDiasNormales;
+    
 
     public String getNombre() {
         return nombre;
@@ -117,6 +131,22 @@ public class Alojamiento {
     public void setPrecioEstival(double precioEstival) {
         this.precioEstival = precioEstival;
     }
+
+    public int getCantidadDiasFestivos() {
+        return cantidadDiasFestivos;
+    }
+
+    public void setCantidadDiasFestivos(int cantidadDiasFestivos) {
+        this.cantidadDiasFestivos = cantidadDiasFestivos;
+    }
+
+    public int getCantidadDiasNormales() {
+        return cantidadDiasNormales;
+    }
+
+    public void setCantidadDiasNormales(int cantidadDiasNormales) {
+        this.cantidadDiasNormales = cantidadDiasNormales;
+    }
     
     
     
@@ -129,11 +159,54 @@ public class Alojamiento {
     }
 
     
+
+
     
+    public  void calcularDiasFestivos(){
+        
+        //        Instanciar BBDD
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+        com.mysql.jdbc.Connection con= conexion.conectar();
+
+        
+
+            
+        
+        String query="select * from festivos where fecha between'"+Alojamiento.alojamiento1.getFechaEntrada()+"' and '"+ Alojamiento.alojamiento1.getFechaSalida()+"'";
+        
+        try{
+           //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
+        ResultSet rs= consultas.consultaBD(query);
+            while(rs.next())
+            {
+                Alojamiento.alojamiento1.setCantidadDiasFestivos(Alojamiento.alojamiento1.getCantidadDiasFestivos()+1);
+                System.out.println("Hay un festivo.");
+                System.out.println(Alojamiento.alojamiento1.getCantidadDiasFestivos());
+            }
+
+            }
+            catch(SQLException | HeadlessException ex)
+            {
+                JOptionPane.showMessageDialog(null,ex);
+            }
+        
+        Alojamiento.alojamiento1.setCantidadDiasNormales(Alojamiento.alojamiento1.getDiasEstancia()-Alojamiento.alojamiento1.getCantidadDiasFestivos());
+        System.out.println("Su estancia va a ser de: ");
+        System.out.println(Alojamiento.alojamiento1.getDiasEstancia());
+        System.out.println("De los cuales son dias normales: ");
+        System.out.println(Alojamiento.alojamiento1.getCantidadDiasNormales());
+        System.out.println("Y Dias Festivos: ");
+        System.out.println(Alojamiento.alojamiento1.getCantidadDiasFestivos());
+    }
+    
+
 
     public static Alojamiento alojamiento1=new Alojamiento();
     public static Alojamiento alojamiento2=new Alojamiento();
     public static Alojamiento alojamiento3=new Alojamiento();
+    
+    
     
     
     

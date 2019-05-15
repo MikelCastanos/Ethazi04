@@ -70,8 +70,8 @@ public void cancelar(){
         
         
         //COGEMOS EL NUMERO DE PERSONAS DEL COMBOBOX Y LO PASAMOS AL MODELO
-        Alojamiento.alojamiento1.setNum_personas((int)comboBoxNumeroPersonasCasa.getSelectedItem());
-        System.out.println(Alojamiento.alojamiento1.getNum_personas());
+        Casa.casa1.setNum_personas((int)comboBoxNumeroPersonasCasa.getSelectedItem());
+        System.out.println(Casa.casa1.getNum_personas());
         
         //PASAMOS LOS JDATECHOOSER A FECHA NORMAL
         Date fech1=fechaEntradaCasa.getDate();
@@ -124,7 +124,7 @@ public void cancelar(){
                 System.out.println("Fecha entrada Casa: "+Alojamiento.alojamiento1.getFechaSalida());
                 System.out.println("Dias Estancia Casa: "+Alojamiento.alojamiento1.getDiasEstancia());
                 System.out.println("Ciudad Alojamiento Casa: "+ Alojamiento.alojamiento1.getCiudad());
-                System.out.println("Numero de Personas Casa: "+Alojamiento.alojamiento1.getNum_personas());
+                System.out.println("Numero de Personas Casa: "+Casa.casa1.getNum_personas());
         } }}
 
 

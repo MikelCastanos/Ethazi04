@@ -14,10 +14,9 @@ import javax.swing.JOptionPane;
 
 public class Alojamiento {
     
-    protected   String nombre, calle, ciudad, provincia;
+    protected   String calle, ciudad;
     protected   int codigo_postal;
     protected   int num_habitaciones;
-    protected   int num_personas;
     protected  String fechaEntrada;
     protected  String fechaSalida;
     protected  int diasEstancia;
@@ -28,13 +27,6 @@ public class Alojamiento {
     protected int cantidadDiasNormales;
     
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public String getCalle() {
         return calle;
@@ -50,14 +42,6 @@ public class Alojamiento {
 
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
-    }
-
-    public String getProvincia() {
-        return provincia;
-    }
-
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
     }
 
     public int getCodigo_postal() {
@@ -98,14 +82,6 @@ public class Alojamiento {
 
     public void setDiasEstancia(int diasEstancia) {
         this.diasEstancia = diasEstancia;
-    }
-
-    public int getNum_personas() {
-        return num_personas;
-    }
-
-    public void setNum_personas(int num_personas) {
-        this.num_personas = num_personas;
     }
 
     public double getPrecioBase() {
@@ -153,10 +129,10 @@ public class Alojamiento {
     public void mostrar(){
         System.out.println("Imprimirrrrr "+codigo_postal);
     }
-    @Override
-    public String toString() {
-        return "Alojamiento"+"Nombre :"+nombre+"Calle: "+calle+"Ciudad: "+ciudad+"Provincia: "+provincia+"Codigo hotel: "+codigo_postal;
-    }
+
+   
+
+    
 
     
 
@@ -205,6 +181,11 @@ public class Alojamiento {
     public static Alojamiento alojamiento1=new Alojamiento();
     public static Alojamiento alojamiento2=new Alojamiento();
     public static Alojamiento alojamiento3=new Alojamiento();
+
+    @Override
+    public String toString() {
+        return "Alojamiento{" + "calle=" + calle + ", ciudad=" + ciudad + ", codigo_postal=" + codigo_postal + ", num_habitaciones=" + num_habitaciones + ", fechaEntrada=" + fechaEntrada + ", fechaSalida=" + fechaSalida + ", diasEstancia=" + diasEstancia + ", precioBase=" + precioBase + ", precioFestivo=" + precioFestivo + ", precioEstival=" + precioEstival + ", cantidadDiasFestivos=" + cantidadDiasFestivos + ", cantidadDiasNormales=" + cantidadDiasNormales + '}';
+    }
     
     
     

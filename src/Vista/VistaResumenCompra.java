@@ -59,11 +59,11 @@ public class VistaResumenCompra extends JFrame{
         System.out.println("Vista datos: "+alojamiento.getCalle());
         ControladorResumenCompra.sacarDatosEstancia();
         //datosEstancia=new JLabel("Datos: "+Alojamiento.getNombre()+" "+alojamiento.getProvincia()+" "+alojamiento.getCiudad()+" "+alojamiento.getCalle());
-        datosEstancia=new JLabel("Codigo Hotel: "+Hotel.hotel1.getCodigoHotel()+" Nombre: "+Hotel.hotel1.getNombre());
+        datosEstancia=new JLabel("Codigo Hotel: "+Hotel.hotel1.getCodigoHotel()+" Nombre: "+Hotel.hotel1.getNombreHotel());
         datosEstancia.setBounds(40,275,550,30);
         add(datosEstancia);
         
-        datosEstancia2=new JLabel("Provincia: "+Hotel.hotel1.getProvincia()+" Ciudad: "+Hotel.hotel1.getCiudad()+" Calle: "+Hotel.hotel1.getCalle());
+        datosEstancia2=new JLabel(" Ciudad: "+Hotel.hotel1.getCiudad()+" Calle: "+Hotel.hotel1.getCalle());
         datosEstancia2.setBounds(40,305,550,30);
         add(datosEstancia2);
         

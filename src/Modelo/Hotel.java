@@ -14,6 +14,7 @@ public class Hotel extends Alojamiento{
     public static Hotel hotel1=new Hotel();
     
     protected int num_estrellas,codigoHotel;
+    protected String nombreHotel;
 
     public int getNum_estrellas() {
         return num_estrellas;
@@ -31,6 +32,14 @@ public class Hotel extends Alojamiento{
         this.codigoHotel = codigoHotel;
     }
 
+    public String getNombreHotel() {
+        return nombreHotel;
+    }
+
+    public void setNombreHotel(String nombreHotel) {
+        this.nombreHotel = nombreHotel;
+    }
+    
 
  //Devuelve las ubicaciones en las que hay hoteles disponibles   
     public ArrayList<String>ubicacion(){
@@ -122,7 +131,7 @@ public class Hotel extends Alojamiento{
                 //Llenamos el Objeto de Hotel con los Getters y Setters heredados o propios
                 
                 //Setters de la clase Alojamiento que se extienden a Hotel
-                hotel1.setNombre(nombre);
+                hotel1.setNombreHotel(nombre);
                 hotel1.setCalle(direccion);
                 hotel1.setCodigo_postal(codigoPostal);
                 hotel1.setCiudad(ciudad);

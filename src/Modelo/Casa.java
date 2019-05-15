@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class Casa extends Alojamiento {
     
-    int num_baños, tamaño;
+    protected int num_baños, tamaño, numeroHuespedes, num_personas;
     
     
     public static Casa casa1=new Casa();
@@ -38,6 +38,23 @@ public class Casa extends Alojamiento {
         this.tamaño = tamaño;
     }
 
+    public int getNumeroHuespedes() {
+        return numeroHuespedes;
+    }
+
+    public void setNumeroHuespedes(int numeroHuespedes) {
+        this.numeroHuespedes = numeroHuespedes;
+    }
+
+    public int getNum_personas() {
+        return num_personas;
+    }
+
+    public void setNum_personas(int num_personas) {
+        this.num_personas = num_personas;
+    }
+    
+    
 //Retorna las ubicaciones donde estan disponibles las casa    
    public ArrayList<String>ubicacionCasa(){
 

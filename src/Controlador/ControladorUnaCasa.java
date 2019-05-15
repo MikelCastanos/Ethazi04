@@ -61,7 +61,7 @@ public class ControladorUnaCasa {
             Casa casa= new Casa();
 //            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
             
-            Iterator<String> ite= casa.CasaPorLugarYporPersonas(Alojamiento.alojamiento1.getCiudad(),Alojamiento.alojamiento1.getNum_personas()).iterator();
+            Iterator<String> ite= casa.CasaPorLugarYporPersonas(Alojamiento.alojamiento1.getCiudad(),Casa.casa1.getNum_personas()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosCasa.addItem(ite.next()); 
           }

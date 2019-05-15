@@ -61,8 +61,8 @@ public class ControladorUbicacionApartamento {
         
         
         //COGEMOS EL NUMERO DE PERSONAS DEL COMBOBOX Y LO PASAMOS AL MODELO
-        Alojamiento.alojamiento1.setNum_personas((int)comboBoxNumeroPersonasApartamento.getSelectedItem());
-        System.out.println(Alojamiento.alojamiento1.getNum_personas());
+        Apartamento.apartamento1.setNum_personas((int)comboBoxNumeroPersonasApartamento.getSelectedItem());
+        System.out.println(Apartamento.apartamento1.getNum_personas());
         
         //PASAMOS LOS JDATECHOOSER A FECHA NORMAL
         Date fech1=fechaEntradaApartamento.getDate();
@@ -115,7 +115,7 @@ public class ControladorUbicacionApartamento {
                 System.out.println("Fecha entrada Apartamento"+Alojamiento.alojamiento1.getFechaSalida());
                 System.out.println("Dias Estancia Apartamento: "+Alojamiento.alojamiento1.getDiasEstancia());
                 System.out.println("Ciudad Alojamiento Apartamento: "+ Alojamiento.alojamiento1.getCiudad());
-                System.out.println("Numero de Personas Apartamento: "+Alojamiento.alojamiento1.getNum_personas());
+                System.out.println("Numero de Personas Apartamento: "+Apartamento.apartamento1.getNum_personas());
         } }}
              
                  public void siguienteVentanaApartamento(){

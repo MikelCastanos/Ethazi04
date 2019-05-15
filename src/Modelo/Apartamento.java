@@ -17,16 +17,18 @@ import java.util.ArrayList;
  */
 public class Apartamento extends Casa {
     
-    String piso;
-    int codigoApartamento;
+    int piso, codigoApartamento;
     ArrayList<Apartamento> apartamentoSeleccionado = new ArrayList<Apartamento>();
     public static Apartamento apartamento1=new Apartamento();
 
-    public String getPiso() {
+    public Apartamento() {
+    }
+    
+    public int getPiso() {
         return piso;
     }
 
-    public void setPiso(String piso) {
+    public void setPiso(int piso) {
         this.piso = piso;
     }
 
@@ -37,6 +39,7 @@ public class Apartamento extends Casa {
     public void setCodigoApartamento(int codigoApartamento) {
         this.codigoApartamento = codigoApartamento;
     }
+
     
     
 //    Devuelve las ubicaciones en las que hay disponibles apartamentos
@@ -88,33 +91,43 @@ public class Apartamento extends Casa {
 //        que el setter esta hecho antes de llamar al metodo
         
         public ArrayList<Apartamento> datosApartamentoSeleccionado (int calleApartamento){
-          
+            Apartamento aux= new Apartamento();
             Conexion conexion= new Conexion();
             Consultas consultas= new Consultas();
             
             String query="select * from apartamento where direccion= "+calleApartamento+";";
             ResultSet rs= consultas.consultaBD(query);
-
+            
             try{
                 while(rs.next()){
+                    apartamento1.setCodigoApartamento(rs.getInt(1));
+                    apartamento1.setNumeroHuespedes(rs.getInt(2));
+                    apartamento1.setPrecioBase(rs.getDouble(3));
+                    apartamento1.setPrecioFestivo(rs.getDouble(4));
+                    apartamento1.setPrecioEstival(rs.getDouble(5));
+                    apartamento1.setPiso(rs.getInt(6));
+                    apartamento1.setCiudad(rs.getString(7));
+                    apartamento1.setCalle(rs.getString(8));
+                    apartamento1.setCodigo_postal(rs.getInt(9));
                     
-//                    preciosApartamento.add(rs.getDouble(1));
-//                    preciosApartamento.add(rs.getDouble(2));
-//                    preciosApartamento.add(rs.getDouble(3)); 
+                    
                 }
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }
-            asignarPrecios();
+            apartamentoSeleccionado.add(apartamento1);
+//            asignarPrecios();
+            System.out.println(apartamento1);
+            System.out.println(apartamentoSeleccionado);
            return apartamentoSeleccionado; 
         }
         
 //Siempre hay que llamar a este metodo despues de haber llamado al metodo de consulta PrecioApartamento
         
         public void asignarPrecios(){
-            apartamento1.setPrecioBase(apartamentoSeleccionado.get(0));
-            apartamento1.setPrecioEstival(apartamentoSeleccionado.get(1));
-            apartamento1.setPrecioFestivo(apartamentoSeleccionado.get(2));
+//            apartamento1.setPrecioBase(apartamentoSeleccionado.get(0));
+//            apartamento1.setPrecioEstival(apartamentoSeleccionado.get(1));
+//            apartamento1.setPrecioFestivo(apartamentoSeleccionado.get(2));
             
             System.out.println("Precio apartamento seleccionado :"+apartamento1.getPrecioBase()+" "+apartamento1.getPrecioEstival()+" "+apartamento1.getPrecioFestivo());
             

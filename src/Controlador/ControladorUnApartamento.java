@@ -34,8 +34,8 @@ public class ControladorUnApartamento {
                 System.out.println("Boton Una Apartamento");
                 Alojamiento.alojamiento1.calcularDiasFestivos();
                 habitacionSeleccionada(comboBoxResultadosApartamento);
-                Apartamento apart = new Apartamento();
-                apart.datosApartamentoSeleccionado(apartamento1.getCodigoApartamento());
+//                Apartamento apart = new Apartamento();
+                apartamento1.datosApartamentoSeleccionado(apartamento1.getCodigoApartamento());
             }
             
         });
@@ -58,14 +58,14 @@ public void cancelar(){
           }
             
             public void habitacionSeleccionada(JComboBox comboBoxResultadosApartamento){
-                apartamento1.setCodigoApartamento(Integer.parseInt(comboBoxResultadosApartamento.getSelectedItem().toString()));
+//                apartamento1.setCodigoApartamento(Integer.parseInt(comboBoxResultadosApartamento.getSelectedItem().toString()));
             }
     
             public void rellenarComboBox (JComboBox comboBoxResultadosHotel){
             Apartamento apartamento= new Apartamento();
 //            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
             
-            Iterator<String> ite= apartamento.ApartamentoPorLugarYpersonas(Alojamiento.alojamiento1.getCiudad(),Alojamiento.alojamiento1.getNum_personas()).iterator();
+            Iterator<String> ite= apartamento.ApartamentoPorLugarYpersonas(Alojamiento.alojamiento1.getCiudad(),Apartamento.apartamento1.getNum_personas()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 
           }

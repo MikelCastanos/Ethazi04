@@ -32,7 +32,7 @@ public class ControladorUnaHabitacion {
             public void mouseClicked(MouseEvent e){
                 System.out.println("Una Habitacion");
                 rellenarComboBox(comboBoxResultadosHabitaciones);
-                
+                Alojamiento.alojamiento1.calcularDiasFestivos();
             }
             
             });

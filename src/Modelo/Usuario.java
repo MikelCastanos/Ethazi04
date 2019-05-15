@@ -145,9 +145,7 @@ public class Usuario {
     
    
     
-    static PreparedStatement pst = null;
-    static ResultSet rs = null;
-    static Connection con = null;
+
     
     public  void consultaLogin(){
         

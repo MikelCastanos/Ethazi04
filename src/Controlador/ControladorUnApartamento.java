@@ -14,6 +14,7 @@ import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
 import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import Modelo.Alojamiento;
 import Modelo.Apartamento;
+import static Modelo.Apartamento.apartamento1;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
 import java.util.Iterator;
@@ -26,12 +27,14 @@ import javax.swing.JOptionPane;
  */
 public class ControladorUnApartamento {
     
-                    public ControladorUnApartamento(JButton botonCancelar,JButton botonSiguienteUnaApartamento,JComboBox comboBoxResultadosApartamento){
-        botonSiguienteUnaApartamento.addMouseListener(new MouseAdapter(){
-            public void mouseClicked(MouseEvent e){
+        public ControladorUnApartamento(JButton botonCancelar,JButton botonSiguienteUnaApartamento,
+            JComboBox comboBoxResultadosApartamento){
+            botonSiguienteUnaApartamento.addMouseListener(new MouseAdapter(){
+                public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Apartamento");
-                
-                
+                habitacionSeleccionada(comboBoxResultadosApartamento);
+                Apartamento apart = new Apartamento();
+                apart.precioApartamento(apartamento1.getCodigoApartamento());
             }
             
         });
@@ -54,7 +57,7 @@ public void cancelar(){
           }
             
             public void habitacionSeleccionada(JComboBox comboBoxResultadosApartamento){
-                comboBoxResultadosApartamento.getSelectedItem();
+                apartamento1.setCodigoApartamento(Integer.parseInt(comboBoxResultadosApartamento.getSelectedItem().toString()));
             }
     
             public void rellenarComboBox (JComboBox comboBoxResultadosHotel){

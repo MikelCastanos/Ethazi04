@@ -12,6 +12,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import Vista.VistaLogin;
+import com.toedter.calendar.JDateChooser;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -23,7 +25,9 @@ import javax.swing.JTextField;
 public class ControladorLogin {
 
     
-            public ControladorLogin(JButton botonBorrar,JTextField dniBorrarUsuario,JPasswordField passwordBorrarUsuario,JButton botonLogin,JButton botonRegistro,JButton botonCambio,JTextField cambioPasswordDNI, JPasswordField cambioPasswordPass, JPasswordField cambioPasswordNueva,JPasswordField contrasenaField, JTextField usuarioField,JPasswordField registroContrasenaField,JTextField registroDniField,JTextField registroNombreField,JPasswordField registroContrasenaField2){
+            public ControladorLogin(JButton botonBorrar,JTextField dniBorrarUsuario,JPasswordField passwordBorrarUsuario,JButton botonLogin,JButton botonRegistro,JButton botonCambio,
+                    JTextField cambioPasswordDNI, JPasswordField cambioPasswordPass, JPasswordField cambioPasswordNueva,JPasswordField contrasenaField, JTextField usuarioField,
+                    JPasswordField registroContrasenaField,JTextField registroDniField,JTextField registroNombreField,JPasswordField registroContrasenaField2,JDateChooser fecha_nacimiento,JTextField registroApellidoField){
         botonLogin.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
@@ -38,7 +42,7 @@ public class ControladorLogin {
                 botonRegistro.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
-                cogerDatosRegistro(registroContrasenaField,registroContrasenaField2,registroDniField,registroNombreField);
+                cogerDatosRegistro(registroContrasenaField,registroContrasenaField2,registroDniField,registroNombreField, fecha_nacimiento, registroApellidoField);
                 llamarRegistro();
                 
             }
@@ -91,12 +95,17 @@ public class ControladorLogin {
          }
             
             
-            public void cogerDatosRegistro(JPasswordField registroContrasenaField, JPasswordField registroContrasenaField2, JTextField registroDniField,JTextField registroNombreField){
+            public void cogerDatosRegistro(JPasswordField registroContrasenaField, JPasswordField registroContrasenaField2, JTextField registroDniField,JTextField registroNombreField, JDateChooser fecha_nacimiento,JTextField registroApellidoField){
                 Usuario.usuarioRegistro.setDniUsuarioRegistro(VistaLogin.registroDniField.getText());
                 Usuario.usuarioRegistro.setPasswordRegistro(String.valueOf(VistaLogin.registroContrasenaField.getPassword()));
                 Usuario.usuarioRegistro.setPasswordRegistro2(String.valueOf(VistaLogin.registroContrasenaField2.getPassword()));
                 Usuario.usuarioRegistro.setNombreRegistro(VistaLogin.registroNombreField.getText());
-                System.out.println(Usuario.usuarioRegistro.getDniUsuarioRegistro()+" "+Usuario.usuarioRegistro.getNombreRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro2());
+                Usuario.usuarioRegistro.setApellido(VistaLogin.registroApellidoField.getText());
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                String date = sdf.format(fecha_nacimiento.getDate());
+                Usuario.usuarioRegistro.setFechaNacimiento(date);
+                System.out.println(Usuario.usuarioRegistro.getDniUsuarioRegistro()+" "+Usuario.usuarioRegistro.getNombreRegistro()+" "+Usuario.usuarioRegistro.getApellido()+" "+Usuario.usuarioRegistro.getPasswordRegistro()+" "+Usuario.usuarioRegistro.getPasswordRegistro2()
+                        +" "+Usuario.usuarioRegistro.getFechaNacimiento());
             }
             
             

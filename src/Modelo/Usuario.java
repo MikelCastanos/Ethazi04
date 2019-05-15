@@ -28,6 +28,9 @@ public class Usuario {
     protected  String passwordNuevaCambioPassword2;
     protected  String dniUsuarioBorrar;
     protected  String passwordUsuarioBorrar;
+    protected  String fechaNacimiento;
+    protected  String apellido;
+
 
     public static Usuario usuarioLogin=new Usuario();
     public static Usuario usuarioRegistro=new Usuario();
@@ -123,6 +126,22 @@ public class Usuario {
         this.passwordUsuarioBorrar = passwordUsuarioBorrar;
     }
 
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
     
    
     
@@ -176,7 +195,9 @@ public class Usuario {
            JOptionPane.showMessageDialog(null, "El usuario ya existe. Pruebe a iniciar sesión para continuar."); 
         }
         else{
-            String query2="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"','"+Usuario.usuarioRegistro.getNombreRegistro()+"','Arri','2000-10-20','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
+            String query2="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+
+                    "','"+Usuario.usuarioRegistro.getNombreRegistro()+"','"+Usuario.usuarioRegistro.getApellido()+"','"+Usuario.usuarioRegistro.getFechaNacimiento()
+                    +"','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
             consultas.insertarDatosBD(query2);
           
         }

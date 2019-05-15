@@ -34,7 +34,7 @@ public class ControladorUnApartamento {
                 System.out.println("Boton Una Apartamento");
                 habitacionSeleccionada(comboBoxResultadosApartamento);
                 Apartamento apart = new Apartamento();
-                apart.precioApartamento(apartamento1.getCodigoApartamento());
+                apart.datosApartamentoSeleccionado(apartamento1.getCodigoApartamento());
             }
             
         });

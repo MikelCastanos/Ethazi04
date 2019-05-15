@@ -19,7 +19,7 @@ public class Apartamento extends Casa {
     
     String piso;
     int codigoApartamento;
-    ArrayList<Double> preciosApartamento = new ArrayList<Double>();
+    ArrayList<Apartamento> apartamentoSeleccionado = new ArrayList<Apartamento>();
     public static Apartamento apartamento1=new Apartamento();
 
     public String getPiso() {
@@ -60,6 +60,7 @@ public class Apartamento extends Casa {
         System.out.println("Apartamentos en son "+consultaUbicacion);
         return consultaUbicacion;
     }
+       
 //      Devuelve los apartamentos disponibles en una ciudad concreta y con una capacidad concreta de personas
         public ArrayList<String>ApartamentoPorLugarYpersonas(String ubicacionApartamento, int numeroDePersonas){
 
@@ -72,8 +73,8 @@ public class Apartamento extends Casa {
         try{
             while(rs.next()){
 
-                String codApartamento=rs.getString(1);
-                consulta.add(codApartamento);
+                String calleApartamento=rs.getString(8);
+                consulta.add(calleApartamento);
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
@@ -86,34 +87,34 @@ public class Apartamento extends Casa {
 //        llamar a este metodo precioApartamento(apartamento1.getPrecioApartamento) comprobar 
 //        que el setter esta hecho antes de llamar al metodo
         
-        public ArrayList<Double> precioApartamento (int codigoApartamento){
+        public ArrayList<Apartamento> datosApartamentoSeleccionado (int calleApartamento){
           
             Conexion conexion= new Conexion();
             Consultas consultas= new Consultas();
             
-            String query="select precio_base_apartamento, precio_estival_apartamento, "
-                    + "precio_festivo_apartamento from apartamento where cod_apartamento= "+codigoApartamento+";";
+            String query="select * from apartamento where direccion= "+calleApartamento+";";
             ResultSet rs= consultas.consultaBD(query);
 
             try{
                 while(rs.next()){
-                    preciosApartamento.add(rs.getDouble(1));
-                    preciosApartamento.add(rs.getDouble(2));
-                    preciosApartamento.add(rs.getDouble(3)); 
+                    
+//                    preciosApartamento.add(rs.getDouble(1));
+//                    preciosApartamento.add(rs.getDouble(2));
+//                    preciosApartamento.add(rs.getDouble(3)); 
                 }
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }
             asignarPrecios();
-           return preciosApartamento; 
+           return apartamentoSeleccionado; 
         }
         
 //Siempre hay que llamar a este metodo despues de haber llamado al metodo de consulta PrecioApartamento
         
         public void asignarPrecios(){
-            apartamento1.setPrecioBase(preciosApartamento.get(0));
-            apartamento1.setPrecioEstival(preciosApartamento.get(1));
-            apartamento1.setPrecioFestivo(preciosApartamento.get(2));
+            apartamento1.setPrecioBase(apartamentoSeleccionado.get(0));
+            apartamento1.setPrecioEstival(apartamentoSeleccionado.get(1));
+            apartamento1.setPrecioFestivo(apartamentoSeleccionado.get(2));
             
             System.out.println("Precio apartamento seleccionado :"+apartamento1.getPrecioBase()+" "+apartamento1.getPrecioEstival()+" "+apartamento1.getPrecioFestivo());
             

@@ -8,12 +8,14 @@ package Vista;
 import Controlador.ControladorLogin;
 import com.toedter.calendar.JDateChooser;
 import java.util.Date;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import static vista.VistaPago.logo1;
 
 /**
  *
@@ -189,8 +191,21 @@ public class VistaLogin extends JFrame {
         add(passwordBorrarUsuario);
         
         botonBorrar=new JButton("Eliminar");
-        botonBorrar.setBounds(425,560,120,30);
+        botonBorrar.setBounds(425,580,120,30);
         add(botonBorrar);
+        
+        
+            ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+            JLabel logo2 = new JLabel(icon);
+            logo2.setSize(575,50);
+            add(logo2);
+            validate();
+        
+            ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(585,695);
+            add(logo1);
+            validate();
         
         ControladorLogin contL=new ControladorLogin(botonBorrar,dniBorrarUsuario,passwordBorrarUsuario,botonLogin,botonRegistro,botonCambio,cambioPasswordDNI,cambioPasswordPass,cambioPasswordNueva,contrasenaField,dniField,registroContrasenaField,
             registroContrasenaField2,registroNombreField,registroContrasenaField2,fecha_nacimiento,registroApellidoField);

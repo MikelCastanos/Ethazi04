@@ -38,6 +38,7 @@ public class ControladorUbicacionHotel {
                 //checkearFechas(ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
                 
                 cogerDatosUbicacionHotel( ubicacion,  combobox_numero_habitaciones, fecha_inicio, fecha_fin);
+                Alojamiento.alojamiento1.calcularDiasFestivos();
                 siguienteVentana();
 
             }

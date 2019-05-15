@@ -156,7 +156,7 @@ public class Usuario {
         Consultas consultas= new Consultas();
         com.mysql.jdbc.Connection con= conexion.conectar();
 
-        String query="select * from usuario where dni='"+Usuario.usuarioLogin.getDniUsuarioLogin()+"' and contrasena='"+ Usuario.usuarioLogin.getPasswordLogin()+"'";
+        String query="select * from usuario where dni='"+Usuario.usuarioLogin.getDniUsuarioLogin()+"' and contrasena=MD5('"+ Usuario.usuarioLogin.getPasswordLogin()+"')";
         
         try{
            //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
@@ -195,9 +195,11 @@ public class Usuario {
            JOptionPane.showMessageDialog(null, "El usuario ya existe. Pruebe a iniciar sesión para continuar."); 
         }
         else{
-            String query2="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+
-                    "','"+Usuario.usuarioRegistro.getNombreRegistro()+"','"+Usuario.usuarioRegistro.getApellido()+"','"+Usuario.usuarioRegistro.getFechaNacimiento()
-                    +"','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
+//            String query2="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+
+//                    "','"+Usuario.usuarioRegistro.getNombreRegistro()+"','"+Usuario.usuarioRegistro.getApellido()+"','"+Usuario.usuarioRegistro.getFechaNacimiento()
+//                    +"','"+Usuario.usuarioRegistro.getPasswordRegistro()+"')";
+        
+            String query2="insert into usuario (dni,nombre,apellido,fecha_nac,contrasena) values('"+Usuario.usuarioRegistro.getDniUsuarioRegistro()+"','"+Usuario.usuarioRegistro.getNombreRegistro()+"','"+Usuario.usuarioRegistro.getApellido()+"','"+Usuario.usuarioRegistro.getFechaNacimiento()+"',MD5('"+Usuario.usuarioRegistro.getPasswordRegistro()+"'))";
             consultas.insertarDatosBD(query2);
           
         }
@@ -215,14 +217,14 @@ public class Usuario {
         com.mysql.jdbc.Connection con= conexion.conectar();
         
         System.out.println(Usuario.usuarioCambio.getDniCambioPassword()+" "+Usuario.usuarioCambio.getPasswordViejaCambioPassword()+" "+Usuario.usuarioCambio.getPasswordNuevaCambioPassword2());
-        String query="select * from usuario where dni='"+Usuario.usuarioCambio.getDniCambioPassword()+"' and contrasena='"+ Usuario.usuarioCambio.getPasswordViejaCambioPassword()+"'";
+        String query="select * from usuario where dni='"+Usuario.usuarioCambio.getDniCambioPassword()+"' and contrasena=MD5('"+ Usuario.usuarioCambio.getPasswordViejaCambioPassword()+"')";
         
          try{
              ResultSet rs= consultas.consultaBD(query);
             if(rs.next())
             {
                 //METODO CAMBIO PASSWORD
-                String query2="UPDATE USUARIO SET contrasena='"+Usuario.usuarioCambio.getPasswordNuevaCambioPassword2()+"' WHERE dni='"+Usuario.usuarioCambio.getDniCambioPassword()+"'";
+                String query2="UPDATE USUARIO SET contrasena=MD5('"+Usuario.usuarioCambio.getPasswordNuevaCambioPassword2()+"') WHERE dni='"+Usuario.usuarioCambio.getDniCambioPassword()+"'";
                     
                 consultas.actualizarBD(query2);
                 JOptionPane.showMessageDialog(null, "Enhorabuena, ahora puede entrar con la nueva contraseña");
@@ -245,7 +247,7 @@ public class Usuario {
         com.mysql.jdbc.Connection con= conexion.conectar();
         
         System.out.println(Usuario.usuarioBorrar.getDniUsuarioBorrar()+" "+Usuario.usuarioBorrar.getPasswordUsuarioBorrar());
-        String query="select * from usuario where dni='"+Usuario.usuarioBorrar.getDniUsuarioBorrar()+"' and contrasena='"+ Usuario.usuarioBorrar.getPasswordUsuarioBorrar()+"'";
+        String query="select * from usuario where dni='"+Usuario.usuarioBorrar.getDniUsuarioBorrar()+"' and contrasena=MD5('"+ Usuario.usuarioBorrar.getPasswordUsuarioBorrar()+"')";
         
          try{
             ResultSet rs= consultas.consultaBD(query);

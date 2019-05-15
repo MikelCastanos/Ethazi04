@@ -32,6 +32,7 @@ public class ControladorUnApartamento {
             botonSiguienteUnaApartamento.addMouseListener(new MouseAdapter(){
                 public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Apartamento");
+                Alojamiento.alojamiento1.calcularDiasFestivos();
                 habitacionSeleccionada(comboBoxResultadosApartamento);
                 Apartamento apart = new Apartamento();
                 apart.precioApartamento(apartamento1.getCodigoApartamento());

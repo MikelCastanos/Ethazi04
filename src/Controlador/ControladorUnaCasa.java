@@ -29,7 +29,7 @@ public class ControladorUnaCasa {
         botonSiguienteUnaCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Casa");
-                
+                Alojamiento.alojamiento1.calcularDiasFestivos();
                 
             }
             

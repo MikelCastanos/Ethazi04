@@ -23,10 +23,21 @@ public class VistaCondiciones extends JFrame {
         
         
         
-        JTextField Condiciones = new JTextField("Bidai_ON mantiene este sitio web como un servicio para sus visitantes y sus clientes. \n" +
-"\nPara seguir utilizando este sitio web o contratar cualquiera de nuestros servicios, usted acepta atenerse a los Términos y Condiciones de nuestra firma: Bidai_ON S.L.");
-        Condiciones.setBounds(100,200,400,300);
+        JLabel Condiciones = new JLabel("Bidai_ON mantiene este sitio web como un servicio para sus ");
+        Condiciones.setBounds(100,100,400,300);
         add(Condiciones);
+        
+        JLabel Condiciones1 = new JLabel("visitantes y sus clientes. Para seguir utilizando este sitio web o");
+        Condiciones1.setBounds(100,120,400,300);
+        add(Condiciones1);
+        
+        JLabel Condiciones2 = new JLabel("contratar cualquiera de nuestros servicios, usted acepta atenerse a");
+        Condiciones2.setBounds(100,140,400,300);
+        add(Condiciones2);
+        
+        JLabel Condiciones3 = new JLabel("los Términos y Condiciones de nuestra firma: Bidai_ON S.L.");
+        Condiciones3.setBounds(100,160,400,300);
+        add(Condiciones3);
         
         JRadioButton radioCondiciones = new JRadioButton("He leído y acepto los terminos y las condiciones.");
         
@@ -34,7 +45,7 @@ public class VistaCondiciones extends JFrame {
         ButtonGroup group = new ButtonGroup();
         group.add(radioCondiciones);
         
-        radioCondiciones.setBounds(250,500,300,30);
+        radioCondiciones.setBounds(110,400,300,30);
         add(radioCondiciones);
 
         

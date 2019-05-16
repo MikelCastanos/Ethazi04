@@ -11,6 +11,7 @@ import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
 import Controlador.ControladorTipoAlojamiento;
 import Modelo.Alojamiento;
+import Modelo.Habitacion;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
 import java.awt.event.MouseAdapter;
@@ -55,11 +56,12 @@ public class ControladorUnaHabitacion {
           }
         public void rellenarComboBox (JComboBox comboBoxResultadosHabitaciones){
             Hotel hotel= new Hotel();
+            Habitacion habitacion= new Habitacion();
             //Llamamos primero a la consulta que carga todos los datos del hotel seleccionado
             hotel.seleccionHotelCompleta(hotelSeleccionado);
             System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
             //Hacemos la consulta de las habitaciones con el codigo del hotel selecionado
-            Iterator<String> ite= hotel.informacionHabitacionSelecionada(Hotel.hotel1.getCodigoHotel()).iterator();
+            Iterator<String> ite= habitacion.habitacionesHotel(Hotel.hotel1.getCodigoHotel()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHabitaciones.addItem(ite.next()); 
           }

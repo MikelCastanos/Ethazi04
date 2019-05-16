@@ -13,7 +13,6 @@ public class Hotel extends Alojamiento{
     
     public static Hotel hotel1=new Hotel();
     ArrayList<Hotel>hotelSeleccionado= new ArrayList<Hotel>();
-    ArrayList<Hotel>habitacionSelecionada= new ArrayList<Hotel>();
 
     protected int num_estrellas,codigoHotel;
     protected String nombreHotel;
@@ -130,47 +129,6 @@ public class Hotel extends Alojamiento{
         return hotelSeleccionado;
     }
 
-    //Mover esta consulta a habitacion; devuelve las habitaciones disponibles en un hotel segun su codigo
-    public ArrayList<String>informacionHabitacionSelecionada(int codigoHotel){
-
-        System.out.println("El codgio del hotel seleccionado es: "+codigoHotel);
-        
-        Conexion conexion= new Conexion();
-        Consultas consultas= new Consultas();
-
-        ArrayList<String> consulta2 = new ArrayList<String>();
-        String query="select hotel.cod_hotel, habitacion_hotel.cod_habitacion_hotel,habitacion_hotel.precio_base_hotel,"
-                + "habitacion_hotel.precio_festivo_hotel,habitacion_hotel.precio_estival_hotel,camas.cama_doble,camas.cama_simple,camas.cama_nino"
-                +" from habitacion_hotel inner join hotel on habitacion_hotel.cod_hotel=hotel.cod_hotel inner join camas on "
-                + "habitacion_hotel.cod_habitacion_hotel=camas.cod_habitacion_hotel where hotel.cod_hotel="+codigoHotel+"";
-        ResultSet rs= consultas.consultaBD(query);
-        try{
-            while(rs.next()){
-                //Guardo los datos en variables por si son necesarios para rellenar un array o lo que sea
-                //Mas adelante habra que guardar estos datos pero sobre la habitacion que haya selecionado el usuario
-                int codigoHabitacion=rs.getInt(2);
-                double precioBaseHotel=rs.getDouble(3);
-                double precioFestivoHotel=rs.getDouble(4);
-                double precioEstivalHotel=rs.getDouble(5);
-                int camaDoble=rs.getInt(6);
-                int camaSimple=rs.getInt(7);
-                int camaNino=rs.getInt(8);
-                
-
-                consulta2.add("Cod "+codigoHabitacion+" Precio Base "+precioBaseHotel+" Cama Doble "+camaDoble+" Cama Simple "+camaSimple+" Cama Nino "+camaNino);
-//                consulta2.add("Precio Base "+precioBaseHotel);
-//                consulta2.add("Precio Festivo "+precioFestivoHotel);
-//                consulta2.add("Precio Estival "+precioEstivalHotel);
-            
-                
-            }
-
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        return consulta2;
-    }
     
 }
 

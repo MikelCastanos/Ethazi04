@@ -8,6 +8,7 @@ package Modelo;
 import BBDD.Conexion;
 import BBDD.Consultas;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Habitacion extends Hotel{
@@ -18,7 +19,8 @@ public class Habitacion extends Hotel{
     protected  int cama_nino;
     protected  double precio_habitacion;
     protected  boolean disponibilidad;
-    
+    ArrayList<Hotel>habitacionSelecionada= new ArrayList<Hotel>();
+
     
 public static Habitacion habitacion1=new Habitacion();
 public static Habitacion habitacion2=new Habitacion();
@@ -90,6 +92,36 @@ public static Habitacion habitacion3=new Habitacion();
 //        }else{
 //        setDisponibilidad(true);    
 //        }
+    }
+    
+        //Mover esta consulta a habitacion; devuelve las habitaciones disponibles en un hotel segun su codigo
+    public ArrayList<String>habitacionesHotel(int codigoHotel){
+
+        System.out.println("El codgio del hotel seleccionado es: "+codigoHotel);
+        
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+
+        ArrayList<String> habitaciones = new ArrayList<String>();
+        String query="select habitacion_hotel.cod_habitacion_hotel,camas.cama_doble, camas.cama_simple, "
+                + "camas.cama_nino from habitacion_hotel inner join hotel on habitacion_hotel.cod_hotel=hotel.cod_hotel "
+                + "inner join camas on habitacion_hotel.cod_habitacion_hotel=camas.cod_habitacion_hotel where hotel.cod_hotel=1";
+        
+        ResultSet rs= consultas.consultaBD(query);
+            
+        try{
+            while(rs.next()){
+
+               habitaciones.add(Integer.toString(rs.getInt(1))+"CamaDoble: "+Integer.toString(rs.getInt(2))
+                       +"CamaSimple: "+Integer.toString(rs.getInt(2))+"CamaNino: "+Integer.toString(rs.getInt(3)));
+
+            }
+
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return habitaciones;
     }
 
     

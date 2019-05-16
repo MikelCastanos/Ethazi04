@@ -34,7 +34,7 @@ public class ControladorUnaHabitacion {
                 System.out.println("Una Habitacion");
                 rellenarComboBox(comboBoxResultadosHabitaciones);
                 Alojamiento.alojamiento1.calcularDiasFestivos();
-                System.out.println("Habitacion seleccionada "+comboBoxResultadosHabitaciones.getSelectedItem());
+                habitacionSeleccionada(comboBoxResultadosHabitaciones);
             }
             
             });
@@ -68,8 +68,16 @@ public class ControladorUnaHabitacion {
           }
            }
         
-            public void habitacionSeleccionada(JComboBox comboBoxResultadosHabitaciones){
-                comboBoxResultadosHabitaciones.getSelectedItem();
-            }
+        public void habitacionSeleccionada(JComboBox comboBoxResultadosHabitaciones){
+            String resultadoHabitacion=(String) comboBoxResultadosHabitaciones.getSelectedItem();
+            int codigoHabitacion = Integer.parseInt(resultadoHabitacion.substring(0,3));
+            System.out.println("Codigo habitacion substring "+codigoHabitacion);
+            Habitacion.habitacion1.setCod_habitacion(codigoHabitacion);
+
+            //Llamar al metodo que consulta siguente
+            Habitacion habitacion= new Habitacion();
+            habitacion.habitacionSeleccionadaInfo(codigoHabitacion);
+
+        }
             
 }

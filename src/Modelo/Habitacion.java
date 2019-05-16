@@ -17,7 +17,6 @@ public class Habitacion extends Hotel{
     protected  int cama_simple;
     protected  int cama_doble;
     protected  int cama_nino;
-    protected  double precio_habitacion;
     protected  boolean disponibilidad;
     ArrayList<Hotel>habitacionSelecionada= new ArrayList<Hotel>();
 
@@ -61,14 +60,6 @@ public static Habitacion habitacion3=new Habitacion();
         this.cama_nino = cama_nino;
     }
 
-    public double getPrecio_habitacion() {
-        return precio_habitacion;
-    }
-
-    public void setPrecio_habitacion(double precio_habitacion) {
-        this.precio_habitacion = precio_habitacion;
-    }
-
     public boolean isDisponibilidad() {
         return disponibilidad;
     }
@@ -82,6 +73,11 @@ public static Habitacion habitacion3=new Habitacion();
     public void coincidencia(){
         
 //        habitaciones(getCama_nino(),getCama_simple(),getCama_doble(),Hotel.hotel1.getCodigoHotel());
+    }
+
+    @Override
+    public String toString() {
+        return "Habitacion{" + "cod_habitacion=" + cod_habitacion + ", cama_simple=" + cama_simple + ", cama_doble=" + cama_doble + ", cama_nino=" + cama_nino + '}';
     }
     
     public static void comprobarDisponibilidad(){
@@ -124,6 +120,37 @@ public static Habitacion habitacion3=new Habitacion();
         return habitaciones;
     }
 
+    public ArrayList<Habitacion>habitacionSeleccionadaInfo(int codigoHabitacion){
+
+        
+        Conexion conexion= new Conexion();
+        Consultas consultas= new Consultas();
+
+        ArrayList<Habitacion> infoHabitacion = new ArrayList<Habitacion>();
+        String query="select habitacion_hotel.precio_base_hotel,habitacion_hotel.precio_festivo_hotel,"
+                + "habitacion_hotel.precio_estival_hotel,camas.cama_doble,camas.cama_simple,camas.cama_nino from habitacion_hotel "
+                + "inner join camas on habitacion_hotel.cod_habitacion_hotel=camas.cod_habitacion_hotel where "
+                + "camas.cod_habitacion_hotel="+codigoHabitacion+"";
+        ResultSet rs= consultas.consultaBD(query);
+            
+        try{
+            while(rs.next()){
+//                habitacion1.setCod_habitacion(rs.getInt(1));
+                alojamiento1.setPrecioBase(rs.getDouble(1));
+                alojamiento1.setPrecioFestivo(rs.getDouble(2));
+                alojamiento1.setPrecioEstival(rs.getDouble(3));
+                habitacion1.setCama_doble(rs.getInt(4));
+                habitacion1.setCama_simple(rs.getInt(5));
+                habitacion1.setCama_nino(rs.getInt(6));
+
+            }
+            infoHabitacion.add(habitacion1);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println(infoHabitacion);
+        return infoHabitacion;
+    }
     
     public void  habitacionesDisponibles(){
         Conexion conexion= new Conexion();

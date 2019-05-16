@@ -72,10 +72,11 @@ public static Habitacion habitacion3=new Habitacion();
         Consultas consultas= new Consultas();
 
         ArrayList<String> habitaciones = new ArrayList<String>();
-        String query="select habitacion_hotel.cod_habitacion_hotel,camas.cama_doble, camas.cama_simple, "
-                + "camas.cama_nino from habitacion_hotel inner join hotel on habitacion_hotel.cod_hotel=hotel.cod_hotel "
-                + "inner join camas on habitacion_hotel.cod_habitacion_hotel=camas.cod_habitacion_hotel where hotel.cod_hotel=1";
-        
+        String query="select camas.cod_habitacion_hotel,camas.cama_doble,camas.cama_simple,camas.cama_nino FROM camas" +
+            " INNER JOIN habitacion_hotel ON camas.cod_habitacion_hotel=habitacion_hotel.cod_habitacion_hotel" +
+            " WHERE habitacion_hotel.cod_hotel=(SELECT cod_hotel from hotel WHERE cod_hotel="+codigoHotel+")" +
+            " AND habitacion_hotel.cod_hotel NOT IN (SELECT cod_hotel from reserva where fecha_entrada"
+            + " >='"+Alojamiento.alojamiento1.getFechaEntrada()+"' and  fecha_salida <='"+Alojamiento.alojamiento1.getFechaSalida()+"');";
         ResultSet rs= consultas.consultaBD(query);
             
         try{

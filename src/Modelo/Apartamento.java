@@ -67,28 +67,28 @@ public class Apartamento extends Casa {
 //      Devuelve los apartamentos disponibles en una ciudad concreta y con una capacidad concreta de personas
         public ArrayList<String>ApartamentoPorLugarYpersonas(String ubicacionApartamento, int numeroDePersonas){
 
-        Conexion conexion= new Conexion();
-        Consultas consultas= new Consultas();
+            Conexion conexion= new Conexion();
+            Consultas consultas= new Consultas();
 
-        ArrayList<String> consulta = new ArrayList<String>();
-        String query="select * from apartamento where maximo_huespedes>="+numeroDePersonas+" AND ciudad='"+ubicacionApartamento+"';";
-        ResultSet rs= consultas.consultaBD(query);
-        try{
-            while(rs.next()){
+            ArrayList<String> consulta = new ArrayList<String>();
+            String query="select * from apartamento where maximo_huespedes>="+numeroDePersonas+" AND ciudad='"+ubicacionApartamento+"' "
+                    + "AND apartamento.cod_apartamento NOT IN (SELECT cod_apartamento from reserva "
+                    + "where fecha_entrada >='"+Alojamiento.alojamiento1.getFechaEntrada()+"' and  "
+                    + "fecha_salida <='"+Alojamiento.alojamiento1.getFechaSalida()+"');";
+            ResultSet rs= consultas.consultaBD(query);
+            try{
+                while(rs.next()){
 
-                String calleApartamento=rs.getString(8);
-                consulta.add(calleApartamento);
+                    String calleApartamento=rs.getString(8);
+                    consulta.add(calleApartamento);
+                }
+            }catch(Exception e){
+                System.out.println(e.getMessage());
             }
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        System.out.println("Apartamentos en "+ubicacionApartamento+" son "+consulta);
-        return consulta;
+            System.out.println("Apartamentos en "+ubicacionApartamento+" son "+consulta);
+            return consulta;
     }
-        
-//        METODOS PARA SACAR LOS PRECIOS BASe ESTIVAL Y FESTIVO SEGUN EL CODIGO DE APARTAMENTO
-//        llamar a este metodo precioApartamento(apartamento1.getPrecioApartamento) comprobar 
-//        que el setter esta hecho antes de llamar al metodo
+
         
         public ArrayList<Apartamento> datosApartamentoSeleccionado (int calleApartamento){
             Apartamento aux= new Apartamento();

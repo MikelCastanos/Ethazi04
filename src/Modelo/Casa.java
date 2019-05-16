@@ -94,7 +94,9 @@ public class Casa extends Alojamiento {
         Consultas consultas= new Consultas();
 
         ArrayList<String> consulta = new ArrayList<String>();
-        String query="select cod_casa, maximo_huespedes,direccion,ciudad from casa where maximo_huespedes>="+numeroDePersonas+" AND ciudad='"+ubicacionCasa+"'";
+        String query="select cod_casa, maximo_huespedes,direccion,ciudad from casa where maximo_huespedes>="+numeroDePersonas+" AND "
+            + "ciudad='"+ubicacionCasa+"' AND casa.cod_casa NOT IN (SELECT cod_casa from reserva where fecha_entrada"
+            + " >='"+Alojamiento.alojamiento1.getFechaEntrada()+"' and  fecha_salida <='"+Alojamiento.alojamiento1.getFechaSalida()+"');";
         ResultSet rs= consultas.consultaBD(query);
         try{
             while(rs.next()){

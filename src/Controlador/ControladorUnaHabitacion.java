@@ -34,6 +34,7 @@ public class ControladorUnaHabitacion {
                 System.out.println("Una Habitacion");
                 rellenarComboBox(comboBoxResultadosHabitaciones);
                 Alojamiento.alojamiento1.calcularDiasFestivos();
+                System.out.println("Habitacion seleccionada "+comboBoxResultadosHabitaciones.getSelectedItem());
             }
             
             });

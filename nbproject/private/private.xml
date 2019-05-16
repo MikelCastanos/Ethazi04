@@ -3,49 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorPago.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Aplicacion/Main.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Casa.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Baño.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaDosHabitacionesHotel.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Festivos.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Complementos.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaTresHabitacionesHotel.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Alojamiento.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaLogin.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Garaje.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaPago.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Habitacion.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Apartamento.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Comedor.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorTipoAlojamiento.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorComplementosHotel.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorHotelesDisponibles.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaTipoAlojamiento.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorBienvenida.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaUbicacionApartamento.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorDosHabitaciones.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Estancia.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Hotel.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorLogin.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorUnaHabitacion.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaPagoMayor.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/insertarReserva.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorTresHabitaciones.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorUbicacionCasa.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaComplementosCasa.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorUnApartamento.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorUnaCasa.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Balcon.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorUbicacionHotel.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaBienvenida.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Cocina.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorComplementosCasa.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Usuario.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Modelo/Dormitorio.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Controlador/ControladorComplementosApartamento.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaUnaHabitacionHotel.java</file>
-            <file>file:/C:/Users/ikasleaETHAZI/Documents/NetBeansProjects/Ethazi04/src/Vista/VistaUbicacionCasa.java</file>
+            <file>file:/C:/Users/ibilbao/Desktop/Ethazi04/src/Vista/VistaCondiciones.java</file>
+            <file>file:/C:/Users/ibilbao/Desktop/Ethazi04/src/Controlador/ControladorCondiciones.java</file>
+            <file>file:/C:/Users/ibilbao/Desktop/Ethazi04/src/Vista/VistaCodigoDescuento.java</file>
+            <file>file:/C:/Users/ibilbao/Desktop/Ethazi04/src/Vista/VistaTipoAlojamiento.java</file>
         </group>
     </open-files>
 </project-private>

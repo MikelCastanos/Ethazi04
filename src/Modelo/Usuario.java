@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import BBDD.Conexion;
 import BBDD.Consultas;
+import Vista.VistaCondiciones;
 import Vista.VistaTipoAlojamiento;
 import Vista.VistaUbicacionHotel;
 import javax.swing.JFrame;
@@ -163,7 +164,7 @@ public class Usuario {
         ResultSet rs= consultas.consultaBD(query);
             if(rs.next())
             {
-            VistaTipoAlojamiento vistaTA=new VistaTipoAlojamiento();
+            VistaCondiciones vistaTA=new VistaCondiciones();
             vistaTA.setBounds(0,0,600,730);
             vistaTA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistaTA.setVisible(true);

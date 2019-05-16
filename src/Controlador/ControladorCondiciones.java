@@ -7,6 +7,7 @@ package Controlador;
 
 import static Controlador.ControladorPago.cantidad_insertada;
 import Vista.VistaBienvenida;
+import Vista.VistaTipoAlojamiento;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
@@ -43,7 +44,7 @@ public class ControladorCondiciones extends JFrame {
           public char comprobarSelected(JRadioButton radioCondiciones){
 //              char tipoDeAlojamiento='n';
               if(radioCondiciones.isSelected()){
-                VistaPago vistaUH=new VistaPago();        
+                VistaTipoAlojamiento vistaUH=new VistaTipoAlojamiento();        
                 vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistaUH.setBounds(0,0,600,725);
                 vistaUH.setVisible(true);

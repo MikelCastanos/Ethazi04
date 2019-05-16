@@ -17,7 +17,6 @@ public class Habitacion extends Hotel{
     protected  int cama_simple;
     protected  int cama_doble;
     protected  int cama_nino;
-    protected  boolean disponibilidad;
     ArrayList<Hotel>habitacionSelecionada= new ArrayList<Hotel>();
 
     
@@ -60,37 +59,11 @@ public static Habitacion habitacion3=new Habitacion();
         this.cama_nino = cama_nino;
     }
 
-    public boolean isDisponibilidad() {
-        return disponibilidad;
-    }
-
-    public void setDisponibilidad(boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
-    }
-
-    
-    
-    public void coincidencia(){
-        
-//        habitaciones(getCama_nino(),getCama_simple(),getCama_doble(),Hotel.hotel1.getCodigoHotel());
-    }
-
     @Override
     public String toString() {
         return "Habitacion{" + "cod_habitacion=" + cod_habitacion + ", cama_simple=" + cama_simple + ", cama_doble=" + cama_doble + ", cama_nino=" + cama_nino + '}';
     }
-    
-    public static void comprobarDisponibilidad(){
-        
-        habitacion1.habitacionesDisponibles();
-//        if (!habitacion2.habitacionesDisponibles()){
-//        setDisponibilidad(false); 
-//        }else{
-//        setDisponibilidad(true);    
-//        }
-    }
-    
-        //Mover esta consulta a habitacion; devuelve las habitaciones disponibles en un hotel segun su codigo
+
     public ArrayList<String>habitacionesHotel(int codigoHotel){
 
         System.out.println("El codgio del hotel seleccionado es: "+codigoHotel);
@@ -135,7 +108,6 @@ public static Habitacion habitacion3=new Habitacion();
             
         try{
             while(rs.next()){
-//                habitacion1.setCod_habitacion(rs.getInt(1));
                 alojamiento1.setPrecioBase(rs.getDouble(1));
                 alojamiento1.setPrecioFestivo(rs.getDouble(2));
                 alojamiento1.setPrecioEstival(rs.getDouble(3));
@@ -151,24 +123,5 @@ public static Habitacion habitacion3=new Habitacion();
         System.out.println(infoHabitacion);
         return infoHabitacion;
     }
-    
-    public void  habitacionesDisponibles(){
-        Conexion conexion= new Conexion();
-        Consultas consultas= new Consultas();
 
-        String query="select cod_habitacion, fecha_entrada, fecha_salida from reserva where "
-                + "(cod_habitacion="+getCod_habitacion()+")AND(fecha_entrada='"+Hotel.hotel1.getFechaEntrada()+"')AND(fecha_salida='"+Hotel.hotel1.getFechaSalida()+"')";
-        System.out.println(query);
-        ResultSet rs= consultas.consultaBD(query);
-
-        
-        try{
-            while(rs.next()) {
-              JOptionPane.showMessageDialog(null,"Las habitaciones que cumplen sus requerimientos no estan disponibles");
-          }
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        
-    }
 }

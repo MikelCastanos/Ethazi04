@@ -116,20 +116,9 @@ public class Apartamento extends Casa {
                 System.out.println(e.getMessage());
             }
             apartamentoSeleccionado.add(apartamento1);
-//            asignarPrecios();
             System.out.println(apartamento1);
             System.out.println(apartamentoSeleccionado);
            return apartamentoSeleccionado; 
         }
-        
-//Siempre hay que llamar a este metodo despues de haber llamado al metodo de consulta PrecioApartamento
-        
-        public void asignarPrecios(){
-//            apartamento1.setPrecioBase(apartamentoSeleccionado.get(0));
-//            apartamento1.setPrecioEstival(apartamentoSeleccionado.get(1));
-//            apartamento1.setPrecioFestivo(apartamentoSeleccionado.get(2));
-            
-            System.out.println("Precio apartamento seleccionado :"+apartamento1.getPrecioBase()+" "+apartamento1.getPrecioEstival()+" "+apartamento1.getPrecioFestivo());
-            
-        }
+
 }

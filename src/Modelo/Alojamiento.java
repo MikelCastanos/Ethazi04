@@ -143,12 +143,7 @@ public class Alojamiento {
         //        Instanciar BBDD
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
-        com.mysql.jdbc.Connection con= conexion.conectar();
 
-        
-
-            
-        
         String query="select * from festivos where fecha between'"+Alojamiento.alojamiento1.getFechaEntrada()+"' and '"+ Alojamiento.alojamiento1.getFechaSalida()+"'";
         
         try{

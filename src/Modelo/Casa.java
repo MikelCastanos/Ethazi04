@@ -91,9 +91,8 @@ public class Casa extends Alojamiento {
         try{
             while(rs.next()){
 
-                int cod_casa=rs.getInt(1);
                 String calle=rs.getString(3);
-                consulta.add(Integer.toString(cod_casa)+" Calle: "+calle);
+                consulta.add(calle);
                 
             }
         }catch(Exception e){
@@ -102,5 +101,35 @@ public class Casa extends Alojamiento {
         System.out.println("Casas en "+ubicacionCasa+" son "+consulta);
         return consulta;
     }
-           
+       
+  public ArrayList<Apartamento> datosCasaSeleccionada (int calleApartamento){
+            Apartamento aux= new Apartamento();
+            Conexion conexion= new Conexion();
+            Consultas consultas= new Consultas();
+            
+            String query="select * from apartamento where direccion= "+calleApartamento+";";
+            ResultSet rs= consultas.consultaBD(query);
+            
+            try{
+                while(rs.next()){
+                    apartamento1.setCodigoApartamento(rs.getInt(1));
+                    apartamento1.setNumeroHuespedes(rs.getInt(2));
+                    apartamento1.setPrecioBase(rs.getDouble(3));
+                    apartamento1.setPrecioFestivo(rs.getDouble(4));
+                    apartamento1.setPrecioEstival(rs.getDouble(5));
+                    apartamento1.setPiso(rs.getInt(6));
+                    apartamento1.setCiudad(rs.getString(7));
+                    apartamento1.setCalle(rs.getString(8));
+                    apartamento1.setCodigo_postal(rs.getInt(9));
+                    
+                    
+                }
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+            apartamentoSeleccionado.add(apartamento1);
+            System.out.println(apartamento1);
+            System.out.println(apartamentoSeleccionado);
+           return apartamentoSeleccionado; 
+        }
 }

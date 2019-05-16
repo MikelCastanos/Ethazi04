@@ -30,7 +30,7 @@ public class ControladorUnaCasa {
             public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Casa");
                 Alojamiento.alojamiento1.calcularDiasFestivos();
-                
+                casaSeleccionada(comboBoxResultadosCasa);
             }
             
         });
@@ -52,8 +52,10 @@ public class ControladorUnaCasa {
           
           }
             
-            public void habitacionSeleccionada(JComboBox comboBoxResultadosCasa){
-                comboBoxResultadosCasa.getSelectedItem();
+            public void casaSeleccionada(JComboBox comboBoxResultadosCasa){
+                String casaSeleccionada=(String) comboBoxResultadosCasa.getSelectedItem();
+                Casa casa= new Casa();
+                casa.datosCasaSeleccionada(casaSeleccionada);
             }
             
             
@@ -65,6 +67,8 @@ public class ControladorUnaCasa {
             while(ite.hasNext()){
             comboBoxResultadosCasa.addItem(ite.next()); 
           }
-           }
+        }
+            
+
     
 }

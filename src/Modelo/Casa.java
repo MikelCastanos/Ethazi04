@@ -17,8 +17,8 @@ import java.util.ArrayList;
  */
 public class Casa extends Alojamiento {
     
-    protected int num_baños, tamaño, numeroHuespedes, num_personas;
-    
+    protected int num_baños, tamaño, numeroHuespedes, num_personas, codigo_casa;
+    ArrayList <Casa> casaSeleccionada= new ArrayList <Casa>();
     
     public static Casa casa1=new Casa();
 
@@ -52,6 +52,14 @@ public class Casa extends Alojamiento {
 
     public void setNum_personas(int num_personas) {
         this.num_personas = num_personas;
+    }
+
+    public int getCodigo_casa() {
+        return codigo_casa;
+    }
+
+    public void setCodigo_casa(int codigo_casa) {
+        this.codigo_casa = codigo_casa;
     }
     
     
@@ -102,34 +110,29 @@ public class Casa extends Alojamiento {
         return consulta;
     }
        
-  public ArrayList<Apartamento> datosCasaSeleccionada (int calleApartamento){
-            Apartamento aux= new Apartamento();
+  public ArrayList<Casa> datosCasaSeleccionada (String calleCasa){
             Conexion conexion= new Conexion();
             Consultas consultas= new Consultas();
             
-            String query="select * from apartamento where direccion= "+calleApartamento+";";
+            String query="select * from casa where direccion= '"+calleCasa+"';";
             ResultSet rs= consultas.consultaBD(query);
             
             try{
                 while(rs.next()){
-                    apartamento1.setCodigoApartamento(rs.getInt(1));
-                    apartamento1.setNumeroHuespedes(rs.getInt(2));
-                    apartamento1.setPrecioBase(rs.getDouble(3));
-                    apartamento1.setPrecioFestivo(rs.getDouble(4));
-                    apartamento1.setPrecioEstival(rs.getDouble(5));
-                    apartamento1.setPiso(rs.getInt(6));
-                    apartamento1.setCiudad(rs.getString(7));
-                    apartamento1.setCalle(rs.getString(8));
-                    apartamento1.setCodigo_postal(rs.getInt(9));
-                    
-                    
+                    casa1.setCodigo_casa(rs.getInt(1));
+                    casa1.setPrecioBase(rs.getDouble(3));
+                    casa1.setPrecioFestivo(rs.getDouble(4));
+                    casa1.setPrecioEstival(rs.getDouble(5));
+                    casa1.setCiudad(rs.getString(6));
+                    casa1.setCalle(rs.getString(7));
+                    casa1.setCodigo_postal(rs.getInt(8));
                 }
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }
-            apartamentoSeleccionado.add(apartamento1);
-            System.out.println(apartamento1);
-            System.out.println(apartamentoSeleccionado);
-           return apartamentoSeleccionado; 
+            casaSeleccionada.add(casa1);
+            System.out.println(casa1);
+            System.out.println(casaSeleccionada);
+           return casaSeleccionada; 
         }
 }

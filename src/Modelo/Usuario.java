@@ -31,6 +31,7 @@ public class Usuario {
     protected  String passwordUsuarioBorrar;
     protected  String fechaNacimiento;
     protected  String apellido;
+    protected  String fechaTOS;
 
 
     public static Usuario usuarioLogin=new Usuario();
@@ -141,6 +142,14 @@ public class Usuario {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getFechaTOS() {
+        return fechaTOS;
+    }
+
+    public void setFechaTOS(String fechaTOS) {
+        this.fechaTOS = fechaTOS;
     }
 
 

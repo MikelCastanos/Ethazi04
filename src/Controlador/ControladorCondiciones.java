@@ -6,15 +6,18 @@
 package Controlador;
 
 import static Controlador.ControladorPago.cantidad_insertada;
+import Modelo.Usuario;
 import Vista.VistaBienvenida;
 import Vista.VistaTipoAlojamiento;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.SimpleDateFormat;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import vista.VistaPago;
+import java.util.*;
 
 /**
  *
@@ -44,6 +47,15 @@ public class ControladorCondiciones extends JFrame {
           public char comprobarSelected(JRadioButton radioCondiciones){
 //              char tipoDeAlojamiento='n';
               if(radioCondiciones.isSelected()){
+                  
+                  
+                   SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+                    Date fechatos=Calendar.getInstance().getTime();
+                    String formatted= format1.format(fechatos);
+                  Usuario.usuarioLogin.setFechaTOS(formatted);
+                  System.out.println(Usuario.usuarioLogin.getFechaTOS());
+                  
+                  
                 VistaTipoAlojamiento vistaUH=new VistaTipoAlojamiento();        
                 vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistaUH.setBounds(0,0,600,725);

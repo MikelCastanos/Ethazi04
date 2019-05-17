@@ -11,6 +11,7 @@ import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
 import Controlador.ControladorTipoAlojamiento;
 import Modelo.Alojamiento;
+import static Modelo.Alojamiento.alojamiento1;
 import Modelo.Habitacion;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
@@ -35,6 +36,11 @@ public class ControladorUnaHabitacion {
                 //rellenarComboBox(comboBoxResultadosHabitaciones);
                 Alojamiento.alojamiento1.calcularDiasFestivos();
                 habitacionSeleccionada(comboBoxResultadosHabitaciones);
+                
+                //Setteamos el precio final del alojamiento() y llamamos dentro al metodo que calcula el precio final
+                //lepasamos por paramentros el precio base el festivo cantidad de dias festivos cantidad de dias normales 
+                alojamiento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
+                alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
             }
             
             });
@@ -47,13 +53,13 @@ public class ControladorUnaHabitacion {
             }
 
         public void cancelar(){
-          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
-            cantidad_insertada=0;
-            VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setBounds(0,0,600,730);
-            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            iniciostart.setVisible(true);
-          
+            JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+              cantidad_insertada=0;
+              VistaBienvenida iniciostart=new VistaBienvenida();
+              iniciostart.setBounds(0,0,600,730);
+              iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+              iniciostart.setVisible(true);
+
           }
         public void rellenarComboBox (JComboBox comboBoxResultadosHabitaciones){
             Hotel hotel= new Hotel();

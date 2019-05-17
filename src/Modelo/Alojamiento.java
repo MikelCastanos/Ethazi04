@@ -25,8 +25,9 @@ public class Alojamiento {
     protected double precioEstival;
     protected int cantidadDiasFestivos;
     protected int cantidadDiasNormales;
+    protected double precioFinal;
     
-
+    
 
     public String getCalle() {
         return calle;
@@ -123,31 +124,26 @@ public class Alojamiento {
     public void setCantidadDiasNormales(int cantidadDiasNormales) {
         this.cantidadDiasNormales = cantidadDiasNormales;
     }
-    
-    
-    
-    public void mostrar(){
-        System.out.println("Imprimirrrrr "+codigo_postal);
+
+    public double getPrecioFinal() {
+        return precioFinal;
     }
 
-   
-
+    public void setPrecioFinal(double precioFinal) {
+        this.precioFinal = precioFinal;
+    }
+    
     
 
-    
-
-
-    
+ 
     public  void calcularDiasFestivos(){
         
-        //        Instanciar BBDD
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
 
         String query="select * from festivos where fecha between'"+Alojamiento.alojamiento1.getFechaEntrada()+"' and '"+ Alojamiento.alojamiento1.getFechaSalida()+"'";
         
         try{
-           //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(query);
             while(rs.next())
             {
@@ -172,18 +168,34 @@ public class Alojamiento {
     }
     
 
-
     public static Alojamiento alojamiento1=new Alojamiento();
     public static Alojamiento alojamiento2=new Alojamiento();
     public static Alojamiento alojamiento3=new Alojamiento();
 
     @Override
     public String toString() {
-        return "Alojamiento{" + "calle=" + calle + ", ciudad=" + ciudad + ", codigo_postal=" + codigo_postal + ", num_habitaciones=" + num_habitaciones + ", fechaEntrada=" + fechaEntrada + ", fechaSalida=" + fechaSalida + ", diasEstancia=" + diasEstancia + ", precioBase=" + precioBase + ", precioFestivo=" + precioFestivo + ", precioEstival=" + precioEstival + ", cantidadDiasFestivos=" + cantidadDiasFestivos + ", cantidadDiasNormales=" + cantidadDiasNormales + '}';
+        return "Alojamiento{" + "calle=" + calle + ", ciudad=" + ciudad + ", codigo_postal=" + codigo_postal + ", num_habitaciones=" + num_habitaciones + ", fechaEntrada=" + fechaEntrada + ", fechaSalida=" + fechaSalida + ", diasEstancia=" + diasEstancia + ", precioBase=" + precioBase + ", precioFestivo=" + precioFestivo + ", precioEstival=" + precioEstival + ", cantidadDiasFestivos=" + cantidadDiasFestivos + ", cantidadDiasNormales=" + cantidadDiasNormales + ", precioFinal=" + precioFinal + '}';
     }
+
+    public double calcularPrecioFinal(double precioBase,double precioFestivo,int cantidadDiasFestivos,int cantidadDiasNormales){
     
-    
-    
+        double precioFinal=0;
+        
+        if(cantidadDiasFestivos==0){
+           precioFinal=precioBase*cantidadDiasNormales; 
+           
+            System.out.println("Base "+precioBase+"cantidadDiasNormales "+cantidadDiasNormales);
+        }else{
+            double diasNormales=precioBase*cantidadDiasNormales;
+            double diasFestivos=precioFestivo*cantidadDiasFestivos;
+            precioFinal=diasNormales+diasFestivos;
+            
+            System.out.println("PRecio dias normales "+diasNormales+"Precio diasFestivos: "+diasFestivos
+            +"PrecioFinal: "+precioFinal);
+        }
+        System.out.println("Precio final "+precioFinal);
+        return precioFinal;
+    }
     
     
 }

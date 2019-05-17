@@ -30,7 +30,7 @@ public class Main {
     VistaBienvenida vistab=new VistaBienvenida();
 
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vistab.setSize(1000,700);
+    vistab.setSize(916,725);
     vistab.setLocationRelativeTo(null);
     vistab.setVisible(true);
 

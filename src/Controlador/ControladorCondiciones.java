@@ -57,9 +57,10 @@ public class ControladorCondiciones extends JFrame {
                   
                   
                 VistaTipoAlojamiento vistaUH=new VistaTipoAlojamiento();        
-                vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistaUH.setBounds(0,0,600,725);
-                vistaUH.setVisible(true);
+                vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+    vistaUH.setSize(916,725);
+    vistaUH.setLocationRelativeTo(null);
+    vistaUH.setVisible(true);
                 aceptado= 'S';
               }else{
               JOptionPane.showMessageDialog(null,"Tienes que aceptar los terminos y las condiciones para poder continuar.");
@@ -71,10 +72,11 @@ public class ControladorCondiciones extends JFrame {
           public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
-            VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setBounds(0,0,600,730);
-            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            iniciostart.setVisible(true);
+            VistaBienvenida vista=new VistaBienvenida();
+            vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+    vista.setSize(916,725);
+    vista.setLocationRelativeTo(null);
+    vista.setVisible(true);
           
           }
     

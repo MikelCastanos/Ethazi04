@@ -44,18 +44,22 @@ public class ControladorComplementosApartamento {
 public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
-            VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setBounds(0,0,600,730);
-            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            iniciostart.setVisible(true);
+            VistaBienvenida vista=new VistaBienvenida();
+            vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+    vista.setSize(916,725);
+    vista.setLocationRelativeTo(null);
+    vista.setVisible(true);
           
           }
         
         public void siguienteVentana(){
-           VistaUnApartamento vista1Apartamento=new VistaUnApartamento();
-                  vista1Apartamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      vista1Apartamento.setBounds(0,0,600,725);
-      vista1Apartamento.setVisible(true);
+           VistaUnApartamento vista2=new VistaUnApartamento();
+                  
+            
+            vista2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+    vista2.setSize(916,725);
+    vista2.setLocationRelativeTo(null);
+    vista2.setVisible(true);
        
             
         }

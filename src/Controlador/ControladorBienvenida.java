@@ -52,7 +52,7 @@ public class ControladorBienvenida {
             
        VistaLogin vista=new VistaLogin();
        vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vista.setSize(1000,700);
+    vista.setSize(916,725);
     vista.setLocationRelativeTo(null);
     vista.setVisible(true);
 

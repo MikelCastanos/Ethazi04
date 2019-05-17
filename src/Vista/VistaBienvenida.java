@@ -1,14 +1,11 @@
 
 package Vista;
 
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import Controlador.*;
-import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
-import static vista.VistaPago.logo1;
 
 /**
  *
@@ -27,7 +24,10 @@ public class VistaBienvenida extends JFrame{
         setLayout(null);
         
         boton_siguiente=new JButton("¡EMPECEMOS!");
-        boton_siguiente.setBounds(800,605,150,30);
+        boton_siguiente.setOpaque(false);
+        boton_siguiente.setContentAreaFilled(false);
+        boton_siguiente.setBorderPainted(false);      
+        boton_siguiente.setBounds(700,605,150,30);
         add(boton_siguiente);
         
         
@@ -43,7 +43,7 @@ public class VistaBienvenida extends JFrame{
         ImageIcon imageIcon = new ImageIcon("src//images/avion.gif");
         etiqueta.setIcon(imageIcon);
         imageIcon.setImageObserver(etiqueta);
-        etiqueta.setSize(900,900);
+        etiqueta.setSize(1000,700);
         add(etiqueta);
         
     }

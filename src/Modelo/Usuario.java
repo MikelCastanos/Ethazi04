@@ -175,7 +175,7 @@ public class Usuario {
             {
             VistaCondiciones vistaTA=new VistaCondiciones();
             vistaTA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vistaTA.setSize(1000,700);
+    vistaTA.setSize(916,725);
     vistaTA.setLocationRelativeTo(null);
     vistaTA.setVisible(true);
             }

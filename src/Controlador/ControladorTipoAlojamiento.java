@@ -43,22 +43,25 @@ public class ControladorTipoAlojamiento {
 //              char tipoDeAlojamiento='n';
               if(radioHotel.isSelected()){
                 VistaUbicacionHotel vistaUH=new VistaUbicacionHotel();        
-                vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistaUH.setBounds(0,0,600,725);
+                vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+                vistaUH.setSize(916,725);
+                vistaUH.setLocationRelativeTo(null);
                 vistaUH.setVisible(true);
                 tipoDeAlojamiento= 'H';
               }
               if(radioCasa.isSelected()){
                 VistaUbicacionCasa vistaUC=new VistaUbicacionCasa();
-                vistaUC.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistaUC.setBounds(0,0,600,725);
+                vistaUC.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+                vistaUC.setSize(916,725);
+                vistaUC.setLocationRelativeTo(null);
                 vistaUC.setVisible(true);
                 tipoDeAlojamiento= 'C';
               }
               if(radioApartamento.isSelected()){
                 VistaUbicacionApartamento vistaUA=new VistaUbicacionApartamento();
-                vistaUA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                vistaUA.setBounds(0,0,600,725);
+                vistaUA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+                vistaUA.setSize(916,725);
+                vistaUA.setLocationRelativeTo(null);
                 vistaUA.setVisible(true);
                 tipoDeAlojamiento= 'A';
               }
@@ -68,11 +71,11 @@ public class ControladorTipoAlojamiento {
           public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
-            VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setBounds(0,0,600,730);
-            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            iniciostart.setVisible(true);
-          
+            VistaBienvenida vista=new VistaBienvenida();
+            vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+    vista.setSize(916,725);
+    vista.setLocationRelativeTo(null);
+    vista.setVisible(true);
           }
             
 }

@@ -12,6 +12,7 @@ import javax.swing.JComboBox;
 import static Controlador.ControladorPago.cantidad_insertada;
 import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import Modelo.Alojamiento;
+import static Modelo.Alojamiento.alojamiento1;
 import Modelo.Apartamento;
 import Modelo.Casa;
 import Vista.VistaBienvenida;
@@ -26,17 +27,20 @@ import javax.swing.JOptionPane;
  */
 public class ControladorUnaCasa {
     
-                public ControladorUnaCasa(JButton botonCancelar,JButton botonSiguienteUnaCasa,JComboBox comboBoxResultadosCasa){
+        public ControladorUnaCasa(JButton botonCancelar,JButton botonSiguienteUnaCasa,JComboBox comboBoxResultadosCasa){
         botonSiguienteUnaCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Casa");
                 Alojamiento.alojamiento1.calcularDiasFestivos();
                 casaSeleccionada(comboBoxResultadosCasa);
                 
-            VistaResumenDescuento ResumenDescuentoCasa=new VistaResumenDescuento();
-            ResumenDescuentoCasa.setBounds(0,0,600,730);
-            ResumenDescuentoCasa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            ResumenDescuentoCasa.setVisible(true);
+                alojamiento1 .setPrecioFinal(alojamiento1.calcularPrecioFinal(Casa.casa1.getPrecioBase(), Casa.casa1.getPrecioFestivo(), 
+                alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
+                
+                VistaResumenDescuento ResumenDescuentoCasa=new VistaResumenDescuento();
+                ResumenDescuentoCasa.setBounds(0,0,600,730);
+                ResumenDescuentoCasa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                ResumenDescuentoCasa.setVisible(true);
             }
             
         });

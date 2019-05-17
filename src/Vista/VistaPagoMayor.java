@@ -1,7 +1,7 @@
 
 package vista;
 
-import Controlador.ControladorResumenCompra;
+
 import Controlador.ControladorPago;
 import Controlador.ControladorPagoMayor;
 import static Controlador.ControladorPagoMayor.*;

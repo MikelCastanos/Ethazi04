@@ -39,7 +39,7 @@ public class ControladorUnApartamento {
 //                Apartamento apart = new Apartamento();
                 apartamento1.datosApartamentoSeleccionado(apartamento1.getCodigoApartamento());
                 
-                apartamento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
+                alojamiento1 .setPrecioFinal(alojamiento1.calcularPrecioFinal(Apartamento.apartamento1.getPrecioBase(), Apartamento.apartamento1.getPrecioFestivo(), 
                 alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
                 
                 VistaResumenDescuento ResumenDescuentoApartamento=new VistaResumenDescuento();

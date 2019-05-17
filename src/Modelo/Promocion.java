@@ -10,7 +10,9 @@ import BBDD.Consultas;
 import java.awt.HeadlessException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import vista.VistaPago;
 
 /**
  *
@@ -54,22 +56,25 @@ public class Promocion {
         String query="select * from promocion where cod_promocion like '"+Promocion.promocion.getCodigoDescuento()+"' AND dni LIKE '"+Usuario.usuarioLogin.getDniUsuarioLogin()+"'";
          System.out.println(query);
         
+      
         try{
            //        Llamamos al metodo de consultasLogin y le pasamos la conexion y la consulta
         ResultSet rs= consultas.consultaBD(query);
             if(rs.next())
             {
-                System.out.println("Esta bien");
+                Alojamiento.alojamiento1.setPrecioFinal(Alojamiento.alojamiento1.getPrecioFinal()-20);
+                System.out.println(Alojamiento.alojamiento1.getPrecioFinal());
             }
             else{
-                System.out.println("Esta mal");
+                JOptionPane.showMessageDialog(null,"El Codigo no es correcto");
             }
             }
             catch(SQLException | HeadlessException ex)
             {
                 JOptionPane.showMessageDialog(null,ex);
             }
-        
+     
+
 
     }
     

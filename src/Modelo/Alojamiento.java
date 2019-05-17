@@ -190,10 +190,11 @@ public class Alojamiento {
             double diasFestivos=precioFestivo*cantidadDiasFestivos;
             precioFinal=diasNormales+diasFestivos;
             
-            System.out.println("PRecio dias normales "+diasNormales+"Precio diasFestivos: "+diasFestivos
+            System.out.println("Precio dias normales "+diasNormales+"Precio diasFestivos: "+diasFestivos
             +"PrecioFinal: "+precioFinal);
         }
         System.out.println("Precio final "+precioFinal);
+        
         return precioFinal;
     }
     

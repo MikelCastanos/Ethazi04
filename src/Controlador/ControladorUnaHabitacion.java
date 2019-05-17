@@ -15,6 +15,7 @@ import static Modelo.Alojamiento.alojamiento1;
 import Modelo.Habitacion;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
+import Vista.VistaResumenDescuento;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Iterator;
@@ -39,8 +40,14 @@ public class ControladorUnaHabitacion {
                 
                 //Setteamos el precio final del alojamiento() y llamamos dentro al metodo que calcula el precio final
                 //lepasamos por paramentros el precio base el festivo cantidad de dias festivos cantidad de dias normales 
+                
                 alojamiento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
                 alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
+                
+                VistaResumenDescuento ResumenDescuentoHotel=new VistaResumenDescuento();
+                ResumenDescuentoHotel.setBounds(0,0,600,730);
+                ResumenDescuentoHotel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                ResumenDescuentoHotel.setVisible(true);
             }
             
             });

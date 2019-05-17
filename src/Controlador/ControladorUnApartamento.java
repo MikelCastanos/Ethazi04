@@ -13,6 +13,7 @@ import static Controlador.ControladorPago.cantidad_insertada;
 import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
 import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
 import Modelo.Alojamiento;
+import static Modelo.Alojamiento.alojamiento1;
 import Modelo.Apartamento;
 import static Modelo.Apartamento.apartamento1;
 import Modelo.Hotel;
@@ -38,10 +39,13 @@ public class ControladorUnApartamento {
 //                Apartamento apart = new Apartamento();
                 apartamento1.datosApartamentoSeleccionado(apartamento1.getCodigoApartamento());
                 
-            VistaResumenDescuento ResumenDescuentoApartamento=new VistaResumenDescuento();
-            ResumenDescuentoApartamento.setBounds(0,0,600,730);
-            ResumenDescuentoApartamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            ResumenDescuentoApartamento.setVisible(true);
+                apartamento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
+                alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
+                
+                VistaResumenDescuento ResumenDescuentoApartamento=new VistaResumenDescuento();
+                ResumenDescuentoApartamento.setBounds(0,0,600,730);
+                ResumenDescuentoApartamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                ResumenDescuentoApartamento.setVisible(true);
             }
             
         });

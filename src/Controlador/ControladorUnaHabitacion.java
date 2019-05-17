@@ -23,6 +23,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static Modelo.Hotel.hotel1;
 
 /**
  *
@@ -30,19 +31,21 @@ import javax.swing.JOptionPane;
  */
 public class ControladorUnaHabitacion {
     
-            public ControladorUnaHabitacion(JButton botonCancelar,JButton botonSiguienteUnaHabitacion,JComboBox comboBoxResultadosHabitaciones){
+        public ControladorUnaHabitacion(JButton botonCancelar,JButton botonSiguienteUnaHabitacion,JComboBox comboBoxResultadosHabitaciones){
         botonSiguienteUnaHabitacion.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Una Habitacion");
                 //rellenarComboBox(comboBoxResultadosHabitaciones);
-                Alojamiento.alojamiento1.calcularDiasFestivos();
-                habitacionSeleccionada(comboBoxResultadosHabitaciones);
+                Alojamiento alojamiento= new Alojamiento();
                 
+               
                 //Setteamos el precio final del alojamiento() y llamamos dentro al metodo que calcula el precio final
                 //lepasamos por paramentros el precio base el festivo cantidad de dias festivos cantidad de dias normales 
                 
                 alojamiento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
                 alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
+                
+  
                 
                 VistaResumenDescuento ResumenDescuentoHotel=new VistaResumenDescuento();
                 ResumenDescuentoHotel.setBounds(0,0,600,730);
@@ -73,7 +76,7 @@ public class ControladorUnaHabitacion {
             Habitacion habitacion= new Habitacion();
             //Llamamos primero a la consulta que carga todos los datos del hotel seleccionado
             hotel.seleccionHotelCompleta(hotelSeleccionado);
-            System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
+//            System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
             //Hacemos la consulta de las habitaciones con el codigo del hotel selecionado
             Iterator<String> ite= habitacion.habitacionesHotel(Hotel.hotel1.getCodigoHotel()).iterator();
             while(ite.hasNext()){

@@ -2,6 +2,7 @@ package Modelo;
 
 import BBDD.Conexion;
 import BBDD.Consultas;
+import static Modelo.Hotel.hotel1;
 import Vista.VistaTipoAlojamiento;
 import java.awt.HeadlessException;
 import java.sql.Connection;
@@ -135,21 +136,23 @@ public class Alojamiento {
     
     
 
- 
-    public  void calcularDiasFestivos(){
-        
+ //Le pasasmo al metodo por parametros las fechas de entrada y salida acceciendo al getter corresponiendo de cada objeto
+ //retorna los dias festivos
+    public  int  calcularDiasFestivos(String fechaEntrada,String fechaSalida){
+        System.out.println(fechaEntrada+""+fechaSalida);
         Conexion conexion= new Conexion();
         Consultas consultas= new Consultas();
 
-        String query="select * from festivos where fecha between'"+Alojamiento.alojamiento1.getFechaEntrada()+"' and '"+ Alojamiento.alojamiento1.getFechaSalida()+"'";
-        
+        String query="select * from festivos where fecha between'"+fechaEntrada+"' and '"+ fechaSalida+"'";
+        int diasFestivos=0;
         try{
         ResultSet rs= consultas.consultaBD(query);
             while(rs.next())
             {
-                Alojamiento.alojamiento1.setCantidadDiasFestivos(Alojamiento.alojamiento1.getCantidadDiasFestivos()+1);
-                System.out.println("Hay un festivo.");
-                System.out.println(Alojamiento.alojamiento1.getCantidadDiasFestivos());
+                  diasFestivos++;
+//                Alojamiento.alojamiento1.setCantidadDiasFestivos(Alojamiento.alojamiento1.getCantidadDiasFestivos()+1);
+//                System.out.println("Hay un festivo.");
+//                System.out.println(Alojamiento.alojamiento1.getCantidadDiasFestivos());
             }
 
             }
@@ -158,16 +161,24 @@ public class Alojamiento {
                 JOptionPane.showMessageDialog(null,ex);
             }
         
-        Alojamiento.alojamiento1.setCantidadDiasNormales(Alojamiento.alojamiento1.getDiasEstancia()-Alojamiento.alojamiento1.getCantidadDiasFestivos());
-        System.out.println("Su estancia va a ser de: ");
-        System.out.println(Alojamiento.alojamiento1.getDiasEstancia());
-        System.out.println("De los cuales son dias normales: ");
-        System.out.println(Alojamiento.alojamiento1.getCantidadDiasNormales());
-        System.out.println("Y Dias Festivos: ");
-        System.out.println(Alojamiento.alojamiento1.getCantidadDiasFestivos());
+//      Alojamiento.alojamiento1.setCantidadDiasNormales(Alojamiento.alojamiento1.getDiasEstancia()-Alojamiento.alojamiento1.getCantidadDiasFestivos());
+
+        
+        return diasFestivos;
     }
     
-
+    //Llamar a este metodo pasandole por parametro (calcularDiasFestivos(getterCorresponientea la fecha entrada y el otro de la fechaSalida),getDiasEstancia)
+    public int calcularDiasNormales(int diasFestivos,int diasEstancia){
+        
+        int diasNormales=0;
+        
+        diasNormales=diasEstancia-diasFestivos;
+        
+        return diasNormales;
+        
+    }
+    
+    
     public static Alojamiento alojamiento1=new Alojamiento();
     public static Alojamiento alojamiento2=new Alojamiento();
     public static Alojamiento alojamiento3=new Alojamiento();

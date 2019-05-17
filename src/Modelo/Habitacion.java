@@ -93,7 +93,7 @@ public static Habitacion habitacion3=new Habitacion();
 
         return habitaciones;
     }
-
+ 
     public ArrayList<Habitacion>habitacionSeleccionadaInfo(int codigoHabitacion){
 
         
@@ -112,7 +112,7 @@ public static Habitacion habitacion3=new Habitacion();
                 alojamiento1.setPrecioBase(rs.getDouble(1));
                 alojamiento1.setPrecioFestivo(rs.getDouble(2));
                 alojamiento1.setPrecioEstival(rs.getDouble(3));
-                habitacion1.setCama_doble(rs.getInt(4));
+                habitacion2.setCama_doble(rs.getInt(4));
                 habitacion1.setCama_simple(rs.getInt(5));
                 habitacion1.setCama_nino(rs.getInt(6));
 

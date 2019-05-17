@@ -12,12 +12,13 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import vista.VistaPagoMayor;
 import static Controlador.ControladorPago.*;
+import Modelo.Alojamiento;
 
 
 public class ControladorPagoMayor {
-    ControladorResumenCompra contro=new ControladorResumenCompra();
+
     
-   public double calculo_preciototal= contro.precio1cents;
+   public double calculo_preciototal= Alojamiento.alojamiento1.getPrecioFinal()*100;
    public final static int billete200=20000,billete100=10000,billete50=5000,billete20=2000,billete10=1000,billete5=500,moneda2=200,moneda1=100,moneda50c=50,moneda20c=20,moneda10c=10,moneda5c=5,moneda2c=2,moneda1c=1;
     VistaPagoMayor pagomayor;
     

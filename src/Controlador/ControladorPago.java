@@ -13,7 +13,6 @@ import vista.VistaPago;
 import vista.VistaPagoMayor;
 import static vista.VistaPago.*;
 import Modelo.Alojamiento;
-import Modelo.Habitacion;
 import javax.swing.JOptionPane;
 
 
@@ -25,6 +24,7 @@ public class ControladorPago extends JFrame {
    public  double precioFinal = Alojamiento.alojamiento1.getPrecioFinal();
    public  double precioFinalcents = precioFinal*100;
    
+   public static ControladorPago pago1=new ControladorPago();
     VistaPago pago;
     
     ActionListener actionListener;

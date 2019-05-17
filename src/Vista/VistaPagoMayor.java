@@ -8,6 +8,7 @@ import static Controlador.ControladorPagoMayor.*;
 import javax.swing.*;
 import javax.swing.ImageIcon;
 import static Controlador.ControladorPago.*;
+import Modelo.Alojamiento;
 
 
 
@@ -39,8 +40,7 @@ public class VistaPagoMayor extends JFrame{
             
      setLayout(null);  
             ControladorPago controp=new ControladorPago();
-            ControladorResumenCompra contro=new ControladorResumenCompra();
-            precioFinal2=contro.precio1cents;
+            precioFinal2=Alojamiento.alojamiento1.getPrecioFinal()*100;
             precioFinal2cents=precioFinal2;
             vueltasCentimos=controp.cantidad_insertada-precioFinal2cents;
 

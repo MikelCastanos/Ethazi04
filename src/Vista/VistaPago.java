@@ -118,12 +118,12 @@ public VistaPago(){
             boton_1c.setBounds(300,450,50,50);
             add(boton_1c);
             
-            ControladorPago controp=new ControladorPago();
-            preciototal_IVA= new JLabel("Precio Final (IVA incluido): "+controp.precioFinal+"€");
+            
+            preciototal_IVA= new JLabel("Precio Final (IVA incluido): "+pago1.precioFinal+"€");
             preciototal_IVA.setBounds(200,100,300,20);
             add(preciototal_IVA);
             
-            men_cantidad_insertada= new JLabel("Cantidad insertada: "+(controp.cantidad_insertada/100)+"€");
+            men_cantidad_insertada= new JLabel("Cantidad insertada: "+(pago1.cantidad_insertada/100)+"€");
             men_cantidad_insertada.setBounds(200,550,300,20);
             add(men_cantidad_insertada);
             

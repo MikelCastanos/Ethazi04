@@ -25,22 +25,26 @@ public class VistaBienvenida extends JFrame{
         boton_siguiente=new javax.swing.JButton();
 
         setLayout(null);
-        /*mensaje_bienvenida=new JLabel("¡BIENVENIDO A BIDAI-ON!");
-        mensaje_bienvenida.setBounds(200,200,200,30);
-        add(mensaje_bienvenida);*/
         
         boton_siguiente=new JButton("¡EMPECEMOS!");
-        boton_siguiente.setBounds(400,625,150,30);
+        boton_siguiente.setBounds(800,605,150,30);
         add(boton_siguiente);
         
         
        ControladorBienvenida cont=new ControladorBienvenida(boton_siguiente);
         
-        ImageIcon icono=new ImageIcon("src//images/fondoP.png");
+       /* ImageIcon icono=new ImageIcon("src//images/fondoP.png");
             logo1=new JLabel(icono);
             logo1.setSize(585,695);
             add(logo1);
-            validate(); 
+            validate(); */
+            
+        JLabel etiqueta = new JLabel();
+        ImageIcon imageIcon = new ImageIcon("src//images/avion.gif");
+        etiqueta.setIcon(imageIcon);
+        imageIcon.setImageObserver(etiqueta);
+        etiqueta.setSize(900,900);
+        add(etiqueta);
         
     }
 

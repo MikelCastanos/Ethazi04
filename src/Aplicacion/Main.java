@@ -29,8 +29,9 @@ public class Main {
 
     VistaBienvenida vistab=new VistaBienvenida();
 
-    vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    vistab.setBounds(0,0,600,730);
+    vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+    vistab.setSize(1000,700);
+    vistab.setLocationRelativeTo(null);
     vistab.setVisible(true);
 
     }}

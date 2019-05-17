@@ -7,7 +7,6 @@ package Vista;
 
 import Controlador.ControladorLogin;
 import com.toedter.calendar.JDateChooser;
-import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
@@ -50,162 +49,162 @@ public class VistaLogin extends JFrame {
         
         //Login
         mensaje_login=new JLabel("Usuario Registrado");
-        mensaje_login.setBounds(50,70,120,30);
+        mensaje_login.setBounds(190,70,120,30);
         add(mensaje_login);
         
         label_usuario=new JLabel("DNI:");
-        label_usuario.setBounds(10,120,120,30);
+        label_usuario.setBounds(150,120,120,30);
         add(label_usuario);
         
         label_password=new JLabel("Contraseña:");
-        label_password.setBounds(10,160,200,30);
+        label_password.setBounds(150,160,200,30);
         add(label_password);
         
         dniField=new JTextField("");
-        dniField.setBounds(100,120,120,30);
+        dniField.setBounds(240,120,120,30);
         add(dniField);
         
         contrasenaField=new JPasswordField("");
-        contrasenaField.setBounds(100,160,120,30);
+        contrasenaField.setBounds(240,160,120,30);
         add(contrasenaField);
         
         botonLogin=new JButton("Entrar");
-        botonLogin.setBounds(100,200,120,30);
+        botonLogin.setBounds(240,200,120,30);
         add(botonLogin);
         
         
         // Registro
         
-        mensaje_registro=new JLabel("Nuevo Usuario");
-        mensaje_registro.setBounds(400,70,120,30);
+       mensaje_registro=new JLabel("Nuevo Usuario");
+        mensaje_registro.setBounds(190,300,120,30);
         add(mensaje_registro);
         
         label_dni_registro=new JLabel("DNI:");
-        label_dni_registro.setBounds(300,100,120,30);
+        label_dni_registro.setBounds(150,350,120,30);
         add(label_dni_registro);
         
         registroDniField=new JTextField("");
-        registroDniField.setBounds(425,120,120,30);
+        registroDniField.setBounds(240,350,120,30);
         add(registroDniField);
         
         label_nombre_registro=new JLabel("Nombre:");
-        label_nombre_registro.setBounds(300,140,120,30);
+        label_nombre_registro.setBounds(150,390,120,30);
         add(label_nombre_registro);
                 
         registroNombreField=new JTextField("");
-        registroNombreField.setBounds(425,160,120,30);
+        registroNombreField.setBounds(240,390,120,30);
         add(registroNombreField);
         
         label_apellido_registro=new JLabel("Apellido:");
-        label_apellido_registro.setBounds(300,180,120,30);
+        label_apellido_registro.setBounds(150,430,120,30);
         add(label_apellido_registro);
         
         registroApellidoField=new JTextField("");
-        registroApellidoField.setBounds(425,200,120,30);
+        registroApellidoField.setBounds(240,430,120,30);
         add(registroApellidoField);
         
         label_password_registro=new JLabel("Contraseña:");
-        label_password_registro.setBounds(300,220,120,30);
+        label_password_registro.setBounds(150,470,120,30);
         add(label_password_registro);
                 
         registroContrasenaField=new JPasswordField("");
-        registroContrasenaField.setBounds(425,240,120,30);
+        registroContrasenaField.setBounds(240,470,120,30);
         add(registroContrasenaField);      
         
         label_password_registro=new JLabel("Repita la Contraseña:");
-        label_password_registro.setBounds(300,260,150,30);
+        label_password_registro.setBounds(150,510,150,30);
         add(label_password_registro);
         
         registroContrasenaField2=new JPasswordField("");
-        registroContrasenaField2.setBounds(425,280,120,30);
+        registroContrasenaField2.setBounds(290,510,120,30);
         add(registroContrasenaField2);  
         
         label_fecha_nacimiento=new JLabel("Fecha de nacimiento:");
-        label_fecha_nacimiento.setBounds(300,300,120,30);
+        label_fecha_nacimiento.setBounds(150,550,120,30);
         add(label_fecha_nacimiento);
         
         fecha_nacimiento=new JDateChooser();
-        fecha_nacimiento.setBounds(425,320,120,30);
+        fecha_nacimiento.setBounds(290,550,120,30);
         add(fecha_nacimiento);
         
         botonRegistro=new JButton("Registrar");
-        botonRegistro.setBounds(425,400,120,30);
+        botonRegistro.setBounds(290,590,120,30);
         add(botonRegistro);
         
         
         //Cambio Password
         mensaje_cambiar_password=new JLabel("Cambiar Contraseña");
-        mensaje_cambiar_password.setBounds(50,370,120,30);
+        mensaje_cambiar_password.setBounds(600,300,120,30);
         add(mensaje_cambiar_password);
         
         label_cambio_dni=new JLabel("DNI:");
-        label_cambio_dni.setBounds(10,400,120,30);
+        label_cambio_dni.setBounds(540,350,120,30);
         add(label_cambio_dni);
         
         
         cambioPasswordDNI=new JTextField("");
-        cambioPasswordDNI.setBounds(120,400,120,30);
+        cambioPasswordDNI.setBounds(630,350,120,30);
         add(cambioPasswordDNI);
         
         label_cambio_password=new JLabel("Contraseña vieja:");
-        label_cambio_password.setBounds(10,440,200,30);
+        label_cambio_password.setBounds(540,390,200,30);
         add(label_cambio_password);
         
                 cambioPasswordPass=new JPasswordField("");
-        cambioPasswordPass.setBounds(120,440,120,30);
+        cambioPasswordPass.setBounds(680,390,120,30);
         add(cambioPasswordPass);
         
                 label_cambio_password2=new JLabel("Contraseña nueva:");
-        label_cambio_password2.setBounds(10,480,200,30);
+        label_cambio_password2.setBounds(540,430,200,30);
         add(label_cambio_password2);
         
                 cambioPasswordNueva=new JPasswordField("");
-        cambioPasswordNueva.setBounds(120,480,120,30);
+        cambioPasswordNueva.setBounds(680,430,120,30);
         add(cambioPasswordNueva);
         
                 botonCambio=new JButton("Cambiar");
-        botonCambio.setBounds(120,520,120,30);
+        botonCambio.setBounds(630,470,120,30);
         add(botonCambio);
         
         
         //Borrar Usuario
         mensaje_borrar_usuario=new JLabel("Eliminar Usuario");
-        mensaje_borrar_usuario.setBounds(400,460,120,30);
+        mensaje_borrar_usuario.setBounds(600,70,120,30);
         add(mensaje_borrar_usuario);
         
         
         label_dni_borrar_usuario=new JLabel("DNI:");
-        label_dni_borrar_usuario.setBounds(300,480,120,30);
+        label_dni_borrar_usuario.setBounds(540,120,120,30);
         add(label_dni_borrar_usuario);
         
         dniBorrarUsuario=new JTextField("");
-        dniBorrarUsuario.setBounds(425,500,120,30);
+        dniBorrarUsuario.setBounds(630,120,120,30);
         add(dniBorrarUsuario);
         
-        label_password_borrar_usuario=new JLabel("Password:");
-        label_password_borrar_usuario.setBounds(300,520,120,30);
+        label_password_borrar_usuario=new JLabel("Contraseña:");
+        label_password_borrar_usuario.setBounds(540,160,120,30);
         add(label_password_borrar_usuario);
         
                 passwordBorrarUsuario=new JPasswordField("");
-        passwordBorrarUsuario.setBounds(425,540,120,30);
+        passwordBorrarUsuario.setBounds(630,160,120,30);
         add(passwordBorrarUsuario);
         
         botonBorrar=new JButton("Eliminar");
-        botonBorrar.setBounds(425,580,120,30);
+        botonBorrar.setBounds(630,200,120,30);
         add(botonBorrar);
         
         
-            ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+            /*ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
             JLabel logo2 = new JLabel(icon);
             logo2.setSize(575,50);
             add(logo2);
-            validate();
+            validate();*/
         
-            ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            /*ImageIcon icono=new ImageIcon("src//images/fondo.png");
             logo1=new JLabel(icono);
             logo1.setSize(585,695);
             add(logo1);
-            validate();
+            validate();*/
         
         ControladorLogin contL=new ControladorLogin(botonBorrar,dniBorrarUsuario,passwordBorrarUsuario,botonLogin,botonRegistro,botonCambio,cambioPasswordDNI,cambioPasswordPass,cambioPasswordNueva,contrasenaField,dniField,registroContrasenaField,
             registroContrasenaField2,registroNombreField,registroContrasenaField2,fecha_nacimiento,registroApellidoField);

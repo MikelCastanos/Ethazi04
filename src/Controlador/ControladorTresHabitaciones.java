@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import static Controlador.ControladorHotelesDisponibles.hotelSeleccionado;
 import Modelo.Habitacion;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -12,7 +13,9 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import static Controlador.ControladorPago.cantidad_insertada;
 import Modelo.Alojamiento;
+import Modelo.Hotel;
 import Vista.VistaBienvenida;
+import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 /**
@@ -25,6 +28,13 @@ public class ControladorTresHabitaciones {
         botonSiguienteTresHabitaciones.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Tres Habitaciones");
+                
+                                if(comboBoxResultados3Habitaciones1.getSelectedItem().equals(comboBoxResultados3Habitaciones2.getSelectedItem())||comboBoxResultados3Habitaciones1.getSelectedItem().equals(comboBoxResultados3Habitaciones3.getSelectedItem())||comboBoxResultados3Habitaciones2.getSelectedItem().equals(comboBoxResultados3Habitaciones3.getSelectedItem())){
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar habitaciones distintas");
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Bien");
+                }
                 Alojamiento.alojamiento1.calcularDiasFestivos();
                 
             }
@@ -71,4 +81,43 @@ public void cancelar(){
                     
 
             }
+                
+            public void rellenarComboBox1 (JComboBox comboBoxResultados3Habitaciones1){
+                    Hotel hotel= new Hotel();
+                    Habitacion habitacion= new Habitacion();
+                    //Llamamos primero a la consulta que carga todos los datos del hotel seleccionado
+                    hotel.seleccionHotelCompleta(hotelSeleccionado);
+                    System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
+                    //Hacemos la consulta de las habitaciones con el codigo del hotel selecionado
+                    Iterator<String> ite= habitacion.habitacionesHotel(Hotel.hotel1.getCodigoHotel()).iterator();
+                    while(ite.hasNext()){
+                    comboBoxResultados3Habitaciones1.addItem(ite.next()); 
+          }
+           }
+                        
+            public void rellenarComboBox2 (JComboBox comboBoxResultados3Habitaciones2){
+                    Hotel hotel= new Hotel();
+                    Habitacion habitacion= new Habitacion();
+                    //Llamamos primero a la consulta que carga todos los datos del hotel seleccionado
+                    hotel.seleccionHotelCompleta(hotelSeleccionado);
+                    System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
+                    //Hacemos la consulta de las habitaciones con el codigo del hotel selecionado
+                    Iterator<String> ite= habitacion.habitacionesHotel(Hotel.hotel1.getCodigoHotel()).iterator();
+                    while(ite.hasNext()){
+                    comboBoxResultados3Habitaciones2.addItem(ite.next()); 
+          }
+           }
+                                                
+            public void rellenarComboBox3 (JComboBox comboBoxResultados3Habitaciones3){
+                    Hotel hotel= new Hotel();
+                    Habitacion habitacion= new Habitacion();
+                    //Llamamos primero a la consulta que carga todos los datos del hotel seleccionado
+                    hotel.seleccionHotelCompleta(hotelSeleccionado);
+                    System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
+                    //Hacemos la consulta de las habitaciones con el codigo del hotel selecionado
+                    Iterator<String> ite= habitacion.habitacionesHotel(Hotel.hotel1.getCodigoHotel()).iterator();
+                    while(ite.hasNext()){
+                    comboBoxResultados3Habitaciones3.addItem(ite.next()); 
+          }
+           }
 }

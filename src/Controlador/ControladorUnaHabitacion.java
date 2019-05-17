@@ -32,7 +32,7 @@ public class ControladorUnaHabitacion {
         botonSiguienteUnaHabitacion.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Una Habitacion");
-                rellenarComboBox(comboBoxResultadosHabitaciones);
+                //rellenarComboBox(comboBoxResultadosHabitaciones);
                 Alojamiento.alojamiento1.calcularDiasFestivos();
                 habitacionSeleccionada(comboBoxResultadosHabitaciones);
             }

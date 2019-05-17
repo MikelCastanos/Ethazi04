@@ -72,10 +72,5 @@ public class VistaCondiciones extends JFrame {
         ControladorCondiciones cont=new ControladorCondiciones(botonTipoAlojamiento,botonCancelar,radioCondiciones);
     }
     
-    public static void main(String[] args) {
-            VistaCondiciones iniciostart=new VistaCondiciones();
-            iniciostart.setBounds(0,0,600,730);
-            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            iniciostart.setVisible(true);
-    }
+
 }

@@ -15,6 +15,7 @@ import Modelo.Alojamiento;
 import Modelo.Apartamento;
 import Modelo.Casa;
 import Vista.VistaBienvenida;
+import Vista.VistaResumenDescuento;
 import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -31,6 +32,11 @@ public class ControladorUnaCasa {
                 System.out.println("Boton Una Casa");
                 Alojamiento.alojamiento1.calcularDiasFestivos();
                 casaSeleccionada(comboBoxResultadosCasa);
+                
+            VistaResumenDescuento ResumenDescuentoCasa=new VistaResumenDescuento();
+            ResumenDescuentoCasa.setBounds(0,0,600,730);
+            ResumenDescuentoCasa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            ResumenDescuentoCasa.setVisible(true);
             }
             
         });

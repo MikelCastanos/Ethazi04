@@ -17,6 +17,7 @@ import Modelo.Apartamento;
 import static Modelo.Apartamento.apartamento1;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
+import Vista.VistaResumenDescuento;
 import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -36,6 +37,11 @@ public class ControladorUnApartamento {
                 habitacionSeleccionada(comboBoxResultadosApartamento);
 //                Apartamento apart = new Apartamento();
                 apartamento1.datosApartamentoSeleccionado(apartamento1.getCodigoApartamento());
+                
+            VistaResumenDescuento ResumenDescuentoApartamento=new VistaResumenDescuento();
+            ResumenDescuentoApartamento.setBounds(0,0,600,730);
+            ResumenDescuentoApartamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            ResumenDescuentoApartamento.setVisible(true);
             }
             
         });

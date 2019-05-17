@@ -66,7 +66,8 @@ public class VistaDosHabitacionesHotel extends JFrame{
             validate();
             
                                         ControladorDosHabitaciones controladorDosHab=new ControladorDosHabitaciones(botonCancelar,botonSiguienteDosHabitaciones,comboBoxResultados2Habitaciones1,comboBoxResultados2Habitaciones2);
-
+                controladorDosHab.rellenarComboBox1(comboBoxResultados2Habitaciones1);
+                controladorDosHab.rellenarComboBox2(comboBoxResultados2Habitaciones2);
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     

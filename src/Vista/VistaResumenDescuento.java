@@ -5,7 +5,10 @@
  */
 package Vista;
 
-import Controlador.ControladorCodigoDescuento;
+import Controlador.ControladorResumenDescuento;
+import Modelo.Apartamento;
+import Modelo.Casa;
+import Modelo.Hotel;
 import javax.swing.JFrame;
 import javax.swing.*;
 import static vista.VistaPago.logo1;
@@ -14,26 +17,43 @@ import static vista.VistaPago.logo1;
  *
  * @author shabi
  */
-public class VistaCodigoDescuento extends JFrame {
+public class VistaResumenDescuento extends JFrame {
     
     JLabel mensajeCodigo_Descuento;
     public static JTextField fieldCodigoDescuento;
     JButton botonSiguiente;
+    JTextField resumenHotel,resumenCasa,resumenApartamento;
     
     
-    public VistaCodigoDescuento(){
+    
+    public VistaResumenDescuento(){
         
         
         botonSiguiente=new javax.swing.JButton();
         
                 setLayout(null);
+                
+                resumenHotel=new JTextField(Hotel.hotel1.toString());
+                resumenHotel.setBounds(100,200,400,30);
+                resumenHotel.setEditable(false);
+                add(resumenHotel);
+                
+                resumenCasa=new JTextField(Casa.casa1.toString());
+                resumenCasa.setBounds(100,240,400,30);
+                resumenCasa.setEditable(false);
+                add(resumenCasa);
+                
+                resumenApartamento=new JTextField(Apartamento.apartamento1.toString());
+                resumenApartamento.setBounds(100,280,400,30);
+                resumenApartamento.setEditable(false);
+                add(resumenApartamento);
                
         mensajeCodigo_Descuento=new JLabel("Introduce el Codigo");
-        mensajeCodigo_Descuento.setBounds(200,200,200,30);
+        mensajeCodigo_Descuento.setBounds(200,350,200,30);
         add(mensajeCodigo_Descuento);
         
         fieldCodigoDescuento=new JTextField("");
-        fieldCodigoDescuento.setBounds(200,240,200,30);
+        fieldCodigoDescuento.setBounds(180,390,200,30);
         add(fieldCodigoDescuento);
         
                 botonSiguiente=new JButton("Siguiente");
@@ -56,13 +76,13 @@ public class VistaCodigoDescuento extends JFrame {
             add(logo1);
             validate();
             
-ControladorCodigoDescuento contCD=new ControladorCodigoDescuento(botonCancelar,botonSiguiente,fieldCodigoDescuento);
+ControladorResumenDescuento contCD=new ControladorResumenDescuento(botonCancelar,botonSiguiente,fieldCodigoDescuento);
             
 
     }
     
     public static void main(String[] args) {
-                    VistaCodigoDescuento iniciostart=new VistaCodigoDescuento();
+                    VistaResumenDescuento iniciostart=new VistaResumenDescuento();
             iniciostart.setBounds(0,0,600,730);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);

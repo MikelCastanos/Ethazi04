@@ -16,9 +16,9 @@ import javax.swing.*;
  *
  * @author shabi
  */
-public class ControladorCodigoDescuento {
+public class ControladorResumenDescuento {
     
-                        public ControladorCodigoDescuento(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
+                        public ControladorResumenDescuento(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
         botonSiguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Probando");
@@ -32,7 +32,7 @@ public class ControladorCodigoDescuento {
                         
                         
                         public void cogerCodigoDescuento(){
-                            Promocion.promocion.setCodigoDescuento(Vista.VistaCodigoDescuento.fieldCodigoDescuento.getText());;
+                            Promocion.promocion.setCodigoDescuento(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText());;
                         }
     
 }

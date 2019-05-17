@@ -72,7 +72,9 @@ public class VistaTresHabitacionesHotel extends JFrame {
             validate();
             
              ControladorTresHabitaciones controladorTresHab=new ControladorTresHabitaciones(botonCancelar,botonSiguienteTresHabitaciones,comboBoxResultados3Habitaciones1,comboBoxResultados3Habitaciones2,comboBoxResultados3Habitaciones3);
-
+               controladorTresHab.rellenarComboBox1(comboBoxResultados3Habitaciones1);
+               controladorTresHab.rellenarComboBox2(comboBoxResultados3Habitaciones2);
+               controladorTresHab.rellenarComboBox2(comboBoxResultados3Habitaciones3);
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     

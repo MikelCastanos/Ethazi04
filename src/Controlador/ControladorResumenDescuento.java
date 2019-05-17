@@ -19,6 +19,8 @@ import vista.VistaPago;
  */
 public class ControladorResumenDescuento {
     
+    public ControladorResumenDescuento(){}
+    
                         public ControladorResumenDescuento(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
         botonSiguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
@@ -51,5 +53,11 @@ public class ControladorResumenDescuento {
                         }
     
                         
-
+                        public void irPago(){
+                                     VistaPago vista=new VistaPago();
+                                     vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+                                     vista.setSize(1000,700);
+                                     vista.setLocationRelativeTo(null);
+                                     vista.setVisible(true);
+                        }
 }

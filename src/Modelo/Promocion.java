@@ -7,6 +7,7 @@ package Modelo;
 
 import BBDD.Conexion;
 import BBDD.Consultas;
+import Controlador.ControladorResumenDescuento;
 import java.awt.HeadlessException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -64,6 +65,10 @@ public class Promocion {
             {
                 Alojamiento.alojamiento1.setPrecioFinal(Alojamiento.alojamiento1.getPrecioFinal()-20);
                 System.out.println(Alojamiento.alojamiento1.getPrecioFinal());
+                
+                ControladorResumenDescuento contrl=new ControladorResumenDescuento();
+                contrl.irPago();
+                
             }
             else{
                 JOptionPane.showMessageDialog(null,"El Codigo no es correcto");

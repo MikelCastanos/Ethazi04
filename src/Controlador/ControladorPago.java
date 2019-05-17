@@ -246,7 +246,7 @@ public class ControladorPago extends JFrame {
             VistaPago Pago=new VistaPago();
             Pago.setBounds(0,0,600,730);
             Pago.setVisible(true);
-           }      
+           }    
            }
                      
            public void c20(){

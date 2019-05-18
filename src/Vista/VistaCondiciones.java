@@ -57,15 +57,15 @@ public class VistaCondiciones extends JFrame {
         botonCancelar.setBounds(340,600,100,30);
         add(botonCancelar);
         
-                ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+            /*    ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
         JLabel logo2 = new JLabel(icon);
             logo2.setSize(575,200);
             add(logo2);
-            validate();
+            validate();*/
         
         ImageIcon icono=new ImageIcon("src//images/fondo.png");
             logo1=new JLabel(icono);
-            logo1.setSize(585,695);
+            logo1.setSize(900,690);
             add(logo1);
             validate();
         

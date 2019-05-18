@@ -133,7 +133,7 @@ public class ControladorPago extends JFrame {
  
             if(cantidad_insertada>precioFinalcents){  
             VistaPagoMayor pagoMayor=new VistaPagoMayor();
-            pagoMayor.setSize(916,725);    pagoMayor.setLocationRelativeTo(null);
+            pagoMayor.setSize(916,729);    pagoMayor.setLocationRelativeTo(null);
     pagoMayor.setVisible(true);
             pagoMayor.setVisible(true);
             pagoMayor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -149,7 +149,7 @@ public class ControladorPago extends JFrame {
            cantidad_insertada=0;
            VistaBienvenida Pago=new VistaBienvenida();
            Pago.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-           Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+           Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
            Pago.setVisible(true);
             }
@@ -161,7 +161,7 @@ public class ControladorPago extends JFrame {
         if(getBoton_volver()==boton_volver){            
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setSize(916,725);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setSize(916,729);    iniciostart.setLocationRelativeTo(null);
     iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);                      
@@ -173,7 +173,7 @@ public class ControladorPago extends JFrame {
     if(getBoton_200e()==boton_200e){ 
             cantidad_insertada=cantidad_insertada+billete200;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Pago.setVisible(true);      
@@ -184,7 +184,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_100e()==boton_100e){ 
             cantidad_insertada=cantidad_insertada+billete100;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Pago.setVisible(true);     
@@ -195,7 +195,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_50e()==boton_50e){ 
             cantidad_insertada=cantidad_insertada+billete50;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);     
            }
@@ -205,7 +205,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_20e()==boton_20e){ 
             cantidad_insertada=cantidad_insertada+billete20;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);     
            }
@@ -215,7 +215,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_10e()==boton_10e){ 
             cantidad_insertada=cantidad_insertada+billete10;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);      
            }
@@ -225,7 +225,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_5e()==boton_5e){ 
             cantidad_insertada=cantidad_insertada+billete5;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }
@@ -235,7 +235,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_2e()==boton_2e){ 
             cantidad_insertada=cantidad_insertada+moneda2;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }     
@@ -245,7 +245,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_1e()==boton_1e){ 
             cantidad_insertada=cantidad_insertada+moneda1;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }       
@@ -255,7 +255,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_50c()==boton_50c){ 
             cantidad_insertada=cantidad_insertada+moneda50c;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }      
@@ -265,7 +265,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_20c()==boton_20c){ 
             cantidad_insertada=cantidad_insertada+moneda20c;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }       
@@ -275,7 +275,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_10c()==boton_10c){ 
             cantidad_insertada=cantidad_insertada+moneda10c;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }       
@@ -285,7 +285,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_5c()==boton_5c){ 
             cantidad_insertada=cantidad_insertada+moneda5c;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }      
@@ -295,7 +295,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_2c()==boton_2c){ 
             cantidad_insertada=cantidad_insertada+moneda2c;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }      
@@ -305,7 +305,7 @@ public class ControladorPago extends JFrame {
            if(getBoton_1c()==boton_1c){ 
             cantidad_insertada=cantidad_insertada+moneda1c;
             VistaPago Pago=new VistaPago();
-            Pago.setSize(916,725);    Pago.setLocationRelativeTo(null);
+            Pago.setSize(916,729);    Pago.setLocationRelativeTo(null);
     Pago.setVisible(true);
             Pago.setVisible(true);
            }      

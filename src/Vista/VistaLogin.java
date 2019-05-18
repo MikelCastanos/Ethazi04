@@ -200,11 +200,11 @@ public class VistaLogin extends JFrame {
             add(logo2);
             validate();*/
         
-            /*ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            ImageIcon icono=new ImageIcon("src//images/fondo.png");
             logo1=new JLabel(icono);
-            logo1.setSize(585,695);
+            logo1.setSize(900,690);
             add(logo1);
-            validate();*/
+            validate();
         
         ControladorLogin contL=new ControladorLogin(botonBorrar,dniBorrarUsuario,passwordBorrarUsuario,botonLogin,botonRegistro,botonCambio,cambioPasswordDNI,cambioPasswordPass,cambioPasswordNueva,contrasenaField,dniField,registroContrasenaField,
             registroContrasenaField2,registroNombreField,registroContrasenaField2,fecha_nacimiento,registroApellidoField);

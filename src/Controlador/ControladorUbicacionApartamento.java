@@ -122,7 +122,7 @@ public class ControladorUbicacionApartamento {
         
 
 //            VistaEleccion vistae=new VistaEleccion();
-//            vistae.setSize(916,725);    vistab.setLocationRelativeTo(null);
+//            vistae.setSize(916,729);    vistab.setLocationRelativeTo(null);
 
 //            vistae.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //            vistae.setVisible(true);
@@ -130,7 +130,7 @@ public class ControladorUbicacionApartamento {
             
             
             VistaComplementosApartamento VistaCompleAp=new VistaComplementosApartamento();
-                VistaCompleAp.setSize(916,725);    VistaCompleAp.setLocationRelativeTo(null);
+                VistaCompleAp.setSize(916,729);    VistaCompleAp.setLocationRelativeTo(null);
     VistaCompleAp.setVisible(true);
                 VistaCompleAp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 VistaCompleAp.setVisible(true);
@@ -140,7 +140,7 @@ public class ControladorUbicacionApartamento {
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setSize(916,725);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setSize(916,729);    iniciostart.setLocationRelativeTo(null);
     iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);

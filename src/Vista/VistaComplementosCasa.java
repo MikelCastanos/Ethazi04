@@ -125,7 +125,7 @@ public class VistaComplementosCasa extends JFrame{
         
             ImageIcon icono=new ImageIcon("src//images/fondo.png");
             logo1=new JLabel(icono);
-            logo1.setSize(585,695);
+            logo1.setSize(900,690);
             add(logo1);
             validate();
             

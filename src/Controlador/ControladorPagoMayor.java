@@ -49,7 +49,7 @@ public class ControladorPagoMayor {
         controp.cantidad_insertada=0;
         VistaBienvenida vistab=new VistaBienvenida();
         vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        vistab.setSize(916,725);    vistab.setLocationRelativeTo(null);
+        vistab.setSize(916,729);    vistab.setLocationRelativeTo(null);
     vistab.setVisible(true);
         vistab.setVisible(true);
             

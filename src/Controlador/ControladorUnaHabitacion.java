@@ -48,7 +48,7 @@ public class ControladorUnaHabitacion {
   
                 
                 VistaResumenDescuento ResumenDescuentoHotel=new VistaResumenDescuento();
-                ResumenDescuentoHotel.setSize(916,725);    ResumenDescuentoHotel.setLocationRelativeTo(null);
+                ResumenDescuentoHotel.setSize(916,729);    ResumenDescuentoHotel.setLocationRelativeTo(null);
     ResumenDescuentoHotel.setVisible(true);
                 ResumenDescuentoHotel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 ResumenDescuentoHotel.setVisible(true);
@@ -67,7 +67,7 @@ public class ControladorUnaHabitacion {
             JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
               cantidad_insertada=0;
               VistaBienvenida iniciostart=new VistaBienvenida();
-              iniciostart.setSize(916,725);    iniciostart.setLocationRelativeTo(null);
+              iniciostart.setSize(916,729);    iniciostart.setLocationRelativeTo(null);
     iniciostart.setVisible(true);
               iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
               iniciostart.setVisible(true);

@@ -44,7 +44,7 @@ public class ControladorTipoAlojamiento {
               if(radioHotel.isSelected()){
                 VistaUbicacionHotel vistaUH=new VistaUbicacionHotel();        
                 vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-                vistaUH.setSize(916,725);
+                vistaUH.setSize(916,729);
                 vistaUH.setLocationRelativeTo(null);
                 vistaUH.setVisible(true);
                 tipoDeAlojamiento= 'H';
@@ -52,7 +52,7 @@ public class ControladorTipoAlojamiento {
               if(radioCasa.isSelected()){
                 VistaUbicacionCasa vistaUC=new VistaUbicacionCasa();
                 vistaUC.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-                vistaUC.setSize(916,725);
+                vistaUC.setSize(916,729);
                 vistaUC.setLocationRelativeTo(null);
                 vistaUC.setVisible(true);
                 tipoDeAlojamiento= 'C';
@@ -60,7 +60,7 @@ public class ControladorTipoAlojamiento {
               if(radioApartamento.isSelected()){
                 VistaUbicacionApartamento vistaUA=new VistaUbicacionApartamento();
                 vistaUA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-                vistaUA.setSize(916,725);
+                vistaUA.setSize(916,729);
                 vistaUA.setLocationRelativeTo(null);
                 vistaUA.setVisible(true);
                 tipoDeAlojamiento= 'A';
@@ -73,7 +73,7 @@ public class ControladorTipoAlojamiento {
             cantidad_insertada=0;
             VistaBienvenida vista=new VistaBienvenida();
             vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vista.setSize(916,725);
+    vista.setSize(916,729);
     vista.setLocationRelativeTo(null);
     vista.setVisible(true);
           }

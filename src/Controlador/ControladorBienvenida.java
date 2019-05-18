@@ -45,7 +45,7 @@ public class ControladorBienvenida {
             
             /*
             VistaUbicacionHotel vistau=new VistaUbicacionHotel();
-            vistau.setSize(916,725);    vistab.setLocationRelativeTo(null);
+            vistau.setSize(916,729);    vistab.setLocationRelativeTo(null);
     vistab.setVisible(true);
             vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistau.setVisible(true);
@@ -53,7 +53,7 @@ public class ControladorBienvenida {
             
        VistaLogin vista=new VistaLogin();
        vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vista.setSize(916,725);
+    vista.setSize(916,729);
     vista.setLocationRelativeTo(null);
     vista.setVisible(true);
 
@@ -61,7 +61,7 @@ public class ControladorBienvenida {
 
         /*
             VistaUbicacionHotel vistau=new VistaUbicacionHotel();
-            vistau.setSize(916,725);    vistab.setLocationRelativeTo(null);
+            vistau.setSize(916,729);    vistab.setLocationRelativeTo(null);
     vistab.setVisible(true);
             vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             vistau.setVisible(true);

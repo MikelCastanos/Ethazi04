@@ -236,7 +236,7 @@ public class VistaPagoMayor extends JFrame{
     
             ImageIcon icono=new ImageIcon("src//images/fondoPago.png");
             logo1=new JLabel(icono);
-            logo1.setSize(585,695);
+            logo1.setSize(900,690);
             add(logo1);
             validate();
             

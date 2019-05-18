@@ -88,7 +88,7 @@ public class VistaResumenDescuento extends JFrame {
         
         ImageIcon icono=new ImageIcon("src//images/fondo.png");
             logo1=new JLabel(icono);
-            logo1.setSize(585,695);
+            logo1.setSize(900,690);
             add(logo1);
             validate();
             
@@ -99,7 +99,7 @@ ControladorResumenDescuento contCD=new ControladorResumenDescuento(botonCancelar
     
     public static void main(String[] args) {
                     VistaResumenDescuento iniciostart=new VistaResumenDescuento();
-            iniciostart.setSize(916,725);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setSize(916,729);    iniciostart.setLocationRelativeTo(null);
     iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);

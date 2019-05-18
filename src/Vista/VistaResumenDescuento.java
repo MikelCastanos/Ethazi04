@@ -99,7 +99,8 @@ ControladorResumenDescuento contCD=new ControladorResumenDescuento(botonCancelar
     
     public static void main(String[] args) {
                     VistaResumenDescuento iniciostart=new VistaResumenDescuento();
-            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setSize(916,725);    iniciostart.setLocationRelativeTo(null);
+    iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
     }

@@ -69,7 +69,8 @@ public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setSize(916,725);    iniciostart.setLocationRelativeTo(null);
+    iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
           
@@ -78,7 +79,8 @@ public void cancelar(){
     public void siguienteVentana(){
 
             VistaComplementosHotel VistaComple=new VistaComplementosHotel();
-            VistaComple.setBounds(0,0,600,730);
+            VistaComple.setSize(916,725);    VistaComple.setLocationRelativeTo(null);
+    VistaComple.setVisible(true);
             VistaComple.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             VistaComple.setVisible(true);
             

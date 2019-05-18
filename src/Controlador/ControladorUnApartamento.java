@@ -43,7 +43,8 @@ public class ControladorUnApartamento {
                 alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
                 
                 VistaResumenDescuento ResumenDescuentoApartamento=new VistaResumenDescuento();
-                ResumenDescuentoApartamento.setBounds(0,0,600,730);
+                ResumenDescuentoApartamento.setSize(916,725);    ResumenDescuentoApartamento.setLocationRelativeTo(null);
+    ResumenDescuentoApartamento.setVisible(true);
                 ResumenDescuentoApartamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 ResumenDescuentoApartamento.setVisible(true);
             }
@@ -61,7 +62,8 @@ public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setSize(916,725);    iniciostart.setLocationRelativeTo(null);
+    iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
           

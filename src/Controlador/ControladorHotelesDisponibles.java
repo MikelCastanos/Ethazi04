@@ -52,7 +52,8 @@ public class ControladorHotelesDisponibles {
             JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setBounds(0,0,600,730);
+            iniciostart.setSize(916,725);    iniciostart.setLocationRelativeTo(null);
+    iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
           
@@ -62,20 +63,23 @@ public class ControladorHotelesDisponibles {
                                         
             if(Alojamiento.alojamiento1.getNum_habitaciones()==1){
                 VistaUnaHabitacionHotel vistauna=new VistaUnaHabitacionHotel();
-                vistauna.setBounds(0,0,600,730);
+                vistauna.setSize(916,725);    vistauna.setLocationRelativeTo(null);
+    vistauna.setVisible(true);
                 vistauna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistauna.setVisible(true);
                 
             }
             if(Alojamiento.alojamiento1.getNum_habitaciones()==2){
                 VistaDosHabitacionesHotel vistados=new VistaDosHabitacionesHotel();
-                vistados.setBounds(0,0,600,730);
+                vistados.setSize(916,725);    vistados.setLocationRelativeTo(null);
+    vistados.setVisible(true);
                 vistados.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistados.setVisible(true);
             }
             if(Alojamiento.alojamiento1.getNum_habitaciones()==3){
                 VistaTresHabitacionesHotel vistatres=new VistaTresHabitacionesHotel();
-                vistatres.setBounds(0,0,600,730);
+                vistatres.setSize(916,725);    vistatres.setLocationRelativeTo(null);
+    vistatres.setVisible(true);
                 vistatres.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistatres.setVisible(true);
             }

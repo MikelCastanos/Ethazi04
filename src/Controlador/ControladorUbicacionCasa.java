@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
 import java.time.temporal.ChronoUnit;
+import static Modelo.Casa.casa1;
 
 /**
  *
@@ -48,13 +49,13 @@ public class ControladorUbicacionCasa {
         
             }
 
-public void cancelar(){
+    public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
             iniciostart.setSize(905,720);
-    iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
-    iniciostart.setVisible(true);
+            iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
           
@@ -72,7 +73,7 @@ public void cancelar(){
         
         
         //COGEMOS EL NUMERO DE PERSONAS DEL COMBOBOX Y LO PASAMOS AL MODELO
-        Casa.casa1.setNum_personas((int)comboBoxNumeroPersonasCasa.getSelectedItem());
+        casa1.setNum_personas((int)comboBoxNumeroPersonasCasa.getSelectedItem());
         System.out.println(Casa.casa1.getNum_personas());
         
         //PASAMOS LOS JDATECHOOSER A FECHA NORMAL
@@ -102,11 +103,11 @@ public void cancelar(){
                 String date = sdf.format(fechaEntradaCasa.getDate());
                 
                 //Set de FechaEntrada al Modelo
-                Alojamiento.alojamiento1.setFechaEntrada(date);
+                casa1.setFechaEntrada(date);
                 
                 String date2 = sdf.format(fechaSalidaCasa.getDate());
                 //Set de FechaSalida al Modelo
-                Alojamiento.alojamiento1.setFechaSalida(date2);
+                casa1.setFechaSalida(date2);
                 
                 //Cogemos las fechas otra vez para calcular los dias que hay entre medio
             Date dat1=fechaEntradaCasa.getDate();
@@ -117,26 +118,26 @@ public void cancelar(){
             int otro = (int) ChronoUnit.DAYS.between(now,now2);
             
             //Llevamos el numero de dias al Modelo
-            Alojamiento.alojamiento1.setDiasEstancia(otro);
+            casa1.setDiasEstancia(otro);
             
             //Llevamos la ciudad seleccionada al Modelo
-            Alojamiento.alojamiento1.setCiudad((String)comboBoxUbicacionCasa.getSelectedItem());
+            casa1.setCiudad((String)comboBoxUbicacionCasa.getSelectedItem());
             
-                System.out.println("Fecha entrada Casa: "+Alojamiento.alojamiento1.getFechaEntrada());
-                System.out.println("Fecha entrada Casa: "+Alojamiento.alojamiento1.getFechaSalida());
-                System.out.println("Dias Estancia Casa: "+Alojamiento.alojamiento1.getDiasEstancia());
-                System.out.println("Ciudad Alojamiento Casa: "+ Alojamiento.alojamiento1.getCiudad());
-                System.out.println("Numero de Personas Casa: "+Casa.casa1.getNum_personas());
+                System.out.println("Fecha entrada Casa: "+casa1.getFechaEntrada());
+                System.out.println("Fecha entrada Casa: "+casa1.getFechaSalida());
+                System.out.println("Dias Estancia Casa: "+casa1.getDiasEstancia());
+                System.out.println("Ciudad Alojamiento Casa: "+ casa1.getCiudad());
+                System.out.println("Numero de Personas Casa: "+ casa1.getNum_personas());
         } }}
 
 
     public void siguienteVentanaCasa(){
             VistaComplementosCasa VistaCompleCa=new VistaComplementosCasa();
-                VistaCompleCa.setSize(905,720);
-    VistaCompleCa.setResizable(false);    VistaCompleCa.setLocationRelativeTo(null);
-    VistaCompleCa.setVisible(true);
-                VistaCompleCa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                VistaCompleCa.setVisible(true);
+            VistaCompleCa.setSize(905,720);
+            VistaCompleCa.setResizable(false);    VistaCompleCa.setLocationRelativeTo(null);
+            VistaCompleCa.setVisible(true);
+            VistaCompleCa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            VistaCompleCa.setVisible(true);
 
     }
 

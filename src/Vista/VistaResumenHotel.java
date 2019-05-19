@@ -5,7 +5,7 @@
  */
 package Vista;
 
-import Controlador.ControladorResumenDescuento;
+import Controlador.ControladorResumenHotel;
 import Modelo.Alojamiento;
 import Modelo.Apartamento;
 import Modelo.Casa;
@@ -18,7 +18,7 @@ import static vista.VistaPago.logo1;
  *
  * @author shabi
  */
-public class VistaResumenDescuento extends JFrame {
+public class VistaResumenHotel extends JFrame {
     
     JLabel mensajeCodigo_Descuento;
     public static JTextField fieldCodigoDescuento;
@@ -28,7 +28,7 @@ public class VistaResumenDescuento extends JFrame {
     
     
     
-    public VistaResumenDescuento(){
+    public VistaResumenHotel(){
         
         
         botonSiguiente=new javax.swing.JButton();
@@ -92,7 +92,7 @@ public class VistaResumenDescuento extends JFrame {
             add(logo1);
             validate();
             
-ControladorResumenDescuento contCD=new ControladorResumenDescuento(botonCancelar,botonSiguiente,fieldCodigoDescuento);
+ControladorResumenHotel contCD=new ControladorResumenHotel(botonCancelar,botonSiguiente,fieldCodigoDescuento);
             
 
     }

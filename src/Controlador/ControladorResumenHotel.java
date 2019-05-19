@@ -12,9 +12,9 @@ import vista.VistaPago;
  *
  * @author shabi
  */
-public class ControladorResumenDescuento {
+public class ControladorResumenHotel {
     
-        public ControladorResumenDescuento(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
+        public ControladorResumenHotel(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
         botonSiguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Probando");
@@ -29,9 +29,9 @@ public class ControladorResumenDescuento {
                         
                         
         public void cogerCodigoDescuento(){
-        Promocion.promocion.setCodigoDescuento(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText());;
+        Promocion.promocion.setCodigoDescuento(Vista.VistaResumenHotel.fieldCodigoDescuento.getText());;
 
-            if(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText().equals("")){
+            if(Vista.VistaResumenHotel.fieldCodigoDescuento.getText().equals("")){
                      VistaPago vista=new VistaPago();
                      vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
                      vista.setSize(1000,700);

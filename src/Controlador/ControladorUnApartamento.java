@@ -18,7 +18,7 @@ import Modelo.Apartamento;
 import static Modelo.Apartamento.apartamento1;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
-import Vista.VistaResumenDescuento;
+import Vista.VistaResumenHotel;
 import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -44,7 +44,7 @@ public class ControladorUnApartamento {
                 apartamento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
                 alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
                 
-                VistaResumenDescuento ResumenDescuentoApartamento=new VistaResumenDescuento();
+                VistaResumenHotel ResumenDescuentoApartamento=new VistaResumenHotel();
                 ResumenDescuentoApartamento.setSize(905,720);
                 ResumenDescuentoApartamento.setResizable(false);    ResumenDescuentoApartamento.setLocationRelativeTo(null);
                 ResumenDescuentoApartamento.setVisible(true);

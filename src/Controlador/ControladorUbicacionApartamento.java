@@ -23,6 +23,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static Modelo.Apartamento.apartamento1;
 
 /**
  *
@@ -34,8 +35,8 @@ public class ControladorUbicacionApartamento {
         botonSiguienteUbicacionApartamento.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 
-                cogerDatosUbicacionApartamento(comboBoxUbicacionApartamento,comboBoxNumeroPersonasApartamento,fechaEntradaApartamento,fechaSalidaApartamento);
-                siguienteVentanaApartamento();
+        cogerDatosUbicacionApartamento(comboBoxUbicacionApartamento,comboBoxNumeroPersonasApartamento,fechaEntradaApartamento,fechaSalidaApartamento);
+        siguienteVentanaApartamento();
                 
                 
             }
@@ -57,11 +58,11 @@ public class ControladorUbicacionApartamento {
          }
             
             
-             public void cogerDatosUbicacionApartamento(JComboBox comboBoxUbicacionApartamento, JComboBox comboBoxNumeroPersonasApartamento,JDateChooser fechaEntradaApartamento,JDateChooser fechaSalidaApartamento){
+    public void cogerDatosUbicacionApartamento(JComboBox comboBoxUbicacionApartamento, JComboBox comboBoxNumeroPersonasApartamento,JDateChooser fechaEntradaApartamento,JDateChooser fechaSalidaApartamento){
         
         
         //COGEMOS EL NUMERO DE PERSONAS DEL COMBOBOX Y LO PASAMOS AL MODELO
-        Apartamento.apartamento1.setNum_personas((int)comboBoxNumeroPersonasApartamento.getSelectedItem());
+        apartamento1.setNum_personas((int)comboBoxNumeroPersonasApartamento.getSelectedItem());
         System.out.println(Apartamento.apartamento1.getNum_personas());
         
         //PASAMOS LOS JDATECHOOSER A FECHA NORMAL
@@ -80,9 +81,7 @@ public class ControladorUbicacionApartamento {
             JOptionPane.showMessageDialog(null,"Fecha fin invalida. Selecciona al menos una noche.");
         }
         
-        
         else{
-            
             
             //ESTE CODIGO CALCULA EL NUMERO DE DIAS QUE HAY ENTRE LA FECHA ENTRADA Y LA FECHA SALIDA
 
@@ -91,52 +90,52 @@ public class ControladorUbicacionApartamento {
                 String date = sdf.format(fechaEntradaApartamento.getDate());
                 
                 //Set de FechaEntrada al Modelo
-                Alojamiento.alojamiento1.setFechaEntrada(date);
+                apartamento1.setFechaEntrada(date);
                 
                 String date2 = sdf.format(fechaSalidaApartamento.getDate());
                 //Set de FechaSalida al Modelo
-                Alojamiento.alojamiento1.setFechaSalida(date2);
+                apartamento1.setFechaSalida(date2);
                 
                 //Cogemos las fechas otra vez para calcular los dias que hay entre medio
-            Date dat1=fechaEntradaApartamento.getDate();
-            Date dat2=fechaSalidaApartamento.getDate();
+                Date dat1=fechaEntradaApartamento.getDate();
+                Date dat2=fechaSalidaApartamento.getDate();
 
-            Instant now = dat1.toInstant();
-            Instant now2 = dat2.toInstant();
-            int otro = (int) ChronoUnit.DAYS.between(now,now2);
+                Instant now = dat1.toInstant();
+                Instant now2 = dat2.toInstant();
+                int otro = (int) ChronoUnit.DAYS.between(now,now2);
+
+                //Llevamos el numero de dias al Modelo
+                apartamento1.setDiasEstancia(otro);
+
+                //Llevamos la ciudad seleccionada al Modelo
+                apartamento1.setCiudad((String)comboBoxUbicacionApartamento.getSelectedItem());
             
-            //Llevamos el numero de dias al Modelo
-            Alojamiento.alojamiento1.setDiasEstancia(otro);
-            
-            //Llevamos la ciudad seleccionada al Modelo
-            Alojamiento.alojamiento1.setCiudad((String)comboBoxUbicacionApartamento.getSelectedItem());
-            
-                System.out.println("Fecha entrada Apartamento"+Alojamiento.alojamiento1.getFechaEntrada());
-                System.out.println("Fecha entrada Apartamento"+Alojamiento.alojamiento1.getFechaSalida());
-                System.out.println("Dias Estancia Apartamento: "+Alojamiento.alojamiento1.getDiasEstancia());
-                System.out.println("Ciudad Alojamiento Apartamento: "+ Alojamiento.alojamiento1.getCiudad());
-                System.out.println("Numero de Personas Apartamento: "+Apartamento.apartamento1.getNum_personas());
-        } }}
+                System.out.println("Fecha entrada Apartamento"+apartamento1.getFechaEntrada());
+                System.out.println("Fecha entrada Apartamento"+apartamento1.getFechaSalida());
+                System.out.println("Dias Estancia Apartamento: "+apartamento1.getDiasEstancia());
+                System.out.println("Ciudad Alojamiento Apartamento: "+ apartamento1.getCiudad());
+                System.out.println("Numero de Personas Apartamento: "+apartamento1.getNum_personas());
+           } 
+                     }
+             }
              
-                 public void siguienteVentanaApartamento(){
+        public void siguienteVentanaApartamento(){
  
-            
-            
             VistaComplementosApartamento VistaCompleAp=new VistaComplementosApartamento();
-                VistaCompleAp.setSize(905,720);
-    VistaCompleAp.setResizable(false);    VistaCompleAp.setLocationRelativeTo(null);
-    VistaCompleAp.setVisible(true);
-                VistaCompleAp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                VistaCompleAp.setVisible(true);
+            VistaCompleAp.setSize(905,720);
+            VistaCompleAp.setResizable(false);    VistaCompleAp.setLocationRelativeTo(null);
+            VistaCompleAp.setVisible(true);
+            VistaCompleAp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            VistaCompleAp.setVisible(true);
 
     }
-                 public void cancelar(){
-          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+        public void cancelar(){
+            JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
             iniciostart.setSize(905,720);
-    iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
-    iniciostart.setVisible(true);
+            iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
           

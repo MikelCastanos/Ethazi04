@@ -14,6 +14,7 @@ import Vista.VistaBienvenida;
 import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static Modelo.Habitacion.habitacion2;
 
 /**
  *
@@ -31,7 +32,8 @@ public class ControladorDosHabitaciones {
                 else{
                     JOptionPane.showMessageDialog(null, "Bien");
                 }
-                Alojamiento.alojamiento1.calcularDiasFestivos();
+                Alojamiento alojamiento= new Alojamiento();
+//                alojamiento.calcularDiasFestivos();
                 
                 
             }
@@ -45,29 +47,29 @@ public class ControladorDosHabitaciones {
         
             }
 
-public void cancelar(){
+        public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
             iniciostart.setSize(905,720);
-    iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
-    iniciostart.setVisible(true);
+            iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
           
           }
                 
-                public void habitacionSeleccionada(JComboBox comboBoxResultados2Habitaciones1,JComboBox comboBoxResultados2Habitaciones2){
-                comboBoxResultados2Habitaciones1.getSelectedItem();
-                comboBoxResultados2Habitaciones2.getSelectedItem();
+        public void habitacionSeleccionada(JComboBox comboBoxResultados2Habitaciones1,JComboBox comboBoxResultados2Habitaciones2){
+        comboBoxResultados2Habitaciones1.getSelectedItem();
+        comboBoxResultados2Habitaciones2.getSelectedItem();
             }
                 
-                        public void rellenarComboBox1 (JComboBox comboBoxResultados2Habitaciones1){
+        public void rellenarComboBox (JComboBox comboBoxResultados2Habitaciones1){
             Hotel hotel= new Hotel();
             Habitacion habitacion= new Habitacion();
             //Llamamos primero a la consulta que carga todos los datos del hotel seleccionado
             hotel.seleccionHotelCompleta(hotelSeleccionado);
-            System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
+//          System.out.println(Alojamiento.alojamiento1.getCiudad()+ControladorHotelesDisponibles.hotelSeleccionado );
             //Hacemos la consulta de las habitaciones con el codigo del hotel selecionado
             Iterator<String> ite= habitacion.habitacionesHotel(Hotel.hotel1.getCodigoHotel()).iterator();
             while(ite.hasNext()){
@@ -75,7 +77,7 @@ public void cancelar(){
           }
            }
                         
-                                                public void rellenarComboBox2 (JComboBox comboBoxResultados2Habitaciones2){
+        public void rellenarComboBox2 (JComboBox comboBoxResultados2Habitaciones2){
             Hotel hotel= new Hotel();
             Habitacion habitacion= new Habitacion();
             //Llamamos primero a la consulta que carga todos los datos del hotel seleccionado

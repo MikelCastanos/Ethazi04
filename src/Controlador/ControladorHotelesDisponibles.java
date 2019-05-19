@@ -21,6 +21,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static Modelo.Hotel.hotel1;
 
 /**
  *
@@ -53,8 +54,8 @@ public class ControladorHotelesDisponibles {
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
             iniciostart.setSize(905,720);
-    iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
-    iniciostart.setVisible(true);
+            iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
           
@@ -62,28 +63,28 @@ public class ControladorHotelesDisponibles {
                 
         public void irSeleccionarHabitacion(){
                                         
-            if(Alojamiento.alojamiento1.getNum_habitaciones()==1){
+            if(hotel1.getNum_habitaciones()==1){
                 VistaUnaHabitacionHotel vistauna=new VistaUnaHabitacionHotel();
                 vistauna.setSize(905,720);
-    vistauna.setResizable(false);    vistauna.setLocationRelativeTo(null);
-    vistauna.setVisible(true);
+                vistauna.setResizable(false);    vistauna.setLocationRelativeTo(null);
+                vistauna.setVisible(true);
                 vistauna.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistauna.setVisible(true);
                 
             }
-            if(Alojamiento.alojamiento1.getNum_habitaciones()==2){
+            if(hotel1.getNum_habitaciones()==2){
                 VistaDosHabitacionesHotel vistados=new VistaDosHabitacionesHotel();
                 vistados.setSize(905,720);
-    vistados.setResizable(false);    vistados.setLocationRelativeTo(null);
-    vistados.setVisible(true);
+                vistados.setResizable(false);    vistados.setLocationRelativeTo(null);
+                vistados.setVisible(true);
                 vistados.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistados.setVisible(true);
             }
-            if(Alojamiento.alojamiento1.getNum_habitaciones()==3){
+            if(hotel1.getNum_habitaciones()==3){
                 VistaTresHabitacionesHotel vistatres=new VistaTresHabitacionesHotel();
                 vistatres.setSize(905,720);
-    vistatres.setResizable(false);    vistatres.setLocationRelativeTo(null);
-    vistatres.setVisible(true);
+                vistatres.setResizable(false);    vistatres.setLocationRelativeTo(null);
+                vistatres.setVisible(true);
                 vistatres.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 vistatres.setVisible(true);
             }
@@ -95,8 +96,8 @@ public class ControladorHotelesDisponibles {
             Iterator<String> ite= hotel.HotelPorLugar(seleccionUbicacion).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 
-          }
-           }
+            }
+             }
                          
                          
     

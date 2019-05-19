@@ -32,11 +32,12 @@ public class ControladorResumenDescuento {
                         Promocion.promocion.setCodigoDescuento(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText());;
                             
                             if(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText().equals("")){
-                                     VistaPago vista=new VistaPago();
-                                     vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-                                     vista.setSize(1000,700);
-                                     vista.setLocationRelativeTo(null);
-                                     vista.setVisible(true);
+                                     VistaPago vistab=new VistaPago();
+                                     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
+                                     vistab.setSize(905,720);    
+                                     vistab.setResizable(false);
+                                     vistab.setLocationRelativeTo(null);
+                                     vistab.setVisible(true);
                             }
                             
                             else{

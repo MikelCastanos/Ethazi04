@@ -57,10 +57,12 @@ public void cancelar(){
           }
         
         public void siguienteVentana(){
-            VistaUnaCasa vista1casa=new VistaUnaCasa();
-                   vista1casa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       vista1casa.setBounds(0,0,600,725);
-       vista1casa.setVisible(true);
+            VistaUnaCasa vistab=new VistaUnaCasa();
+                   vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
+                   vistab.setSize(905,720);    
+                   vistab.setResizable(false);
+                   vistab.setLocationRelativeTo(null);
+                   vistab.setVisible(true);
         }
         
         public void comprobarCheckBoxesComplementosCasa(){

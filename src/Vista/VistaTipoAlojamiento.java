@@ -33,12 +33,21 @@ public class VistaTipoAlojamiento extends JFrame{
         group.add(radioApartamento);
         
         radioHotel.setBounds(270,325,20,30);
+        radioHotel.setOpaque(false);
+        radioHotel.setContentAreaFilled(false);
+        radioHotel.setBorderPainted(false);
         add(radioHotel);
         
         radioCasa.setBounds(620,325,20,30);
+        radioCasa.setOpaque(false);
+        radioCasa.setContentAreaFilled(false);
+        radioCasa.setBorderPainted(false);
         add(radioCasa);
         
         radioApartamento.setBounds(450,450,20,30);
+        radioApartamento.setOpaque(false);
+        radioApartamento.setContentAreaFilled(false);
+        radioApartamento.setBorderPainted(false);
         add(radioApartamento);
         
         JLabel mensajeTipoAlojamiento=new JLabel("Seleccione el tipo de alojamiento");

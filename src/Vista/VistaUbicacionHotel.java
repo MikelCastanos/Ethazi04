@@ -33,12 +33,12 @@ public class VistaUbicacionHotel extends JFrame{
         boton_siguiente2=new javax.swing.JButton();
         
         setLayout(null);
-        mensaje_ubicacion=new JLabel("SELECCIONAR UBICACIÓN");
-        mensaje_ubicacion.setBounds(200,200,200,30);
+        mensaje_ubicacion=new JLabel("SELECCIONAR UBICACIÓN:");
+        mensaje_ubicacion.setBounds(380,200,200,30);
         add(mensaje_ubicacion);
         
         ubicacion=new JComboBox();
-        ubicacion.setBounds(180,230,200,30);
+        ubicacion.setBounds(360,230,200,30);
         add(ubicacion);
         
         mensaje_num_habitaciones=new JLabel("Cantidad Habitaciones:");
@@ -46,54 +46,54 @@ public class VistaUbicacionHotel extends JFrame{
         
         //      JLabel y JComboBox del Numero de Habitaciones
         
-        mensaje_num_habitaciones.setBounds(100,300,200,30);
+        mensaje_num_habitaciones.setBounds(280,300,200,30);
         add(mensaje_num_habitaciones);
         
         combobox_numero_habitaciones=new JComboBox();
         combobox_numero_habitaciones.addItem(1);
         combobox_numero_habitaciones.addItem(2);
         combobox_numero_habitaciones.addItem(3);
-        combobox_numero_habitaciones.setBounds(300,300,50,30);
+        combobox_numero_habitaciones.setBounds(480,300,50,30);
         add(combobox_numero_habitaciones);
         
         
         //      JLabel y JDateChooser de la FECHA INICIO
         
         mensaje_fecha_inicio=new JLabel("Fecha Inicio:");
-        mensaje_fecha_inicio.setBounds(90,400,100,30);
+        mensaje_fecha_inicio.setBounds(270,400,100,30);
         add(mensaje_fecha_inicio);
         
         fecha_inicio=new JDateChooser();
         fecha_inicio.setMinSelectableDate(new Date());
-        fecha_inicio.setBounds(170,400,100,30);
+        fecha_inicio.setBounds(350,400,100,30);
         add(fecha_inicio);
         
         //      JLabel y JDateChooser de la FECHA FIN
         
         mensaje_fecha_fin=new JLabel("Fecha Fin:");
-        mensaje_fecha_fin.setBounds(290,400,100,30);
+        mensaje_fecha_fin.setBounds(470,400,100,30);
         add(mensaje_fecha_fin);
         
         fecha_fin=new JDateChooser();
         fecha_fin.setMinSelectableDate(new Date());
-        fecha_fin.setBounds(350,400,100,30);
+        fecha_fin.setBounds(530,400,100,30);
         add(fecha_fin);
         
         boton_siguiente2=new JButton("Siguiente");
-        boton_siguiente2.setBounds(450,600,100,30);
+        boton_siguiente2.setBounds(470,600,100,30);
         add(boton_siguiente2);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
         ControladorUbicacionHotel cont=new ControladorUbicacionHotel(botonCancelar,boton_siguiente2,ubicacion,combobox_numero_habitaciones,fecha_inicio,fecha_fin);
     
         cont.rellenarComboBox(ubicacion);
         
-        ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+        ImageIcon icon=new ImageIcon("src//images/hotel.png");
         JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
         

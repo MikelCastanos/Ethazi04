@@ -31,26 +31,26 @@ public class VistaUbicacionApartamento extends JFrame {
         
          
         JButton botonSiguienteUbicacionApartamento=new JButton("Siguiente");
-        botonSiguienteUbicacionApartamento.setBounds(450,600,100,30);
+        botonSiguienteUbicacionApartamento.setBounds(470,600,100,30);
         add(botonSiguienteUbicacionApartamento);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
         setLayout(null);
 
-        mensajeUbicacionCasa=new JLabel("SELECCIONAR UBICACIÓN APARTAMENTO");
-        mensajeUbicacionCasa.setBounds(200,200,200,30);
+        mensajeUbicacionCasa=new JLabel("SELECCIONAR UBICACIÓN:");
+        mensajeUbicacionCasa.setBounds(380,200,200,30);
         add(mensajeUbicacionCasa);
         
         comboBoxUbicacionApartamento=new JComboBox();
-        comboBoxUbicacionApartamento.setBounds(180,230,200,30);
+        comboBoxUbicacionApartamento.setBounds(360,230,200,30);
         add(comboBoxUbicacionApartamento);
         
         
         numeroPersonasCasa=new JLabel("Cantidad de Personas:");
-        numeroPersonasCasa.setBounds(100,300,200,30);
+        numeroPersonasCasa.setBounds(280,300,200,30);
         add(numeroPersonasCasa);
         
         
@@ -60,31 +60,33 @@ public class VistaUbicacionApartamento extends JFrame {
         comboBoxNumeroPersonasApartamento.addItem(3);
         comboBoxNumeroPersonasApartamento.addItem(4);
         comboBoxNumeroPersonasApartamento.addItem(5);
-        comboBoxNumeroPersonasApartamento.setBounds(300,300,50,30);
+        comboBoxNumeroPersonasApartamento.setBounds(480,300,50,30);
         add(comboBoxNumeroPersonasApartamento);
         
                 //      JLabel y JDateChooser de la FECHA INICIO
         
         labelFechaEntrada=new JLabel("Fecha Inicio:");
-        labelFechaEntrada.setBounds(90,400,100,30);
+        labelFechaEntrada.setBounds(270,400,100,30);
         add(labelFechaEntrada);
         
         fechaEntradaApartamento=new JDateChooser();
         fechaEntradaApartamento.setMinSelectableDate(new Date());
-        fechaEntradaApartamento.setBounds(170,400,100,30);
+        fechaEntradaApartamento.setBounds(350,400,100,30);
         add(fechaEntradaApartamento);
         
         
         //      JLabel y JDateChooser de la FECHA FIN
         
         labelFechaSalida=new JLabel("Fecha Fin:");
-        labelFechaSalida.setBounds(290,400,100,30);
+        labelFechaSalida.setBounds(470,400,100,30);
         add(labelFechaSalida);
         
         fechaSalidaApartamento=new JDateChooser();
         fechaSalidaApartamento.setMinSelectableDate(new Date());
-        fechaSalidaApartamento.setBounds(350,400,100,30);
+        fechaSalidaApartamento.setBounds(530,400,100,30);
         add(fechaSalidaApartamento);
+        
+        
         
         
         //Pasamos lo importante al Controlador y rellenamos el combobox
@@ -95,12 +97,12 @@ public class VistaUbicacionApartamento extends JFrame {
 
 
         
-        
-        ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+        ImageIcon icon=new ImageIcon("src//images/apartamento.png");
         JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
+        
         
         ImageIcon icono=new ImageIcon("src//images/fondo.png");
             logo1=new JLabel(icono);

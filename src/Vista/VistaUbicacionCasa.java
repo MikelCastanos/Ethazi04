@@ -26,26 +26,26 @@ public class VistaUbicacionCasa extends JFrame {
     
         botonSiguienteUbicacionCasa=new javax.swing.JButton();
         botonSiguienteUbicacionCasa=new JButton("Siguiente");
-        botonSiguienteUbicacionCasa.setBounds(450,600,100,30);
+        botonSiguienteUbicacionCasa.setBounds(470,600,100,30);
         add(botonSiguienteUbicacionCasa);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
         setLayout(null);
 
-        mensajeUbicacionCasa=new JLabel("SELECCIONAR UBICACIÓN CASA");
-        mensajeUbicacionCasa.setBounds(200,200,200,30);
+        mensajeUbicacionCasa=new JLabel("SELECCIONAR UBICACIÓN:");
+        mensajeUbicacionCasa.setBounds(380,200,200,30);
         add(mensajeUbicacionCasa);
         
         comboBoxUbicacionCasa=new JComboBox();
-        comboBoxUbicacionCasa.setBounds(180,230,200,30);
+        comboBoxUbicacionCasa.setBounds(360,230,200,30);
         add(comboBoxUbicacionCasa);
         
         
         numeroPersonasCasa=new JLabel("Cantidad de Personas:");
-        numeroPersonasCasa.setBounds(100,300,200,30);
+        numeroPersonasCasa.setBounds(280,300,200,30);
         add(numeroPersonasCasa);
         
         
@@ -55,30 +55,30 @@ public class VistaUbicacionCasa extends JFrame {
         comboBoxNumeroPersonasCasa.addItem(3);
         comboBoxNumeroPersonasCasa.addItem(4);
         comboBoxNumeroPersonasCasa.addItem(5);
-        comboBoxNumeroPersonasCasa.setBounds(300,300,50,30);
+        comboBoxNumeroPersonasCasa.setBounds(480,300,50,30);
         add(comboBoxNumeroPersonasCasa);
         
                 //      JLabel y JDateChooser de la FECHA INICIO
         
         labelFechaEntrada=new JLabel("Fecha Inicio:");
-        labelFechaEntrada.setBounds(90,400,100,30);
+        labelFechaEntrada.setBounds(270,400,100,30);
         add(labelFechaEntrada);
         
         fechaEntradaCasa=new JDateChooser();
         fechaEntradaCasa.setMinSelectableDate(new Date());
-        fechaEntradaCasa.setBounds(170,400,100,30);
+        fechaEntradaCasa.setBounds(350,400,100,30);
         add(fechaEntradaCasa);
         
         
         //      JLabel y JDateChooser de la FECHA FIN
         
         labelFechaSalida=new JLabel("Fecha Fin:");
-        labelFechaSalida.setBounds(290,400,100,30);
+        labelFechaSalida.setBounds(470,400,100,30);
         add(labelFechaSalida);
         
         fechaSalidaCasa=new JDateChooser();
         fechaSalidaCasa.setMinSelectableDate(new Date());
-        fechaSalidaCasa.setBounds(350,400,100,30);
+        fechaSalidaCasa.setBounds(530,400,100,30);
         add(fechaSalidaCasa);
         
         
@@ -91,9 +91,9 @@ public class VistaUbicacionCasa extends JFrame {
 
         
         
-        ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+        ImageIcon icon=new ImageIcon("src//images/casa.png");
         JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
         

@@ -31,95 +31,96 @@ public class VistaComplementosApartamento extends JFrame{
         
         botonSiguienteComplementosApartamento=new javax.swing.JButton();
         botonSiguienteComplementosApartamento=new JButton("Siguiente");
-        botonSiguienteComplementosApartamento.setBounds(450,600,100,30);
+        botonSiguienteComplementosApartamento.setBounds(480,600,100,30);
         add(botonSiguienteComplementosApartamento);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
-        mensajeComplementos=new JLabel("Seleccione los complementos de la Apartamento:");
-        mensajeComplementos.setBounds(200,200,200,30);
+        mensajeComplementos=new JLabel("Seleccione los complementos:");
+        mensajeComplementos.setBounds(375,200,200,30);
         add(mensajeComplementos);
         
         
         //Primera Fila
         
         labelWifi=new JLabel("Wifi:");
-        labelWifi.setBounds(120,250,200,30);
+        labelWifi.setBounds(295,250,200,30);
         add(labelWifi);
         
         checkboxWifiApartamento=new JCheckBox();
-        checkboxWifiApartamento.setBounds(150,250,30,30);
+        checkboxWifiApartamento.setBounds(325,250,30,30);
         add(checkboxWifiApartamento);
         
                 labelPiscina=new JLabel("Piscina:");
-        labelPiscina.setBounds(350,250,200,30);
+        labelPiscina.setBounds(525,250,200,30);
         add(labelPiscina);
         
         checkboxPiscinaApartamento=new JCheckBox();
-        checkboxPiscinaApartamento.setBounds(400,250,30,30);
+        checkboxPiscinaApartamento.setBounds(575,250,30,30);
         add(checkboxPiscinaApartamento);
         
         //Segunda Fila
         
         labelSpa=new JLabel("Spa:");
-        labelSpa.setBounds(120,300,200,30);
+        labelSpa.setBounds(295,300,200,30);
         add(labelSpa);
         
         checkboxSpaApartamento=new JCheckBox();
-        checkboxSpaApartamento.setBounds(150,300,30,30);
+        checkboxSpaApartamento.setBounds(325,300,30,30);
         add(checkboxSpaApartamento);
         
         labelParking=new JLabel("Parking:");
-        labelParking.setBounds(350,300,200,30);
+        labelParking.setBounds(525,300,200,30);
         add(labelParking);
         
         checkboxParkingApartamento=new JCheckBox();
-        checkboxParkingApartamento.setBounds(400,300,30,30);
+        checkboxParkingApartamento.setBounds(575,300,30,30);
         add(checkboxParkingApartamento);
         
         //Tercera Fila
         
         labelAA=new JLabel("Aire Acondicionado:");
-        labelAA.setBounds(32,350,200,30);
+        labelAA.setBounds(207,350,200,30);
         add(labelAA);
         
         checkboxAAApartamento=new JCheckBox();
-        checkboxAAApartamento.setBounds(150,350,30,30);
+        checkboxAAApartamento.setBounds(325,350,30,30);
         add(checkboxAAApartamento);
         
         labelRestaurante=new JLabel("Restaurante:");
-        labelRestaurante.setBounds(325,350,200,30);
+        labelRestaurante.setBounds(500,350,200,30);
         add(labelRestaurante);
         
         checkboxRestauranteApartamento=new JCheckBox();
-        checkboxRestauranteApartamento.setBounds(400,350,30,30);
+        checkboxRestauranteApartamento.setBounds(575,350,30,30);
         add(checkboxRestauranteApartamento);
         
         //Cuarta Fila
         
         labelBar=new JLabel("Bar:");
-        labelBar.setBounds(120,400,200,30);
+        labelBar.setBounds(295,400,200,30);
         add(labelBar);
         
         checkboxBarApartamento=new JCheckBox();
-        checkboxBarApartamento.setBounds(150,400,30,30);
+        checkboxBarApartamento.setBounds(325,400,30,30);
         add(checkboxBarApartamento);
         
         labelGym=new JLabel("Gimnasio:");
-        labelGym.setBounds(340,400,200,30);
+        labelGym.setBounds(515,400,200,30);
         add(labelGym);
         
         checkboxGymApartamento=new JCheckBox();
-        checkboxGymApartamento.setBounds(400,400,30,30);
+        checkboxGymApartamento.setBounds(575,400,30,30);
         add(checkboxGymApartamento);
-        
-                    ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
-            JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+       
+        ImageIcon icon=new ImageIcon("src//images/complementos.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
+                    
         
             ImageIcon icono=new ImageIcon("src//images/fondo.png");
             logo1=new JLabel(icono);
@@ -131,5 +132,6 @@ public class VistaComplementosApartamento extends JFrame{
 
         
     }
+
     
 }

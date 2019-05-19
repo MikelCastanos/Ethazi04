@@ -39,34 +39,13 @@ public class ControladorBienvenida {
         });
     }
         
-        public void abrirVentanaLogin(){
-            
-            //HACER DISPOSE SI HAY AGALLAS.
-            
-            /*
-            VistaUbicacionHotel vistau=new VistaUbicacionHotel();
-            vistau.setSize(916,729);    vistab.setLocationRelativeTo(null);
-    vistab.setVisible(true);
-            vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            vistau.setVisible(true);
-            */
-            
+        public void abrirVentanaLogin(){     
        VistaLogin vista=new VistaLogin();
        vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vista.setSize(916,729);
+    vista.setSize(905,720);
+    vista.setResizable(false);
     vista.setLocationRelativeTo(null);
     vista.setVisible(true);
-
-
-
-        /*
-            VistaUbicacionHotel vistau=new VistaUbicacionHotel();
-            vistau.setSize(916,729);    vistab.setLocationRelativeTo(null);
-    vistab.setVisible(true);
-            vistau.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            vistau.setVisible(true);
-
-        */
         }
     
     

@@ -46,7 +46,8 @@ public void cancelar(){
             cantidad_insertada=0;
             VistaBienvenida vista=new VistaBienvenida();
             vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vista.setSize(916,729);
+    vista.setSize(905,720);
+    vista.setResizable(false);
     vista.setLocationRelativeTo(null);
     vista.setVisible(true);
           
@@ -57,7 +58,8 @@ public void cancelar(){
                   
             
             vista2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vista2.setSize(916,729);
+    vista2.setSize(905,720);
+    vista2.setResizable(false);
     vista2.setLocationRelativeTo(null);
     vista2.setVisible(true);
        

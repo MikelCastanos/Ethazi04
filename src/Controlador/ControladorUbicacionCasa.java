@@ -52,7 +52,8 @@ public void cancelar(){
           JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
-            iniciostart.setSize(916,729);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setSize(905,720);
+    iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
     iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
@@ -130,18 +131,9 @@ public void cancelar(){
 
 
     public void siguienteVentanaCasa(){
-        
-
-//            VistaEleccion vistae=new VistaEleccion();
-//            vistae.setSize(916,729);    vistab.setLocationRelativeTo(null);
-
-//            vistae.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//            vistae.setVisible(true);
-           // cogerDatos(ubicacion,combobox_numero_habitaciones);
-            
-            
             VistaComplementosCasa VistaCompleCa=new VistaComplementosCasa();
-                VistaCompleCa.setSize(916,729);    VistaCompleCa.setLocationRelativeTo(null);
+                VistaCompleCa.setSize(905,720);
+    VistaCompleCa.setResizable(false);    VistaCompleCa.setLocationRelativeTo(null);
     VistaCompleCa.setVisible(true);
                 VistaCompleCa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 VistaCompleCa.setVisible(true);

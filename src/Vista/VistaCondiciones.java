@@ -24,29 +24,38 @@ public class VistaCondiciones extends JFrame {
         
         
         JLabel Condiciones = new JLabel("Bidai_ON mantiene este sitio web como un servicio para sus ");
-        Condiciones.setBounds(100,100,400,300);
+        Condiciones.setBounds(280,100,400,300);
         add(Condiciones);
         
         JLabel Condiciones1 = new JLabel("visitantes y sus clientes. Para seguir utilizando este sitio web o");
-        Condiciones1.setBounds(100,120,400,300);
+        Condiciones1.setBounds(280,120,400,300);
         add(Condiciones1);
         
         JLabel Condiciones2 = new JLabel("contratar cualquiera de nuestros servicios, usted acepta atenerse a");
-        Condiciones2.setBounds(100,140,400,300);
+        Condiciones2.setBounds(280,140,400,300);
         add(Condiciones2);
         
         JLabel Condiciones3 = new JLabel("los Términos y Condiciones de nuestra firma: Bidai_ON S.L.");
-        Condiciones3.setBounds(100,160,400,300);
+        Condiciones3.setBounds(280,160,400,300);
         add(Condiciones3);
         
-        JRadioButton radioCondiciones = new JRadioButton("He leído y acepto los terminos y las condiciones.");
-        
+        JRadioButton radioCondiciones = new JRadioButton("He leído y SÍ acepto los términos y las condiciones.");
+        JRadioButton radioCondiciones2 = new JRadioButton("No acepto los términos y las condiciones.");
         
         ButtonGroup group = new ButtonGroup();
         group.add(radioCondiciones);
+        group.add(radioCondiciones2);
         
-        radioCondiciones.setBounds(110,400,300,30);
+        radioCondiciones.setBounds(310,500,325,30);
+        radioCondiciones.setOpaque(false);
+        radioCondiciones.setContentAreaFilled(false);
+        radioCondiciones.setBorderPainted(false);
         add(radioCondiciones);
+        radioCondiciones2.setBounds(310,525,265,30);
+        radioCondiciones2.setOpaque(false);
+        radioCondiciones2.setContentAreaFilled(false);
+        radioCondiciones2.setBorderPainted(false);
+        add(radioCondiciones2);
 
         
         JButton botonTipoAlojamiento=new JButton("Siguiente");
@@ -57,15 +66,15 @@ public class VistaCondiciones extends JFrame {
         botonCancelar.setBounds(340,600,100,30);
         add(botonCancelar);
         
-            /*    ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
+            ImageIcon icon=new ImageIcon("src//images/Tit_Terminos.png");
         JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            logo2.setSize(900,200);
             add(logo2);
-            validate();*/
+            validate();
         
         ImageIcon icono=new ImageIcon("src//images/fondo.png");
             logo1=new JLabel(icono);
-            logo1.setSize(900,690);
+            logo1.setSize(900,692);
             add(logo1);
             validate();
         

@@ -58,7 +58,8 @@ public class ControladorCondiciones extends JFrame {
                   
                 VistaTipoAlojamiento vistaUH=new VistaTipoAlojamiento();        
                 vistaUH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vistaUH.setSize(916,729);
+    vistaUH.setSize(905,720);
+    vistaUH.setResizable(false);
     vistaUH.setLocationRelativeTo(null);
     vistaUH.setVisible(true);
                 aceptado= 'S';
@@ -74,7 +75,8 @@ public class ControladorCondiciones extends JFrame {
             cantidad_insertada=0;
             VistaBienvenida vista=new VistaBienvenida();
             vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-    vista.setSize(916,729);
+    vista.setSize(905,720);
+    vista.setResizable(false);
     vista.setLocationRelativeTo(null);
     vista.setVisible(true);
           

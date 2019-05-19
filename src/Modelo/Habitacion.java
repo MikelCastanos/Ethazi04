@@ -20,9 +20,7 @@ public class Habitacion extends Hotel{
     ArrayList<Hotel>habitacionSelecionada= new ArrayList<Hotel>();
 
     
-public static Habitacion habitacion1=new Habitacion();
-public static Habitacion habitacion2=new Habitacion();
-public static Habitacion habitacion3=new Habitacion();
+
 
     public Habitacion() {
     }
@@ -63,6 +61,10 @@ public static Habitacion habitacion3=new Habitacion();
     public String toString() {
         return "Habitacion{" + "cod_habitacion=" + cod_habitacion + ", cama_simple=" + cama_simple + ", cama_doble=" + cama_doble + ", cama_nino=" + cama_nino + '}';
     }
+    
+    public static Habitacion habitacion1=new Habitacion();
+    public static Habitacion habitacion2=new Habitacion();
+    public static Habitacion habitacion3=new Habitacion();
 
     public ArrayList<String>habitacionesHotel(int codigoHotel){
 

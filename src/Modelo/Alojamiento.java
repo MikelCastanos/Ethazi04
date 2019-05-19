@@ -133,11 +133,19 @@ public class Alojamiento {
     public void setPrecioFinal(double precioFinal) {
         this.precioFinal = precioFinal;
     }
-    
-    
+  
+    public static Alojamiento alojamiento1=new Alojamiento();
+    public static Alojamiento alojamiento2=new Alojamiento();
+    public static Alojamiento alojamiento3=new Alojamiento();
+
+    @Override
+    public String toString() {
+        return "Alojamiento{" + "calle=" + calle + ", ciudad=" + ciudad + ", codigo_postal=" + codigo_postal + ", num_habitaciones=" + num_habitaciones + ", fechaEntrada=" + fechaEntrada + ", fechaSalida=" + fechaSalida + ", diasEstancia=" + diasEstancia + ", precioBase=" + precioBase + ", precioFestivo=" + precioFestivo + ", precioEstival=" + precioEstival + ", cantidadDiasFestivos=" + cantidadDiasFestivos + ", cantidadDiasNormales=" + cantidadDiasNormales + ", precioFinal=" + precioFinal + '}';
+    }
 
  //Le pasasmo al metodo por parametros las fechas de entrada y salida acceciendo al getter corresponiendo de cada objeto
  //retorna los dias festivos
+    
     public  int  calcularDiasFestivos(String fechaEntrada,String fechaSalida){
         System.out.println(fechaEntrada+""+fechaSalida);
         Conexion conexion= new Conexion();
@@ -150,9 +158,6 @@ public class Alojamiento {
             while(rs.next())
             {
                   diasFestivos++;
-//                Alojamiento.alojamiento1.setCantidadDiasFestivos(Alojamiento.alojamiento1.getCantidadDiasFestivos()+1);
-//                System.out.println("Hay un festivo.");
-//                System.out.println(Alojamiento.alojamiento1.getCantidadDiasFestivos());
             }
 
             }
@@ -161,8 +166,6 @@ public class Alojamiento {
                 JOptionPane.showMessageDialog(null,ex);
             }
         
-//      Alojamiento.alojamiento1.setCantidadDiasNormales(Alojamiento.alojamiento1.getDiasEstancia()-Alojamiento.alojamiento1.getCantidadDiasFestivos());
-
         
         return diasFestivos;
     }
@@ -177,16 +180,7 @@ public class Alojamiento {
         return diasNormales;
         
     }
-    
-    
-    public static Alojamiento alojamiento1=new Alojamiento();
-    public static Alojamiento alojamiento2=new Alojamiento();
-    public static Alojamiento alojamiento3=new Alojamiento();
 
-    @Override
-    public String toString() {
-        return "Alojamiento{" + "calle=" + calle + ", ciudad=" + ciudad + ", codigo_postal=" + codigo_postal + ", num_habitaciones=" + num_habitaciones + ", fechaEntrada=" + fechaEntrada + ", fechaSalida=" + fechaSalida + ", diasEstancia=" + diasEstancia + ", precioBase=" + precioBase + ", precioFestivo=" + precioFestivo + ", precioEstival=" + precioEstival + ", cantidadDiasFestivos=" + cantidadDiasFestivos + ", cantidadDiasNormales=" + cantidadDiasNormales + ", precioFinal=" + precioFinal + '}';
-    }
 
     public double calcularPrecioFinal(double precioBase,double precioFestivo,int cantidadDiasFestivos,int cantidadDiasNormales){
     

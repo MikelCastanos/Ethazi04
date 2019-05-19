@@ -22,6 +22,7 @@ import Vista.VistaResumenDescuento;
 import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static Modelo.Apartamento.apartamento1;
 
 /**
  *
@@ -34,9 +35,10 @@ public class ControladorUnApartamento {
             botonSiguienteUnaApartamento.addMouseListener(new MouseAdapter(){
                 public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Apartamento");
-                Alojamiento.alojamiento1.calcularDiasFestivos();
+                Alojamiento alojamiento= new Alojamiento();
+                alojamiento.calcularDiasFestivos(apartamento1.getFechaEntrada(),apartamento1.getFechaSalida());
+                
                 habitacionSeleccionada(comboBoxResultadosApartamento);
-//                Apartamento apart = new Apartamento();
                 apartamento1.datosApartamentoSeleccionado(apartamento1.getCodigoApartamento());
                 
                 apartamento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
@@ -44,8 +46,8 @@ public class ControladorUnApartamento {
                 
                 VistaResumenDescuento ResumenDescuentoApartamento=new VistaResumenDescuento();
                 ResumenDescuentoApartamento.setSize(905,720);
-    ResumenDescuentoApartamento.setResizable(false);    ResumenDescuentoApartamento.setLocationRelativeTo(null);
-    ResumenDescuentoApartamento.setVisible(true);
+                ResumenDescuentoApartamento.setResizable(false);    ResumenDescuentoApartamento.setLocationRelativeTo(null);
+                ResumenDescuentoApartamento.setVisible(true);
                 ResumenDescuentoApartamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 ResumenDescuentoApartamento.setVisible(true);
             }

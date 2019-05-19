@@ -23,43 +23,37 @@ public class VistaTipoAlojamiento extends JFrame{
     public VistaTipoAlojamiento(){
         setLayout(null);
         
-        JRadioButton radioHotel = new JRadioButton("Hotel");
-        JRadioButton radioCasa = new JRadioButton("Casa");
-        JRadioButton radioApartamento = new JRadioButton("Apartamento");
+        JRadioButton radioHotel = new JRadioButton();
+        JRadioButton radioCasa = new JRadioButton();
+        JRadioButton radioApartamento = new JRadioButton();
         
         ButtonGroup group = new ButtonGroup();
         group.add(radioHotel);
         group.add(radioCasa);
         group.add(radioApartamento);
         
-        radioHotel.setBounds(250,200,100,30);
+        radioHotel.setBounds(270,325,20,30);
         add(radioHotel);
         
-        radioCasa.setBounds(250,250,100,30);
+        radioCasa.setBounds(620,325,20,30);
         add(radioCasa);
         
-        radioApartamento.setBounds(250,300,100,30);
+        radioApartamento.setBounds(450,450,20,30);
         add(radioApartamento);
         
         JLabel mensajeTipoAlojamiento=new JLabel("Seleccione el tipo de alojamiento");
-        mensajeTipoAlojamiento.setBounds(50,250,200,30);
+        mensajeTipoAlojamiento.setBounds(370,200,200,30);
         add(mensajeTipoAlojamiento);
         
         JButton botonTipoAlojamiento=new JButton("Siguiente");
-        botonTipoAlojamiento.setBounds(450,600,100,30);
+        botonTipoAlojamiento.setBounds(470,600,100,30);
         add(botonTipoAlojamiento);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
-                ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
-        JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
-            add(logo2);
-            validate();
-        
-        ImageIcon icono=new ImageIcon("src//images/fondo.png");
+        ImageIcon icono=new ImageIcon("src//images/fondo_tipoaloj.png");
             logo1=new JLabel(icono);
             logo1.setSize(900,692);
             add(logo1);

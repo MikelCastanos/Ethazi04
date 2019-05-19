@@ -61,13 +61,13 @@ public class ControladorUnApartamento {
         
             }
 
-public void cancelar(){
-          JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
+        public void cancelar(){
+            JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
             cantidad_insertada=0;
             VistaBienvenida iniciostart=new VistaBienvenida();
             iniciostart.setSize(905,720);
-    iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
-    iniciostart.setVisible(true);
+            iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setVisible(true);
             iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             iniciostart.setVisible(true);
           
@@ -81,7 +81,7 @@ public void cancelar(){
             Apartamento apartamento= new Apartamento();
 //            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
             
-            Iterator<String> ite= apartamento.ApartamentoPorLugarYpersonas(Alojamiento.alojamiento1.getCiudad(),Apartamento.apartamento1.getNum_personas()).iterator();
+            Iterator<String> ite= apartamento.ApartamentoPorLugarYpersonas(apartamento1.getCiudad(),Apartamento.apartamento1.getNum_personas()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 
           }

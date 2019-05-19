@@ -73,8 +73,8 @@ public class Apartamento extends Casa {
             ArrayList<String> consulta = new ArrayList<String>();
             String query="select * from apartamento where maximo_huespedes>="+numeroDePersonas+" AND ciudad='"+ubicacionApartamento+"' "
                     + "AND apartamento.cod_apartamento NOT IN (SELECT cod_apartamento from reserva "
-                    + "where fecha_entrada >='"+Alojamiento.alojamiento1.getFechaEntrada()+"' and  "
-                    + "fecha_salida <='"+Alojamiento.alojamiento1.getFechaSalida()+"');";
+                    + "where fecha_entrada >='"+apartamento1.getFechaEntrada()+"' and  "
+                    + "fecha_salida <='"+apartamento1.getFechaSalida()+"');";
             ResultSet rs= consultas.consultaBD(query);
             try{
                 while(rs.next()){

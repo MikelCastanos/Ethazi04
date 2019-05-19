@@ -14,7 +14,7 @@ import vista.VistaPago;
  */
 public class ControladorResumenDescuento {
     
-                        public ControladorResumenDescuento(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
+        public ControladorResumenDescuento(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
         botonSiguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Probando");
@@ -28,22 +28,22 @@ public class ControladorResumenDescuento {
         });}
                         
                         
-                        public void cogerCodigoDescuento(){
-                        Promocion.promocion.setCodigoDescuento(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText());;
-                            
-                            if(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText().equals("")){
-                                     VistaPago vista=new VistaPago();
-                                     vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-                                     vista.setSize(1000,700);
-                                     vista.setLocationRelativeTo(null);
-                                     vista.setVisible(true);
-                            }
-                            
-                            else{
-                               Promocion.promocion.checkPromocion(); 
-                                
-                            }
-                        }
+        public void cogerCodigoDescuento(){
+        Promocion.promocion.setCodigoDescuento(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText());;
+
+            if(Vista.VistaResumenDescuento.fieldCodigoDescuento.getText().equals("")){
+                     VistaPago vista=new VistaPago();
+                     vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+                     vista.setSize(1000,700);
+                     vista.setLocationRelativeTo(null);
+                     vista.setVisible(true);
+            }
+
+            else{
+               Promocion.promocion.checkPromocion(); 
+
+            }
+        }
     
                         
 

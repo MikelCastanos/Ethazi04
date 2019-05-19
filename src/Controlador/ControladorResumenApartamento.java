@@ -14,7 +14,7 @@ import vista.VistaPago;
  */
 public class ControladorResumenApartamento {
     
-                        public ControladorResumenApartamento(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
+        public ControladorResumenApartamento(JButton botonCancelar,JButton botonSiguiente,JTextField fieldCodigoDescuento){
         botonSiguiente.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Probando");

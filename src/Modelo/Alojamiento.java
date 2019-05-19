@@ -169,7 +169,7 @@ public class Alojamiento {
         
         return diasFestivos;
     }
-    
+    //Calcula los dias nrmales de estamcia (No festivos)
     //Llamar a este metodo pasandole por parametro (calcularDiasFestivos(getterCorresponientea la fecha entrada y el otro de la fechaSalida),getDiasEstancia)
     public int calcularDiasNormales(int diasFestivos,int diasEstancia){
         
@@ -181,7 +181,7 @@ public class Alojamiento {
         
     }
 
-
+//Calcula el precio final dela estamcia 
     public double calcularPrecioFinal(double precioBase,double precioFestivo,int cantidadDiasFestivos,int cantidadDiasNormales){
     
         double precioFinal=0;

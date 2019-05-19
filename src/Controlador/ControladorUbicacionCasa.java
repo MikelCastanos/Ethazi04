@@ -10,6 +10,7 @@ import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 import Vista.*;
 import Modelo.*;
+import static Modelo.Apartamento.apartamento1;
 import java.awt.event.MouseEvent;
 import java.util.Iterator;
 import javax.swing.JComboBox;
@@ -38,6 +39,12 @@ public class ControladorUbicacionCasa {
                 
                 cogerDatosUbicacionCasa(comboBoxUbicacionCasa,comboBoxNumeroPersonasCasa,fechaEntradaCasa,fechaSalidaCasa);
                 siguienteVentanaCasa();
+                
+                Alojamiento alojamiento= new Alojamiento();
+        
+                casa1.setCantidadDiasFestivos(alojamiento.calcularDiasFestivos(casa1.getFechaEntrada(),casa1.getFechaSalida()));
+                casa1.setCantidadDiasNormales(alojamiento.calcularDiasNormales(alojamiento.calcularDiasFestivos(casa1.getFechaEntrada(),casa1.getFechaSalida()),casa1.getDiasEstancia()));
+
             }
             
         });

@@ -78,7 +78,7 @@ public class Habitacion extends Hotel{
             " INNER JOIN habitacion_hotel ON camas.cod_habitacion_hotel=habitacion_hotel.cod_habitacion_hotel" +
             " WHERE habitacion_hotel.cod_hotel=(SELECT cod_hotel from hotel WHERE cod_hotel="+codigoHotel+")" +
             " AND habitacion_hotel.cod_hotel NOT IN (SELECT cod_hotel from reserva where fecha_entrada"
-            + " >='"+Alojamiento.alojamiento1.getFechaEntrada()+"' and  fecha_salida <='"+Alojamiento.alojamiento1.getFechaSalida()+"');";
+            + " >='"+hotel1.getFechaEntrada()+"' and  fecha_salida <='"+hotel1.getFechaSalida()+"');";
         ResultSet rs= consultas.consultaBD(query);
             
         try{
@@ -111,10 +111,10 @@ public class Habitacion extends Hotel{
             
         try{
             while(rs.next()){
-                alojamiento1.setPrecioBase(rs.getDouble(1));
-                alojamiento1.setPrecioFestivo(rs.getDouble(2));
-                alojamiento1.setPrecioEstival(rs.getDouble(3));
-                habitacion2.setCama_doble(rs.getInt(4));
+                hotel1.setPrecioBase(rs.getDouble(1));
+                hotel1.setPrecioFestivo(rs.getDouble(2));
+                hotel1.setPrecioEstival(rs.getDouble(3));
+                habitacion1.setCama_doble(rs.getInt(4));
                 habitacion1.setCama_simple(rs.getInt(5));
                 habitacion1.setCama_nino(rs.getInt(6));
 

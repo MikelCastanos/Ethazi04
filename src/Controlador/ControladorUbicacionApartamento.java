@@ -24,6 +24,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static Modelo.Apartamento.apartamento1;
+import static Modelo.Hotel.hotel1;
 
 /**
  *
@@ -33,10 +34,18 @@ public class ControladorUbicacionApartamento {
     
         public ControladorUbicacionApartamento(JButton botonCancelar,JButton botonSiguienteUbicacionApartamento,JComboBox comboBoxUbicacionApartamento,JComboBox comboBoxNumeroPersonasApartamento,JDateChooser fechaEntradaApartamento,JDateChooser fechaSalidaApartamento){
         botonSiguienteUbicacionApartamento.addMouseListener(new MouseAdapter(){
-            public void mouseClicked(MouseEvent e){
+        public void mouseClicked(MouseEvent e){
+                
+        Alojamiento alojamiento= new Alojamiento();
+        
+        apartamento1.setCantidadDiasFestivos(alojamiento.calcularDiasFestivos(apartamento1.getFechaEntrada(),apartamento1.getFechaSalida()));
+        apartamento1.setCantidadDiasNormales(alojamiento.calcularDiasNormales(alojamiento.calcularDiasFestivos(apartamento1.getFechaEntrada(),apartamento1.getFechaSalida()),apartamento1.getDiasEstancia()));
+
                 
         cogerDatosUbicacionApartamento(comboBoxUbicacionApartamento,comboBoxNumeroPersonasApartamento,fechaEntradaApartamento,fechaSalidaApartamento);
         siguienteVentanaApartamento();
+        
+        
                 
                 
             }

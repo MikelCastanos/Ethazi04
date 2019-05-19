@@ -59,9 +59,9 @@ public class ControladorDosHabitaciones {
           
           }
                 
-                public void habitacionSeleccionada(JComboBox comboBoxResultados2Habitaciones1,JComboBox comboBoxResultados2Habitaciones2){
-                comboBoxResultados2Habitaciones1.getSelectedItem();
-                comboBoxResultados2Habitaciones2.getSelectedItem();
+        public void habitacionSeleccionada(JComboBox comboBoxResultados2Habitaciones1,JComboBox comboBoxResultados2Habitaciones2){
+        comboBoxResultados2Habitaciones1.getSelectedItem();
+        comboBoxResultados2Habitaciones2.getSelectedItem();
             }
                 
         public void rellenarComboBox (JComboBox comboBoxResultados2Habitaciones1){

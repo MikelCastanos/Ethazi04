@@ -48,7 +48,7 @@ public class VistaDosHabitacionesHotel extends JFrame{
         comboBoxResultados2Habitaciones1.setBounds(50,280,200,30);
         add(comboBoxResultados2Habitaciones1);
         
-                comboBoxResultados2Habitaciones2=new JComboBox();
+        comboBoxResultados2Habitaciones2=new JComboBox();
         comboBoxResultados2Habitaciones2.setBounds(300,280,200,30);
         add(comboBoxResultados2Habitaciones2);
         
@@ -65,10 +65,10 @@ public class VistaDosHabitacionesHotel extends JFrame{
             add(logo1);
             validate();
             
-                                        ControladorDosHabitaciones controladorDosHab=new ControladorDosHabitaciones(botonCancelar,botonSiguienteDosHabitaciones,comboBoxResultados2Habitaciones1,comboBoxResultados2Habitaciones2);
-                controladorDosHab.rellenarComboBox1(comboBoxResultados2Habitaciones1);
-                controladorDosHab.rellenarComboBox2(comboBoxResultados2Habitaciones2);
-                //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
+            ControladorDosHabitaciones controladorDosHab=new ControladorDosHabitaciones(botonCancelar,botonSiguienteDosHabitaciones,comboBoxResultados2Habitaciones1,comboBoxResultados2Habitaciones2);
+            controladorDosHab.rellenarComboBox(comboBoxResultados2Habitaciones1);
+            controladorDosHab.rellenarComboBox2(comboBoxResultados2Habitaciones2);
+            //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     
     

@@ -27,24 +27,24 @@ public class VistaUnaHabitacionHotel extends JFrame {
         
         botonSiguienteUnaHabitacion=new javax.swing.JButton();
         botonSiguienteUnaHabitacion=new JButton("Siguiente");
-        botonSiguienteUnaHabitacion.setBounds(450,600,100,30);
+        botonSiguienteUnaHabitacion.setBounds(480,600,100,30);
         add(botonSiguienteUnaHabitacion);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
         labelResultadosHabitacion=new JLabel("Estos son las  habitaciones:");
-        labelResultadosHabitacion.setBounds(200,200,200,30);
+        labelResultadosHabitacion.setBounds(350,280,300,30);
         add(labelResultadosHabitacion);
         
         comboBoxResultadosHabitaciones=new JComboBox();
-        comboBoxResultadosHabitaciones.setBounds(180,230,200,30);
+        comboBoxResultadosHabitaciones.setBounds(355,330,200,30);
         add(comboBoxResultadosHabitaciones);
         
-            ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
-            JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            ImageIcon icon=new ImageIcon("src//images/disponible.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
         

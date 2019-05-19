@@ -30,24 +30,24 @@ public class VistaUnaCasa extends JFrame{
         
         botonSiguienteUnaCasa=new javax.swing.JButton();
         botonSiguienteUnaCasa=new JButton("Siguiente");
-        botonSiguienteUnaCasa.setBounds(450,600,100,30);
+        botonSiguienteUnaCasa.setBounds(480,600,100,30);
         add(botonSiguienteUnaCasa);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
         labelResultadosHabitacion=new JLabel("Estas son las casas disponibles:");
-        labelResultadosHabitacion.setBounds(200,200,200,30);
+        labelResultadosHabitacion.setBounds(350,280,300,30);
         add(labelResultadosHabitacion);
         
         comboBoxResultadosCasa=new JComboBox();
-        comboBoxResultadosCasa.setBounds(180,230,200,30);
+        comboBoxResultadosCasa.setBounds(355,330,200,30);
         add(comboBoxResultadosCasa);
         
-            ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
-            JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            ImageIcon icon=new ImageIcon("src//images/disponible.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
         
@@ -59,7 +59,6 @@ public class VistaUnaCasa extends JFrame{
             
                             ControladorUnaCasa controladorUnaCasa=new ControladorUnaCasa(botonCancelar,botonSiguienteUnaCasa,comboBoxResultadosCasa);
                             controladorUnaCasa.rellenarComboBox(comboBoxResultadosCasa);
-                //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     
 }

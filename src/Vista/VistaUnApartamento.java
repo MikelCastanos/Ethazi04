@@ -31,24 +31,24 @@ public class VistaUnApartamento extends JFrame{
         
         botonSiguienteUnaApartamento=new javax.swing.JButton();
         botonSiguienteUnaApartamento=new JButton("Siguiente");
-        botonSiguienteUnaApartamento.setBounds(450,600,100,30);
+        botonSiguienteUnaApartamento.setBounds(480,600,100,30);
         add(botonSiguienteUnaApartamento);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
-        labelResultadosHabitacion=new JLabel("Estas son los Apartamentos disponibles:");
-        labelResultadosHabitacion.setBounds(200,200,200,30);
+        labelResultadosHabitacion=new JLabel("Estos son los Apartamentos disponibles:");
+        labelResultadosHabitacion.setBounds(350,280,300,30);
         add(labelResultadosHabitacion);
         
         comboBoxResultadosApartamento=new JComboBox();
-        comboBoxResultadosApartamento.setBounds(180,230,200,30);
+        comboBoxResultadosApartamento.setBounds(355,330,200,30);
         add(comboBoxResultadosApartamento);
         
-            ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
-            JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            ImageIcon icon=new ImageIcon("src//images/disponible.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
         
@@ -63,4 +63,5 @@ public class VistaUnApartamento extends JFrame{
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionApartamento);
     }
     
+        
 }

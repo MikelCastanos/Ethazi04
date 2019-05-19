@@ -71,5 +71,17 @@ public class VistaDosHabitacionesHotel extends JFrame{
             //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     
+    public static void main(String[] args) {
+
+        VistaDosHabitacionesHotel vistab = new VistaDosHabitacionesHotel();
+
+        vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        vistab.setSize(905, 720);
+
+        vistab.setResizable(false);
+        vistab.setLocationRelativeTo(null);
+        vistab.setVisible(true);
+
+    }
     
 }

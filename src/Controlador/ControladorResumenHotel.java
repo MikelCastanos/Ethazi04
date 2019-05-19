@@ -32,11 +32,11 @@ public class ControladorResumenHotel {
         Promocion.promocion.setCodigoDescuento(Vista.VistaResumenHotel.fieldCodigoDescuento.getText());;
 
             if(Vista.VistaResumenHotel.fieldCodigoDescuento.getText().equals("")){
-                     VistaPago vista=new VistaPago();
-                     vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
-                     vista.setSize(1000,700);
-                     vista.setLocationRelativeTo(null);
-                     vista.setVisible(true);
+                     VistaPago vistab=new VistaPago();
+                     vistab.setSize(905,720);
+                     vistab.setResizable(false);
+                     vistab.setLocationRelativeTo(null);
+                     vistab.setVisible(true);
             }
 
             else{

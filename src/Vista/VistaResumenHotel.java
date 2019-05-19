@@ -98,7 +98,7 @@ ControladorResumenHotel contCD=new ControladorResumenHotel(botonCancelar,botonSi
     }
 public static void main(String[] args){ 
 
-    VistaResumenDescuento vistab=new VistaResumenDescuento();
+    VistaResumenHotel vistab=new VistaResumenHotel();
     
     vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
     vistab.setSize(905,720);

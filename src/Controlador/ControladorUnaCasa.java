@@ -19,6 +19,7 @@ import Vista.VistaResumenDescuento;
 import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static Modelo.Casa.casa1;
 
 /**
  *
@@ -30,7 +31,9 @@ public class ControladorUnaCasa {
         botonSiguienteUnaCasa.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Casa");
-                Alojamiento.alojamiento1.calcularDiasFestivos();
+                Alojamiento alojamiento= new Alojamiento();
+                alojamiento.calcularDiasFestivos(casa1.getFechaEntrada(),casa1.getFechaSalida());
+                
                 casaSeleccionada(comboBoxResultadosCasa);
                 
             VistaResumenDescuento ResumenDescuentoCasa=new VistaResumenDescuento();

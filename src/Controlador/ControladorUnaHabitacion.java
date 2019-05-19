@@ -42,37 +42,39 @@ public class ControladorUnaHabitacion {
                 //Setteamos el precio final del alojamiento() y llamamos dentro al metodo que calcula el precio final
                 //lepasamos por paramentros el precio base el festivo cantidad de dias festivos cantidad de dias normales 
                 
-                alojamiento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
-                alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
+                hotel1.setPrecioFinal(hotel1.calcularPrecioFinal(hotel1.getPrecioBase(), hotel1.getPrecioFestivo(), 
+                hotel1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
                 
   
                 
                 VistaResumenDescuento ResumenDescuentoHotel=new VistaResumenDescuento();
                 ResumenDescuentoHotel.setSize(905,720);
-    ResumenDescuentoHotel.setResizable(false);    ResumenDescuentoHotel.setLocationRelativeTo(null);
-    ResumenDescuentoHotel.setVisible(true);
+                ResumenDescuentoHotel.setResizable(false);    ResumenDescuentoHotel.setLocationRelativeTo(null);
+                ResumenDescuentoHotel.setVisible(true);
                 ResumenDescuentoHotel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 ResumenDescuentoHotel.setVisible(true);
             }
             
             });
-        botonCancelar.addMouseListener(new MouseAdapter(){
+        
+            botonCancelar.addMouseListener(new MouseAdapter(){
                  public void mouseClicked(MouseEvent a){
                     cancelar();
-        }
-             });
+            }
+             }
+            );
         
             }
 
         public void cancelar(){
             JOptionPane.showMessageDialog(null,"Pedido cancelado. Volverá a la pantalla de inicio. ¡Hasta la proxima!");
-              cantidad_insertada=0;
-              VistaBienvenida iniciostart=new VistaBienvenida();
-              iniciostart.setSize(905,720);
-    iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
-    iniciostart.setVisible(true);
-              iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-              iniciostart.setVisible(true);
+            cantidad_insertada=0;
+            VistaBienvenida iniciostart=new VistaBienvenida();
+            iniciostart.setSize(905,720);
+            iniciostart.setResizable(false);    iniciostart.setLocationRelativeTo(null);
+            iniciostart.setVisible(true);
+            iniciostart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            iniciostart.setVisible(true);
 
           }
         public void rellenarComboBox (JComboBox comboBoxResultadosHabitaciones){

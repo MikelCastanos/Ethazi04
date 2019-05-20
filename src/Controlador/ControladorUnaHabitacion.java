@@ -13,6 +13,7 @@ import Controlador.ControladorTipoAlojamiento;
 import Modelo.Alojamiento;
 import static Modelo.Alojamiento.alojamiento1;
 import Modelo.Habitacion;
+import static Modelo.Habitacion.habitacion1;
 import Modelo.Hotel;
 import Vista.VistaBienvenida;
 import Vista.VistaResumenHotel;
@@ -41,7 +42,11 @@ public class ControladorUnaHabitacion {
                
                 //Setteamos el precio final del alojamiento() y llamamos dentro al metodo que calcula el precio final
                 //lepasamos por paramentros el precio base el festivo cantidad de dias festivos cantidad de dias normales 
+                habitacionSeleccionada(comboBoxResultadosHabitaciones);
                 
+                System.out.println("Probanding");
+                System.out.println(hotel1.getPrecioBase());
+                System.out.println(hotel1.getPrecioFestivo());
                 hotel1.setPrecioFinal(hotel1.calcularPrecioFinal(hotel1.getPrecioBase(), hotel1.getPrecioFestivo(), 
                 hotel1.getCantidadDiasFestivos(),hotel1.getCantidadDiasNormales()));
                 

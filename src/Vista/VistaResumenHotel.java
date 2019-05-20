@@ -35,7 +35,7 @@ public class VistaResumenHotel extends JFrame {
         
                 setLayout(null);
                 
-                resumenHotel=new JTextField("Hotel: "+Hotel.hotel1.getNombreHotel()+" Ciudad: "+Hotel.hotel1.getCiudad()+" Numero Habitaciones: "+Alojamiento.alojamiento1.getNum_habitaciones());
+                resumenHotel=new JTextField("Hotel: "+Hotel.hotel1.getNombreHotel()+" Ciudad: "+Hotel.hotel1.getCiudad()+" Numero Habitaciones: "+Hotel.hotel1.getNum_habitaciones());
                 resumenHotel.setBounds(300,200,300,30);
                 resumenHotel.setEditable(false);
                 add(resumenHotel);

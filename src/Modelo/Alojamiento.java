@@ -27,6 +27,16 @@ public class Alojamiento {
     protected int cantidadDiasFestivos;
     protected int cantidadDiasNormales;
     protected double precioFinal;
+    protected String tipoAlojamiento;
+
+    public String getTipoAlojamiento() {
+        return tipoAlojamiento;
+    }
+
+    public void setTipoAlojamiento(String tipoAlojamiento) {
+        this.tipoAlojamiento = tipoAlojamiento;
+    }
+    
     
     
 

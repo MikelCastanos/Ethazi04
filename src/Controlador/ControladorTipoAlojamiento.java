@@ -1,6 +1,7 @@
 package Controlador;
 
 import static Controlador.ControladorPago.cantidad_insertada;
+import Modelo.Alojamiento;
 import Vista.VistaBienvenida;
 import Vista.VistaUbicacionApartamento;
 import Vista.VistaUbicacionCasa;
@@ -48,7 +49,7 @@ public class ControladorTipoAlojamiento {
     vistaUH.setResizable(false);
                 vistaUH.setLocationRelativeTo(null);
                 vistaUH.setVisible(true);
-                tipoDeAlojamiento= 'H';
+                Alojamiento.alojamiento1.setTipoAlojamiento("H");
               }
               if(radioCasa.isSelected()){
                 VistaUbicacionCasa vistaUC=new VistaUbicacionCasa();
@@ -57,7 +58,7 @@ public class ControladorTipoAlojamiento {
     vistaUC.setResizable(false);
                 vistaUC.setLocationRelativeTo(null);
                 vistaUC.setVisible(true);
-                tipoDeAlojamiento= 'C';
+                Alojamiento.alojamiento1.setTipoAlojamiento("C");
               }
               if(radioApartamento.isSelected()){
                 VistaUbicacionApartamento vistaUA=new VistaUbicacionApartamento();
@@ -66,7 +67,7 @@ public class ControladorTipoAlojamiento {
     vistaUA.setResizable(false);
                 vistaUA.setLocationRelativeTo(null);
                 vistaUA.setVisible(true);
-                tipoDeAlojamiento= 'A';
+                Alojamiento.alojamiento1.setTipoAlojamiento("A");
               }
             return tipoDeAlojamiento;
           }

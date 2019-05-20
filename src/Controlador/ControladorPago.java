@@ -21,8 +21,8 @@ import javax.swing.JOptionPane;
 public class ControladorPago extends JFrame {
    public int billete200=20000,billete100=10000,billete50=5000,billete20=2000,billete10=1000,billete5=500,moneda2=200,moneda1=100,moneda50c=50,moneda20c=20,moneda10c=10,moneda5c=5,moneda2c=2,moneda1c=1;
    public static double cantidad_insertada=0;
-   public  double precioFinal = Alojamiento.alojamiento1.getPrecioFinal();
-   public  double precioFinalcents = precioFinal*100;
+   public  double precioFinal;
+   public  double precioFinalcents;
    
    public static ControladorPago pago1=new ControladorPago();
     VistaPago pago;
@@ -34,6 +34,26 @@ public class ControladorPago extends JFrame {
     public ControladorPago(JButton boton_volver, JButton boton_continuar, JButton boton_200e, JButton boton_100e,
             JButton boton_50e, JButton boton_20e, JButton boton_10e, JButton boton_5e, JButton boton_2e, JButton boton_1e,
             JButton boton_50c, JButton boton_20c, JButton boton_10c,JButton boton_5c,JButton boton_2c,JButton boton_1c){
+        
+            if(Alojamiento.alojamiento1.getTipoAlojamiento().equals("H")){
+        precioFinal = Hotel.hotel1.getPrecioFinal();
+        precioFinalcents=precioFinal*100;
+                System.out.println("Precio Hotel: "+precioFinal);
+    }
+        if(Alojamiento.alojamiento1.getTipoAlojamiento().equals("C")){
+        precioFinal = Casa.casa1.getPrecioFinal();
+        precioFinalcents=precioFinal*100;
+            System.out.println("Precio Casa: "+precioFinal);
+    }
+            if(Alojamiento.alojamiento1.getTipoAlojamiento().equals("A")){
+        precioFinal = Apartamento.apartamento1.getPrecioFinal();
+        precioFinalcents=precioFinal*100;
+                System.out.println("Precio Apartamento: "+precioFinal);
+    }
+        
+        
+        
+        
     boton_volver.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 volver();
@@ -114,6 +134,8 @@ public class ControladorPago extends JFrame {
                 c1();
             }
         });   
+    
+
 
     }
     

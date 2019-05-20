@@ -39,7 +39,7 @@ public class VistaPagoMayor extends JFrame{
             
      setLayout(null);  
             ControladorPago controp=new ControladorPago();
-            precioFinal2=Alojamiento.alojamiento1.getPrecioFinal()*100;
+            precioFinal2=pago1.precioFinal*100;
             precioFinal2cents=precioFinal2;
             vueltasCentimos=controp.cantidad_insertada-precioFinal2cents;
 

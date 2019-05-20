@@ -39,7 +39,7 @@ public class VistaUnaHabitacionHotel extends JFrame {
         add(labelResultadosHabitacion);
         
         comboBoxResultadosHabitaciones=new JComboBox();
-        comboBoxResultadosHabitaciones.setBounds(355,330,200,30);
+        comboBoxResultadosHabitaciones.setBounds(275,330,300,30);
         add(comboBoxResultadosHabitaciones);
         
             ImageIcon icon=new ImageIcon("src//images/disponible.png");

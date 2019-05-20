@@ -28,24 +28,24 @@ public class VistaHotelesDisponibles extends JFrame {
         
         botonSiguienteHotel=new javax.swing.JButton();
         botonSiguienteHotel=new JButton("Siguiente");
-        botonSiguienteHotel.setBounds(450,600,100,30);
+        botonSiguienteHotel.setBounds(480,600,100,30);
         add(botonSiguienteHotel);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
         labelResultadosHotel=new JLabel("Estos son los Hoteles disponibles");
-        labelResultadosHotel.setBounds(200,200,200,30);
+        labelResultadosHotel.setBounds(375,300,200,30);
         add(labelResultadosHotel);
         
         comboBoxResultadosHotel=new JComboBox();
-        comboBoxResultadosHotel.setBounds(180,230,200,30);
+        comboBoxResultadosHotel.setBounds(365,350,200,30);
         add(comboBoxResultadosHotel);
         
-            ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
-            JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            ImageIcon icon=new ImageIcon("src//images/disponible.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
         
@@ -61,4 +61,16 @@ public class VistaHotelesDisponibles extends JFrame {
         controladorHD.rellenarComboBox(comboBoxResultadosHotel);
     }
     
+    public static void main(String[] args){ 
+
+    VistaHotelesDisponibles vistab=new VistaHotelesDisponibles();
+    
+    vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
+    vistab.setSize(905,720);
+    
+    vistab.setResizable(false);
+    vistab.setLocationRelativeTo(null);
+    vistab.setVisible(true);
+    
+    }
 }

@@ -155,6 +155,7 @@ public class ControladorPago extends JFrame {
             JOptionPane.showMessageDialog(null,"¡La cantidad de dinero insertada es exacta!. Muchas gracias por su reserva.");
            Conexion conn= new Conexion();
            conn.desconectar();
+           precioFinalcents=0; precioFinal=0;
            cantidad_insertada=0;
            VistaBienvenida Pago=new VistaBienvenida();
            Pago.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

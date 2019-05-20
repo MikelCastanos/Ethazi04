@@ -47,6 +47,8 @@ public class ControladorPagoMayor {
         Conexion conn= new Conexion();
         conn.desconectar();
         controp.cantidad_insertada=0;
+        controp.precioFinalcents=0; controp.precioFinal=0;
+           cantidad_insertada=0;
         VistaBienvenida vistab=new VistaBienvenida();
         vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         vistab.setSize(905,720);

@@ -34,8 +34,8 @@ public class VistaUnaHabitacionHotel extends JFrame {
         botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
-        labelResultadosHabitacion=new JLabel("Estos son las  habitaciones:");
-        labelResultadosHabitacion.setBounds(350,280,300,30);
+        labelResultadosHabitacion=new JLabel("Estas son las  habitaciones:");
+        labelResultadosHabitacion.setBounds(375,280,300,30);
         add(labelResultadosHabitacion);
         
         comboBoxResultadosHabitaciones=new JComboBox();
@@ -60,5 +60,6 @@ public class VistaUnaHabitacionHotel extends JFrame {
                 //controladorUnaHab.rellenarComboBox(comboBoxUbicacionCasa);
     }
     
-
+    
+    
 }

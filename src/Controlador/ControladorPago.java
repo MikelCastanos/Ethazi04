@@ -141,10 +141,11 @@ public class ControladorPago extends JFrame {
  
             if(cantidad_insertada>precioFinalcents){  
                 reserva.checkInsertar();
+                reserva.generarArchivoTexto();
             VistaPagoMayor pagoMayor=new VistaPagoMayor();
             pagoMayor.setSize(905,720);
-    pagoMayor.setResizable(false);    pagoMayor.setLocationRelativeTo(null);
-    pagoMayor.setVisible(true);
+            pagoMayor.setResizable(false);    pagoMayor.setLocationRelativeTo(null);
+            pagoMayor.setVisible(true);
             pagoMayor.setVisible(true);
             pagoMayor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             }
@@ -154,6 +155,7 @@ public class ControladorPago extends JFrame {
             
             if(cantidad_insertada==precioFinalcents){  
                 reserva.checkInsertar();
+                reserva.generarArchivoTexto();
             JOptionPane.showMessageDialog(null,"¡La cantidad de dinero insertada es exacta!. Muchas gracias por su reserva.");
            Conexion conn= new Conexion();
            conn.desconectar();

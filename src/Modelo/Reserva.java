@@ -7,6 +7,9 @@ package Modelo;
 
 import BBDD.Conexion;
 import BBDD.Consultas;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -89,5 +92,24 @@ public class Reserva {
                Apartamento.apartamento1.getFechaEntrada(),Apartamento.apartamento1.getFechaSalida(),Apartamento.apartamento1.getPrecioFinal());
         }
         
+    }
+    
+    public void generarArchivoTexto(){
+        FileWriter fw;
+    
+        try {
+            Reserva rers=new Reserva();
+            
+            fw = new FileWriter(new File("reserva.txt"));
+            
+            String reserva="DNI: "+Usuario.usuarioLogin.getDniUsuarioLogin()+" Hotel: "+Hotel.hotel1.getCodigoHotel()+" Casa: "+Casa.casa1.getCodigo_casa()+" Apartamento: "+Apartamento.apartamento1.getCodigoApartamento()+" ";
+            
+            fw.write(reserva);
+            
+
+            fw.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 }

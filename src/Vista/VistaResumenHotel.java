@@ -9,6 +9,7 @@ import Controlador.ControladorResumenHotel;
 import Modelo.Alojamiento;
 import Modelo.Apartamento;
 import Modelo.Casa;
+import static Modelo.Habitacion.habitacion1;
 import Modelo.Hotel;
 import javax.swing.JFrame;
 import javax.swing.*;

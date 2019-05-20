@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.Alojamiento;
 import Modelo.Apartamento;
 import Modelo.Casa;
+import Modelo.Habitacion;
 import Modelo.Hotel;
 import Modelo.Promocion;
 import Modelo.Usuario;
@@ -34,9 +35,10 @@ public class ControladorResumenHotel {
                         
             public void cogerCodigoDescuento(){
         Promocion.promocion.setCodigoDescuento(Vista.VistaResumenHotel.fieldCodigoDescuento.getText());;
-
+        
+                System.out.println(Hotel.hotel1.getPrecioFinal());
             if(Vista.VistaResumenHotel.fieldCodigoDescuento.getText().equals("")){
-                       
+                     
                      VistaPago vistab=new VistaPago();
                      vistab.setSize(905,720);
                      vistab.setResizable(false);

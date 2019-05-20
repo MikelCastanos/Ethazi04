@@ -13,8 +13,13 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import static Controlador.ControladorPago.cantidad_insertada;
 import Modelo.Alojamiento;
+import static Modelo.Habitacion.habitacion1;
+import static Modelo.Habitacion.habitacion2;
+import static Modelo.Habitacion.habitacion3;
 import Modelo.Hotel;
+import static Modelo.Hotel.hotel1;
 import Vista.VistaBienvenida;
+import Vista.VistaResumenHotel;
 import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -33,7 +38,27 @@ public class ControladorTresHabitaciones {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar habitaciones distintas");
                 }
                 else{
-                    JOptionPane.showMessageDialog(null, "Bien");
+                                        habitacionesSeleccionadas(comboBoxResultados3Habitaciones1,comboBoxResultados3Habitaciones2,comboBoxResultados3Habitaciones3);
+                habitacion1.setPrecioFinal(habitacion1.calcularPrecioFinal(habitacion1.getPrecioBase(), habitacion1.getPrecioFestivo(), 
+                hotel1.getCantidadDiasFestivos(),hotel1.getCantidadDiasNormales()));
+                                habitacion2.setPrecioFinal(habitacion2.calcularPrecioFinal(habitacion2.getPrecioBase(), habitacion2.getPrecioFestivo(), 
+                hotel1.getCantidadDiasFestivos(),hotel1.getCantidadDiasNormales()));
+
+                                habitacion3.setPrecioFinal(habitacion3.calcularPrecioFinal(habitacion3.getPrecioBase(), habitacion3.getPrecioFestivo(), 
+                hotel1.getCantidadDiasFestivos(),hotel1.getCantidadDiasNormales())); 
+                                
+                System.out.println("Habitacion1 "+habitacion1.getPrecioFinal());
+                System.out.println("Habitacion2 "+habitacion2.getPrecioFinal());
+                System.out.println("Habitacion2 "+habitacion3.getPrecioFinal());
+               
+                Hotel.hotel1.setPrecioFinal(Habitacion.habitacion1.getPrecioFinal()+Habitacion.habitacion2.getPrecioFinal()+Habitacion.habitacion3.getPrecioFinal());
+                
+                VistaResumenHotel ResumenDescuentoHotel=new VistaResumenHotel();
+                ResumenDescuentoHotel.setSize(905,720);
+                ResumenDescuentoHotel.setResizable(false);    ResumenDescuentoHotel.setLocationRelativeTo(null);
+                ResumenDescuentoHotel.setVisible(true);
+                ResumenDescuentoHotel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                ResumenDescuentoHotel.setVisible(true);
                 }
 //                Alojamiento.alojamiento1.calcularDiasFestivos();
                 
@@ -62,27 +87,27 @@ public class ControladorTresHabitaciones {
           }
     
     
-    public void habitacionSeleccionada3(JComboBox comboBoxResultados3Habitaciones1,JComboBox comboBoxResultados3Habitaciones2,JComboBox comboBoxResultados3Habitaciones3){
+                public void habitacionesSeleccionadas(JComboBox comboBoxResultados3Habitaciones1,JComboBox comboBoxResultados3Habitaciones2,JComboBox comboBoxResultados3Habitaciones3){
+            String resultadosHabitaciones1=(String) comboBoxResultados3Habitaciones1.getSelectedItem();
+            int codigoHabitacion = Integer.parseInt(resultadosHabitaciones1.substring(0,3));
+            String resultadosHabitaciones2=(String) comboBoxResultados3Habitaciones2.getSelectedItem();
+            int codigoHabitacion2 = Integer.parseInt(resultadosHabitaciones2.substring(0,3));    
+            String resultadosHabitaciones3=(String) comboBoxResultados3Habitaciones3.getSelectedItem();
+            int codigoHabitacion3 = Integer.parseInt(resultadosHabitaciones3.substring(0,3)); 
+            
+            System.out.println("Codigo habitacion substring "+codigoHabitacion);
+            System.out.println("Codigo habitacion substring "+codigoHabitacion2);
+            System.out.println("Codigo habitacion substring "+codigoHabitacion3);
+            Habitacion.habitacion1.setCod_habitacion(codigoHabitacion);
+            Habitacion.habitacion2.setCod_habitacion(codigoHabitacion2);
+            Habitacion.habitacion3.setCod_habitacion(codigoHabitacion3);
+            //Llamar al metodo que consulta siguente
+            Habitacion habitacion= new Habitacion();
+            habitacion.habitacionSeleccionadaInfo(codigoHabitacion);
+            habitacion.habitacionSeleccionadaInfo2(codigoHabitacion2);
+            habitacion.habitacionSeleccionadaInfo3(codigoHabitacion3);
 
-//                        Aqui habria que hacer un get por ejemplo del Codigo Habitacion que ha sido seleccionada en el ComboBox y despues pasarlo al objeto que corresponda
-//                        Como ejemplo seria:
-//                        
-//                        comboBoxResultados2Habitaciones1.getSelectedItem();
-//                        
-//                        Conseguir el Codigo Habitacion, sacar toda la informacion de la habitacion con una consulta y pasarla a los setters de ese objeto, en este caso:
-//                         
-//                         Modelo.Habitacion.habitacion1.setCod_habitacion(1);
-//                         Modelo.Habitacion.habitacion1.setCod_habitacion(1);
-//                         Modelo.Habitacion.habitacion1.setCama_simple(0);
-//                         Modelo.Habitacion.habitacion1.setCama_doble(0);
-//                         Modelo.Habitacion.habitacion1.setCama_nino(0);
-//                         Modelo.Habitacion.habitacion1.setPrecio_habitacion(50.0);
-//                         
-//                         y asi con los objetos necesarios, en este caso serian habitacion1, habitacion2 y habitacion3
-
-
-
-}
+        }
 
         public void rellenarComboBox1 (JComboBox comboBoxResultados3Habitaciones1){
                 Hotel hotel= new Hotel();

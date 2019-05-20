@@ -45,12 +45,12 @@ public class ControladorUnaHabitacion {
                 habitacionSeleccionada(comboBoxResultadosHabitaciones);
                 
                 System.out.println("Probanding");
-                System.out.println(hotel1.getPrecioBase());
-                System.out.println(hotel1.getPrecioFestivo());
-                hotel1.setPrecioFinal(hotel1.calcularPrecioFinal(hotel1.getPrecioBase(), hotel1.getPrecioFestivo(), 
+                System.out.println(habitacion1.getPrecioBase());
+                System.out.println(habitacion1.getPrecioFestivo());
+                habitacion1.setPrecioFinal(habitacion1.calcularPrecioFinal(habitacion1.getPrecioBase(), habitacion1.getPrecioFestivo(), 
                 hotel1.getCantidadDiasFestivos(),hotel1.getCantidadDiasNormales()));
                 
-  
+                Hotel.hotel1.setPrecioFinal(Habitacion.habitacion1.getPrecioFinal()+Habitacion.habitacion2.getPrecioFinal()+Habitacion.habitacion3.getPrecioFinal());
                 
                 VistaResumenHotel ResumenDescuentoHotel=new VistaResumenHotel();
                 ResumenDescuentoHotel.setSize(905,720);

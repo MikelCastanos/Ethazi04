@@ -9,6 +9,7 @@ import Controlador.ControladorResumenCasa;
 import Modelo.Alojamiento;
 import Modelo.Casa;
 import javax.swing.*;
+import static vista.VistaPago.logo1;
 
 /**
  *
@@ -70,6 +71,12 @@ public class VistaResumenCasa extends JFrame{
         JLabel logo2 = new JLabel(icon);
             logo2.setSize(900,200);
             add(logo2);
+            validate();
+            
+            ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(900,692);
+            add(logo1);
             validate();
             
             ControladorResumenCasa contCasa=new ControladorResumenCasa(botonCancelar,botonSiguiente,fieldCodigoDescuento);

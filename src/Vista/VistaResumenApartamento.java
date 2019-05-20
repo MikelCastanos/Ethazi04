@@ -8,6 +8,7 @@ package Vista;
 import Controlador.ControladorResumenApartamento;
 import Modelo.Apartamento;
 import javax.swing.*;
+import static vista.VistaPago.logo1;
 
 /**
  *
@@ -68,6 +69,12 @@ public class VistaResumenApartamento extends JFrame {
         JLabel logo2 = new JLabel(icon);
             logo2.setSize(900,200);
             add(logo2);
+            validate();
+            
+            ImageIcon icono=new ImageIcon("src//images/fondo.png");
+            logo1=new JLabel(icono);
+            logo1.setSize(900,692);
+            add(logo1);
             validate();
             
             ControladorResumenApartamento contApart=new ControladorResumenApartamento(botonCancelar,botonSiguiente,fieldCodigoDescuento);

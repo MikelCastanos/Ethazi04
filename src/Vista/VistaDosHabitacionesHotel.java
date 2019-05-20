@@ -24,38 +24,38 @@ public class VistaDosHabitacionesHotel extends JFrame{
         
         botonSiguienteDosHabitaciones=new javax.swing.JButton();
         botonSiguienteDosHabitaciones=new JButton("Siguiente");
-        botonSiguienteDosHabitaciones.setBounds(450,600,100,30);
+        botonSiguienteDosHabitaciones.setBounds(480,600,100,30);
         add(botonSiguienteDosHabitaciones);
         
         JButton botonCancelar=new JButton("Cancelar");
-        botonCancelar.setBounds(340,600,100,30);
+        botonCancelar.setBounds(360,600,100,30);
         add(botonCancelar);
         
         labelResultados2Habitaciones=new JLabel("Estos son los resultados: ");
-        labelResultados2Habitaciones.setBounds(200,200,200,30);
+        labelResultados2Habitaciones.setBounds(400,200,200,30);
         add(labelResultados2Habitaciones);
         
         
         labelPrimeraHabitacion=new JLabel("Primera Habitacion: ");
-        labelPrimeraHabitacion.setBounds(50,250,200,30);
+        labelPrimeraHabitacion.setBounds(250,250,200,30);
         add(labelPrimeraHabitacion);
         
         labelSegundaHabitacion=new JLabel("Segunda Habitacion: ");
-        labelSegundaHabitacion.setBounds(300,250,200,30);
+        labelSegundaHabitacion.setBounds(500,250,200,30);
         add(labelSegundaHabitacion);
         
         comboBoxResultados2Habitaciones1=new JComboBox();
-        comboBoxResultados2Habitaciones1.setBounds(50,280,200,30);
+        comboBoxResultados2Habitaciones1.setBounds(250,280,200,30);
         add(comboBoxResultados2Habitaciones1);
         
         comboBoxResultados2Habitaciones2=new JComboBox();
-        comboBoxResultados2Habitaciones2.setBounds(300,280,200,30);
+        comboBoxResultados2Habitaciones2.setBounds(500,280,200,30);
         add(comboBoxResultados2Habitaciones2);
         
         
-            ImageIcon icon=new ImageIcon("src//images/Bidaion.png");
-            JLabel logo2 = new JLabel(icon);
-            logo2.setSize(575,200);
+            ImageIcon icon=new ImageIcon("src//images/disponible.png");
+        JLabel logo2 = new JLabel(icon);
+            logo2.setSize(900,200);
             add(logo2);
             validate();
         

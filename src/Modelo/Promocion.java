@@ -62,6 +62,20 @@ public class Promocion {
             {
                 JOptionPane.showMessageDialog(null,"El codigo promocional es correcto, lo vera reflejado en su nuevo precio");
                 
+                
+                //Checkeamos qué tipo de alojamiento es para bajar el precio al correcto
+                if(Alojamiento.alojamiento1.getTipoAlojamiento().equals("H")){
+                    Hotel.hotel1.setPrecioFinal(Hotel.hotel1.getPrecioFinal()-20);
+                }
+                
+                    if(Alojamiento.alojamiento1.getTipoAlojamiento().equals("C")){
+                    Casa.casa1.setPrecioFinal(Casa.casa1.getPrecioFinal()-20);
+                }
+                                
+                    if(Alojamiento.alojamiento1.getTipoAlojamiento().equals("A")){
+                    Apartamento.apartamento1.setPrecioFinal(Apartamento.apartamento1.getPrecioFinal()-20);
+                }
+                
                      VistaPago vistab=new VistaPago();
                      vistab.setSize(905,720);
                      vistab.setResizable(false);

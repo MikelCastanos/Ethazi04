@@ -1,5 +1,9 @@
 package Controlador;
 
+import Modelo.Alojamiento;
+import Modelo.Apartamento;
+import Modelo.Casa;
+import Modelo.Hotel;
 import Modelo.Promocion;
 import Modelo.Usuario;
 import java.awt.event.MouseAdapter;
@@ -32,6 +36,7 @@ public class ControladorResumenHotel {
         Promocion.promocion.setCodigoDescuento(Vista.VistaResumenHotel.fieldCodigoDescuento.getText());;
 
             if(Vista.VistaResumenHotel.fieldCodigoDescuento.getText().equals("")){
+                       
                      VistaPago vistab=new VistaPago();
                      vistab.setSize(905,720);
                      vistab.setResizable(false);
@@ -45,6 +50,7 @@ public class ControladorResumenHotel {
             }
         }
     
+
                         
 
 }

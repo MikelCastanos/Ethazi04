@@ -36,7 +36,7 @@ public class ControladorUnaHabitacion {
             public void mouseClicked(MouseEvent e){
                 System.out.println("Una Habitacion");
                 //rellenarComboBox(comboBoxResultadosHabitaciones);
-                Alojamiento alojamiento= new Alojamiento();
+                
                 
                
                 //Setteamos el precio final del alojamiento() y llamamos dentro al metodo que calcula el precio final

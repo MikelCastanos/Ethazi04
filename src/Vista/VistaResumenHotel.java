@@ -40,23 +40,14 @@ public class VistaResumenHotel extends JFrame {
                 resumenHotel.setEditable(false);
                 add(resumenHotel);
                 
-                resumenCasa=new JTextField("Codigo Casa: "+Casa.casa1.getCodigo_casa()+" Ciudad: "+Casa.casa1.getCiudad()+" Personas Maximas: "+Casa.casa1.getNum_personas());
-                resumenCasa.setBounds(300,240,300,30);
-                resumenCasa.setEditable(false);
-                add(resumenCasa);
-                
-                resumenApartamento=new JTextField("Codigo Apartamento: "+Apartamento.apartamento1.getCodigoApartamento()+" Ciudad: "+Apartamento.apartamento1.getCiudad()+" Personas Maximas: "+Apartamento.apartamento1.getNum_personas());
-                resumenApartamento.setBounds(300,280,300,30);
-                resumenApartamento.setEditable(false);
-                add(resumenApartamento);
                
                 
         
-        labelFechaInicio=new JLabel ("Fecha Inicio: "+Alojamiento.alojamiento1.getFechaEntrada());
+        labelFechaInicio=new JLabel ("Fecha Inicio: "+Hotel.hotel1.getFechaEntrada());
         labelFechaInicio.setBounds(300,350,200,30);
         add(labelFechaInicio);
         
-                labelFechaFin=new JLabel ("Fecha Fin: "+Alojamiento.alojamiento1.getFechaSalida());
+                labelFechaFin=new JLabel ("Fecha Fin: "+Hotel.hotel1.getFechaSalida());
         labelFechaFin.setBounds(525,350,200,30);
         add(labelFechaFin);
         
@@ -68,7 +59,7 @@ public class VistaResumenHotel extends JFrame {
         fieldCodigoDescuento.setBounds(380,480,150,30);
         add(fieldCodigoDescuento);
         
-        diasYPrecio=new JLabel("Dias Normales: "+Alojamiento.alojamiento1.getCantidadDiasNormales()+" Dias Festivos: "+Alojamiento.alojamiento1.getCantidadDiasFestivos()+" Precio Total: "+Double.toString(Alojamiento.alojamiento1.getPrecioFinal()));
+        diasYPrecio=new JLabel("Dias Normales: "+Hotel.hotel1.getCantidadDiasNormales()+" Dias Festivos: "+Hotel.hotel1.getCantidadDiasFestivos()+" Precio Total: "+Double.toString(Hotel.hotel1.getPrecioFinal()));
         diasYPrecio.setBounds(300,400,400,30);
         add(diasYPrecio);
         
@@ -96,17 +87,6 @@ ControladorResumenHotel contCD=new ControladorResumenHotel(botonCancelar,botonSi
             
 
     }
-public static void main(String[] args){ 
 
-    VistaResumenHotel vistab=new VistaResumenHotel();
-    
-    vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
-    vistab.setSize(905,720);
-    
-    vistab.setResizable(false);
-    vistab.setLocationRelativeTo(null);
-    vistab.setVisible(true);
-    
-    }
     
 }

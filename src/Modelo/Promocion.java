@@ -11,6 +11,7 @@ import java.awt.HeadlessException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import vista.VistaPago;
 
 /**
  *
@@ -59,10 +60,16 @@ public class Promocion {
         ResultSet rs= consultas.consultaBD(query);
             if(rs.next())
             {
-                System.out.println("Esta bien");
+                JOptionPane.showMessageDialog(null,"El codigo promocional es correcto, lo vera reflejado en su nuevo precio");
+                
+                     VistaPago vistab=new VistaPago();
+                     vistab.setSize(905,720);
+                     vistab.setResizable(false);
+                     vistab.setLocationRelativeTo(null);
+                     vistab.setVisible(true);
             }
             else{
-                System.out.println("Esta mal");
+                JOptionPane.showMessageDialog(null, "El codigo no es correcto.");
             }
             }
             catch(SQLException | HeadlessException ex)
@@ -72,5 +79,7 @@ public class Promocion {
         
 
     }
+     
+ 
     
 }

@@ -28,7 +28,7 @@ public class ControladorResumenHotel {
         });}
                         
                         
-        public void cogerCodigoDescuento(){
+            public void cogerCodigoDescuento(){
         Promocion.promocion.setCodigoDescuento(Vista.VistaResumenHotel.fieldCodigoDescuento.getText());;
 
             if(Vista.VistaResumenHotel.fieldCodigoDescuento.getText().equals("")){

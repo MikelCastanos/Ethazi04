@@ -10,19 +10,19 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import static Controlador.ControladorPago.cantidad_insertada;
-import static Controlador.ControladorTipoAlojamiento.tipoDeAlojamiento;
-import static Controlador.ControladorUbicacionHotel.seleccionUbicacion;
+
 import Modelo.Alojamiento;
-import static Modelo.Alojamiento.alojamiento1;
+
 import Modelo.Apartamento;
-import static Modelo.Apartamento.apartamento1;
-import Modelo.Hotel;
+
+
 import Vista.VistaBienvenida;
 import Vista.VistaResumenHotel;
 import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import static Modelo.Apartamento.apartamento1;
+
+import Vista.VistaResumenApartamento;
 
 /**
  *
@@ -36,24 +36,26 @@ public class ControladorUnApartamento {
                 public void mouseClicked(MouseEvent e){
                 System.out.println("Boton Una Apartamento");
 
-               // Alojamiento.alojamiento1.calcularDiasFestivos();
 
                 Alojamiento alojamiento= new Alojamiento();
-                alojamiento.calcularDiasFestivos(apartamento1.getFechaEntrada(),apartamento1.getFechaSalida());
+                alojamiento.calcularDiasFestivos(Apartamento.apartamento1.getFechaEntrada(),Apartamento.apartamento1.getFechaSalida());
                 
 
                 habitacionSeleccionada(comboBoxResultadosApartamento);
-                apartamento1.datosApartamentoSeleccionado(apartamento1.getCodigoApartamento());
+                Apartamento.apartamento1.datosApartamentoSeleccionado(Apartamento.apartamento1.getCodigoApartamento());
                 
-                apartamento1.setPrecioFinal(alojamiento1.calcularPrecioFinal(alojamiento1.getPrecioBase(), alojamiento1.getPrecioFestivo(), 
-                alojamiento1.getCantidadDiasFestivos(),alojamiento1.getCantidadDiasNormales()));
+                Apartamento.apartamento1.setPrecioFinal(Apartamento.apartamento1.calcularPrecioFinal(Apartamento.apartamento1.getPrecioBase(), Apartamento.apartamento1.getPrecioFestivo(), 
+                Apartamento.apartamento1.getCantidadDiasFestivos(),Apartamento.apartamento1.getCantidadDiasNormales()));
                 
-                VistaResumenHotel ResumenDescuentoApartamento=new VistaResumenHotel();
+                VistaResumenApartamento ResumenDescuentoApartamento=new VistaResumenApartamento();
                 ResumenDescuentoApartamento.setSize(905,720);
                 ResumenDescuentoApartamento.setResizable(false);    ResumenDescuentoApartamento.setLocationRelativeTo(null);
                 ResumenDescuentoApartamento.setVisible(true);
                 ResumenDescuentoApartamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 ResumenDescuentoApartamento.setVisible(true);
+                
+                    System.out.println(Apartamento.apartamento1.getPrecioBase()+" "+ Apartamento.apartamento1.getPrecioFestivo()+" "+
+                Apartamento.apartamento1.getCantidadDiasFestivos()+" "+Apartamento.apartamento1.getCantidadDiasNormales());
             }
             
         });
@@ -85,7 +87,7 @@ public class ControladorUnApartamento {
             Apartamento apartamento= new Apartamento();
 //            hotel.HotelPorLugar(ControladorUbicacionHotel.seleccionUbicacion);
             
-            Iterator<String> ite= apartamento.ApartamentoPorLugarYpersonas(apartamento1.getCiudad(),Apartamento.apartamento1.getNum_personas()).iterator();
+            Iterator<String> ite= apartamento.ApartamentoPorLugarYpersonas(Apartamento.apartamento1.getCiudad(),Apartamento.apartamento1.getNum_personas()).iterator();
             while(ite.hasNext()){
             comboBoxResultadosHotel.addItem(ite.next()); 
           }

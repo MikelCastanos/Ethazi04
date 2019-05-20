@@ -29,9 +29,9 @@ public class ControladorResumenApartamento {
                         
                         
                         public void cogerCodigoDescuento(){
-                        Promocion.promocion.setCodigoDescuento(Vista.VistaResumenHotel.fieldCodigoDescuento.getText());;
+                        Promocion.promocion.setCodigoDescuento(Vista.VistaResumenApartamento.fieldCodigoDescuento.getText());;
                             
-                            if(Vista.VistaResumenHotel.fieldCodigoDescuento.getText().equals("")){
+                            if(Vista.VistaResumenApartamento.fieldCodigoDescuento.getText().equals("")){
                                      VistaPago vistab=new VistaPago();
                                      vistab.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
                                      vistab.setSize(905,720);    

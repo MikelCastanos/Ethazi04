@@ -20,6 +20,7 @@ import java.util.Iterator;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static Modelo.Casa.casa1;
+import Vista.VistaResumenCasa;
 
 /**
  *
@@ -36,12 +37,18 @@ public class ControladorUnaCasa {
                 
                 casaSeleccionada(comboBoxResultadosCasa);
                 
-            VistaResumenHotel ResumenDescuentoCasa=new VistaResumenHotel();
-            ResumenDescuentoCasa.setSize(905,720);
-            ResumenDescuentoCasa.setResizable(false);    ResumenDescuentoCasa.setLocationRelativeTo(null);
-            ResumenDescuentoCasa.setVisible(true);
-            ResumenDescuentoCasa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            ResumenDescuentoCasa.setVisible(true);
+                casa1.setPrecioFinal(casa1.calcularPrecioFinal(casa1.getPrecioBase(), casa1.getPrecioFestivo(), 
+                casa1.getCantidadDiasFestivos(),casa1.getCantidadDiasNormales()));
+                
+  
+                
+                VistaResumenCasa ResumenDescuentoCasa=new VistaResumenCasa();
+                ResumenDescuentoCasa.setSize(905,720);
+                ResumenDescuentoCasa.setResizable(false);    
+                ResumenDescuentoCasa.setLocationRelativeTo(null);
+                ResumenDescuentoCasa.setVisible(true);
+                ResumenDescuentoCasa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                ResumenDescuentoCasa.setVisible(true);
             }
             
         }

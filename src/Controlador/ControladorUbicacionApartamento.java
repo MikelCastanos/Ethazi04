@@ -38,14 +38,14 @@ public class ControladorUbicacionApartamento {
                 
         Alojamiento alojamiento= new Alojamiento();
         
-        apartamento1.setCantidadDiasFestivos(alojamiento.calcularDiasFestivos(apartamento1.getFechaEntrada(),apartamento1.getFechaSalida()));
-        apartamento1.setCantidadDiasNormales(alojamiento.calcularDiasNormales(alojamiento.calcularDiasFestivos(apartamento1.getFechaEntrada(),apartamento1.getFechaSalida()),apartamento1.getDiasEstancia()));
-
+       
                 
         cogerDatosUbicacionApartamento(comboBoxUbicacionApartamento,comboBoxNumeroPersonasApartamento,fechaEntradaApartamento,fechaSalidaApartamento);
         siguienteVentanaApartamento();
         
-        
+         apartamento1.setCantidadDiasFestivos(alojamiento.calcularDiasFestivos(apartamento1.getFechaEntrada(),apartamento1.getFechaSalida()));
+        apartamento1.setCantidadDiasNormales(alojamiento.calcularDiasNormales(alojamiento.calcularDiasFestivos(apartamento1.getFechaEntrada(),apartamento1.getFechaSalida()),apartamento1.getDiasEstancia()));
+
                 
                 
             }
